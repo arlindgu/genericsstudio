@@ -10,17 +10,17 @@ export default function Home() {
         <div className="flex flex-row gap-4">
           <div className="flex flex-col gap-2">
             <h1>Content</h1>
-            <a className="text-sm break-words max-w-xs">this is my portfolio website, have fun with it (you can't do much with it tbh.)</a>
+            <a className="break-words max-w-xs">this is my portfolio website, have fun with it (you can't do much with it tbh.)</a>
           </div>
           <div className="flex flex-col gap-2">
             <h1>Profile</h1>
             <div className="flex flex-col">
-              <a href="mailto:hey@arlind.io?subject=hey">self-taught programmer</a>
-              <a href="tel:0798966996">self-taught designer</a>
+              <a>self-taught programmer</a>
+              <a>self-taught designer</a>
             </div>
           </div>
         </div>
-        <div className="flex flex-col w-full justify-center text-center">
+        <div className="flex flex-col w-full justify-center text-center gap-2">
           <h1>Contact</h1>
           <div className="flex flex-col justify-between">
             <a href="mailto:hey@arlind.io?subject=hey">hey@arlind.io</a>
