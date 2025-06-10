@@ -4,6 +4,6 @@ export default function Footer() {
         <a className="link" href="/">home</a>
         <a className="link" href="/blog">blog</a>
         <a className="link" href="https://github.com/arlindgu/">github</a>
-        <a className="link" href="/casestudies">case studies</a>
+        <a className="link" href="/references">references</a>
       </footer>
     );}

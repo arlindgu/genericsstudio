@@ -13,9 +13,9 @@
 @layer base {
   h1 {
     font-family: var(--font-instrument-serif);
-    font-style: normal;
-    font-size: large;
+    font-size: x-large;
     font-weight: bold;
+    font-style: italic;
   }
 
   h1.title {
