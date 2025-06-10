@@ -1,6 +1,6 @@
 export default function Footer() {
     return (
-      <footer className="flex flex-row gap-4 items-center justify-center absolute bottom-0 py-4">
+      <footer className="self-center flex flex-row gap-4">
         <a className="link" href="/">home</a>
         <a className="link" href="/blog">blog</a>
         <a className="link" href="https://github.com/arlindgu/">github</a>

@@ -34,14 +34,11 @@ export default function RootLayout({
       <body
         className={`${instrumentSerif.variable} ${instrumentSans.variable} antialiased`}
       >
-        <div className="flex flex-col items-center justify-center min-h-screen border p-5 gap-32">
-                  {children}
-                            <Footer />
-
+        <div className="flex flex-col items-start justify-start h-screen border p-5">
+          {children}
+          <Footer />
         </div>
-
       </body>
-
     </html>
   );
 }
