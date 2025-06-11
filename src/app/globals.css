@@ -24,6 +24,19 @@
     font-size: 2.5rem;
     font-weight: bold;
   }
+  a { 
+  font-family: var(--font-instrument-sans);
+}
+
+a.link {
+  font-family: var(--font-instrument-serif);
+  font-weight:bold;
+}
+
+a.link:hover {
+  color: var(--foreground); /* Beispiel: Farbe ändern beim Hover */
+  text-decoration: underline;    /* Beispiel: Unterstreichung entfernen beim Hover */
+}
 }
 
 @media (prefers-color-scheme: dark) {
@@ -38,16 +51,3 @@ body {
   color: var(--foreground);
 }
 
-a { 
-  font-family: var(--font-instrument-sans);
-}
-
-a.link {
-  font-family: var(--font-instrument-serif);
-  font-weight:bold;
-}
-
-a.link:hover {
-  color: var(--foreground); /* Beispiel: Farbe ändern beim Hover */
-  text-decoration: underline;    /* Beispiel: Unterstreichung entfernen beim Hover */
-}
