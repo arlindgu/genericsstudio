@@ -14,7 +14,7 @@ const footerLinks: FooterLinks[] = [
 
 
     return (
-      <footer className="self-center flex flex-row gap-4 bottom-0 absolute py-5">
+      <footer className="self-center flex flex-row gap-4 bottom-0">
         {footerLinks.map((link, index) => (
           <a key={index} className="link" href={link.href}>
             {link.label}

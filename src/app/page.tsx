@@ -28,10 +28,9 @@ const pageContent: PageContent = {
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center h-full w-full">
-      <h1 className="font-bold text-3xl italic">arlind's portfolio</h1>
-      <div className="flex flex-row gap-8 items-start p-10">
-        <div className="flex flex-col gap-1">
+    <main className="flex-1 flex flex-col">
+      <div className="self-center flex flex-row gap-4 m-auto p-4">
+        <div className="flex flex-col gap-2">
           <h1>{pageContent.profile.title}</h1>
           <div className="flex flex-col">
             {pageContent.profile.list.map((item, index) => (
@@ -39,7 +38,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-2">
           <h1>{pageContent.contact.title}</h1>
           <div className="flex flex-col">
             {pageContent.contact.list.map((item, index) => (
@@ -47,7 +46,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </div>
+        </div>
     </main>
   );
 }

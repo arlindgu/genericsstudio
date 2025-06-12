@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Instrument_Serif, Instrument_Sans } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/footer";
+import Header from "@/components/header";
 
 const instrumentSerif = Instrument_Serif({
   variable: "--font-instrument-serif",
@@ -34,8 +35,11 @@ export default function RootLayout({
       <body
         className={`${instrumentSerif.variable} ${instrumentSans.variable} antialiased`}
       >
-        <div className="flex flex-col items-start justify-start min-h-screen border p-5">
+        <div className="flex min-h-dvh flex-col p-4">
+          <Header />
+          <div className="flex flex-1 p-4">
           {children}
+          </div>
           <Footer />
         </div>
       </body>
