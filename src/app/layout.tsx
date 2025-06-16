@@ -6,12 +6,14 @@ import Header from "@/components/header";
 
 const instrumentSerif = Instrument_Serif({
   variable: "--font-instrument-serif",
-  weight: "400"
+  weight: "400",
+  subsets: ["latin"],
 });
 
 const instrumentSans = Instrument_Sans({
   variable: "--font-instrument-sans",
-  weight: "variable"
+  weight: "variable",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
