@@ -8,35 +8,25 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --font-sans: var(--font-instrument-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-instrument-serif), ui-serif, Georgia, serif;
 }
 
 @layer base {
-  h1 {
-    font-family: var(--font-instrument-serif);
-    font-size: x-large;
-    font-weight: bold;
-    font-style: italic;
+  input {
+    border: 1px solid var(--foreground);
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    background-color: var(--background);
   }
 
-  h1.title {
-    font-family: var(--font-instrument-serif);
-    font-style: normal;
-    font-size: 2.5rem;
-    font-weight: bold;
+  textarea {
+    border: 1px solid var(--foreground);
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    background-color: var(--background);
   }
-  a { 
-  font-family: var(--font-instrument-sans);
-}
 
-a.link {
-  font-family: var(--font-instrument-serif);
-  font-weight:bold;
-}
-
-a.link:hover {
-  color: var(--foreground); /* Beispiel: Farbe ändern beim Hover */
-  text-decoration: underline;    /* Beispiel: Unterstreichung entfernen beim Hover */
-}
 }
 
 @media (prefers-color-scheme: dark) {
@@ -49,5 +39,5 @@ a.link:hover {
 body {
   background: var(--background);
   color: var(--foreground);
+  font-family: var(--font-instrument-sans), ui-sans-serif, system-ui, sans-serif;
 }
-

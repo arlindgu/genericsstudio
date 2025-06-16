@@ -6,14 +6,11 @@ import Header from "@/components/header";
 
 const instrumentSerif = Instrument_Serif({
   variable: "--font-instrument-serif",
-  subsets: ["latin"],
   weight: "400"
-
 });
 
 const instrumentSans = Instrument_Sans({
   variable: "--font-instrument-sans",
-  subsets: ["latin"],
   weight: "variable"
 });
 
@@ -33,11 +30,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${instrumentSerif.variable} ${instrumentSans.variable} antialiased`}
+        className={`${instrumentSerif.variable} ${instrumentSans.variable}`}
       >
-        <div className="flex min-h-dvh flex-col p-4">
+        <div className="flex min-h-dvh flex-col">
           <Header />
-          <div className="flex flex-1 p-4">
+          <div className="flex flex-1">
           {children}
           </div>
           <Footer />

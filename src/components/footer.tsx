@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
 
 interface FooterLinks {
@@ -7,18 +9,17 @@ interface FooterLinks {
 
 const footerLinks: FooterLinks[] = [
   { href: "/", label: "home" },
-  { href: "/blog", label: "blog" },
   { href: "https://github.com/arlindgu/", label: "github" },
-  { href: "/references", label: "references" },
+  { href: "/case-studies", label: "cases studies" },
 ];
 
 
     return (
-      <footer className="self-center flex flex-row gap-4 bottom-0">
+      <footer className="self-center flex flex-row bottom-0 py-2 border-t w-full justify-center">
         {footerLinks.map((link, index) => (
-          <a key={index} className="link" href={link.href}>
+          <Link key={index} className="link p-2 uppercase" href={link.href}>
             {link.label}
-          </a>
+          </Link>
         ))}
       </footer>
     );}

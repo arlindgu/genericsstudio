@@ -1,51 +1,46 @@
-interface PageContent {
-  profile: {
-    title: string;
-    list: [string, string?][];
-  };
-  contact: {
-    title: string;
-    list: [string, string?][];
-  };
-}
+"use client"
 
-const pageContent: PageContent = {
-  profile: {
-    title: "Profile",
-    list: [
-      ["Student"],
-      ["Self-Taught"],
-    ],
-  },
-  contact: {
-    title: "Contact",
-    list: [
-      ["hey@arlind.io", "mailto:hey@arlind.io?subject=hey"],
-      ["+41 79 896 69 96", "tel:0798966996"],
-    ],
-  }
-};
+import { motion } from "motion/react"
+import LoremIpsum from "react-lorem-ipsum";
+
 
 export default function Home() {
   return (
-    <main className="flex-1 flex flex-col">
-      <div className="self-center flex flex-row gap-4 m-auto p-4">
-        <div className="flex flex-col gap-2">
-          <h1>{pageContent.profile.title}</h1>
-          <div className="flex flex-col">
-            {pageContent.profile.list.map((item, index) => (
-              <a key={index} href={item[1]}>{item[0]}</a>
-            ))}
-          </div>
+    <main className="flex-1 flex flex-col p-4">
+      <div className="self-center flex flex-row gap-4 flex-grow">
+        <div className="flex flex-col justify-center items-center">
+          <motion.div
+            initial={{ opacity: 0 }} 
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}>
+            <div className="flex flex-row gap-2">
+              <h1 className="text-5xl">VIVID</h1>
+              <h1 className="text-5xl font-bold">Studios</h1>
+            </div>
+          </motion.div>
+
+          <motion.div 
+          animate={{ y: 0, opacity: 1 }}
+          initial={{ y: 100, opacity: 0 }}
+          transition={{ duration: 1.5, ease: "easeInOut" }}
+          className="font-serif flex-row flex gap-1">
+            <a className="font-bold italic">fuck</a>
+            <a className="font-serif"> the templates. </a>
+            <a className="font-bold italic">build</a>
+            <a> with soul.</a>
+          </motion.div>
+          
         </div>
-        <div className="flex flex-col gap-2">
-          <h1>{pageContent.contact.title}</h1>
-          <div className="flex flex-col">
-            {pageContent.contact.list.map((item, index) => (
-              <a className="link font-[--font-instrument-sans] font-normal" key={index} href={item[1]}>{item[0]}</a>
-            ))}
-          </div>
-        </div>
+
+        
+
+
+
+
+      </div>
+      <div className="">
+        <LoremIpsum p={1}/>
+
         </div>
     </main>
   );
