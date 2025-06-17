@@ -38,10 +38,6 @@ export default function Home() {
 
 
       </div>
-      <div className="">
-        <LoremIpsum p={1}/>
-
-        </div>
     </main>
   );
 }

@@ -1,38 +1,141 @@
 "use client"
 
 import Form from 'next/form'
+import { Resend } from 'resend';
+import { motion } from 'motion/react';
 
 export default function ContactPage() {
 
-    function sendMessage(formData: FormData) {
-        const name = formData.get('name')
-        console.log(name)
+    function sendInquiry(FormData: FormData) {
+
+        const data = {
+            name: FormData.get('name'),
+            email: FormData.get('email'),
+            website: FormData.get('website'),
+            projectName: FormData.get('projectName'),
+            details: FormData.get('details'),
+        };
+
+        fetch('/api/send', {
+            method: 'POST',
+            body: JSON.stringify(data),
+        }).then(response => {
+            if (response.ok) {
+                alert('Your message has been sent successfully!');
+            } else {
+                alert('There was an error sending your message. Please try again later.');
+            }
+        }
+        ).catch(error => {
+            console.error('Error sending message:', error);
+            alert('There was an error sending your message. Please try again later.');
+        }
+        );
+    }
+
+    const contactInfo = {
+        email: 'hey@arlind.io',
+        phone: '+41 79 896 69 96',
     }
 
     return (
-        <main className='flex-1 flex flex-col'>
-            <div className="flex flex-col m-auto align-center justify-center">
-                <a className='font-sans text-center'>Hate your shit?</a>
-                <Form action={sendMessage} className='flex flex-col gap-4 mt-4'>
-                    <div className='flex flex-col gap-1'>
-                        <a>name please</a>
-                        <input className="border-white rounded p-2 border" type="text" name="name" />
-                    </div>
-                    <div className='flex flex-col gap-1'>
-                        <a>email please</a>
-                        <input className="" type="email" name="name" />
-                    </div>
-                    <div className='flex flex-col gap-1'>
-                        <a>current website</a>
-                        <input className="border-white border" type="url" name="name" />
-                    </div>
-                    <div className='flex flex-col gap-1'>
-                        <a>name please</a>
-                        <textarea className="border-white border" name="inquiry" />
-                    </div>
-                    <button>Send Inquiry</button>
+        <main className='flex-1 flex flex-col w-full'>
+            <section className="flex flex-col items-center justify-center w-full">
+                <h1 className="text-4xl font-bold mb-4 text-center">
+                    Let's create something which has a soul to it.
+                </h1>
+                <p className="text-lg mb-8 text-center">
+                    Reach out and let's build something meaningful together.
+                </p>
+                <Form action={sendInquiry} className="flex flex-col gap-4 w-full max-w-md">
+                    <motion.div
+                        animate={{ y: 0, opacity: 1 }}
+                        initial={{ y: 10, opacity: 0 }}
+                        transition={{ duration: 0.5, ease: "easeInOut", delay: 0 }}
+                        className="flex flex-col">
+                                                <div className='flex flex-row justify-between items-center'>
+                            <p>NAME</p>
+                            <p className='font-serif italic opacity-50'>required</p>
+
+                        </div>
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Full Name"
+                            className="border px-3 py-2"
+                            required
+                        />
+                    </motion.div>
+
+                    <motion.div
+                        animate={{ y: 0, opacity: 1 }}
+                        initial={{ y: 10, opacity: 0 }}
+                        transition={{ duration: 0.5, ease: "easeInOut", delay: 0.1 }}
+                        className="flex flex-col">
+                        <div className='flex flex-row justify-between items-center'>
+                            <p>EMAIL</p>
+                            <p className='font-serif italic opacity-50'>required</p>
+
+                        </div>
+
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="example@example.com"
+                            className="border px-3 py-2"
+                            required
+                        />
+                    </motion.div >
+                    <motion.div
+                        animate={{ y: 0, opacity: 1 }}
+                        initial={{ y: 10, opacity: 0 }}
+                        transition={{ duration: 0.5, ease: "easeInOut", delay: 0.2 }}
+                        className="flex flex-col">
+                        <p>WEBSITE</p>
+                        <input
+                            type="text"
+                            name="website"
+                            placeholder="Website URL"
+                            className="border px-3 py-2"
+                        />
+                    </motion.div >
+                    <motion.div
+                        animate={{ y: 0, opacity: 1 }}
+                        initial={{ y: 10, opacity: 0 }}
+                        transition={{ duration: 0.5, ease: "easeInOut", delay: 0.3 }}
+                        className="flex flex-col">
+                        <p>PROJECT NAME</p>
+                        <input
+                            type="text"
+                            name="projectName"
+                            placeholder="Project Name"
+                            className="border px-3 py-2"
+                        />
+                    </motion.div>
+                    <motion.div
+                        animate={{ y: 0, opacity: 1 }}
+                        initial={{ y: 10, opacity: 0 }}
+                        transition={{ duration: 0.5, ease: "easeInOut", delay: 0.4 }}
+                        className="flex flex-col">
+                        <p>DETAILS</p>
+                        <textarea
+                            name="details"
+                            placeholder="Details about your project"
+                            className="border px-3 py-2"
+                            rows={4}
+                        />
+                    </motion.div>
+                    <motion.button
+                        animate={{ y: 0, opacity: 1 }}
+                        initial={{ y: 10, opacity: 0 }}
+                        transition={{ duration: 0.5, ease: "easeInOut", delay: 0.5 }}
+                        type="submit"
+                        className="bg-white text-black p-2"
+                    >
+                        Send Message
+                    </motion.button>
                 </Form>
-            </div>
+            </section>
 
 
         </main>

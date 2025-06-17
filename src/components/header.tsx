@@ -10,7 +10,7 @@ export default function Header() {
       <header className="w-full">
         <div className="text-sm p-1 px-2 flex flox-row align-center justify-between border-b border-t border-white">
             <a href="/" className="uppercase">{pathname}</a>
-            <a className="uppercase">Contact</a>
+            <a href="/contact" className="uppercase">Contact</a>
         </div>
             
         </header>
