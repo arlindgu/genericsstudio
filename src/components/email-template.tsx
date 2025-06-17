@@ -6,13 +6,14 @@ interface EmailTemplateProps {
     Website?: string;
     ProjectName?: string;
     Details: string;
+    Code: string;
 }
 
 export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
-    Name, Email, Website, ProjectName, Details
+    Name, Email, Website, ProjectName, Details, Code
 }) => (
     <div>
-        <h1>NEW INQUIRY</h1>
+        <h1>NEW INQUIRY {Code}</h1>
         <p><strong>Name:</strong> {Name}</p>
         <p><strong>Email:</strong> {Email}</p>
         {Website && <p><strong>Website:</strong> {Website}</p>}
