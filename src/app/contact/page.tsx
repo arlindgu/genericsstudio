@@ -39,14 +39,12 @@ export default function ContactPage() {
     }
 
     return (
-        <main className='flex-1 flex flex-col w-full'>
+        <main className='flex-1 flex flex-col w-full justify-center items-center'>
             <section className="flex flex-col items-center justify-center w-full">
-                <h1 className="text-4xl font-bold mb-4 text-center">
+                <h1 className='text-4xl font-bold '>Contact</h1>
+                <h2 className='text-xl font-serif italic mb-8'>
                     Let's create something which has a soul to it.
-                </h1>
-                <p className="text-lg mb-8 text-center">
-                    Reach out and let's build something meaningful together.
-                </p>
+                </h2>
                 <Form action={sendInquiry} className="flex flex-col gap-4 w-full max-w-md">
                     <motion.div
                         animate={{ y: 0, opacity: 1 }}
