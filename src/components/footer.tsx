@@ -11,6 +11,8 @@ const footerLinks: FooterLinks[] = [
   { href: "/", label: "home" },
   { href: "https://github.com/arlindgu/", label: "github" },
   { href: "/case-studies", label: "cases studies" },
+  { href: "/contact", label: "contact" },
+  { href: "/pricing", label: "pricing" },
 ];
 
 
