@@ -7,6 +7,7 @@ import LoremIpsum from "react-lorem-ipsum";
 export default function Home() {
   return (
     <main className="flex-1 flex flex-col p-4">
+      <title>VIVID Studios Homepage</title>
       <div className="self-center flex flex-row gap-4 flex-grow">
         <div className="flex flex-col justify-center items-center">
           <motion.div
@@ -14,8 +15,7 @@ export default function Home() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}>
             <div className="flex flex-row gap-2">
-              <h1 className="text-5xl">VIVID</h1>
-              <h1 className="text-5xl font-bold">Studios</h1>
+              <h1 className="text-5xl">VIVID <span className="text-5xl font-bold">Studios</span></h1>
             </div>
           </motion.div>
 
@@ -24,10 +24,12 @@ export default function Home() {
           initial={{ y: 100, opacity: 0 }}
           transition={{ duration: 1.5, ease: "easeInOut" }}
           className="font-serif flex-row flex gap-1">
-            <a className="font-bold italic">fuck</a>
-            <a className="font-serif"> the templates. </a>
-            <a className="font-bold italic">build</a>
-            <a> with soul.</a>
+            <h2>
+              <span className="font-bold italic">fuck</span>
+              <span className="font-serif"> the templates. </span>
+              <span className="font-bold italic">build</span>
+              <span> with soul.</span>
+            </h2>
           </motion.div>
           
         </div>
