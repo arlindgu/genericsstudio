@@ -40,9 +40,13 @@ export default function ContactPage() {
 
     return (
         <main className='flex-1 flex flex-col w-full justify-center items-center'>
-            <section className="flex flex-col items-center justify-center w-full">
-                <h1 className='text-4xl font-bold '>Contact</h1>
-                <h2 className='text-xl font-serif italic mb-8'>
+            <motion.section 
+            animate={{ y: 0, opacity: 1 }}
+                        initial={{ y: 10, opacity: 0 }}
+                        transition={{ duration: 0.5, ease: "easeInOut", delay: 0 }}
+            className="flex flex-col items-center justify-center w-full">
+                <h1 className='text-4xl font-bold font-serif italic '>Contact</h1>
+                <h2 className='text-xl font-sans mb-8 text-center max-w-75'>
                     Let's create something which has a soul to it.
                 </h2>
                 <Form action={sendInquiry} className="flex flex-col gap-4 w-full max-w-md bg-background p-8 border border-white">
@@ -80,7 +84,7 @@ export default function ContactPage() {
                             type="email"
                             name="email"
                             placeholder="example@example.com"
-                            className="border px-3 py-2"
+                            className="border px-3 py-2 focus:outline-none focus:bg-neutral- transition-colors duration-200"
                             required
                         />
                     </motion.div >
@@ -133,7 +137,7 @@ export default function ContactPage() {
                         Send Message
                     </motion.button>
                 </Form>
-            </section>
+            </motion.section>
 
 
         </main>

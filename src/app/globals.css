@@ -35,3 +35,18 @@ html {
   scroll-behavior: smooth;
   overscroll-behavior: none;
 }
+
+input {
+  @apply transition-colors;
+}
+
+input:focus, textarea:focus {
+  outline:none;
+  @apply bg-neutral-900;
+  @apply transition-colors
+}
+
+input:hover, textarea:hover {
+  @apply bg-neutral-800;
+  @apply transition-colors;
+}
