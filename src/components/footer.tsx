@@ -14,22 +14,11 @@ const links = [
 
 export default function Footer() {
   const [isOpen, setIsOpen] = useState(false);
-  const endRef = useRef<HTMLDivElement | null>(null);
   const buttonRef = useRef<HTMLButtonElement | null>(null);
 
-  useEffect(() => {
-    if (isOpen && endRef.current) {
-      endRef.current.scrollIntoView({ behavior: "smooth" });
-    } else if (!isOpen && buttonRef.current) {
-      // Delay für das Zurück-Scrollen, damit die Exit-Animation nicht unterbrochen wird
-      setTimeout(() => {
-        buttonRef.current?.scrollIntoView({ behavior: "smooth" });
-      }, 300); // Entspricht der transition duration
-    }
-  }, [isOpen]);
 
   return (
-    <footer className="border-t py-2 bg-background w-full h-fit justify-center items-center flex flex-col relative">
+    <footer className="border-t py-4 bg-background w-full h-fit justify-center items-center flex flex-col sticky bottom-0 z-10">
       <motion.button
         type="button"
         aria-label="Toggle footer menu"
@@ -93,7 +82,6 @@ export default function Footer() {
           </motion.div>
         )}
       </AnimatePresence>
-      <div ref={endRef} />
     </footer>
   );
 }

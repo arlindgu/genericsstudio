@@ -3,36 +3,36 @@ import PricingCard, { type PricingCardProps } from "@/components/PricingCard"
 export default function PricingPage() {
 const pricingOptions: PricingCardProps[] = [
   {
-    title: "Start Plan",
-    description: "Klassische Landing Page – eine Seite, so lang du willst.",
-    price: "CHF 250",
-    features: [
-      "Eine Seite (unbegrenzt lang)",
-      "Basic SEO",
-      "Support per Mail"
-    ],
-    buttonText: "Start wählen",
-    buttonUrl: "/pricing/start"
-  },
-  {
     title: "Deep Plan",
-    description: "Website mit mehreren Seiten (bis zu 5).",
-    price: "CHF 1250",
+    description: "Website with up to 5 pages.",
+    price: "1250",
+    currency: "CHF",
     features: [
-      "Bis zu 5 Seiten",
-      "Erweitertes SEO",
+      "Up to 5 Pages",
       "Priorisierter Support"
     ],
     buttonText: "Deep wählen",
-    buttonUrl: "/pricing/deep"
+    buttonUrl: "/pricing/deep",
+  },
+    {
+    title: "Start Plan",
+    description: "Classic Landing Page for your business.",
+    price: "250",
+    currency: "CHF",
+    features: [
+      "One Landing Page",
+      "Unlimited Length",
+      "Support per Mail"
+    ],
+    buttonText: "Start wählen",
+    buttonUrl: "/pricing/start",
   },
   {
     title: "Elite Plan",
-    description: "Unlimitierte Website für maximale Freiheit.",
+    description: "Freiheit.",
     price: "Consult",
     features: [
-      "Unlimitierte Seiten",
-      "Custom SEO Strategien",
+      "Custom",
       "24/7 Support",
     ],
     buttonText: "Elite wählen",
@@ -48,6 +48,7 @@ const pricingOptions: PricingCardProps[] = [
             key={index}
             title={option.title}
             description={option.description}
+            currency={option.currency}
             price={option.price}
             features={option.features}
             buttonText={option.buttonText}
