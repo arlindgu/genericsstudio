@@ -15,7 +15,7 @@ const footerLinks: FooterLinks[] = [
 
 
     return (
-      <footer className="bg-background self-center flex flex-row bottom-0 py-2 border-t w-full justify-center z-10">
+      <footer className="self-center flex flex-row bottom-0 py-2 w-full justify-center">
         {footerLinks.map((link, index) => (
           <Link key={index} className="link p-2 uppercase" href={link.href}>
             {link.label}

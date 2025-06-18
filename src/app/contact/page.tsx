@@ -45,7 +45,7 @@ export default function ContactPage() {
                 <h2 className='text-xl font-serif italic mb-8'>
                     Let's create something which has a soul to it.
                 </h2>
-                <Form action={sendInquiry} className="flex flex-col gap-4 w-full max-w-md">
+                <Form action={sendInquiry} className="flex flex-col gap-4 w-full max-w-md bg-background p-8 border border-white">
                     <motion.div
                         animate={{ y: 0, opacity: 1 }}
                         initial={{ y: 10, opacity: 0 }}

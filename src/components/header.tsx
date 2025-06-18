@@ -8,7 +8,7 @@ export default function Header() {
 
     return (
       <header className="w-full">
-        <div className="text-sm p-1 px-2 flex flox-row align-center justify-between border-b border-t border-white bg-background">
+        <div className="text-sm p-1 px-2 flex flox-row align-center justify-between border-b bg-background border-white">
             <a href="/" className="uppercase">{pathname}</a>
             <a href="/contact" className="uppercase">Contact</a>
         </div>
