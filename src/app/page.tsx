@@ -15,7 +15,7 @@ export default function Home() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}>
             <div className="flex flex-row gap-2">
-              <h1 className="text-5xl">VIVID <span className="text-5xl font-bold">Studios</span></h1>
+              <h1 className="text-4xl">VIVID <span className="text-4xl font-bold">Studios</span></h1>
             </div>
           </motion.div>
 

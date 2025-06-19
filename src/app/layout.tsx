@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Arlind Gurgurovci", url: "https://arlind.io" }],
   creator: "Arlind Gurgurovci",
   description:
-    "VIVID Studios is a Switzerland-based web design and development studio helping startups and small businesses (SMEs) build modern, responsive, and SEO-optimized websites. We focus on user experience, clean code, and digital strategy to drive growth and online visibility.",
+    "VIVID Studios is a Switzerland-based web design and development agency that creates custom, responsive, and SEO-optimized websites for startups and SMEs. We combine modern design, clean code, and user-focused strategy to boost online visibility and drive business growth.",
 };
 
 export default function RootLayout({
