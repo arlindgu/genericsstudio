@@ -1,8 +1,8 @@
 "use client"
-import { JSX } from "react";
+import { JSX, useEffect, useState } from "react";
 import Tag from "@/components/tag";
 import { motion } from 'framer-motion'
-
+import getPosts from "./getPosts";
 
 export default function CaseStudiesPage() {
 
@@ -17,7 +17,7 @@ export default function CaseStudiesPage() {
   {
     title: "ES-SELAM MOSQUE",
     description: "Development of a modern website using Next.js and TailwindCSS, designed for seamless integration with a content management system (CMS) and database. The setup is prepared for additional features such as prayer times management, dynamic content handling, and future scalability.",
-    url: "/case-studies/project-alpha",
+    url: "/case-studies/es-selam-mosque",
     tags: ["web design", "development", "UI/UX", "open source"]
   },
   {

@@ -11,16 +11,16 @@ const nextConfig = {
   
   // ESLint für Build deaktivieren (temporär)
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: false,
   },
   
   // TypeScript Fehler ignorieren (temporär)
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: false,
   },
   
   // Deine anderen Configs hier...
-  reactStrictMode: true,
+  reactStrictMode: false,
   // swcMinify ist deprecated, rausnehmen
 }
 

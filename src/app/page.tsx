@@ -1,8 +1,6 @@
 "use client"
 
 import { motion } from "motion/react"
-import LoremIpsum from "react-lorem-ipsum";
-
 
 export default function Home() {
   return (

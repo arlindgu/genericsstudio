@@ -3,7 +3,6 @@ import { Instrument_Serif, Instrument_Sans } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
-import Background from "@/components/Background";
 
 const instrumentSerif = Instrument_Serif({
   variable: "--font-instrument-serif",

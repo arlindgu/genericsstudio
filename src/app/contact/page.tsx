@@ -1,7 +1,6 @@
 "use client"
 
 import Form from 'next/form'
-import { Resend } from 'resend';
 import { motion } from 'motion/react';
 import { useState } from 'react';
 import { Check, X } from 'lucide-react'
@@ -61,7 +60,7 @@ export default function ContactPage() {
                 className="flex flex-col items-center justify-center w-full">
                     <h1 className='text-4xl font-bold font-serif italic '>Contact</h1>
                 <h2 className='text-xl font-sans mb-8 text-center max-w-75'>
-                    Let's create something which has a soul to it.
+                    Let&#39;s create something which has a soul to it.
                 </h2>
                 
                     <Form action={sendInquiry} className="flex flex-col gap-4 w-full max-w-md bg-background p-8 border border-white">
