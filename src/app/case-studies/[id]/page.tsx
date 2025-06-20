@@ -3,8 +3,8 @@ import path from 'path';
 import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
 
-export default async function Post({ params }: { params: { id: string } }) {
-  const id = (await params).id;
+export default async function Post({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
   
   try {
     const filePath = path.join(process.cwd(), 'src/app/case-studies/[id]/posts', `${id}.mdx`);
