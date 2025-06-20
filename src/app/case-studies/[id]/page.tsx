@@ -3,12 +3,6 @@ import path from 'path';
 import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
 
-interface Props {
-  params: {
-    id: string;
-  };
-}
-
 export default async function Post({ params }: { params: { id: string } }) {
   const id = (await params).id;
   
