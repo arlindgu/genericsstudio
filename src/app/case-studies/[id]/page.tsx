@@ -9,8 +9,8 @@ interface Props {
   };
 }
 
-export default async function Post({ params }: Props) {
-  const { id } = await params;
+export default async function Post({ params }: { params: { id: string } }) {
+  const id = (await params).id;
   
   try {
     const filePath = path.join(process.cwd(), 'src/app/case-studies/[id]/posts', `${id}.mdx`);

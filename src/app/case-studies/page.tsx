@@ -1,8 +1,7 @@
 "use client"
-import { JSX, useEffect, useState } from "react";
+import { JSX } from "react";
 import Tag from "@/components/tag";
 import { motion } from 'framer-motion'
-import getPosts from "./getPosts";
 
 export default function CaseStudiesPage() {
 
