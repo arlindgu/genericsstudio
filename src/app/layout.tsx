@@ -17,9 +17,9 @@ const instrumentSans = Instrument_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "VIVID Studios – Web Design & Development for Startups and SMEs",
+  title: "GURGUROVCI Studios – Web Design & Development for Startups and SMEs",
   keywords: [
-    "VIVID Studios",
+    "GURGUROVCI Studios",
     "web design agency",
     "custom websites",
     "responsive web development",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Arlind Gurgurovci", url: "https://arlind.io" }],
   creator: "Arlind Gurgurovci",
   description:
-    "VIVID Studios is a Switzerland-based web design and development agency that creates custom, responsive, and SEO-optimized websites for startups and SMEs. We combine modern design, clean code, and user-focused strategy to boost online visibility and drive business growth.",
+    "GURGUROVCI Studios is a Switzerland-based web design and development agency that creates custom, responsive, and SEO-optimized websites for startups and SMEs. We combine modern design, clean code, and user-focused strategy to boost online visibility and drive business growth.",
 };
 
 export default function RootLayout({
@@ -50,14 +50,13 @@ export default function RootLayout({
       <body
         className={`${instrumentSerif.variable} ${instrumentSans.variable}`}
       >
-        
-        <div className="flex min-h-dvh flex-col">
-          
+        <div className="min-h-screen flex flex-col">
           <Header />
-          
-          <div className="flex flex-1 p-8">
-            {children}
-          </div>
+          <main className="flex-1 flex items-center justify-center px-8 py-12">
+            <div className="w-full max-w-5xl">
+              {children}
+            </div>
+          </main>
           <Footer />
         </div>
       </body>

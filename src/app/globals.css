@@ -13,6 +13,47 @@
 }
 
 @layer base {
+  h1 {
+    @apply text-5xl font-bold leading-tight;
+  }
+
+  h2 {
+    @apply text-4xl font-semibold;
+  }
+
+  h3 {
+    @apply text-3xl font-semibold;
+  }
+
+  h4 {
+    @apply text-2xl;
+  }
+
+  h5 {
+    @apply text-xl;
+  }
+
+  h6 {
+    @apply text-lg;
+  }
+
+  p {
+    @apply text-base;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-instrument-sans), ui-sans-serif, system-ui, sans-serif;
+  }
+  
+  input:hover {
+    @apply outline-none ring-2 ring-blue-500;
+  }
+
+  input:focus {
+    @apply outline-none ring-2 ring-blue-500;
+  }
 
 
 }
@@ -22,31 +63,4 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-instrument-sans), ui-sans-serif, system-ui, sans-serif;
-
-}
-
-html {
-  scroll-behavior: smooth;
-  overscroll-behavior: none;
-}
-
-input {
-  @apply transition-colors;
-}
-
-input:focus, textarea:focus {
-  outline:none;
-  @apply bg-neutral-900;
-  @apply transition-colors
-}
-
-input:hover, textarea:hover {
-  @apply bg-neutral-800;
-  @apply transition-colors;
 }

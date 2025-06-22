@@ -41,7 +41,13 @@ const pricingOptions: PricingCardProps[] = [
 ];
 
   return (
-    <main className="flex-1 flex flex-col p-4 justify-center item-center">
+    <main className="flex flex-col items-center justify-center gap-4">
+      <title>GURGUROVCI Studios – Pricing</title>
+
+      <div className="self-center flex flex-col items-center justify-center">
+      <h1>Pricing Plans</h1>
+      <p>Choose the plan that fits your needs</p>
+      </div>
       <div className="self-center flex flex-col sm:flex-row gap-4">
         {pricingOptions.map((option, index) => (
           <PricingCard

@@ -9,7 +9,9 @@ const links = [
   { href: "/", label: "home" },
   { href: "/contact", label: "contact" },
   { href: "/case-studies", label: "case studies" },
-  { href: "/pricing", label: "pricing" }
+  { href: "/pricing", label: "pricing" },
+  { href: "/about", label: "about" },
+  { href: "/imprint", label: "imprint" },
 ];
 
 export default function Footer() {

@@ -40,29 +40,29 @@ export default function ContactPage() {
     }
 
     return (
-        <main className='flex-1 flex flex-col w-full justify-center items-center'>
-{sent && !error ? (
-                    <div className="flex flex-col items-center justify-center gap-4">
-                    <Check stroke='green'/>
+        <main className='flex flex-col items-center justify-center'>
+            {sent && !error ? (
+                <div className="flex flex-col items-center justify-center gap-4">
+                    <Check stroke='green' />
                     <p className='text-center'>Your inquiry has been sent. Please wait patiently for an answer.</p>
-                    </div>
-                ) : !sent && error ? (
-                    <div className="flex flex-col items-center justify-center gap-4">
-                    <X stroke="red"/>
+                </div>
+            ) : !sent && error ? (
+                <div className="flex flex-col items-center justify-center gap-4">
+                    <X stroke="red" />
                     <p className='text-center'>There has been an Error. Please try again later. If this error persists, feel free to reach out manually.</p>
                     <a href="mailto:hey@arlind.io" className='text-center'> hey@arlind.io</a>
+                </div>
+            ) :
+                <motion.section
+                    animate={{ y: 0, opacity: 1 }}
+                    initial={{ y: 10, opacity: 0 }}
+                    transition={{ duration: 0.5, ease: "easeInOut", delay: 0 }}
+                    className="flex flex-col items-center justify-center w-full">
+                    <div className='text-center mb-8'>
+                        <h1>Contact</h1>
+                        <p>Let&#39;s create something which has a soul to it.</p>
                     </div>
-                ) :
-            <motion.section
-                animate={{ y: 0, opacity: 1 }}
-                initial={{ y: 10, opacity: 0 }}
-                transition={{ duration: 0.5, ease: "easeInOut", delay: 0 }}
-                className="flex flex-col items-center justify-center w-full">
-                    <h1 className='text-4xl font-bold font-serif italic '>Contact</h1>
-                <h2 className='text-xl font-sans mb-8 text-center max-w-75'>
-                    Let&#39;s create something which has a soul to it.
-                </h2>
-                
+
                     <Form action={sendInquiry} className="flex flex-col gap-4 w-full max-w-md bg-background p-8 border border-white">
                         <motion.div
                             animate={{ y: 0, opacity: 1 }}
@@ -151,9 +151,9 @@ export default function ContactPage() {
                             Send Message
                         </motion.button>
                     </Form>
-                
-            </motion.section>
-}
+
+                </motion.section>
+            }
         </main>
     )
 }
