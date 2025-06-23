@@ -14,7 +14,7 @@
 
 @layer base {
   h1 {
-    @apply text-5xl font-bold leading-tight;
+    @apply text-5xl font-bold leading-tight font-serif;
   }
 
   h2 {
@@ -48,11 +48,35 @@
   }
   
   input:hover {
-    @apply outline-none ring-2 ring-blue-500;
+    @apply outline-none bg-neutral-800 transition-colors duration-200;
   }
 
   input:focus {
-    @apply outline-none ring-2 ring-blue-500;
+    @apply outline-none bg-neutral-900 transition-colors duration-200;
+  }
+
+  input {
+    @apply placeholder:text-neutral-700 text-neutral-100;
+  }
+
+  textarea {
+    @apply placeholder:text-neutral-700 text-neutral-100;
+  }
+
+  textarea:hover {
+    @apply outline-none bg-neutral-800 transition-colors duration-200;
+  }
+
+  textarea:focus {
+    @apply outline-none bg-neutral-900 transition-colors duration-200;
+  }
+
+  button {
+    @apply bg-neutral-200 text-neutral-950 p-2 transition-colors duration-200;
+  }
+
+  button:hover {
+    @apply bg-neutral-50;
   }
 
 

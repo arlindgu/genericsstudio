@@ -5,6 +5,7 @@ import { motion } from 'motion/react';
 import { useState } from 'react';
 import { Check, X } from 'lucide-react'
 
+
 export default function ContactPage() {
 
     const [sent, isSent] = useState(false)
@@ -40,7 +41,8 @@ export default function ContactPage() {
     }
 
     return (
-        <main className='flex flex-col items-center justify-center'>
+        <main className='flex flex-col items-center justify-center'
+        >
             {sent && !error ? (
                 <div className="flex flex-col items-center justify-center gap-4">
                     <Check stroke='green' />
@@ -70,14 +72,14 @@ export default function ContactPage() {
                             transition={{ duration: 0.5, ease: "easeInOut", delay: 0 }}
                             className="flex flex-col">
                             <div className='flex flex-row justify-between items-center'>
-                                <p>NAME</p>
-                                <p className='font-serif italic opacity-50'>required</p>
+                                <p>Full Name</p>
+                                <p className='text-sm italic text-neutral-400'>required</p>
 
                             </div>
                             <input
                                 type="text"
                                 name="name"
-                                placeholder="Full Name"
+                                placeholder="Max Mustermann"
                                 className="border px-3 py-2"
                                 required
                             />
@@ -89,15 +91,15 @@ export default function ContactPage() {
                             transition={{ duration: 0.5, ease: "easeInOut", delay: 0.1 }}
                             className="flex flex-col">
                             <div className='flex flex-row justify-between items-center'>
-                                <p>EMAIL</p>
-                                <p className='font-serif italic opacity-50'>required</p>
+                                <p>E-Mail Adress</p>
+                                <p className='italic text-sm text-neutral-400'>required</p>
 
                             </div>
 
                             <input
                                 type="email"
                                 name="email"
-                                placeholder="example@example.com"
+                                placeholder="max.mustermann@example.com"
                                 className="border px-3 py-2 focus:outline-none focus:bg-neutral- transition-colors duration-200"
                                 required
                             />
@@ -107,11 +109,11 @@ export default function ContactPage() {
                             initial={{ y: 10, opacity: 0 }}
                             transition={{ duration: 0.5, ease: "easeInOut", delay: 0.2 }}
                             className="flex flex-col">
-                            <p>WEBSITE</p>
+                            <p>Website</p>
                             <input
                                 type="text"
                                 name="website"
-                                placeholder="Website URL"
+                                placeholder="example.com"
                                 className="border px-3 py-2"
                             />
                         </motion.div >
@@ -120,11 +122,11 @@ export default function ContactPage() {
                             initial={{ y: 10, opacity: 0 }}
                             transition={{ duration: 0.5, ease: "easeInOut", delay: 0.3 }}
                             className="flex flex-col">
-                            <p>PROJECT NAME</p>
+                            <p>Prject Name</p>
                             <input
                                 type="text"
                                 name="projectName"
-                                placeholder="Project Name"
+                                placeholder="Max Clothing Store"
                                 className="border px-3 py-2"
                             />
                         </motion.div>
@@ -133,10 +135,10 @@ export default function ContactPage() {
                             initial={{ y: 10, opacity: 0 }}
                             transition={{ duration: 0.5, ease: "easeInOut", delay: 0.4 }}
                             className="flex flex-col">
-                            <p>DETAILS</p>
+                            <p>Details</p>
                             <textarea
                                 name="details"
-                                placeholder="Details about your project"
+                                placeholder="My project is about creating a modern e-commerce website for my clothing brand. I need a responsive design, SEO optimization, and a user-friendly interface."
                                 className="border px-3 py-2"
                                 rows={4}
                             />
@@ -146,7 +148,6 @@ export default function ContactPage() {
                             initial={{ y: 10, opacity: 0 }}
                             transition={{ duration: 0.5, ease: "easeInOut", delay: 0.5 }}
                             type="submit"
-                            className="bg-white text-black p-2"
                         >
                             Send Message
                         </motion.button>
