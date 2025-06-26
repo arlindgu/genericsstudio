@@ -29,7 +29,7 @@ export default function CaseStudiesPage() {
           className="flex flex-col h-fit gap-4 justify-center">
             <div className="flex flex-col items-center justify-center mb-8">
               <h1>Case Studies</h1>
-              <p>Explore our diverse range of projects that showcase our expertise and creativity.</p>
+              <p className="w-full text-center">Explore our diverse range of projects that showcase our expertise and creativity.</p>
             </div>
       {caseStudies.map(({ title, description, url, tags }, i) => (
         <motion.div  
