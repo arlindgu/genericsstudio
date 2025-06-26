@@ -17,7 +17,7 @@ export default function CaseStudiesPage() {
     title: "No Projects Yet",
     description: "We are currently working on our first case studies. Stay tuned!",
     url: "/case-studies/",
-    tags: ["web design", "development", "UI/UX", "open source"]
+    tags: []
   },
 ];
 

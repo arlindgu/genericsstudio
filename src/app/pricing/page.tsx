@@ -9,10 +9,10 @@ const pricingOptions: PricingCardProps[] = [
     currency: "CHF",
     features: [
       "Up to 5 Pages",
-      "Priorisierter Support"
+      "Responsive Design",
     ],
-    buttonText: "Deep wählen",
-    buttonUrl: "/pricing/deep",
+    buttonText: "Choose Deep",
+    buttonUrl: "/contact",
   },
     {
     title: "Start Plan",
@@ -22,21 +22,21 @@ const pricingOptions: PricingCardProps[] = [
     features: [
       "One Landing Page",
       "Unlimited Length",
-      "Support per Mail"
+      "Responsive Design",
     ],
-    buttonText: "Start wählen",
-    buttonUrl: "/pricing/start",
+    buttonText: "Choose Start",
+    buttonUrl: "/contact",
   },
   {
     title: "Elite Plan",
-    description: "Freiheit.",
+    description: "Freedom.",
     price: "Consult",
     features: [
       "Custom",
       "24/7 Support",
     ],
-    buttonText: "Elite wählen",
-    buttonUrl: "/pricing/elite"
+    buttonText: "Choose Elite",
+    buttonUrl: "/contact"
   }
 ];
 
