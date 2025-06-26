@@ -42,7 +42,7 @@ const pricingOptions: PricingCardProps[] = [
 
   return (
     <main className="flex flex-col items-center justify-center gap-4">
-      <title>GURGUROVCI Studios – Pricing</title>
+      <title>VIVID Studios – Pricing</title>
 
       <div className="self-center flex flex-col items-center justify-center">
       <h1>Pricing Plans</h1>

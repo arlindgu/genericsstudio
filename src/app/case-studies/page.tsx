@@ -14,9 +14,9 @@ export default function CaseStudiesPage() {
 
   const caseStudies: CaseStudiesPageProps[] = [
   {
-    title: "ES-SELAM MOSQUE",
-    description: "Development of a modern website using Next.js and TailwindCSS, designed for seamless integration with a content management system (CMS) and database. The setup is prepared for additional features such as prayer times management, dynamic content handling, and future scalability.",
-    url: "/case-studies/es-selam-mosque",
+    title: "No Projects Yet",
+    description: "We are currently working on our first case studies. Stay tuned!",
+    url: "/case-studies/",
     tags: ["web design", "development", "UI/UX", "open source"]
   },
 ];
@@ -37,20 +37,21 @@ export default function CaseStudiesPage() {
           initial={{ y: 100, opacity: 0 }}
           transition={{ duration: 1.5, ease: "easeInOut", delay: 0.1 * i }}
           key={url} className="border p-4 max-w-4xl bg-back">
-          <div className="flex flex-row justify-between items-center">
-          <a href={url} className="uppercase text-2xl font-semibold hover:underline">
+          <div className="flex flex-col justify-between items-start">
+          <a href={url} className="uppercase text-2xl font-semibold hover:underline order-2">
             {title}
           </a>
-          <div>
-                                  {tags.map((tag) => (
-              <Tag key={tag} tag={tag}/>
-            ))}
-            </div>
+
 
           </div>
           <p className="text-sm text-gray-400">
           {description}
           </p>
+                    <div>
+                                  {tags.map((tag) => (
+              <Tag key={tag} tag={tag}/>
+            ))}
+            </div>
         </motion.div>
       ))}
     </div>

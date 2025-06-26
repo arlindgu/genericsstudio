@@ -17,9 +17,9 @@ const instrumentSans = Instrument_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "GURGUROVCI Studios – Web Design & Development for Startups and SMEs",
+  title: "VIVID Studios – Web Design & Development for Startups and SMEs",
   keywords: [
-    "GURGUROVCI Studios",
+    "VIVID Studios",
     "web design agency",
     "custom websites",
     "responsive web development",
@@ -34,10 +34,10 @@ export const metadata: Metadata = {
     "startup website design",
     "Switzerland web agency"
   ],
-  authors: [{ name: "Arlind Gurgurovci", url: "https://arlind.io" }],
-  creator: "Arlind Gurgurovci",
+  authors: [{ name: "VIVID Studios", url: "https://arlind.io" }],
+  creator: "VIVID Studios",
   description:
-    "GURGUROVCI Studios is a Switzerland-based web design and development agency that creates custom, responsive, and SEO-optimized websites for startups and SMEs. We combine modern design, clean code, and user-focused strategy to boost online visibility and drive business growth.",
+    "VIVID Studios is a Switzerland-based web design and development agency that creates custom, responsive, and SEO-optimized websites for startups and SMEs. We combine modern design, clean code, and user-focused strategy to boost online visibility and drive business growth.",
 };
 
 export default function RootLayout({

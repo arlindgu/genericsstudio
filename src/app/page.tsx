@@ -11,7 +11,7 @@ export default function Home() {
         transition={{ duration: 1 }}
       >
         <h1>
-          <span className="font-normal">GURGUROVCI</span> <span className="font-bold">Studios</span>
+          <span className="font-normal">VIVID</span> <span className="font-bold">Studios</span>
         </h1>
       </motion.div>
 
