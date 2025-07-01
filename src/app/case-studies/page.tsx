@@ -13,48 +13,51 @@ export default function CaseStudiesPage() {
   };
 
   const caseStudies: CaseStudiesPageProps[] = [
-  {
-    title: "No Projects Yet",
-    description: "We are currently working on our first case studies. Stay tuned!",
-    url: "/case-studies/",
-    tags: []
-  },
-];
+    {
+      title: "didischocoberrys",
+      description: "For didischocoberrys, we developed a custom landing page focused on consistent branding, user-friendly UI/UX design, and a clear structure to increase conversions. A responsive contact form and targeted SEO optimizations were integrated to improve visibility on Google.",
+      url: "https://didis.arlind.io/",
+      tags: ["Web Design", "Landing Page", "UI/UX", "SEO", "Branding", "Contact Form"]
+    },
+  ];
 
 
   return (
     <main className="flex flex-col items-center justify-center">
-          <div 
+      <div
 
-          className="flex flex-col h-fit gap-4 justify-center">
-            <div className="flex flex-col items-center justify-center mb-8">
-              <h1>Case Studies</h1>
-              <p className="w-full text-center">Explore our diverse range of projects that showcase our expertise and creativity.</p>
-            </div>
-      {caseStudies.map(({ title, description, url, tags }, i) => (
-        <motion.div  
-        animate={{ y: 0, opacity: 1 }}
-          initial={{ y: 100, opacity: 0 }}
-          transition={{ duration: 1.5, ease: "easeInOut", delay: 0.1 * i }}
-          key={url} className="border p-4 max-w-4xl bg-back">
-          <div className="flex flex-col justify-between items-start">
-          <a href={url} className="uppercase text-2xl font-semibold hover:underline order-2">
-            {title}
-          </a>
+        className="flex flex-col h-fit gap-4 justify-center">
+        <div className="flex flex-col items-center justify-center mb-8">
+          <h1>Case Studies</h1>
+          <p className="w-full text-center">Explore our diverse range of projects that showcase our expertise and creativity.</p>
+        </div>
 
+        {caseStudies.map(({ title, description, url, tags }, i) => (
 
-          </div>
-          <p className="text-sm text-gray-400">
-          {description}
-          </p>
-                    <div>
-                                  {tags.map((tag) => (
-              <Tag key={tag} tag={tag}/>
+          <motion.div
+            animate={{ y: 0, opacity: 1 }}
+            initial={{ y: 10, opacity: 0 }}
+            transition={{ duration: 0.5, ease: "easeInOut", delay: 0.1 + i * 0.1 }}
+            key={url} className="border p-4 max-w-xl bg-back">
+            {tags.map((tag) => (
+              <Tag key={tag} tag={tag} />
             ))}
+            <div className="flex flex-col justify-between items-start">
+              <a href={url} className="uppercase text-2xl font-semibold hover:underline order-2">
+                {title}
+              </a>
+
+
             </div>
-        </motion.div>
-      ))}
-    </div>
+            <p className="text-sm text-licorice-700">
+              {description}
+            </p>
+            <div>
+
+            </div>
+          </motion.div>
+        ))}
+      </div>
     </main>
 
   );

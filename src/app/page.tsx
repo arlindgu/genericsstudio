@@ -32,7 +32,7 @@ export default function Home() {
         initial={{ opacity: 0 }}
         transition={{ duration: 1.5, ease: "easeInOut", delay: 2.5 }}
       >
-        <p className="text-xl">
+        <p className="text-xl lowercase italic">
           fuck the templates, build with soul.
         </p>
       </motion.div>

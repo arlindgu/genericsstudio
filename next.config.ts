@@ -22,7 +22,7 @@ const nextConfig = {
   },
   
   // Deine anderen Configs hier...
-  reactStrictMode: false,
+  reactStrictMode: true,
   // swcMinify ist deprecated, rausnehme
 
   devIndicators: false,
