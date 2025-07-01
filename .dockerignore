@@ -1,10 +1,21 @@
-Dockerfile
-.dockerignore
-node_modules
-npm-debug.log
-README.md
-.env
-.git
-.gitignore
+# Build output
 .next
 .vercel
+
+# Dependencies
+node_modules
+
+# Logs
+npm-debug.log
+
+# Env
+.env
+
+# Git
+.git
+.gitignore
+
+# Misc
+Dockerfile
+.dockerignore
+README.md
