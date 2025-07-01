@@ -23,7 +23,7 @@ export default function Footer() {
                             initial={{ y: 100, opacity: 0 }}
                             transition={{ duration: 0.5, ease: "easeInOut", delay: 0.1 + i * 0.1 }}
                             key={href}
-                            className="border-t last:border-b p-2 text-sm uppercase"
+                            className="border-t last:border-b p-2 text-base uppercase font-bold"
                         >
                         <Link href={href}>
                                 {label}

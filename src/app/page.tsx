@@ -32,8 +32,8 @@ export default function Home() {
         initial={{ opacity: 0 }}
         transition={{ duration: 1.5, ease: "easeInOut", delay: 2.5 }}
       >
-        <p className="text-xl lowercase italic">
-          fuck the templates, build with soul.
+        <p className="text-base italic text-center md:text-xl ">
+          Don’t build from templates — Build with intent. With soul.
         </p>
       </motion.div>
     </div>

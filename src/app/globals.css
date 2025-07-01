@@ -9,8 +9,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-instrument-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-serif: var(--font-instrument-serif), ui-serif, Georgia, serif;
+  --font-sans: var(--font-instrument-sans);
+  --font-serif: var(--font-instrument-serif);
 
   --color-licorice: oklch(22.082% 0.01825 62.847);
   --color-licorice-50: oklch(86.652% 0.02341 61.191);
@@ -80,11 +80,11 @@
   }
 
   input:focus {
-    @apply outline-licorice-800 outline-2
+    @apply  outline-licorice
   }
 
   input:hover {
-    @apply outline-2 outline-licorice-500
+    @apply  outline-licorice
   }
 
   textarea {
@@ -92,11 +92,11 @@
   }
 
   textarea:focus {
-    @apply outline-licorice-800 outline-2
+    @apply  outline-licorice
   }
 
   textarea:hover {
-    @apply outline-none
+    @apply  outline-licorice
   }
 
   button {

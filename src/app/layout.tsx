@@ -16,8 +16,12 @@ const instrumentSans = Instrument_Sans({
   subsets: ["latin"],
 });
 
+
+
 export const metadata: Metadata = {
-  title: "Generics Studio – Web Design & Development for Startups and SMEs",
+  metadataBase: new URL("https://generics.studio"),
+  applicationName: "Generics Studio",
+  title: "Generics Studio",
   keywords: [
     "Generics Studio",
     "web design agency",

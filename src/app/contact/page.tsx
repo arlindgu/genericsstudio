@@ -45,14 +45,14 @@ export default function ContactPage() {
         >
             {sent && !error ? (
                 <div className="flex flex-col items-center justify-center gap-4">
-                    <Check stroke='green' />
+                    <Check stroke='#211912' />
                     <p className='text-center'>Your inquiry has been sent. Please wait patiently for an answer.</p>
                 </div>
             ) : !sent && error ? (
                 <div className="flex flex-col items-center justify-center gap-4">
-                    <X stroke="red" />
+                    <X stroke="#211912" />
                     <p className='text-center'>There has been an Error. Please try again later. If this error persists, feel free to reach out manually.</p>
-                    <a href="mailto:hey@arlind.io" className='text-center'> hey@arlind.io</a>
+                    <a href="mailto:hey@arlind.io" className='text-center'>info@generics.studio</a>
                 </div>
             ) :
                 <motion.section
