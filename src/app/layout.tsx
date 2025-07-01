@@ -17,9 +17,9 @@ const instrumentSans = Instrument_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Generic Studio – Web Design & Development for Startups and SMEs",
+  title: "Generics Studio – Web Design & Development for Startups and SMEs",
   keywords: [
-    "Generic Studio",
+    "Generics Studio",
     "web design agency",
     "custom websites",
     "responsive web development",
@@ -34,10 +34,10 @@ export const metadata: Metadata = {
     "startup website design",
     "Switzerland web agency"
   ],
-  authors: [{ name: "Generic Studio", url: "https://arlind.io" }],
-  creator: "Generic Studio",
+  authors: [{ name: "Generics Studio", url: "https://arlind.io" }],
+  creator: "Generics Studio",
   description:
-    "Generic Studio is a Switzerland-based web design and development agency that creates custom, responsive, and SEO-optimized websites for startups and SMEs. We combine modern design, clean code, and user-focused strategy to boost online visibility and drive business growth.",
+    "Generics Studio is a Switzerland-based web design and development agency that creates custom, responsive, and SEO-optimized websites for startups and SMEs. We combine modern design, clean code, and user-focused strategy to boost online visibility and drive business growth.",
 };
 
 export default function RootLayout({
