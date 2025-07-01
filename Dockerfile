@@ -5,8 +5,8 @@ FROM node:20-alpine AS deps
 WORKDIR /app
 
 # Install dependencies only, copy package files first for better cache
-COPY package.json package-lock.json* pnpm-lock.yaml* yarn.lock* ./
-RUN npm install --frozen-lockfile
+COPY package.json package-lock.json* pnpm-lock.yaml* yarn.lock* tsconfig.json ./
+RUN npm ci
 
 # Copy the rest of the application code
 FROM node:20-alpine AS builder
