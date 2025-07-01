@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Instrument_Serif, Instrument_Sans } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/footer";
+import Footer from "@/components/Footer";
 import Header from "@/components/header";
 
 const instrumentSerif = Instrument_Serif({
@@ -17,9 +17,9 @@ const instrumentSans = Instrument_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "VIVID Studios – Web Design & Development for Startups and SMEs",
+  title: "Generic Studio – Web Design & Development for Startups and SMEs",
   keywords: [
-    "VIVID Studios",
+    "Generic Studio",
     "web design agency",
     "custom websites",
     "responsive web development",
@@ -34,10 +34,10 @@ export const metadata: Metadata = {
     "startup website design",
     "Switzerland web agency"
   ],
-  authors: [{ name: "VIVID Studios", url: "https://arlind.io" }],
-  creator: "VIVID Studios",
+  authors: [{ name: "Generic Studio", url: "https://arlind.io" }],
+  creator: "Generic Studio",
   description:
-    "VIVID Studios is a Switzerland-based web design and development agency that creates custom, responsive, and SEO-optimized websites for startups and SMEs. We combine modern design, clean code, and user-focused strategy to boost online visibility and drive business growth.",
+    "Generic Studio is a Switzerland-based web design and development agency that creates custom, responsive, and SEO-optimized websites for startups and SMEs. We combine modern design, clean code, and user-focused strategy to boost online visibility and drive business growth.",
 };
 
 export default function RootLayout({
@@ -51,13 +51,15 @@ export default function RootLayout({
         className={`${instrumentSerif.variable} ${instrumentSans.variable}`}
       >
         <div className="min-h-screen flex flex-col">
-          <Header />
-          <main className="flex-1 flex items-center justify-center px-8 py-12">
-            <div className="w-full max-w-5xl">
+                            <Header />
+          <main className="flex-1 flex items-center justify-center px-4 py-8">
+            <div className="w-full md:max-w-5xl">
+
               {children}
+                        
             </div>
           </main>
-          <Footer />
+<Footer />
         </div>
       </body>
     </html>

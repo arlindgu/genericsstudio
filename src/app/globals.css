@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f8f7f2;
+  --foreground: #211912;
 }
 
 @theme inline {
@@ -10,11 +10,39 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-instrument-sans), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-instrument-serif), ui-serif, Georgia, serif;
+
+  --color-licorice: oklch(22.082% 0.01825 62.847);
+  --color-licorice-50: oklch(86.652% 0.02341 61.191);
+  --color-licorice-100: oklch(83.626% 0.0291 65.702);
+  --color-licorice-200: oklch(77.544% 0.04021 63.381);
+  --color-licorice-300: oklch(71.395% 0.0518 61.831);
+  --color-licorice-400: oklch(65.06% 0.06383 62.195);
+  --color-licorice-500: oklch(58.435% 0.06527 61.871);
+  --color-licorice-600: oklch(50.924% 0.05583 63.044);
+  --color-licorice-700: oklch(43.266% 0.04597 62.334);
+  --color-licorice-800: oklch(35.251% 0.03556 61.086);
+  --color-licorice-900: oklch(26.593% 0.02435 63.752);
+  --color-licorice-950: oklch(22.082% 0.01825 62.847);
+
+  --color-powder: oklch(97.552% 0.0067 97.351);
+  --color-powder-50: oklch(97.552% 0.0067 97.351);
+  --color-powder-100: oklch(94.136% 0.01609 99.001);
+  --color-powder-200: oklch(87.091% 0.03545 96.342);
+  --color-powder-300: oklch(80.103% 0.05454 98.027);
+  --color-powder-400: oklch(72.796% 0.07336 98.059);
+  --color-powder-500: oklch(64.587% 0.08131 99.149);
+  --color-powder-600: oklch(53.204% 0.06452 98.294);
+  --color-powder-700: oklch(41.049% 0.04771 98.614);
+  --color-powder-800: oklch(28.285% 0.03061 99.933);
+  --color-powder-900: oklch(13.426% 0.00844 94.11);
+  --color-powder-950: oklch(0% 0 none);
+
+
 }
 
 @layer base {
   h1 {
-    @apply text-5xl font-bold leading-tight font-serif;
+    @apply text-5xl font-bold tracking-tighter font-serif;
   }
 
   h2 {
@@ -46,45 +74,32 @@
     color: var(--foreground);
     font-family: var(--font-instrument-sans), ui-sans-serif, system-ui, sans-serif;
   }
-  
-  input:hover {
-    @apply outline-none bg-neutral-800 transition-colors duration-200;
+
+  input {
+    @apply outline-licorice
   }
 
   input:focus {
-    @apply outline-none bg-neutral-900 transition-colors duration-200;
+    @apply outline-licorice-800 outline-2
   }
 
-  input {
-    @apply placeholder:text-neutral-700 text-neutral-100;
+  input:hover {
+    @apply outline-2 outline-licorice-500
   }
 
   textarea {
-    @apply placeholder:text-neutral-700 text-neutral-100;
-  }
-
-  textarea:hover {
-    @apply outline-none bg-neutral-800 transition-colors duration-200;
+    @apply outline-licorice resize-none scroll-auto
   }
 
   textarea:focus {
-    @apply outline-none bg-neutral-900 transition-colors duration-200;
+    @apply outline-licorice-800 outline-2
+  }
+
+  textarea:hover {
+    @apply outline-none
   }
 
   button {
-    @apply bg-neutral-200 text-neutral-950 p-2 transition-colors duration-200;
-  }
-
-  button:hover {
-    @apply bg-neutral-50;
-  }
-
-
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    @apply bg-licorice text-foreground text-white py-2 px-4 transition-colors duration-200 ease-in-out;
   }
 }

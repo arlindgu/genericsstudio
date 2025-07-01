@@ -1,3 +1,5 @@
+import { devIndicatorServerState } from "next/dist/server/dev/dev-indicator-server-state"
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -21,7 +23,9 @@ const nextConfig = {
   
   // Deine anderen Configs hier...
   reactStrictMode: false,
-  // swcMinify ist deprecated, rausnehmen
+  // swcMinify ist deprecated, rausnehme
+
+  devIndicators: false,
 }
 
 module.exports = nextConfig
