@@ -16,7 +16,7 @@ export default function Footer() {
                         <a
                             key={href}
                             href={href}
-                            className="border-t last:border-b p-2 font-sans text-sm"
+                            className="border-t last:border-b p-2 text-sm"
                         >
                             {label}
                         </a>

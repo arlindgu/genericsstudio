@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Instrument_Serif, Instrument_Sans } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/Footer";
 import Header from "@/components/header";
+import Footer from "@/components/Footer";
 
 const instrumentSerif = Instrument_Serif({
   variable: "--font-instrument-serif",
