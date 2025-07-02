@@ -2,10 +2,6 @@ import { devIndicatorServerState } from "next/dist/server/dev/dev-indicator-serv
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  webpack: (config, {isServer}) => {
-    config.cache = false;
-    return config;
-  },
   images: {
     domains: [
       'i.imgur.com',
