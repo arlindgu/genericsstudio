@@ -43,7 +43,7 @@
 
 @layer base {
   h1 {
-    @apply text-5xl font-bold tracking-tighter font-serif;
+    @apply text-5xl font-bold tracking-tight font-serif italic;
   }
 
   h2 {
@@ -80,7 +80,7 @@
   }
 
   input:focus {
-    @apply  outline-licorice
+    @apply  outline-licorice outline-none 
   }
 
   input:hover {
@@ -92,7 +92,7 @@
   }
 
   textarea:focus {
-    @apply  outline-licorice
+    @apply  outline-licorice outline-none
   }
 
   textarea:hover {

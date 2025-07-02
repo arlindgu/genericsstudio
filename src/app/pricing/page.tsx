@@ -27,21 +27,29 @@ export default function PricingPage() {
       ],
     },
     {
-      title: "Custom Plan",
-      description: "Freedom in everything.",
+      title: "Ultra Plan",
+      description: "Website with up to 10 pages. Perfect for medium businesses.",
+      price: "2500",
+      currency: "CHF",
+      features: [
+        "Up to 10 Pages",
+        "Responsive Design",
+        "SEO Optimization",
+        "Contact Form",
+      ],
+    },
+    {
+      title: "Need something else?",
       buttonText: "Contact Us",
-      buttonUrl: "/contact"
+      buttonUrl: "/contact",
     }
   ];
 
   return (
     <main className="flex flex-col items-center justify-center gap-4">
       <title>Generics Studio – Pricing</title>
-
-      <div className="self-center flex flex-col items-center justify-center">
         <h1>Pricing Plans</h1>
         <p>Choose the plan that fits your needs</p>
-      </div>
       <div className="flex flex-col sm:flex-row gap-4 sm:justify-center">
         {pricingOptions.map((option, index) => (
           <motion.div
