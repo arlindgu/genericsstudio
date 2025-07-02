@@ -54,13 +54,11 @@ export default function RootLayout({
       <body
         className={`${instrumentSerif.variable} ${instrumentSans.variable}`}
       >
-        <div className="min-h-screen flex flex-col">
+        <div className="h-dvh flex flex-col">
                             <Header />
           <main className="flex-1 flex items-center justify-center px-4 py-8">
-            <div className="w-full md:max-w-5xl">
-
+            <div className="w-full md:max-w-xl xl:max-w-5xl">
               {children}
-                        
             </div>
           </main>
 <Footer />

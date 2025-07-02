@@ -40,7 +40,7 @@ export default function FormComponent() {
     }
 
     return (
-        <div className='w-full'>
+        <div className='flex w-full'>
             {sent && !error ? (
                 <div className="flex flex-col items-center justify-center gap-4">
                     <Check stroke='#211912' />
@@ -58,7 +58,7 @@ export default function FormComponent() {
                     initial={{ y: 10, opacity: 0 }}
                     transition={{ duration: 0.5, ease: "easeInOut", delay: 0 }}
                     className="flex flex-col items-center justify-center w-full">
-                    <Form action={sendInquiry} className="flex flex-col gap-4 w-full max-w-xl p-8 border border-licorice shadow-md">
+                    <Form action={sendInquiry} className="flex flex-col gap-4 w-full p-8 border border-licorice shadow-md">
                         <motion.div
                             animate={{ y: 0, opacity: 1 }}
                             initial={{ y: 10, opacity: 0 }}

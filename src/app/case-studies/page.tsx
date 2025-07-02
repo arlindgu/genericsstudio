@@ -38,7 +38,7 @@ export default function CaseStudiesPage() {
             animate={{ y: 0, opacity: 1 }}
             initial={{ y: 10, opacity: 0 }}
             transition={{ duration: 0.5, ease: "easeInOut", delay: 0.1 + i * 0.1 }}
-            key={url} className="border p-4 max-w-xl bg-background shadow-md">
+            key={url} className="border p-4 bg-background shadow-md">
             <div className="flex flex-col justify-between items-start">
               <a href={url} className="uppercase text-2xl font-bold hover:underline order-2 ">
                 {title}

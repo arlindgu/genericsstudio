@@ -21,7 +21,7 @@ export default function ContactPage() {
                 <p>After you submitted your inquiry, the following steps will occur.</p>
             </div>
 
-            <div className="flex flex-col items-center justify-center gap-4 w-full max-w-2xl">
+            <div className="flex flex-col items-center justify-center gap-4 w-full">
                 <Steps step={0}>You send us an inquiry.</Steps>
                 <Steps step={1}>We review it.</Steps>
                 <Steps step={2}>We get in touch with you.</Steps>
