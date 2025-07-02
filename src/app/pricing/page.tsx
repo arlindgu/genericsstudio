@@ -47,9 +47,11 @@ export default function PricingPage() {
 
   return (
     <main className="flex flex-col items-center justify-center gap-4">
+      <div className="text-center">
       <title>Generics Studio – Pricing</title>
         <h1>Pricing Plans</h1>
         <p>Choose the plan that fits your needs</p>
+        </div>
       <div className="flex flex-col sm:flex-row gap-4 sm:justify-center">
         {pricingOptions.map((option, index) => (
           <motion.div

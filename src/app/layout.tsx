@@ -12,7 +12,7 @@ const instrumentSerif = Instrument_Serif({
 
 const instrumentSans = Instrument_Sans({
   variable: "--font-instrument-sans",
-  weight: "variable",
+  weight: "400",
   subsets: ["latin"],
 });
 

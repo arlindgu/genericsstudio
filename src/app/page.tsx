@@ -3,7 +3,7 @@ import { motion } from "motion/react"
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center gap-8">
       <motion.div
       animate={{ opacity: 1 }}
       initial={{ opacity: 0 }}

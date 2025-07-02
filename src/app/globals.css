@@ -42,33 +42,34 @@
 }
 
 @layer base {
+
   h1 {
-    @apply text-5xl font-bold tracking-tight font-serif italic;
-  }
+  @apply text-5xl font-bold tracking-tight font-serif leading-[58px];
+}
 
-  h2 {
-    @apply text-4xl font-semibold font-serif;
-  }
+h2 {
+  @apply text-4xl font-semibold font-serif leading-[47px];
+}
 
-  h3 {
-    @apply text-3xl font-semibold font-serif;
-  }
+h3 {
+  @apply text-3xl font-semibold font-serif leading-[39px];
+}
 
-  h4 {
-    @apply text-2xl font-serif;
-  }
+h4 {
+  @apply text-2xl font-serif leading-[34px];
+}
 
-  h5 {
-    @apply text-xl font-serif;
-  }
+h5 {
+  @apply text-xl font-serif leading-[28px];
+}
 
-  h6 {
-    @apply text-lg font-serif;
-  }
+h6 {
+  @apply text-lg font-serif leading-[27px];
+}
 
-  p {
-    @apply text-base font-sans;
-  }
+p {
+  @apply text-base font-sans leading-6; /* 24px */
+}
 
   body {
     background: var(--background);
