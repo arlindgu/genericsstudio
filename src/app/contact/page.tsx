@@ -65,7 +65,7 @@ export default function ContactPage() {
                         <p>Let&#39;s create something which has a soul to it.</p>
                     </div>
 
-                    <Form action={sendInquiry} className="flex flex-col gap-4 w-full max-w-xl p-8 border border-licorice">
+                    <Form action={sendInquiry} className="flex flex-col gap-4 w-full max-w-xl p-8 border border-licorice shadow-md">
                         <motion.div
                             animate={{ y: 0, opacity: 1 }}
                             initial={{ y: 10, opacity: 0 }}
