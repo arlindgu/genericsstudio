@@ -23,7 +23,7 @@ export default function CaseStudiesPage() {
 
 
   return (
-    <main className="flex flex-col items-center justify-center">
+    <main className="flex flex-col items-center justify-center gap-8">
       <div
 
         className="flex flex-col h-fit gap-4 justify-center">

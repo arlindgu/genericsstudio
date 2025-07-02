@@ -10,7 +10,7 @@ export default function AboutPage() {
     console.log('SVG Files:', svgFiles);
 
     return (
-        <main className="flex flex-col items-center justify-center">
+        <main className="flex flex-col items-center justify-center gap-8">
             <div className="flex flex-col gap-4">
                 <div className="flex flex-col">
                     <h1 className='text-center'>About <span className='italic'>Generic Studio</span></h1>

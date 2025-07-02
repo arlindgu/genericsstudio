@@ -30,6 +30,11 @@ export default function Footer() {
                             </Link>
                         </motion.p>
                     ))}
+                    <div className="mb-4 mt-4">
+                        <p className="text-sm text-center text-muted-foreground">
+                            &copy; {new Date().getFullYear()} Generics Studio. All rights reserved.
+                        </p>
+                    </div>
                 </div>
         </footer>
     );

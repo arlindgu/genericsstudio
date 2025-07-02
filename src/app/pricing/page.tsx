@@ -46,7 +46,7 @@ export default function PricingPage() {
   ];
 
   return (
-    <main className="flex flex-col items-center justify-center gap-4">
+    <main className="flex flex-col items-center justify-center gap-8">
       <div className="text-center">
       <title>Generics Studio – Pricing</title>
         <h1>Pricing Plans</h1>
