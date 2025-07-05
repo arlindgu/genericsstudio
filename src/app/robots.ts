@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/private/'],
       },
     ],
-    sitemap: 'https://portfolio.arlind.io/sitemap.xml',
+    sitemap: 'https://generics.studio/sitemap.xml',
   }
 }

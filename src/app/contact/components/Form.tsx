@@ -50,7 +50,7 @@ export default function FormComponent() {
                 <div className="flex flex-col items-center justify-center gap-4">
                     <X stroke="#211912" />
                     <p className='text-center'>There has been an Error. Please try again later. If this error persists, feel free to reach out manually.</p>
-                    <a href="mailto:hey@arlind.io" className='text-center'>info@generics.studio</a>
+                    <a href="mailto:info@generics.studio" className='text-center'>info@generics.studio</a>
                 </div>
             ) :
                 <motion.section

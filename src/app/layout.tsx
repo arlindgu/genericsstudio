@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     "startup website design",
     "Switzerland web agency"
   ],
-  authors: [{ name: "Generics Studio", url: "https://arlind.io" }],
+  authors: [{ name: "Generics Studio", url: "https://generics.studio/" }],
   creator: "Generics Studio",
   description:
     "Generics Studio is a Switzerland-based web design and development agency that creates custom, responsive, and SEO-optimized websites for startups and SMEs. We combine modern design, clean code, and user-focused strategy to boost online visibility and drive business growth.",
