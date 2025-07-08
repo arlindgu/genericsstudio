@@ -16,12 +16,12 @@ export default function ContactPage() {
                 <p>Let&#39;s create something which has a soul to it.</p>
             </div>
             <FormComponent />
-            <div className="text-center">
+            <div className="text-center hidden">
                 <h2>How will the process be?</h2>
                 <p>After you submitted your inquiry, the following steps will occur.</p>
             </div>
 
-            <div className="flex flex-col items-center justify-center gap-4 w-full">
+            <div className="flex-col items-center justify-center gap-4 w-full hidden">
                 <Steps step={0}>You send us an inquiry.</Steps>
                 <Steps step={1}>We review it.</Steps>
                 <Steps step={2}>We get in touch with you.</Steps>

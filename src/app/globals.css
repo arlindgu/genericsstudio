@@ -1,77 +1,101 @@
 @import "tailwindcss";
 
 :root {
-  --background: oklch(97.552% 0.0067 97.351);
-  --foreground: oklch(22.082% 0.01825 62.847);
-
+  --background: var(--color-powder);
+  --foreground: var(--color-night);
 }
 
 @theme inline {
+  --color-night: oklch(23.544% 0.00189 286.25);
+  --color-night-50: oklch(87.36% 0.00272 286.34);
+  --color-night-100: oklch(84.27% 0.00275 286.34);
+  --color-night-200: oklch(77.717% 0.00421 286.3);
+  --color-night-300: oklch(71.316% 0.0043 286.29);
+  --color-night-400: oklch(64.467% 0.00588 286.23);
+  --color-night-500: oklch(57.399% 0.00606 286.21);
+  --color-night-600: oklch(50.458% 0.00626 286.17);
+  --color-night-700: oklch(43.233% 0.00488 286.19);
+  --color-night-800: oklch(35.691% 0.00341 286.23);
+  --color-night-900: oklch(27.724% 0.00181 286.28);
+  --color-night-950: oklch(23.544% 0.00189 286.25);
+
+  --color-powder: oklch(99.592% 0.00526 106.49);
+  --color-powder-50: oklch(100% 0 none);
+  --color-powder-100: oklch(99.592% 0.00526 106.49);
+  --color-powder-200: oklch(95.959% 0.05454 107.38);
+  --color-powder-300: oklch(92.22% 0.09983 108.21);
+  --color-powder-400: oklch(88.967% 0.13883 108.92);
+  --color-powder-500: oklch(85.903% 0.16718 109.46);
+  --color-powder-600: oklch(76.463% 0.15708 109.6);
+  --color-powder-700: oklch(62.052% 0.12615 109.57);
+  --color-powder-800: oklch(46.397% 0.09207 109.51);
+  --color-powder-900: oklch(29.252% 0.05439 109.34);
+  --color-powder-950: oklch(19.926% 0.03261 109.03);
+
+  --color-trinidad: oklch(62.257% 0.19048 41.28);
+  --color-trinidad-50: oklch(90.928% 0.05352 52.316);
+  --color-trinidad-100: oklch(88.04% 0.07164 51.453);
+  --color-trinidad-200: oklch(82.498% 0.10914 50.681);
+  --color-trinidad-300: oklch(77.41% 0.14591 49.339);
+  --color-trinidad-400: oklch(72.938% 0.17888 46.568);
+  --color-trinidad-500: oklch(69.349% 0.20507 42.358);
+  --color-trinidad-600: oklch(62.257% 0.19048 41.28);
+  --color-trinidad-700: oklch(50.439% 0.15235 41.949);
+  --color-trinidad-800: oklch(38.032% 0.11075 43.941);
+  --color-trinidad-900: oklch(24.374% 0.06587 48.508);
+  --color-trinidad-950: oklch(16.988% 0.04058 58.185);
+
+  --color-butterfly: oklch(51.137% 0.13404 302.57);
+  --color-butterfly-50: oklch(92.765% 0.01978 305.25);
+  --color-butterfly-100: oklch(88.956% 0.03 305.09);
+  --color-butterfly-200: oklch(81.371% 0.05274 305.36);
+  --color-butterfly-300: oklch(73.844% 0.07341 305.11);
+  --color-butterfly-400: oklch(66.081% 0.09793 304.64);
+  --color-butterfly-500: oklch(58.463% 0.1212 303.56);
+  --color-butterfly-600: oklch(51.137% 0.13404 302.57);
+  --color-butterfly-700: oklch(42.717% 0.10761 302.7);
+  --color-butterfly-800: oklch(33.67% 0.08129 303.4);
+  --color-butterfly-900: oklch(24.253% 0.05211 303.23);
+  --color-butterfly-950: oklch(19.115% 0.03491 302.17);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-instrument-sans);
   --font-serif: var(--font-instrument-serif);
-
-  --color-licorice: oklch(22.082% 0.01825 62.847);
-  --color-licorice-50: oklch(86.652% 0.02341 61.191);
-  --color-licorice-100: oklch(83.626% 0.0291 65.702);
-  --color-licorice-200: oklch(77.544% 0.04021 63.381);
-  --color-licorice-300: oklch(71.395% 0.0518 61.831);
-  --color-licorice-400: oklch(65.06% 0.06383 62.195);
-  --color-licorice-500: oklch(58.435% 0.06527 61.871);
-  --color-licorice-600: oklch(50.924% 0.05583 63.044);
-  --color-licorice-700: oklch(43.266% 0.04597 62.334);
-  --color-licorice-800: oklch(35.251% 0.03556 61.086);
-  --color-licorice-900: oklch(26.593% 0.02435 63.752);
-  --color-licorice-950: oklch(22.082% 0.01825 62.847);
-
-  --color-powder: oklch(97.552% 0.0067 97.351);
-  --color-powder-50: oklch(97.552% 0.0067 97.351);
-  --color-powder-100: oklch(94.136% 0.01609 99.001);
-  --color-powder-200: oklch(87.091% 0.03545 96.342);
-  --color-powder-300: oklch(80.103% 0.05454 98.027);
-  --color-powder-400: oklch(72.796% 0.07336 98.059);
-  --color-powder-500: oklch(64.587% 0.08131 99.149);
-  --color-powder-600: oklch(53.204% 0.06452 98.294);
-  --color-powder-700: oklch(41.049% 0.04771 98.614);
-  --color-powder-800: oklch(28.285% 0.03061 99.933);
-  --color-powder-900: oklch(13.426% 0.00844 94.11);
-  --color-powder-950: oklch(0% 0 none);
-
-
 }
-
-
 
 @layer base {
+  .card {
+    @apply flex-col flex border-night border-[1.5px] p-4 shadow-md;
+  }
 
   h1 {
-  @apply text-5xl font-bold tracking-tight font-serif leading-[58px];
-}
+    @apply text-5xl font-bold tracking-tight font-serif leading-[58px];
+  }
 
-h2 {
-  @apply text-4xl font-semibold font-serif leading-[47px];
-}
+  h2 {
+    @apply text-4xl font-semibold font-serif leading-[47px];
+  }
 
-h3 {
-  @apply text-3xl font-semibold font-serif leading-[39px];
-}
+  h3 {
+    @apply text-3xl font-semibold font-serif leading-[39px];
+  }
 
-h4 {
-  @apply text-2xl font-serif leading-[34px];
-}
+  h4 {
+    @apply text-2xl font-serif leading-[34px];
+  }
 
-h5 {
-  @apply text-xl font-serif leading-[28px];
-}
+  h5 {
+    @apply text-xl font-serif leading-[28px];
+  }
 
-h6 {
-  @apply text-lg font-serif leading-[27px];
-}
+  h6 {
+    @apply text-lg font-serif leading-[27px];
+  }
 
-p {
-  @apply text-base font-sans leading-6; /* 24px */
-}
+  p {
+    @apply text-base font-sans leading-6; /* 24px */
+  }
 
   body {
     background: var(--background);
@@ -79,30 +103,30 @@ p {
   }
 
   input {
-    @apply outline-licorice
+    @apply outline-night;
   }
 
   input:focus {
-    @apply  outline-licorice outline-none 
+    @apply outline-night outline-none;
   }
 
   input:hover {
-    @apply  outline-licorice
+    @apply outline-night;
   }
 
   textarea {
-    @apply outline-licorice resize-none scroll-auto
+    @apply outline-night resize-none scroll-auto;
   }
 
   textarea:focus {
-    @apply  outline-licorice outline-none
+    @apply outline-night outline-none;
   }
 
   textarea:hover {
-    @apply  outline-licorice
+    @apply outline-night;
   }
 
   button {
-    @apply bg-licorice text-foreground text-white py-2 px-4 transition-colors duration-200 ease-in-out;
+    @apply bg-trinidad text-powder py-2 px-4 transition-colors duration-200 ease-in-out;
   }
 }

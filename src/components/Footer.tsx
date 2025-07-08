@@ -12,6 +12,7 @@ export default function Footer() {
         "Contact": "/contact",
         "Case Studies": "/case-studies",
         "Imprint": "/imprint",
+        "Restriced Access": "/login",
     }
 
     return (
@@ -21,11 +22,11 @@ export default function Footer() {
                         <motion.p
                             animate={{ y: 0, opacity: 1 }}
                             initial={{ y: 100, opacity: 0 }}
-                            transition={{ duration: 0.5, ease: "easeInOut", delay: 0.1 + i * 0.1 }}
+                            transition={{ duration: 0.5, ease: "easeInOut", delay: 0.1 + i * 0.1, type: "spring", stiffness: 100 }}
                             key={href}
                             className="border-b-[1.5px] p-2 text-base uppercase font-bold"
                         >
-                        <Link href={href}>
+                        <Link  href={href}>
                                 {label}
                             </Link>
                         </motion.p>
