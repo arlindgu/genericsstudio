@@ -22,8 +22,8 @@ export default function PricingCard(props: PricingCardProps) {
                     <li key={index} className="list-none before:content-['-'] before:mr-2">{feature}</li>
                 ))}
             </ul>
-            {props.buttonUrl?  <button><Link href={props.buttonUrl}>{props.buttonText}</Link>
-            </button> : null}
+            {props.buttonUrl?  <Link href={props.buttonUrl} ><button className='w-full cursor-pointer'>{props.buttonText}</button></Link>
+             : null}
             {props.tag ? <span className="bg-licorice-500 text-background py-1 px-2 self-center w-full text-center">
                 {props.tag}
             </span> : null}

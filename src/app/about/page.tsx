@@ -1,9 +1,9 @@
 export default function AboutPage() {
   return (
-    <main className="flex flex-col items-center justify-center gap-8">
+    <main className="flex flex-col gap-8">
       <div className="flex flex-col gap-4">
         <div className="flex flex-col">
-          <h1 className="text-center">
+          <h1>
             About <span className="italic">Generics Studio</span>
           </h1>
           <p>
@@ -18,7 +18,7 @@ export default function AboutPage() {
           </p>
         </div>
         <div className="flex flex-col">
-          <h2 className="text-center">Our Vision</h2>
+          <h2>Our Vision</h2>
           <p>
             At Generics Studio, I envision a digital landscape where every brand
             can express its unique identity and connect with its audience in

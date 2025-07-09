@@ -11,7 +11,6 @@ export default function Footer() {
         "Pricing": "/pricing",
         "Contact": "/contact",
         "Case Studies": "/case-studies",
-        "Imprint": "/imprint",
         "Restriced Access": "/login",
     }
 
@@ -31,11 +30,19 @@ export default function Footer() {
                             </Link>
                         </motion.p>
                     ))}
-                    <div className="mb-4 mt-4">
-                        <p className="text-sm text-center text-muted-foreground">
+                    <motion.div
+                    animate={{ opacity: 1 }}
+                    initial={{ opacity: 0 }}
+                    transition={{ duration: 1.5, ease: "easeInOut", delay: 2 }} 
+                     className="mb-4 mt-4 flex flex-col self-center items-center">
+                        <p className="text-sm text-center">
                             &copy; {new Date().getFullYear()} Generics Studio. All rights reserved.
                         </p>
-                    </div>
+                        <div className="flex flex-row gap-4 text-xs">
+                        <Link href="/legal/imprint">Imprint</Link>
+                        <Link href="/legal/privacy-policy">Privacy Policy</Link>
+                        </div>
+                    </motion.div>
                 </div>
         </footer>
     );
