@@ -38,7 +38,7 @@ export default function Footer() {
                         <p className="text-sm text-center">
                             &copy; {new Date().getFullYear()} Generics Studio. All rights reserved.
                         </p>
-                        <div className="flex flex-row gap-4 text-xs">
+                        <div className="flex flex-row gap-4 text-xs text-night-700">
                         <Link href="/legal/imprint">Imprint</Link>
                         <Link href="/legal/privacy-policy">Privacy Policy</Link>
                         </div>

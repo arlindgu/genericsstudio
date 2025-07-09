@@ -65,6 +65,12 @@
 }
 
 @layer base {
+
+  .pagetitle {
+    @apply w-full text-center text-5xl md:text-6xl xl:text-8xl font-serif italic;
+  }
+
+
   .card {
     @apply flex-col flex border-night border-[1.5px] p-4 shadow-md;
   }
