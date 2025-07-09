@@ -1,5 +1,6 @@
 "use client"
 import { motion } from "motion/react"
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -22,7 +23,7 @@ export default function Home() {
     },
   }}
 >
-        <h1 className="w-full text-6xl md:text-8xl xl:text-8xl">
+        <h1 className="w-full text-4xl md:text-8xl xl:text-8xl">
           Generics Studio
         </h1>
       </motion.div>
@@ -32,10 +33,18 @@ export default function Home() {
         initial={{ opacity: 0 }}
         transition={{ duration: 1.5, ease: "easeInOut", delay: 2.5 }}
       >
-        <p className="text-base italic text-center md:text-xl text-night-500">
+        <p className="text-base italic text-center md:text-xl text-night-500 mb-5">
           Don’t build from templates — Build with <span className="text-trinidad font-bold">intent.</span> With <span className="text-butterfly font-bold">soul</span>.
         </p>
       </motion.div>
+        <motion.div
+          initial={{ scale: 0, z: 20 }}
+          animate={{ scale: 1, z: 0 }}
+          transition={{duration:0.5, delay: 3.5, type: "spring", stiffness: 100 }}
+          className="flex flex-col rounded-full py-2 px-4 border-butterfly border-1 shadow-sm bg-butterfly-50 bg-gradient-to-t from-butterfly-200 text-white hover:from-butterfly-400 transition-colors duration-500"
+        >
+          <Link href="/contact">Available for new projects</Link>
+          </motion.div>
     </div>
   );
 }

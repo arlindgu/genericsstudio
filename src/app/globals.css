@@ -67,7 +67,7 @@
 @layer base {
 
   .pagetitle {
-    @apply w-full text-center text-3xl md:text-5xl lg:text-7xl font-title;
+    @apply w-full text-center font-title text-4xl md:text-6xl xl:text-7xl;
   }
 
 
@@ -76,27 +76,27 @@
   }
 
   h1 {
-    @apply text-5xl font-bold tracking-tight font-title leading-[58px];
+    @apply text-4xl lg:text-5xl  font-bold tracking-tight font-title leading-[58px];
   }
 
   h2 {
-    @apply text-4xl font-semibold font-title leading-[47px];
+    @apply text-3xl lg:text-4xl font-semibold font-title leading-[47px];
   }
 
   h3 {
-    @apply text-3xl font-semibold font-title leading-[39px];
+    @apply text-2xl lg:text-3xl font-semibold font-title leading-[39px];
   }
 
   h4 {
-    @apply text-2xl font-title leading-[34px];
+    @apply text-xl lg:text-2xl font-title leading-[34px];
   }
 
   h5 {
-    @apply text-xl font-title leading-[28px];
+    @apply text-lg lg:text-xl font-title leading-[28px];
   }
 
   h6 {
-    @apply text-lg font-title leading-[27px];
+    @apply text-sm lg:text-lg font-title leading-[27px];
   }
 
   p {

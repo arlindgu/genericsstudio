@@ -6,10 +6,10 @@ import Image from "next/image";
 export default function AboutPage() {
   return (
     <main className="flex flex-col gap-8">
-      <div className="flex flex-col gap-4">
-        <div className="h-screen self-center content-center -my-4 -mx-4 w-full">
+      <div className="flex flex-col gap-32">
+        <div className="self-center content-center w-full">
           <div className="flex flex-col">
-            <div className="flex flex-col lg:gap-4">
+            <div className="flex flex-col lg:gap-4 h-screen justify-center">
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -41,13 +41,13 @@ export default function AboutPage() {
           </div>
         </div>
         <div className="flex flex-col gap-32">
-        <section className="flex flex-col lg:flex-row gap-16 lg:gap-32 items-center justify-center">
+        <section className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center justify-center card p-10">
           <Image
             src="/artboard_1.png"
             alt="Artboard 1"
-            width={400}
-            height={400}
-            className="lg:order-1 order-0"
+            width={500}
+            height={500}
+            className="lg:order-1 order-0 drop-shadow-2xl"
           />
           <div>
             <h1>
@@ -56,7 +56,7 @@ export default function AboutPage() {
             <h1>
               Generics Studio
             </h1>
-            <p className="max-w-sm">
+            <p>
               What started as a hobby project of learning web design and web
               technologies has grown into a full-fledged design studio. Generics
               Studio is our brand, where we combine our passion for design and
@@ -68,17 +68,17 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="flex flex-col lg:flex-row gap-16 lg:gap-32 items-center justify-center">
+        <section className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center card p-8 justify-center">
           <Image
             src="/artboard_4.png"
             alt="Artboard 1"
-            width={400}
-            height={400}
+            width={500}
+            height={500}
             className="lg:order-0 order-0"
           />
           <div>
             <h1>Our Vision</h1>
-            <p className="max-w-sm">
+            <p>
               We believe that design is more than just aesthetics; it is about
               creating meaningful connections between brands and their
               audiences. Our vision at Generics Studio is to empower brands to
@@ -87,26 +87,18 @@ export default function AboutPage() {
               stunning but also intuitive and engaging.
             </p>
           </div>
-          
-
-
         </section>
-        <section className="flex flex-col lg:flex-row gap-16 lg:gap-32 items-center justify-center">
+        <section className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center justify-center card p-8">
           <Image
             src="/artboard_3.png"
             alt="Artboard 1"
-            width={400}
-            height={400}
+            width={500}
+            height={500}
                         className="lg:order-1 order-0"
           />
           <div>
-            <h1>
-              We create
-            </h1>
-            <h1>
-              experiences
-            </h1>
-            <p className="max-w-sm">
+            <h1>We create experiences</h1>
+            <p>
               At Generics Studio, we are passionate about creating digital
               experiences that resonate with users. Our team of designers and
               developers work closely together to ensure that every project we
@@ -118,17 +110,17 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="flex flex-col lg:flex-row gap-16 lg:gap-32 items-center justify-center">
+        <section className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center justify-center card p-8">
           <Image
             src="/artboard_2.png"
             alt="Artboard 1"
-            width={400}
-            height={400}
+            width={500}
+            height={500}
                         className="lg:order-0 order-0"
           />
           <div>
             <h1>Blank Canvas</h1>
-            <p className="max-w-sm">
+            <p>
               We approach each project with a fresh perspective, treating every
               client as a unique opportunity to create something special. Our
               process begins with understanding your brand, your goals, and your
