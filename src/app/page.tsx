@@ -22,7 +22,7 @@ export default function Home() {
     },
   }}
 >
-        <h1 className="w-full text-6xl md:text-8xl xl:text-9xl font-serif italic">
+        <h1 className="w-full text-6xl md:text-8xl xl:text-8xl">
           Generics Studio
         </h1>
       </motion.div>

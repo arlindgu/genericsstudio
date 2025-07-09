@@ -30,7 +30,7 @@ export default function AboutPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 2.0 }}
-               className="text-center border-t-2 mt-8 pt-4 max-w-xl self-center">
+               className="text-center pt-4 max-w-xl self-center">
                 We are a creative studio specializing in digital solutions. Our
                 multidisciplinary team combines expertise from development,
                 design, user experience, and project management. Together, we
@@ -40,8 +40,8 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-16">
-        <section className="flex flex-col lg:flex-row gap-8 items-center justify-center">
+        <div className="flex flex-col gap-32">
+        <section className="flex flex-col lg:flex-row gap-16 lg:gap-32 items-center justify-center">
           <Image
             src="/artboard_1.png"
             alt="Artboard 1"
@@ -51,7 +51,10 @@ export default function AboutPage() {
           />
           <div>
             <h1>
-              About <span className="italic">Generics Studio</span>
+              About
+            </h1>
+            <h1>
+              Generics Studio
             </h1>
             <p className="max-w-sm">
               What started as a hobby project of learning web design and web
@@ -65,7 +68,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="flex flex-col lg:flex-row gap-8 items-center justify-center">
+        <section className="flex flex-col lg:flex-row gap-16 lg:gap-32 items-center justify-center">
           <Image
             src="/artboard_4.png"
             alt="Artboard 1"
@@ -88,7 +91,7 @@ export default function AboutPage() {
 
 
         </section>
-        <section className="flex flex-col lg:flex-row gap-8 items-center justify-center">
+        <section className="flex flex-col lg:flex-row gap-16 lg:gap-32 items-center justify-center">
           <Image
             src="/artboard_3.png"
             alt="Artboard 1"
@@ -98,7 +101,10 @@ export default function AboutPage() {
           />
           <div>
             <h1>
-              We create experiences
+              We create
+            </h1>
+            <h1>
+              experiences
             </h1>
             <p className="max-w-sm">
               At Generics Studio, we are passionate about creating digital
@@ -112,9 +118,9 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="flex flex-col lg:flex-row gap-8 items-center justify-center">
+        <section className="flex flex-col lg:flex-row gap-16 lg:gap-32 items-center justify-center">
           <Image
-            src="/artboard_4.png"
+            src="/artboard_2.png"
             alt="Artboard 1"
             width={400}
             height={400}

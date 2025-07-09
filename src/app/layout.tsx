@@ -1,21 +1,21 @@
 import type { Metadata } from "next";
-import { Instrument_Serif, Instrument_Sans } from "next/font/google";
+import { JetBrains_Mono, Roboto_Condensed } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const instrumentSerif = Instrument_Serif({
-  variable: "--font-instrument-serif",
-  weight: "400",
+const jetBrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "700"],
 });
 
-const instrumentSans = Instrument_Sans({
-  variable: "--font-instrument-sans",
-  weight: "400",
+const robotoMonoNarrow = Roboto_Condensed({
+  variable: "--font-roboto-mono-narrow",
+  weight: ["400", "700", "900", "300", "500", "600", "800", "200", "100"],
   subsets: ["latin"],
 });
-
 
 
 export const metadata: Metadata = {
@@ -52,7 +52,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${instrumentSerif.variable} ${instrumentSans.variable}`}
+        className={`${robotoMonoNarrow} ${jetBrainsMono.variable} subpixel-antialiased`}
       >
         <div className="h-dvh flex flex-col">
                             <Header />
