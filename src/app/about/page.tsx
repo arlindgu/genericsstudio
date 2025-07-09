@@ -9,10 +9,10 @@ export default function AboutPage() {
           <p>
             I’m an interdisciplinary designer and developer focused on modern,
             high-quality web solutions. My strength lies at the intersection of
-            aesthetics and function. I believe great web design isn’t just about
-            how it looks — it’s about clarity, structure, and a seamless user
-            experience. I’m tech-agnostic but design-driven. Every project
-            starts with a simple question: What’s the core goal — for the user,
+            aesthetics and function. I believe great web design isn it just about
+            how it looks — it is about clarity, structure, and a seamless user
+            experience. I am tech-agnostic but design-driven. Every project
+            starts with a simple question: What is the core goal — for the user,
             the brand, the product? From there, I build everything else: design
             systems, components, content, performance, and interaction.
           </p>
@@ -35,7 +35,7 @@ export default function AboutPage() {
         </div>
         <div>
           <p className="italic">
-            For me, design isn’t decoration. It’s structure, content, and
+            For me, design isn’t decoration. It is structure, content, and
             identity in one.
           </p>
         </div>

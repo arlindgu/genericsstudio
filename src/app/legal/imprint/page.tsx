@@ -47,7 +47,7 @@ export default function ImprintPage() {
           <p>
             References and links to third party websites are outside our area of
             responsibility. It rejected any responsibility for such websites.
-            Access to and use of such websites is at the user's own risk.
+            Access to and use of such websites is at the user his own risk.
           </p>
         </div>
         <div>
