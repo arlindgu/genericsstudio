@@ -41,7 +41,7 @@ export default function Home() {
           initial={{ scale: 0, z: 20 }}
           animate={{ scale: 1, z: 0 }}
           transition={{duration:0.5, delay: 3.5, type: "spring", stiffness: 100 }}
-          className="flex flex-col rounded-full py-2 px-4 border-butterfly border-1 shadow-sm bg-butterfly-50 bg-gradient-to-t from-butterfly-200 text-white hover:from-butterfly-400 transition-colors duration-500"
+          className="flex flex-col rounded-full py-2 px-4 border-butterfly border-1 shadow-sm bg-butterfly-50 bg-gradient-to-t from-butterfly-200 text-butterfly hover:from-butterfly-400 transition-colors duration-500"
         >
           <Link href="/contact">Available for new projects</Link>
           </motion.div>
