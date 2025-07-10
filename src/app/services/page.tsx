@@ -8,7 +8,7 @@ export default function Page() {
         We offer a range of services to help you build your digital presence.
       </p>
 
-      <div className="flex flex-col lg:grid lg:grid-cols-5 grid-rows-5 gap-4 w-full h-dvh">
+      <div className="flex flex-col lg:grid lg:grid-cols-5 grid-rows-5 gap-4">
         <div className="card col-span-2 border p-4 relative">
             <Image
             src="/services_assets/woman_1.png"
