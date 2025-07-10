@@ -15,13 +15,17 @@ export default function Footer() {
     }
 
     return (
-        <footer className="bg-background z-1 border-t-[1.5px] border-licorice">
+        <motion.footer 
+        animate={{ y: 0, opacity: 1 }}
+        initial={{ y: 100, opacity: 0 }}
+        transition={{ duration: 0.5, ease: "easeInOut", type: "spring", stiffness: 100 }}
+        className="bg-background z-1 border-t-[1.5px] border-licorice">
                 <div className="flex flex-col flex-wrap">
                     {Object.entries(FooterLinks).map(([label, href], i) => (
                         <motion.p
                             animate={{ y: 0, opacity: 1 }}
                             initial={{ y: 100, opacity: 0 }}
-                            transition={{ duration: 0.5, ease: "easeInOut", delay: 0.1 + i * 0.1, type: "spring", stiffness: 100 }}
+                            transition={{ duration: 0.5, ease: "easeInOut", delay: 2.5 + i * 0.1, type: "spring", stiffness: 100 }}
                             key={href}
                             className="border-b-[1.5px] p-2 text-base uppercase font-bold"
                         >
@@ -44,6 +48,6 @@ export default function Footer() {
                         </div>
                     </motion.div>
                 </div>
-        </footer>
+        </motion.footer>
     );
     }

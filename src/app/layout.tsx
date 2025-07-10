@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono, Roboto_Condensed } from "next/font/google";
+import { JetBrains_Mono, Playfair_Display, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -11,10 +11,18 @@ const jetBrainsMono = JetBrains_Mono({
   weight: ["400", "700"],
 });
 
-const robotoMonoNarrow = Roboto_Condensed({
-  variable: "--font-roboto-mono-narrow",
-  weight: ["400", "700", "900", "300", "500", "600", "800", "200", "100"],
+const PlayfairDisplay = Playfair_Display({
+  variable: "--font-playfair-display",
   subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "700"],
+});
+
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "700"],
 });
 
 
@@ -52,7 +60,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${robotoMonoNarrow} ${jetBrainsMono.variable} subpixel-antialiased`}
+        className={`${spaceGrotesk.variable} ${jetBrainsMono.variable} ${PlayfairDisplay.variable} subpixel-antialiased`}
       >
         <div className="h-dvh flex flex-col">
                             <Header />

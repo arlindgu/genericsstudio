@@ -9,7 +9,7 @@ export default function AboutPage() {
       <div className="flex flex-col gap-32">
         <div className="self-center content-center w-full">
           <div className="flex flex-col">
-            <div className="flex flex-col lg:gap-4 h-screen justify-center">
+            <div className="flex flex-col lg:gap-4 h-screen justify-center -mt-16">
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -50,11 +50,8 @@ export default function AboutPage() {
             className="lg:order-1 order-0 drop-shadow-2xl"
           />
           <div>
-            <h1>
-              About
-            </h1>
-            <h1>
-              Generics Studio
+            <h1 className="">
+              About Us
             </h1>
             <p>
               What started as a hobby project of learning web design and web

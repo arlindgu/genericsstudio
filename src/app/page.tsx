@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center md:gap-8">
+    <div className="flex flex-col items-center justify-center md:gap-4">
       <motion.div
       animate={{ opacity: 1 }}
       initial={{ opacity: 0 }}
@@ -23,7 +23,7 @@ export default function Home() {
     },
   }}
 >
-        <h1 className="w-full text-4xl md:text-8xl xl:text-8xl">
+        <h1 className="uppercase font-logo -tracking-wider w-full text-4xl md:text-8xl xl:text-8xl">
           Generics Studio
         </h1>
       </motion.div>
@@ -33,7 +33,7 @@ export default function Home() {
         initial={{ opacity: 0 }}
         transition={{ duration: 1.5, ease: "easeInOut", delay: 2.5 }}
       >
-        <p className="text-base italic text-center md:text-xl text-night-500 mb-5">
+        <p className="text-base text-center md:text-xl text-night-500 mb-5">
           Don’t build from templates — Build with <span className="text-trinidad font-bold">intent.</span> With <span className="text-butterfly font-bold">soul</span>.
         </p>
       </motion.div>
