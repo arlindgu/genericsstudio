@@ -10,7 +10,7 @@ export default function ImprintPage() {
           <p>9500 Wil SG</p>
           <p>Switzerland</p>
           <p>info@generics.studio</p>
-          <p>+41 79 896 69 96</p>
+          <p>+41 79 405 99 55</p>
         </div>
 
         <div>

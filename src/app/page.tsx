@@ -23,7 +23,7 @@ export default function Home() {
     },
   }}
 >
-        <h1 className="uppercase font-logo -tracking-wider w-full text-4xl md:text-8xl xl:text-8xl">
+        <h1 className="font-logo -tracking-widest w-full text-4xl md:text-8xl xl:text-8xl">
           Generics Studio
         </h1>
       </motion.div>
@@ -34,7 +34,7 @@ export default function Home() {
         transition={{ duration: 1.5, ease: "easeInOut", delay: 2.5 }}
       >
         <p className="text-base text-center md:text-xl text-night-500 mb-5">
-          Don’t build from templates — Build with <span className="text-trinidad font-bold">intent.</span> With <span className="text-butterfly font-bold">soul</span>.
+          Until logic breaks or beauty wins
         </p>
       </motion.div>
         <motion.div

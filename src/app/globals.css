@@ -136,4 +136,15 @@
   button {
     @apply bg-trinidad text-powder py-2 px-4 transition-colors duration-200 ease-in-out font-body;
   }
+
+  Link {
+    @apply cursor-pointer
+  }
+}
+
+.bg-woman {
+  background-image: url('/woman_1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }

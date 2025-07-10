@@ -141,7 +141,6 @@ export default function FormComponent() {
                             initial={{ y: 10, opacity: 0 }}
                             transition={{ duration: 0.5, ease: "easeInOut", delay: 0.5 }}
                             type="submit"
-                            className='cursor-pointer'
                         >
                             Send Message
                         </motion.button>

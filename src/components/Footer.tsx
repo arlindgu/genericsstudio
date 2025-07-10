@@ -8,7 +8,7 @@ export default function Footer() {
     const FooterLinks = {
         "Home": "/",
         "About": "/about",
-        "Pricing": "/pricing",
+        "Services": "/services",
         "Contact": "/contact",
         "Case Studies": "/case-studies",
         "Restriced Access": "/login",
