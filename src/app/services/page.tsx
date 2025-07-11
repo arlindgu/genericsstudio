@@ -1,20 +1,30 @@
+"use client"
+
 import Image from "next/image";
+import PageTitle from "@/components/ui/PageTitle";
+import { motion } from "framer-motion";
+
+
 
 export default function Page() {
+
+
   return (
     <div className="flex flex-col items-center justify-center gap-4 flex-1 w-full">
-      <h1>Our Services</h1>
-      <p className="text-center">
-        We offer a range of services to help you build your digital presence.
-      </p>
+      <PageTitle title="Our Services">We offer a range of services to help you build your digital presence.</PageTitle>
 
-      <div className="flex flex-col lg:grid lg:grid-cols-5 grid-rows-5 gap-4">
+      <motion.div
+        animate={{ y: 0, opacity: 1 }}
+        initial={{ y: 10, opacity: 0 }}
+        transition={{ duration: 0.5, ease: "easeInOut", type: "spring", delay: 0.3 }}
+      className="flex flex-col lg:grid lg:grid-cols-5 grid-rows-5 gap-4">
+
         <div className="card col-span-2 border p-4 relative">
             <Image
             src="/services_assets/woman_1.png"
             alt="Background"
             fill={true}
-            className="object-cover object-top"
+            className="object-cover object-top hover:"
           />
           <div className="max-w-xs">
             <h2 className="relative z-0 text-white font-bold mix-blend-difference">
@@ -143,7 +153,7 @@ export default function Page() {
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

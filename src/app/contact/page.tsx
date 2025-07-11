@@ -2,6 +2,7 @@
 
 import FormComponent from "./components/Form"
 import Steps from "./components/Steps"
+import PageTitle from "@/components/ui/PageTitle";
 
 
 
@@ -12,8 +13,7 @@ export default function ContactPage() {
     return (
         <main className='flex flex-col items-center justify-center gap-8'>
             <div className='text-center'>
-                <h1>Contact</h1>
-                <p>Let&#39;s create something which has a soul to it.</p>
+                <PageTitle title="Contact Us">We are here to help you with your project. Fill out the form below to get in touch with us.</PageTitle>
             </div>
             <FormComponent />
             <div className="text-center hidden">

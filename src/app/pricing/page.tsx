@@ -2,6 +2,7 @@
 
 import PricingCard, { type PricingCardProps } from "@/components/PricingCard"
 import { motion } from "framer-motion"
+import PageTitle from "@/components/ui/PageTitle";
 
 export default function PricingPage() {
   const pricingOptions: PricingCardProps[] = [
@@ -49,8 +50,7 @@ export default function PricingPage() {
     <main className="flex flex-col gap-8 justify-center">
       <div className="text-center">
         <title>Generics Studio – Pricing</title>
-        <h1>Pricing Plans</h1>
-        <p>Choose the plan that fits your needs</p>
+        <PageTitle title="Pricing">Discover our transparent pricing for websites and landing pages. Choose the right package for your business or contact us for a custom offer.</PageTitle>
       </div>
       <div className="flex flex-col gap-4 xl:flex-row">
         {pricingOptions.map((option, index) => (

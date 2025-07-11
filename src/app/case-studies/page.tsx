@@ -2,6 +2,7 @@
 import { JSX } from "react";
 import Tag from "@/components/tag";
 import { motion } from 'framer-motion'
+import PageTitle from "@/components/ui/PageTitle";
 
 export default function CaseStudiesPage() {
 
@@ -28,8 +29,7 @@ export default function CaseStudiesPage() {
 
         className="flex flex-col h-fit gap-4 justify-center">
         <div className="flex flex-col items-center justify-center">
-          <h1>Case Studies</h1>
-          <p className="w-full text-center">Explore our diverse range of projects that showcase our expertise and creativity.</p>
+          <PageTitle title="Case Studies">Explore our recent projects and see how we helped our clients achieve their goals.</PageTitle>
         </div>
 
         {caseStudies.map(({ title, description, url, tags }, i) => (
