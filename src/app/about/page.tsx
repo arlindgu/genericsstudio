@@ -160,7 +160,7 @@ export default function AboutPage() {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
           viewport={{ once: true, margin: "-100px" }}
         >
-          <p className="text-center italic text-night-600">For us, design isn't decoration. It is structure, content, and identity in one.</p>
+          <p className="text-center italic text-night-600">For us, design is not decoration. It is structure, content, and identity in one.</p>
         </motion.section>
       </div>
       </div>
