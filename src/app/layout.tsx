@@ -65,7 +65,7 @@ export default function RootLayout({
         <div className="h-dvh flex flex-col">
                             <Header />
           <main className="flex-1 flex items-center justify-center px-4 py-16">
-            <div className="w-full md:max-w-xl xl:max-w-5xl">
+            <div className="w-full md:max-w-xl xl:max-w-6xl">
               {children}
             </div>
           </main>

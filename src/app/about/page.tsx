@@ -41,7 +41,13 @@ export default function AboutPage() {
           </div>
         </div>
         <div className="flex flex-col gap-32">
-        <section className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center justify-center card p-10">
+        <motion.section 
+          className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center justify-center card p-10"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
           <Image
             src="/artboard_1.png"
             alt="Artboard 1"
@@ -63,9 +69,15 @@ export default function AboutPage() {
               user-centric.
             </p>
           </div>
-        </section>
+        </motion.section>
 
-        <section className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center card p-8 justify-center">
+        <motion.section 
+          className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center card p-8 justify-center"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
           <Image
             src="/artboard_4.png"
             alt="Artboard 1"
@@ -84,8 +96,14 @@ export default function AboutPage() {
               stunning but also intuitive and engaging.
             </p>
           </div>
-        </section>
-        <section className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center justify-center card p-8">
+        </motion.section>
+        <motion.section 
+          className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center justify-center card p-8"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
           <Image
             src="/artboard_3.png"
             alt="Artboard 1"
@@ -105,9 +123,15 @@ export default function AboutPage() {
               possible in web design and development.
             </p>
           </div>
-        </section>
+        </motion.section>
 
-        <section className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center justify-center card p-8">
+        <motion.section 
+          className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center justify-center card p-8"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
           <Image
             src="/artboard_2.png"
             alt="Artboard 1"
@@ -129,10 +153,15 @@ export default function AboutPage() {
           
 
 
-        </section>
-        <section>
-          <p className="text-center italic text-night-600">For us, design isn’t decoration. It is structure, content, and identity in one.</p>
-        </section>
+        </motion.section>
+        <motion.section
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          <p className="text-center italic text-night-600">For us, design isn't decoration. It is structure, content, and identity in one.</p>
+        </motion.section>
       </div>
       </div>
     </main>

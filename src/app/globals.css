@@ -134,7 +134,11 @@
   }
 
   button {
-    @apply bg-trinidad text-powder py-2 px-4 transition-colors duration-200 ease-in-out font-body;
+    @apply bg-trinidad text-powder py-2 px-4 transition-colors duration-200 ease-in-out uppercase font-body;
+  }
+
+  button:hover {
+    @apply bg-trinidad-500 text-powder-50;
   }
 
   Link {
