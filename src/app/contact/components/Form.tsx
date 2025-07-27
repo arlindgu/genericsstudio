@@ -40,7 +40,7 @@ export default function FormComponent() {
     }
 
     return (
-        <div className='flex w-full'>
+        <div className='flex w-xl'>
             {sent && !error ? (
                 <div className="flex flex-col items-center justify-center gap-4">
                     <Check stroke='#211912' />

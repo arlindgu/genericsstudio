@@ -24,13 +24,12 @@ export default function CaseStudiesPage() {
 
 
   return (
-    <main className="flex flex-col items-center justify-center gap-8">
-      <div
+    <main className="m-8">
+      <section className="mb-16">
+        <PageTitle title="Case Studies">Explore our recent projects and see how we helped our clients achieve their goals.</PageTitle>
+      </section>
 
-        className="flex flex-col h-fit gap-4 justify-center">
-        <div className="flex flex-col items-center justify-center">
-          <PageTitle title="Case Studies">Explore our recent projects and see how we helped our clients achieve their goals.</PageTitle>
-        </div>
+      <div className="w-full flex flex-col gap-4 justify-center items-center">
 
         {caseStudies.map(({ title, description, url, tags }, i) => (
 
@@ -38,7 +37,7 @@ export default function CaseStudiesPage() {
             animate={{ y: 0, opacity: 1 }}
             initial={{ y: 10, opacity: 0 }}
             transition={{ duration: 0.5, ease: "easeInOut", delay: 0.1 + i * 0.1 }}
-            key={url} className="border p-4 bg-background shadow-md">
+            key={url} className="border p-4 bg-background shadow-md max-w-5xl">
             <div className="flex flex-col justify-between items-start">
               <a href={url} className="uppercase font-body text-2xl font-bold hover:underline order-2 ">
                 {title}
@@ -56,7 +55,7 @@ export default function CaseStudiesPage() {
             </div>
           </motion.div>
         ))}
-      </div>
+        </div>
     </main>
 
   );

@@ -10,7 +10,7 @@ interface PageTitleProps {
 
 export default function PageTitle({ title, children }: PageTitleProps) {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col text-center">
       <motion.h1
         animate={{ y: 0, opacity: 1 }}
         initial={{ y: 10, opacity: 0 }}
@@ -22,7 +22,7 @@ export default function PageTitle({ title, children }: PageTitleProps) {
         animate={{ y: 0, opacity: 1 }}
         initial={{ y: 10, opacity: 0 }}
         transition={{ duration: 0.5, ease: "easeInOut", type: "spring" }}
-        className="text-center"
+        className=""
       >
         {children}
       </motion.p>
