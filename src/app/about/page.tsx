@@ -1,4 +1,31 @@
+"use client";
+import {useEffect} from "react";
+import gsap from "gsap";
+import { SplitText } from "gsap/SplitText";
+
 export default function AboutPage() {
+    gsap.registerPlugin(SplitText);
+
+    useEffect(() => {
+        let splitTitle = SplitText.create("#pagetitle", { type: "words" });
+        let splitSubtitle = SplitText.create("#pagesubtitle", { type: "words, chars" });
+
+        const timeline = gsap.timeline({ defaults: { ease: "power1.out" } });
+        timeline
+            .from(splitTitle.words, {
+                duration: 0.5,
+                y: 100,
+                autoAlpha: 0,
+                stagger: 0.05
+            })
+            .from(splitSubtitle.words, {
+                duration: 0.5,
+                y: 100,
+                autoAlpha: 0,
+                stagger: 0.01
+            });
+
+    }, []);
 
     const content = [
     {
@@ -35,10 +62,10 @@ export default function AboutPage() {
 
     return (
         <div>
-            <section className="h-dvh flex flex-col items-center justify-center">
+            <section className="h-dvh flex flex-col items-center justify-center -mt-32">
                 <section className="p-4 text-center">
-                <h1 className="text-7xl mb-2 max-w-2xl">Why we stand out and why it matters.</h1>
-                <p className="max-w-2xl">We are a creative studio specializing in digital solutions. Our
+                <h1 id="pagetitle" className="text-7xl mb-4 max-w-2xl">Why we stand out and why it matters.</h1>
+                <p  id="pagesubtitle" className="max-w-2xl">We are a creative studio specializing in digital solutions. Our
                 multidisciplinary team combines expertise from development,
                 design, user experience, and project management. Together, we
                 craft innovative concepts and evaluate their potential for
@@ -48,7 +75,7 @@ export default function AboutPage() {
             {content.map((item, index) => (
                 <section
                     key={index}
-                    className="h-dvh flex flex-col items-center justify-center relative"
+                    className="min-h-dvh flex flex-col items-center justify-center relative"
                 >
                     <video
                         src={item.video}

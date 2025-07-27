@@ -23,7 +23,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="section flex flex-col items-center justify-center md:gap-4 h-dvh p-4">
+    <div className="section flex flex-col items-center justify-center md:gap-4 p-4 h-dvh -mt-32">
         <Image
           src={logo}
           alt="Generics Studio Logo"
