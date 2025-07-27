@@ -1,6 +1,6 @@
 export default function PrivacyPolicyPage() {
   return (
-    <main className='flex flex-col gap-8'>
+    <main className='flex flex-col gap-8 m-4'>
           <h1>Privacy Policy</h1>
           <p>Last updated on: 09.07.2025</p>
         <p>

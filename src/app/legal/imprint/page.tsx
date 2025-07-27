@@ -1,6 +1,6 @@
 export default function ImprintPage() {
   return (
-    <main className="flex flex-col items-center justify-center gap-8">
+    <main className="flex flex-col items-center justify-center gap-8 p-4">
       <div className="flex flex-col gap-4">
         <h1>Imprint</h1>
         <div>
