@@ -7,8 +7,8 @@ export default function AboutPage() {
     gsap.registerPlugin(SplitText);
 
     useEffect(() => {
-        let splitTitle = SplitText.create("#pagetitle", { type: "words" });
-        let splitSubtitle = SplitText.create("#pagesubtitle", { type: "words, chars" });
+        const splitTitle = SplitText.create("#pagetitle", { type: "words" });
+        const splitSubtitle = SplitText.create("#pagesubtitle", { type: "words, chars" });
 
         const timeline = gsap.timeline({ defaults: { ease: "power1.out" } });
         timeline
