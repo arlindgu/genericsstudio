@@ -90,6 +90,7 @@ export default function AboutPage() {
                         <h2 className="text-xl mb-4">{item.subtitle}</h2>
                         <p className="max-w-2xl mx-auto">{item.text}</p>
                     </div>
+                    
                 </section>
             ))}
         </div>

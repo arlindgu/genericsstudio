@@ -9,17 +9,17 @@ export default function Home() {
   useEffect(() => {
     const timeline = gsap.timeline({ defaults: { ease: "power1.out" } });
     timeline
+          .fromTo(
+      ".logo",
+      { opacity: 0, scale: 0.9 },
+      { opacity: 1, scale: 1, duration: 1.5, delay: 1 }
+      )
       .fromTo(
       ".subtitle",
       { opacity: 0, y: 20 },
       { opacity: 1, y: 0, duration: 1.5, delay: 1 }
+      , "-=2.5"
       )
-      .fromTo(
-      ".logo",
-      { scaleY: 0 },
-      { scaleY: 1, transformOrigin: "100% top", duration: 2, ease: "elastic.out(1, 0.5)" },
-      "-=2.5"
-      );
   }, []);
 
   return (
@@ -29,7 +29,7 @@ export default function Home() {
           alt="Generics Studio Logo"
           width={450}
           height={200}
-          className="logo"
+          className="logo w-10/12 md:w-1/2 max-w-[450px]"
         />
 
       <div
