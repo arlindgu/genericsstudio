@@ -1,53 +1,23 @@
-"use client";
+"use client"
 
-import { motion } from "framer-motion";
-import Link from "next/link";
+import Link from 'next/link'
 
 export default function Footer() {
-
-    const FooterLinks = {
-        "Home": "/",
-        "About": "/about",
-        "Services": "/services",
-        "Contact": "/contact",
-        "Case Studies": "/case-studies",
-        "Restriced Access": "/login",
-    }
+    const handleLinkClick = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
 
     return (
-        <motion.footer 
-        animate={{ y: 0, opacity: 1 }}
-        initial={{ y: 100, opacity: 0 }}
-        transition={{ duration: 0.5, ease: "easeInOut", type: "spring", stiffness: 100 }}
-        className="bg-background z-1 border-t-[1.5px] border-licorice">
-                <div className="flex flex-col flex-wrap">
-                    {Object.entries(FooterLinks).map(([label, href], i) => (
-                        <motion.p
-                            animate={{ y: 0, opacity: 1 }}
-                            initial={{ y: 100, opacity: 0 }}
-                            transition={{ duration: 0.5, ease: "easeInOut", delay: 2.5 + i * 0.1, type: "spring", stiffness: 100 }}
-                            key={href}
-                            className="border-b-[1.5px] p-2 text-base uppercase font-bold"
-                        >
-                        <Link  href={href}>
-                                {label}
-                            </Link>
-                        </motion.p>
-                    ))}
-                    <motion.div
-                    animate={{ opacity: 1 }}
-                    initial={{ opacity: 0 }}
-                    transition={{ duration: 1.5, ease: "easeInOut", delay: 2 }} 
-                     className="mb-4 mt-4 flex flex-col self-center items-center">
-                        <p className="text-sm text-center">
-                            &copy; {new Date().getFullYear()} Generics Studio. All rights reserved.
-                        </p>
-                        <div className="flex flex-row gap-4 text-xs text-night-700">
-                        <Link href="/legal/imprint">Imprint</Link>
-                        <Link href="/legal/privacy-policy">Privacy Policy</Link>
-                        </div>
-                    </motion.div>
+        <footer className="bg-background/75 z-1 border-[1.5px] shadow-sm m-4 backdrop-blur-2xl">
+            <div className="flex flex-row justify-center lg:justify-between flex-wrap p-2">
+                <p className="text-sm text-night-700">
+                    &copy; {new Date().getFullYear()} Generics Studio. All rights reserved.
+                </p>
+                <div className="flex flex-row gap-4 text-xs text-night-700 items-center">
+                    <Link href="/legal/imprint" onClick={handleLinkClick}>Imprint</Link>
+                    <Link href="/legal/privacy-policy" onClick={handleLinkClick}>Privacy Policy</Link>
                 </div>
-        </motion.footer>
-    );
-    }
+            </div>
+        </footer>
+    )
+}

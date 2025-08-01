@@ -45,7 +45,7 @@ export default function Header() {
     <>
       <header 
         ref={headerRef}
-        className="m-4 fixed inset-x-0 top-0 z-50 bg-background shadow-sm p-4 border flex justify-between items-center"
+        className="m-4 fixed inset-x-0 top-0 z-50 bg-background/75 shadow-sm p-4 border-[1.5px] flex justify-between items-center backdrop-blur-2xl"
       >
         <Link href="/" className="">
           <Image src="/logo.svg" width={1000} height={1000} alt="Logo" className="h-10 w-auto" />

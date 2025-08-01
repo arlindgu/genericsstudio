@@ -42,10 +42,10 @@ export default function RootLayout({
         className={`${generalSans.variable}`}
       >
         <Header />
-        <div className="mt-32 mb-32">
-              {children}
-              </div>
-        <Footer />
+        <div className="mt-32">{children}
+          <Footer />
+        </div>
+        
       </body>
     </html>
   );

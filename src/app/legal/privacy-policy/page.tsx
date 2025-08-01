@@ -1,8 +1,10 @@
+
+import PageTitle from "@/components/ui/PageTitle"
+
 export default function PrivacyPolicyPage() {
   return (
-    <main className='flex flex-col gap-8 m-4'>
-          <h1>Privacy Policy</h1>
-          <p>Last updated on: 09.07.2025</p>
+    <main className='flex flex-col gap-8 m-4 mb-24 max-w-7xl mx-auto p-4'>
+      <PageTitle title="Privacy Policy">Last updated on: 09.07.2025</PageTitle>
         <p>
           Transparent handling of personal data is very important to us. This
           data protection statement provides information on what personal data

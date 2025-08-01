@@ -72,7 +72,7 @@ const services = [
 
 export default function Page() {
   return (
-    <div className="m-8">
+    <div className="m-8 mb-24">
       <section className="mb-16">
         <PageTitle title="Our Services">We offer a range of services to help you build your digital presence.</PageTitle>
       </section>
