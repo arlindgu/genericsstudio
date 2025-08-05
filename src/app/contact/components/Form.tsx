@@ -42,12 +42,12 @@ export default function FormComponent() {
     return (
         <div className='flex w-xl'>
             {sent && !error ? (
-                <div className="flex flex-col items-center justify-center gap-4">
+                <div className="flex flex-col items-center justify-center gap-4 mx-auto">
                     <Check stroke='#211912' />
                     <p className='text-center'>Your inquiry has been sent. Please wait patiently for an answer.</p>
                 </div>
             ) : !sent && error ? (
-                <div className="flex flex-col items-center justify-center gap-4">
+                <div className="flex flex-col items-center justify-center gap-4 mx-auto">
                     <X stroke="#211912" />
                     <p className='text-center'>There has been an Error. Please try again later. If this error persists, feel free to reach out manually.</p>
                     <a href="mailto:info@generics.studio" className='text-center'>info@generics.studio</a>

@@ -52,7 +52,7 @@ export default function PrivacyPolicyPage() {
             <p className="font-bold">Data protection officer</p>
             <p>Arlind Gurgurovci</p>
 
-            <p>arlind@generics.studio</p>
+            <p>info@generics.studio</p>
             <p>+41 79 405 99 55</p>
           </div>
         </div>

@@ -43,16 +43,22 @@ export default function Header() {
 
   return (
     <>
-      <header 
+      <header
         ref={headerRef}
-        className="m-4 fixed inset-x-0 top-0 z-50 bg-background/75 shadow-sm p-4 border-[1.5px] flex justify-between items-center backdrop-blur-2xl"
+        className="backdrop-blur-xs m-4 z-2 fixed inset-x-0 top-0 bg-background/80 shadow-sm p-4 border-[1.5px] flex justify-between items-center "
       >
         <Link href="/" className="">
-          <Image src="/logo.svg" width={1000} height={1000} alt="Logo" className="h-10 w-auto" />
+          <Image
+            src="/logo.svg"
+            width={1000}
+            height={1000}
+            alt="Logo"
+            className="h-10 w-auto"
+          />
         </Link>
-        
+
         {/* Desktop navigation */}
-        <div className="space-x-4 items-center hidden md:flex">
+        <div className="space-x-4 items-center hidden md:flex z-1">
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
           <Link href="/services">Services</Link>
@@ -61,7 +67,7 @@ export default function Header() {
             Contact
           </Link>
         </div>
-        
+
         {/* Mobile burger menu button */}
         <div className="md:hidden flex items-center">
           <button
@@ -78,21 +84,41 @@ export default function Header() {
       <div
         ref={menuItemsRef}
         style={{ display: "none" }}
-        className="fixed inset-0 z-40 bg-background flex flex-col justify-center items-center space-y-8 text-2xl md:hidden"
+        className="fixed inset-0 bg-background z-1 flex flex-col justify-center items-center space-y-8 text-2xl md:hidden"
       >
-        <Link href="/" className="hover:text-trinidad transition-colors" onClick={() => setIsOpen(false)}>
+        <Link
+          href="/"
+          className="hover:text-trinidad transition-colors"
+          onClick={() => setIsOpen(false)}
+        >
           Home
         </Link>
-        <Link href="/about" className="hover:text-trinidad transition-colors" onClick={() => setIsOpen(false)}>
+        <Link
+          href="/about"
+          className="hover:text-trinidad transition-colors"
+          onClick={() => setIsOpen(false)}
+        >
           About
         </Link>
-        <Link href="/services" className="hover:text-trinidad transition-colors" onClick={() => setIsOpen(false)}>
+        <Link
+          href="/services"
+          className="hover:text-trinidad transition-colors"
+          onClick={() => setIsOpen(false)}
+        >
           Services
         </Link>
-        <Link href="/case-studies" className="hover:text-trinidad transition-colors" onClick={() => setIsOpen(false)}>
+        <Link
+          href="/case-studies"
+          className="hover:text-trinidad transition-colors"
+          onClick={() => setIsOpen(false)}
+        >
           Projects
         </Link>
-        <Link href="/contact" className="bg-trinidad text-powder py-3 px-6 hover:bg-opacity-90 transition-all" onClick={() => setIsOpen(false)}>
+        <Link
+          href="/contact"
+          className="bg-trinidad text-powder py-3 px-6 hover:bg-opacity-90 transition-all"
+          onClick={() => setIsOpen(false)}
+        >
           Contact
         </Link>
       </div>

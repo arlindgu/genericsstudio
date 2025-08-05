@@ -19,7 +19,7 @@ export default function Footer() {
         animate={{ y: 0, opacity: 1 }}
         initial={{ y: 100, opacity: 0 }}
         transition={{ duration: 0.5, ease: "easeInOut", type: "spring", stiffness: 100 }}
-        className="bg-background z-1 border-t-[1.5px] border-licorice">
+        className="bg-background border-t-[1.5px] border-licorice">
                 <div className="flex flex-col flex-wrap">
                     {Object.entries(FooterLinks).map(([label, href], i) => (
                         <motion.p

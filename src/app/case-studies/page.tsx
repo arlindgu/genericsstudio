@@ -16,10 +16,28 @@ export default function CaseStudiesPage() {
   const caseStudies: CaseStudiesPageProps[] = [
     {
       title: "didischocoberrys",
-      description: "For didischocoberrys, we developed a custom landing page focused on consistent branding, user-friendly UI/UX design, and a clear structure to increase conversions. A responsive contact form and targeted SEO optimizations were integrated to improve visibility on Google.",
+      description:
+        "For didischocoberrys, we developed a custom landing page focused on consistent branding, user-friendly UI/UX design, and a clear structure to increase conversions. A responsive contact form and targeted SEO optimizations were integrated to improve visibility on Google.",
       url: "https://didis.arlind.io/",
-      tags: ["Web Design", "Landing Page", "UI/UX", "SEO", "Branding", "Contact Form"]
+      tags: [
+        "Web Design",
+        "Landing Page",
+        "Branding",
+      ],
     },
+    {
+      title: "Thread IT",
+      description:
+        "For Thread IT, we developed a comprehensive web solution that included a custom landing page, user-friendly UI/UX design, and robust SEO optimizations. The project aimed to enhance brand visibility and improve user engagement.",
+      url: "https://threadit.arlind.io/",
+      tags: [
+        "Web Design",
+        "Landing Page",
+        "SEO",
+        "Branding",
+        "Contact Form",
+      ],
+    }
   ];
 
 

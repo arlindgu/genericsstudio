@@ -87,10 +87,10 @@ export default function Page() {
               className={`object-cover ${service.objectPosition}`}
             />
             <div className="max-w-xs">
-              <h2 className="relative z-0 text-white font-bold mix-blend-difference word-break">
+              <h2 className="relative text-white font-bold mix-blend-difference word-break">
                 {service.title}
               </h2>
-              <p className="relative z-0 text-white mix-blend-difference">
+              <p className="relative text-white mix-blend-difference">
                 {service.description}
               </p>
             </div>
