@@ -18,5 +18,5 @@ This is a private hobby project to experiment with modern web technologies and c
 - **Next.js**
 - **React**
 - **Markdown**
-- **TypeScript** (optional, if used)
-- **Tailwind CSS** (optional, if used)
+- **TypeScript**
+- **Tailwind CSS**
