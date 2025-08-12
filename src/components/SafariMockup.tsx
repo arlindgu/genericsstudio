@@ -12,8 +12,8 @@ export default function SafariMockup() {
               className="border-b-2 h-1/12 flex flex-row items-center justify-between p-4 gap-2"
             >
               <div className="flex flex-row gap-2">
-                <div className="w-3 h-3 border-1 border-butterfly-400 rounded-full bg-butterfly-300"></div>
-                <div className="w-3 h-3 border-1 border-trinidad-400  rounded-full bg-trinidad-300"></div>
+                <div className="w-3 h-3 border-1 border-butterfly-400 rounded-full"></div>
+                <div className="w-3 h-3 border-1 border-trinidad-400  rounded-full bg-primary"></div>
                 <div className="w-3 h-3 border-1 border-night-400 rounded-full bg-night-300"></div>
               </div>
               <div className="w-full border h-5 rounded-full"></div>

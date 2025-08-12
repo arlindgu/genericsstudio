@@ -38,14 +38,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${generalSans.variable}`}
-      >
+      <body className={`${generalSans.variable}`}>
         <Header />
-        <div className="mt-32">{children}
+        <div className="mt-32">
+          {children}
           <Footer />
         </div>
-        
       </body>
     </html>
   );

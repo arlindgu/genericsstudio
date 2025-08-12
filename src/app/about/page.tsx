@@ -2,13 +2,14 @@
 import {useEffect} from "react";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
+import PageTitle from "@/components/ui/PageTitle";
 
 export default function AboutPage() {
     gsap.registerPlugin(SplitText);
 
     useEffect(() => {
         const splitTitle = SplitText.create("#pagetitle", { type: "words" });
-        const splitSubtitle = SplitText.create("#pagesubtitle", { type: "words, chars" });
+        const splitSubtitle = SplitText.create("#pagesubtitle", { type: "words" });
 
         const timeline = gsap.timeline({ defaults: { ease: "power1.out" } });
         timeline
@@ -22,7 +23,7 @@ export default function AboutPage() {
                 duration: 0.5,
                 y: 100,
                 autoAlpha: 0,
-                stagger: 0.01
+                stagger: 0.005
             });
 
     }, []);
@@ -61,38 +62,28 @@ export default function AboutPage() {
 ];
 
     return (
-        <div>
-            <section className="h-dvh flex flex-col items-center justify-center -mt-32">
-                <section className="p-4 text-center">
-                <h1 id="pagetitle" className="text-7xl mb-4 max-w-2xl">Why we stand out and why it matters.</h1>
-                <p  id="pagesubtitle" className="max-w-2xl">We are a creative studio specializing in digital solutions. Our
-                multidisciplinary team combines expertise from development,
-                design, user experience, and project management. Together, we
-                craft innovative concepts and evaluate their potential for
-                sustainable success.</p>
-                </section>
-            </section>
-            {content.map((item, index) => (
-                <section
-                    key={index}
-                    className="min-h-dvh flex flex-col items-center justify-center relative"
-                >
-                    <video
-                        src={item.video}
-                        className="w-full h-full object-cover absolute top-0 left-0"
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                    />
-                    <div className="relative text-center text-powder p-4">
-                        <h1 className="font-bold mb-2">{item.title}</h1>
-                        <h2 className="text-xl mb-4">{item.subtitle}</h2>
-                        <p className="max-w-2xl mx-auto">{item.text}</p>
-                    </div>
-                    
-                </section>
-            ))}
-        </div>
+      <div>
+        <PageTitle title="About Studio.">Passion. Craft. Innovation.</PageTitle>
+        {content.map((item, index) => (
+          <section
+            key={index}
+            className="min-h-dvh flex flex-col items-center justify-center relative"
+          >
+            <video
+              src={item.video}
+              className="w-full h-full object-cover absolute top-0 left-0"
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+            <div className="relative text-center text-powder p-4 text-background">
+              <h1 className="font-bold text-4xl mb-2">{item.title}</h1>
+              <h2 className="text-xl mb-4">{item.subtitle}</h2>
+              <p className="max-w-2xl mx-auto">{item.text}</p>
+            </div>
+          </section>
+        ))}
+      </div>
     );
 }

@@ -4,7 +4,7 @@ export default function ImprintPage() {
   return (
     <main className="flex flex-col items-center justify-center gap-8 mb-24 max-w-7xl mx-auto p-4">
       <div className="flex flex-col gap-4">
-        <PageTitle title="Imprint"> </PageTitle>
+        <PageTitle title="Imprint">Last updated on: 09.07.2025</PageTitle>
         <div className="card">
           <b>Responsible entity</b>
           <p>Gurgurovci Generics Studio</p>

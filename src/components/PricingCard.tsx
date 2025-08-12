@@ -13,7 +13,7 @@ export interface PricingCardProps {
 
 export default function PricingCard(props: PricingCardProps) {
     return (
-        <div className="flex flex-col gap-2 border-licorice border-[1.5px] p-4 w-full shadow-md">
+        <div className="flex flex-col gap-2 border-licorice border-[1.5px] p-4 w-full shadow-sm">
             <h2 className="font-body">{props.title}</h2>
             <p>{props.description}</p>
             <h3 className="font-body">{props.currency}<span className="font-bold"> {props.price}</span></h3>

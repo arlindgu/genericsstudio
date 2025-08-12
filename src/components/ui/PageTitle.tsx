@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { ReactNode } from "react";
 
 interface PageTitleProps {
@@ -10,22 +7,11 @@ interface PageTitleProps {
 
 export default function PageTitle({ title, children }: PageTitleProps) {
   return (
-    <div className="flex flex-col text-center">
-      <motion.h1
-        animate={{ y: 0, opacity: 1 }}
-        initial={{ y: 10, opacity: 0 }}
-        transition={{ duration: 0.5, ease: "easeInOut", type: "spring" }}
-      >
-        {title}
-      </motion.h1>
-      <motion.p
-        animate={{ y: 0, opacity: 1 }}
-        initial={{ y: 10, opacity: 0 }}
-        transition={{ duration: 0.5, ease: "easeInOut", type: "spring" }}
-        className=""
-      >
-        {children}
-      </motion.p>
-    </div>
+    <section className="h-dvh flex flex-col items-center justify-center -mt-32">
+      <section className="p-4 text-center">
+        <h1 className="font-bold">{title}</h1>
+        <h2 className="text-muted-foreground">{children}</h2>
+      </section>
+    </section>
   );
 }
