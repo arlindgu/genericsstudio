@@ -173,13 +173,13 @@ export default function Page() {
       </section>
       <section className="max-w-7xl mx-auto mt-32 flex flex-col gap-8 items-center">
         <h3 className="text-center">Service Models & Tech Stack</h3>
-        <p className="w-3xl">
+        <p className="max-w-3xl">
           Full Service: End-to-end solution—design, development, launch, and
           ongoing care. Alternatively, we deliver single projects (including
           source code) or offer monthly maintenance contracts tailored to your
           needs.
         </p>
-        <p className="w-3xl">
+        <p className="max-w-3xl">
           Technology: Modern tools for modern outcomes—Figma for design, Next.js
           for development, Vercel for hosting, and GitHub powering version
           control and backups.
@@ -187,7 +187,7 @@ export default function Page() {
       </section>
       <section className="max-w-3xl mx-auto mt-32">
         <h3 className="text-center">Frequently Asked Questions</h3>
-        <p className="w-3xl">
+        <p className="max-w-3xl">
           Have questions? We have answers. Check out our FAQ section for
           information on common inquiries.
         </p>
