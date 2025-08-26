@@ -36,7 +36,7 @@ export default function CaseStudiesPage() {
         "Branding",
         "Contact Form",
       ],
-    }
+    },
     {
       title: "Blendis Barbershop",
       description:
