@@ -46,7 +46,7 @@ export default function Header() {
     <>
       <header
         ref={headerRef}
-        className="bg-background/99 fixed inset-x-0 top-0 p-4 border-b flex justify-between items-center z-2"
+        className="bg-background/99 p-4 border-b flex justify-between items-center z-2 fixed inset-x-0 top-0"
       >
         <Link href="/" className="">
           <Image

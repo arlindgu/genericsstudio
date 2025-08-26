@@ -8,7 +8,7 @@ export default function Footer() {
     };
 
     return (
-        <footer className="bg-background/80 shadow-xs border-t backdrop-blur-2xl bottom-0 inset-x-0 z-2 fixed p-2">
+        <footer className="bg-background/80 shadow-xs border-t backdrop-blur-2xl z-2 p-2">
             <div className="flex flex-row justify-center md:justify-between flex-wrap gap-4 p-2">
                 <p className="text-sm text-night-700">
                     &copy; {new Date().getFullYear()} Generics Studio. All rights reserved.

@@ -37,6 +37,18 @@ export default function CaseStudiesPage() {
         "Contact Form",
       ],
     }
+    {
+      title: "Blendis Barbershop",
+      description:
+        "For Blendis Barbershop, we created a visually stunning website that showcases their services and expertise. The site features a modern design, easy navigation, and a booking system to enhance user experience.",
+      url: "https://blendis.arlind.io/",
+      tags: [
+        "Web Design",
+        "Landing Page",
+        "SEO",
+        "booking system",
+      ],
+    }
   ];
 
 
