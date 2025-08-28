@@ -3,71 +3,67 @@ import PageTitle from "@/components/ui/PageTitle"
 
 export default function PrivacyPolicyPage() {
   return (
-    <main className='flex flex-col gap-8 m-4 mb-24 max-w-7xl mx-auto p-4'>
-      <PageTitle title="Privacy Policy">Last updated on: 09.07.2025</PageTitle>
-        <p>
-          Transparent handling of personal data is very important to us. This
-          data protection statement provides information on what personal data
-          we collect, for what purpose and to whom we pass it on. We regularly
-          review and update this privacy policy to ensure the highest level of
-          transparency.
-        </p>
-        <div>
-          <p className="font-bold">1. What services we use</p>
-          <ul className="list-disc pl-4">
-            <li>
-              <span>Google AdSense</span>
-            </li>
-            <li>
-              <span>Google Ads</span>
-            </li>
-            <li>
-              <span>WhatsApp Business Chat</span>
-            </li>
-            <li>
-              <span>Cloudflare CDN</span>
-            </li>
-            <li>
-              <span>Cloudflare Stream</span>
-            </li>
-            <li>
-              <span>Google Fonts API</span>
-            </li>
+    <main>
+      <PageTitle title="Privacy Policy">
+        Last updated on: 09.07.2025
+        <br />
+        <br />
+        Transparent handling of personal data is very important to us. This data
+        protection statement provides information on what personal data we
+        collect, for what purpose and to whom we pass it on. We regularly review
+        and update this privacy policy to ensure the highest level of
+        transparency.
+      </PageTitle>
+
+      <section>
+        <div className="container">
+          <h2>1. What services we use</h2>
+          <ul>
+            <li>Google AdSense</li>
+            <li>Google Ads</li>
+            <li>WhatsApp Business Chat</li>
+            <li>Cloudflare CDN</li>
+            <li>Cloudflare Stream</li>
+            <li>Google Fonts API</li>
           </ul>
-        </div>
-        <div>
-          <p className="font-bold">2. Contact Information</p>
+
+          <h2>2. Contact Information</h2>
           <p>
             If you have any questions or concerns about our protection of your
             data, you can always reach us by email at info@generics.studio.
             Responsible for data processing done through this website is:
           </p>
-          <div className="pl-4">
-            <p>Gurgurovci Generics Studio</p>
-            <p>Bergholzstrasse 21 A</p>
-            <p>9500 Wil SG</p>
-            <p>Switzerland</p>
-          </div>
-          <div className="pl-4">
-            <p className="font-bold">Data protection officer</p>
-            <p>Arlind Gurgurovci</p>
 
-            <p>info@generics.studio</p>
-            <p>+41 79 405 99 55</p>
-          </div>
-        </div>
-        <div>
-          <p className="font-bold">3. General principles</p>
-          <p className="font-bold">
-            3.1 What data we collect from you and from whom we receive this data
+          <p>
+            Gurgurovci Generics Studio
+            <br />
+            Bergholzstrasse 21 A
+            <br />
+            9500 Wil SG
+            <br />
+            Switzerland
           </p>
+
+          <h3>Data protection officer</h3>
+          <p>
+            Arlind Gurgurovci
+            <br />
+            info@generics.studio
+            <br />
+            +41 79 405 99 55
+          </p>
+
+          <h2>3. General principles</h2>
+          <h3>
+            3.1 What data we collect from you and from whom we receive this data
+          </h3>
           <p>
             First and foremost, we process personal data that you provide to us
             or that we collect when operating our website. We may also receive
             personal data about you from third parties. These may be the
             following categories:
           </p>
-          <ul className="list-disc pl-4">
+          <ul>
             <li>Personal master data (name, address, dates of birth, etc.);</li>
             <li>
               Contact information (cell phone number, email address, etc.);
@@ -81,11 +77,8 @@ export default function PrivacyPolicyPage() {
               about your health).
             </li>
           </ul>
-        </div>
-        <div>
-          <p className="font-bold">
-            3.2 Under what conditions do we process your data?
-          </p>
+
+          <h3>3.2 Under what conditions do we process your data?</h3>
           <p>
             We process your data in good faith and for the purposes set out in
             this privacy policy. In doing so, we ensure transparent and
@@ -94,16 +87,15 @@ export default function PrivacyPolicyPage() {
             lawful because there is a justification. A justification reason may
             be in particular:
           </p>
-          <ul className="list-disc pl-4">
+          <ul>
             <li>Your consent;</li>
             <li>the execution of a contract or pre-contractual measures;</li>
             <li>
               our legitimate interests, unless your interests are overridden.
             </li>
           </ul>
-        </div>
-        <div>
-          <p className="font-bold">3.3 How can you withdraw your consent?</p>
+
+          <h3>3.3 How can you withdraw your consent?</h3>
           <p>
             If you have given us consent to process your personal data for
             specific purposes, we will process your data within the scope of
@@ -112,18 +104,15 @@ export default function PrivacyPolicyPage() {
             in the imprint. Data processing that has already taken place is not
             affected by this.
           </p>
-        </div>
-        <div>
-          <p className="font-bold">
-            3.4 In which cases can we share your data with third parties?
-          </p>
-          <p className="font-semibold italic">a. Principle</p>
+
+          <h3>3.4 In which cases can we share your data with third parties?</h3>
+          <h4>a. Principle</h4>
           <p>
             We may need to rely on the services of third parties or affiliates
             and engage them to process your data (known as processors).
             Categories of recipients are namely:
           </p>
-          <ul className="list-disc pl-4">
+          <ul>
             <li>Accounting, fiduciary and auditing firm;</li>
             <li>Consulting firms (legal, tax, etc.);</li>
             <li>
@@ -139,9 +128,7 @@ export default function PrivacyPolicyPage() {
             confidentially.We may also be required to disclose your personal
             information to government authorities.
           </p>
-          <p className="font-semibold italic">
-            b. Visiting our social media channels
-          </p>
+          <h4>b. Visiting our social media channels</h4>
           <p>
             We may have embedded links to our social media channels on our
             website. This is apparent to you in each case (typically via
@@ -153,7 +140,7 @@ export default function PrivacyPolicyPage() {
             have no knowledge of the content of the transmitted data or its use
             by the operators.
           </p>
-          <p className="font-semibold italic">c. Transfer abroad</p>
+          <h4>c. Transfer abroad</h4>
           <p>
             Under certain circumstances, your personal data may be transferred
             to companies abroad in the course of order processing. These
@@ -169,9 +156,8 @@ export default function PrivacyPolicyPage() {
             clauses at the following link.
             https://commission.europa.eu/publications/standard-contractual-clauses-controllers-and-processors-eueea_de
           </p>
-        </div>
-        <div>
-          <p className="font-bold">3.5 How long do we keep your data?</p>
+
+          <h3>3.5 How long do we keep your data?</h3>
           <p>
             We store personal data only for as long as is necessary to fulfill
             the individual purposes for which the data was collected.Data that
@@ -184,9 +170,7 @@ export default function PrivacyPolicyPage() {
             the services, the data will be blocked and we will only use it for
             accounting and tax purposes.
           </p>
-        </div>
-        <div>
-          <p className="font-bold">3.6 How do we protect your data?</p>
+          <h3>3.6 How do we protect your data?</h3>
           <p>
             We will keep your information secure and take all reasonable steps
             to protect your information from loss, access, misuse or
@@ -198,10 +182,8 @@ export default function PrivacyPolicyPage() {
             Socket Layer) procedure in conjunction with the highest encryption
             level supported by your browser.
           </p>
-        </div>
-        <div>
-          <p className="font-bold">3.7 What rights do you have?</p>
-          <p className="font-semibold italic">a. Right to information</p>
+          <h3>3.7 What rights do you have?</h3>
+          <h4>a. Right to information</h4>
           <p>
             You can request information about the data we have stored about you
             at any time. We ask you to send your request for information
@@ -209,7 +191,7 @@ export default function PrivacyPolicyPage() {
             have the right to receive your data in a common file format if we
             process your data automatically and if:
           </p>
-          <ul className="list-disc pl-4">
+          <ul>
             <li>
               you have given your consent for the processing of this data; or
             </li>
@@ -228,7 +210,7 @@ export default function PrivacyPolicyPage() {
             detailed information from you. You will be informed of the extension
             of the deadline in good time, at least in text form.
           </p>
-          <p className="font-semibold italic">b. Deletion and correction</p>
+          <h4>b. Deletion and correction</h4>
           <p>
             You have the option of requesting the deletion or correction of your
             data at any time. We may reject the request if statutory provisions
@@ -239,7 +221,7 @@ export default function PrivacyPolicyPage() {
             effects on the performance of the contract (e.g. premature
             termination of the contract or cost consequences).
           </p>
-          <p className="font-semibold italic">c. Legal process</p>
+          <h4>c. Legal process</h4>
           <p>
             If you are affected by the processing of personal data, you have the
             right to enforce your rights in court or to file a complaint with
@@ -247,27 +229,21 @@ export default function PrivacyPolicyPage() {
             authority in Switzerland is the Federal Data Protection and
             Information Commissioner: https://www.edoeb.admin.ch
           </p>
-        </div>
-        <div>
-          <p className="font-bold">3.8 Changes to the privacy policy</p>
+          <h3>3.8 Changes to the privacy policy</h3>
           <p>
             We may change this privacy policy at any time. The changes will be
             published on generics.studio, you will not be informed separately.
           </p>
-        </div>
-        <div>
-          <p className="font-bold">4. Individual data processing operations</p>
-          <p className="font-bold">
-            4.1 Providing the website and creating log files
-          </p>
-          <p>What information do we receive and how do we use it?</p>
+          <h2>4. Individual data processing operations</h2>
+          <h3>4.1 Providing the website and creating log files</h3>
+          <h4>What information do we receive and how do we use it?</h4>
           <p>
             By visiting generics.studio, certain data is automatically stored on
             our servers or on servers of services and products that we obtain
             and / or have installed, for purposes of system administration, for
             statistical or backup purposes or for tracking purposes. These are:
           </p>
-          <ul className="list-disc pl-4">
+          <ul>
             <li>the name of your Internet service provider;</li>
             <li>Your IP address (in some circumstances);</li>
             <li>the version of your browser software;</li>
@@ -279,7 +255,7 @@ export default function PrivacyPolicyPage() {
             <li>the web page from which you are visiting URL;</li>
             <li>the search words you used to find the URL.</li>
           </ul>
-          <p>Why may we process this data?</p>
+          <h4>Why may we process this data?</h4>
           <p>
             This data cannot be assigned to a specific person and there is no
             merging of this data with other data sources. The log files are
@@ -287,26 +263,24 @@ export default function PrivacyPolicyPage() {
             ensure the security of our information technology systems. This is
             our legitimate interest.
           </p>
-          <p>How can you prevent data collection?</p>
+          <h4>How can you prevent data collection?</h4>
           <p>
             The data is only stored for as long as is necessary to achieve the
             purpose for which it was collected. Accordingly, the data is deleted
             after the end of each session. The storage of the log files is
             mandatory for the operation of the website, you therefore have no
             possibility to object.
-          </p>{" "}
-        </div>
-        <div>
-          <p className="font-bold">4.2 Google AdSense</p>
+          </p>
+          <h4>4.2 Google AdSense</h4>
           <p>
             On our website, we use Google AdSense, a service for embedding
             advertisements of Google LLC (1600 Amphitheatre Parkway, Mountain
-            View, CA 94043, USA; Google).Google AdSense uses cookies to
-            analyze how visitors use the website. In addition, Google AdSense
-            also uses so-called web beacons (invisible graphics). Through these
-            web beacons, information such as visitor traffic on the pages of
-            this offer can be evaluated.The information generated by cookies and
-            web beacons about the use of this website (including the user his IP
+            View, CA 94043, USA; Google).Google AdSense uses cookies to analyze
+            how visitors use the website. In addition, Google AdSense also uses
+            so-called web beacons (invisible graphics). Through these web
+            beacons, information such as visitor traffic on the pages of this
+            offer can be evaluated.The information generated by cookies and web
+            beacons about the use of this website (including the user his IP
             address) and the delivery of advertising formats is transmitted to a
             Google server in the USA and stored there. This information may be
             passed on by Google to contractual partners of Google. However,
@@ -322,9 +296,7 @@ export default function PrivacyPolicyPage() {
             about your settings options and data protection at Google at
             https://www.google.com/intl/de/policies/privacy/?fg=1.
           </p>
-        </div>
-        <div>
-          <p className="font-bold">4.3 Google Ads</p>
+          <h4>4.3 Google Ads</h4>
           <p>
             We use the Google Ads service on our website, an online advertising
             service provided by Google LLC, 1600 Amphitheatre Parkway, Mountain
@@ -332,9 +304,7 @@ export default function PrivacyPolicyPage() {
             place advertisements in the Google search results as well as in the
             Google advertising network.
           </p>
-        </div>
-        <div>
-          <p className="font-bold">4.4 WhatsApp Business Chat</p>
+          <h4>4.4 WhatsApp Business Chat</h4>
           <p>
             For direct communication, we offer you the possibility to contact us
             via WhatsApp Business Chat. This service is provided by WhatsApp
@@ -348,26 +318,22 @@ export default function PrivacyPolicyPage() {
             the service and enable communication. In the process, your IP
             address may also be collected and stored.Please note that the use of
             WhatsApp Business Chat and communication via this service is subject
-            to WhatsApp its privacy policy. We recommend that you read this policy
-            before using the service.
+            to WhatsApp its privacy policy. We recommend that you read this
+            policy before using the service.
           </p>
-        </div>
-        <div>
-          <p className="font-bold">4.5 Cloudflare CDN</p>
+          <h4>4.5 Cloudflare CDN</h4>
           <p>
             Our website uses the Content Delivery Network (CDN) service provided
             by Cloudflare, Inc, 101 Townsend St, San Francisco, CA 94107, USA
-            (Cloudflare). A CDN helps deliver content from our website faster
-            by distributing copies of the content to a network of fast loading
+            (Cloudflare). A CDN helps deliver content from our website faster by
+            distributing copies of the content to a network of fast loading
             servers.When you visit our website, your IP address is transmitted
             to Cloudflare and cookies may be set in your browser, which are
             necessary for the optimization and security of the service.
             Cloudflare uses this data to speed up traffic between our web server
             and your end device and to protect our website from attacks.
           </p>
-        </div>
-        <div>
-          <p className="font-bold">4.6 Cloudflare Stream</p>
+          <h4>4.6 Cloudflare Stream</h4>
           <p>
             Our website uses the Cloudflare Stream service provided by
             Cloudflare, Inc, 101 Townsend St, San Francisco, CA 94107, USA
@@ -380,9 +346,7 @@ export default function PrivacyPolicyPage() {
             data is used to enable video streaming, monitor performance and
             improve the user experience.
           </p>
-        </div>
-        <div>
-          <p className="font-bold">4.7 Google Fonts API</p>
+          <h4>4.7 Google Fonts API</h4>
           <p>
             On our website, we use the Google Fonts API, a service of Google LLC
             (1600 Amphitheatre Parkway, Mountain View, CA 94043, USA; Google),
@@ -399,6 +363,7 @@ export default function PrivacyPolicyPage() {
             correctly.
           </p>
         </div>
+      </section>
     </main>
   );
 }

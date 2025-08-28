@@ -91,13 +91,13 @@ export default function AboutPage() {
               <CarouselContent >
                 {content.map((item, index) => (
                   <CarouselItem key={index}>
-                    <section
+                    <div
                       key={index}
-                      className="min-h-dvh flex flex-col items-center justify-center relative"
+                      className="h-screen flex flex-col items-center justify-center relative"
                     >
                       <video
                         src={item.video}
-                        className="w-full h-3/4 object-cover absolute"
+                        className="w-full h-full object-cover absolute"
                         autoPlay
                         loop
                         muted
@@ -106,9 +106,8 @@ export default function AboutPage() {
                       <div className="relative text-center max-w-3xl text-background dark:text-foreground">
                         <h3>{item.title}</h3>
                         <h4>{item.subtitle}</h4>
-                        <p>{item.text}</p>
                       </div>
-                    </section>
+                    </div>
                   </CarouselItem>
                 ))}
               </CarouselContent>

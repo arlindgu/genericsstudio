@@ -168,15 +168,15 @@
   }
 
   h2 {
-    @apply scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0;
+    @apply mt-10 scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0;
   }
 
   h3 {
-    @apply scroll-m-20 text-2xl font-semibold tracking-tight;
+    @apply mt-8 scroll-m-20 text-2xl font-semibold tracking-tight;
   }
 
   h4 {
-    @apply scroll-m-20 text-xl font-semibold tracking-tight;
+    @apply mt-6 scroll-m-20 text-xl font-semibold tracking-tight;
   }
 
   p {
@@ -218,6 +218,6 @@
   }
 
   section {
-    @apply py-16 lg:py-24;
+    @apply py-16 lg:py-24 ;
   }
 }

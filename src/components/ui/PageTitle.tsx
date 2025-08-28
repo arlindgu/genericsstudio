@@ -7,10 +7,10 @@ interface PageTitleProps {
 
 export default function PageTitle({ title, children }: PageTitleProps) {
   return (
-    <section>
+    <section className="-mb-12 lg:-mb-24">
       <div className="container">
         <h1>{title}</h1>
-        <p className="max-w-lg">{children}</p>
+        <div className="max-w-lg">{children}</div>
       </div>
     </section>
   );
