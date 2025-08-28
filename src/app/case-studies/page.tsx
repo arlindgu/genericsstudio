@@ -53,32 +53,37 @@ export default function CaseStudiesPage() {
 
 
   return (
-    <main className="m-8">
-      <PageTitle title="Our Projects.">Vision. Execution. Impact.</PageTitle>
-
-      <div className="w-full min-h-dvh flex flex-col gap-4 justify-center items-center">
-        {caseStudies.map(({ title, description, url, tags }) => (
-          <div
-            key={url}
-            className="border p-4 bg-background shadow-sm max-w-5xl"
-          >
-            <div className="flex flex-col justify-between items-start">
-              <a
-                href={url}
-                className="uppercase font-body text-2xl font-bold hover:underline order-2 "
-              >
-                {title}
-              </a>
+    <>
+      <PageTitle title="Our Projects.">
+        Take a look at our successfully completed projects. Each project tells a
+        unique story of challenges, creative solutions, and satisfied clients
+        who trusted us with their vision.
+      </PageTitle>
+      <section>
+        <div className="container flex flex-col gap-4 justify-center items-center">
+          {caseStudies.map(({ title, description, url, tags }) => (
+            <div
+              key={url}
+              className="border p-4 bg-background shadow-sm max-w-5xl"
+            >
+              <div className="flex flex-col justify-between items-start">
+                <a
+                  href={url}
+                  className="uppercase font-body text-2xl font-bold hover:underline order-2 "
+                >
+                  {title}
+                </a>
+              </div>
+              <p className="text-sm text-licoric-950 mb-2">{description}</p>
+              <div>
+                {tags.map((tag) => (
+                  <Tag key={tag} tag={tag} />
+                ))}
+              </div>
             </div>
-            <p className="text-sm text-licoric-950 mb-2">{description}</p>
-            <div>
-              {tags.map((tag) => (
-                <Tag key={tag} tag={tag} />
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
-    </main>
+          ))}
+        </div>
+      </section>
+    </>
   );
 }

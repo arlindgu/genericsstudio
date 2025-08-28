@@ -1,15 +1,13 @@
-import { devIndicatorServerState } from "next/dist/server/dev/dev-indicator-server-state"
+import type { NextConfig } from "next";
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  // Wichtig für Docker!
-  output: 'standalone',
-  
-  // Deine anderen Configs hier...
-  reactStrictMode: true,
-  // swcMinify ist deprecated, rausnehme
+const nextConfig: NextConfig = {
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
+    });
+    return config;
+  },
+};
 
-  devIndicators: false,
-}
-
-module.exports = nextConfig
+export default nextConfig;

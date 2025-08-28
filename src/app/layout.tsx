@@ -37,13 +37,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${generalSans.variable}`}>
+    <html lang="en" className="light
+    ">
+      <body className={`${generalSans.variable} main-h-screen flex flex-col`}>
         <Header />
-        <div className="mt-32">
+        <main className="flex-1">
           {children}
-          <Footer />
-        </div>
+        </main>
+        <Footer />
       </body>
     </html>
   );

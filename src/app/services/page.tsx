@@ -1,8 +1,11 @@
-"use client"
-
 import PageTitle from "@/components/ui/PageTitle";
+import { Card, CardHeader, CardTitle, CardAction, CardContent, CardDescription } from "@/components/ui/card";
+import BrandGuidelines from "@/components/svgs/brandguidelines.svg"
+import Webdesign from "@/components/svgs/webdesign.svg"
+import Webrestauration from "@/components/svgs/webrestauration.svg"
+import {ArrowUpRight } from "lucide-react"
 import Link from "next/link";
-import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 export default function servicesPage() {
 
@@ -10,48 +13,57 @@ export default function servicesPage() {
       {
         title: "Website Design",
         subtitle: "Crafting digital experiences.",
-        href: "/services/website-design",
-        imageSrc: "/services_image_1.png",
+        picture: <Webdesign className="h-12 fill-foreground" />,
+        url: "/contact",
+        description: "We create stunning, user-friendly websites that not only look exceptional but drive real results for your business."
       },
       {
         title: "Branding",
         subtitle: "Building a strong brand identity.",
-        href: "/services/branding",
-        imageSrc: "/services_image_2.png",
+        picture: <BrandGuidelines className="h-12 fill-foreground" />,
+        url: "/contact",
+        description: "We help you establish a strong brand identity that resonates with your target audience and sets you apart from the competition."
       },
       {
         title: "Restauration",
         subtitle: "Reviving traditions.",
-        href: "/services/restauration",
-        imageSrc: "/services_image_3.png",
+        picture: <Webrestauration className="h-12 fill-foreground" />,
+        url: "/contact",
+        description: "We specialize in restoring and preserving traditional craftsmanship, bringing a touch of history to modern design."
       },
     ];
 
+    
+
   return (
-    <main className="p-4">
+    <main>
       <PageTitle title="Explore Services.">
         {" "}
-        Quality. Commitment. Results.
+        Discover our comprehensive range of services. From initial concept to
+        final implementation, we accompany you with tailored solutions that
+        drive your business forward and create sustainable success.
       </PageTitle>
-      <section className="h-dvh flex flex-col space-x-4 lg:flex-row">
-        {ServiceCards.map((service, index) => (
-            <Link
-                key={index}
-                href={service.href}
-                className="relative h-1/3 w-full lg:h-full flex items-center justify-center"
-            >
-                <Image
-                    src={service.imageSrc}
-                    alt={service.title}
-                    className="w-full h-full object-cover absolute"
-                    fill
-                    priority
-                />
-                <h2 className="absolute mix-blend-difference text-background">{service.title}</h2>
-                <p className="absolute mt-18 mix-blend-difference text-background">{service.subtitle}</p>
-                <div className="absolute inset-0 bg-background opacity-0 group-hover:opacity-5 transition" />
-            </Link>
-        ))}
+      <section>
+        <div className="container flex flex-col lg:flex-row gap-8">
+          {ServiceCards.map((service) => (
+            <Card key={service.title} className="flex-1 min-h-64">
+              <CardHeader>
+                <CardAction>
+                  <Button variant="ghost" className="size-8">
+                    <Link href={service.url}>
+                      <ArrowUpRight />
+                    </Link>
+                  </Button>
+                </CardAction>
+                <CardTitle>{service.picture}</CardTitle>
+                <CardDescription>{service.subtitle}</CardDescription>
+              </CardHeader>
+              <CardContent>
+                {service.description}
+              </CardContent>
+            </Card>
+          ))}
+        </div>
       </section>
     </main>
   );

@@ -1,10 +1,10 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Logo from "@/components/svgs/genericsstudio.svg"
 
 export default function Header() {
   const headerRef = useRef<HTMLElement>(null);
@@ -46,16 +46,10 @@ export default function Header() {
     <>
       <header
         ref={headerRef}
-        className="bg-background/99 p-4 border-b flex justify-between items-center z-2 fixed inset-x-0 top-0"
+        className="bg-background/99 p-4 border-b flex justify-between items-center z-2"
       >
         <Link href="/" className="">
-          <Image
-            src="/logo.svg"
-            width={1000}
-            height={1000}
-            alt="Logo"
-            className="h-10 w-auto"
-          />
+          <Logo className="h-10 w-auto fill-current" />
         </Link>
 
         {/* Desktop navigation */}

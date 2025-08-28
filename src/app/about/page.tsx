@@ -3,6 +3,15 @@ import {useEffect} from "react";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
 import PageTitle from "@/components/ui/PageTitle";
+import Autoplay from "embla-carousel-autoplay";
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 export default function AboutPage() {
     gsap.registerPlugin(SplitText);
@@ -62,28 +71,52 @@ export default function AboutPage() {
 ];
 
     return (
-      <div>
-        <PageTitle title="About Studio.">Passion. Craft. Innovation.</PageTitle>
-        {content.map((item, index) => (
-          <section
-            key={index}
-            className="min-h-dvh flex flex-col items-center justify-center relative"
-          >
-            <video
-              src={item.video}
-              className="w-full h-full object-cover absolute top-0 left-0"
-              autoPlay
-              loop
-              muted
-              playsInline
-            />
-            <div className="relative text-center text-powder p-4 text-background">
-              <h1 className="font-bold text-4xl mb-2">{item.title}</h1>
-              <h2 className="text-xl mb-4">{item.subtitle}</h2>
-              <p className="max-w-2xl mx-auto">{item.text}</p>
-            </div>
-          </section>
-        ))}
-      </div>
+      <main>
+        <PageTitle title="About Studio.">
+          Meet the team behind the projects. With passion and expertise, we
+          transform visions into digital reality and create innovative solutions
+          that inspire and convince.
+        </PageTitle>
+
+        <section>
+          <div className="container">
+            <Carousel
+              plugins={[
+                Autoplay({
+                  delay: 5000,
+                  stopOnInteraction: true,
+                }),
+              ]}
+            >
+              <CarouselContent >
+                {content.map((item, index) => (
+                  <CarouselItem key={index}>
+                    <section
+                      key={index}
+                      className="min-h-dvh flex flex-col items-center justify-center relative"
+                    >
+                      <video
+                        src={item.video}
+                        className="w-full h-3/4 object-cover absolute"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                      />
+                      <div className="relative text-center max-w-3xl text-background dark:text-foreground">
+                        <h3>{item.title}</h3>
+                        <h4>{item.subtitle}</h4>
+                        <p>{item.text}</p>
+                      </div>
+                    </section>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
+          </div>
+        </section>
+      </main>
     );
 }
