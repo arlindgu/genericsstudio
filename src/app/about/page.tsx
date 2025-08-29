@@ -76,7 +76,7 @@ export default function AboutPage() {
         <section>
           <div className="container">
             <div className="grid lg:grid-cols-12 border-t pt-8">
-              <h2 className="col-span-4">Our Purpose</h2>
+              <h2 className="col-span-4">What we value and how we act</h2>
               <div className="lg:col-span-8 lg:grid lg:grid-cols-2 gap-8">
                 {valueContent.map((statement, index) => (
                   <div key={index}>
