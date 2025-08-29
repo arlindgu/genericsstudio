@@ -1,8 +1,5 @@
 import PageTitle from "@/components/ui/PageTitle";
 import { Card, CardHeader, CardTitle, CardAction, CardContent, CardDescription } from "@/components/ui/card";
-import BrandGuidelines from "@/components/svgs/brandguidelines.svg"
-import Webdesign from "@/components/svgs/webdesign.svg"
-import Webrestauration from "@/components/svgs/webrestauration.svg"
 import {ArrowUpRight } from "lucide-react"
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -178,23 +175,23 @@ export default function servicesPage() {
       {
         title: "Website Developement",
         subtitle: "Crafting digital experiences",
-        picture: <Webdesign className="h-12 fill-foreground" />,
-        url: "/contact",
-        description: "We create stunning, user-friendly websites that not only look exceptional but drive real results for your business."
+        url: "#web-dev",
+        description:
+          "We create stunning, user-friendly websites that not only look exceptional but drive real results for your business.",
       },
       {
         title: "Branding",
         subtitle: "Building a strong brand identity",
-        picture: <BrandGuidelines className="h-12 fill-foreground" />,
-        url: "/contact",
-        description: "We help you establish a strong brand identity that resonates with your target audience and sets you apart from the competition."
+        url: "#branding",
+        description:
+          "We help you establish a strong brand identity that resonates with your target audience and sets you apart from the competition.",
       },
       {
-        title: "Restauration",
+        title: "Restoration",
         subtitle: "Reviving traditions",
-        picture: <Webrestauration className="h-12 fill-foreground" />,
-        url: "/contact",
-        description: "We specialize in restoring and preserving traditional craftsmanship, bringing a touch of history to modern design."
+        url: "#restoration",
+        description:
+          "We specialize in restoring and preserving traditional craftsmanship, bringing a touch of history to modern design.",
       },
     ];
 
@@ -232,7 +229,9 @@ export default function servicesPage() {
       <section>
         <div className="container">
           <div className="grid lg:grid-cols-12 border-t pt-8">
-            <h2 className="col-span-4">Website Developement</h2>
+            <h2 id="web-dev" className="col-span-4">
+              Website Developement
+            </h2>
             <div className="lg:col-span-8 lg:grid lg:grid-cols-2 gap-8">
               {WebsiteDevelopmentContent.map((statement, index) => (
                 <div key={index}>
@@ -253,7 +252,9 @@ export default function servicesPage() {
       <section>
         <div className="container">
           <div className="grid lg:grid-cols-12 border-t pt-8">
-            <h2 className="col-span-4">Branding</h2>
+            <h2 id="branding" className="col-span-4">
+              Branding
+            </h2>
             <div className="lg:col-span-8 lg:grid lg:grid-cols-2 gap-8">
               {BrandingContent.map((statement, index) => (
                 <div key={index}>
@@ -274,7 +275,9 @@ export default function servicesPage() {
       <section>
         <div className="container">
           <div className="grid lg:grid-cols-12 border-t pt-8">
-            <h2 className="col-span-4">Restauration</h2>
+            <h2 id="restoration" className="col-span-4">
+              Restoration
+            </h2>
             <div className="lg:col-span-8 lg:grid lg:grid-cols-2 gap-8">
               {RestorationContent.map((statement, index) => (
                 <div key={index}>

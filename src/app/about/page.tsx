@@ -1,9 +1,4 @@
 import PageTitle from "@/components/ui/PageTitle";
-import NotJustPixels from '@/components/svgs/notjustpixels.svg';
-import SilenceStandsOut from '@/components/svgs/silencestandsout.svg';
-import DesignThatLingers from '@/components/svgs/designthatlingers.svg';
-import BetweenTheLines from '@/components/svgs/betweenthelines.svg';
-import FormMeetsFeeling from '@/components/svgs/formmeetsfeeling.svg';
 
 export default function AboutPage() {
 
