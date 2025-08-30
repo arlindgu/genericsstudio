@@ -50,6 +50,7 @@ export default function Header() {
       >
         <div className="container flex justify-between">
           <Link href="/">
+          <p className="sr-only">Logo</p>
             <Logo className="h-10 w-auto fill-current" alt="Home" />
           </Link>
 
