@@ -4,6 +4,9 @@ import {ArrowUpRight } from "lucide-react"
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge} from "@/components/ui/badge";
+import { generateSEO, seoConfig } from "@/lib/seo";
+
+export const metadata = generateSEO(seoConfig.services);
 
 export default function servicesPage() {
 
@@ -237,9 +240,9 @@ export default function servicesPage() {
                 <div key={index}>
                   <h3>{statement.title}</h3>
                   <p>{statement.text}</p>
-                  <p className="muted">{statement.subtitle}</p>
+                  <p className="muted mb-6">{statement.subtitle}</p>
                   {statement.deliverables.map((deliverable) => (
-                    <Badge key={deliverable} variant="outline">
+                    <Badge key={deliverable} variant="secondary">
                       {deliverable}
                     </Badge>
                   ))}
@@ -260,9 +263,9 @@ export default function servicesPage() {
                 <div key={index}>
                   <h3>{statement.title}</h3>
                   <p>{statement.text}</p>
-                  <p className="muted">{statement.subtitle}</p>
+                  <p className="muted mb-6">{statement.subtitle}</p>
                   {statement.deliverables.map((deliverable) => (
-                    <Badge key={deliverable} variant="outline">
+                    <Badge key={deliverable} variant="secondary">
                       {deliverable}
                     </Badge>
                   ))}
@@ -283,9 +286,9 @@ export default function servicesPage() {
                 <div key={index}>
                   <h3>{statement.title}</h3>
                   <p>{statement.text}</p>
-                  <p className="muted">{statement.subtitle}</p>
+                  <p className="muted mb-6">{statement.subtitle}</p>
                   {statement.deliverables.map((deliverable) => (
-                    <Badge key={deliverable} variant="outline">
+                    <Badge key={deliverable} variant="secondary">
                       {deliverable}
                     </Badge>
                   ))}

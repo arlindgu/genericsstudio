@@ -1,5 +1,8 @@
 import FormComponent from "./Form"
 import PageTitle from "@/components/ui/PageTitle";
+import { generateSEO, seoConfig } from "@/lib/seo";
+
+export const metadata = generateSEO(seoConfig.contact);
 
 export default function ContactPage() {
     return (

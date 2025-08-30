@@ -1,23 +1,32 @@
-"use client"
+"use client";
 
-import Link from 'next/link'
+import Link from "next/link";
 
 export default function Footer() {
-    const handleLinkClick = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
+  const handleLinkClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
-    return (
-        <footer className="bg-background/80 shadow-xs border-t backdrop-blur-2xl z-2 p-2">
-            <div className="flex flex-row justify-center md:justify-between flex-wrap gap-4 p-2">
-                <p className="text-sm text-night-700">
-                    &copy; {new Date().getFullYear()} Generics Studio. All rights reserved.
-                </p>
-                <div className="flex flex-row gap-4 text-xs text-night-700 items-center">
-                    <Link href="/legal/imprint" onClick={handleLinkClick}>Imprint</Link>
-                    <Link href="/legal/privacy-policy" onClick={handleLinkClick}>Privacy Policy</Link>
-                </div>
-            </div>
-        </footer>
-    )
+  return (
+    <footer className="bg-background border-t z-2 py-4">
+      <div className="container">
+
+        <div className="flex flex-row justify-center md:justify-between flex-wrap gap-4">
+          <div className="flex flex-row gap-4 text-xs items-center">
+            <Link href="/legal/imprint" onClick={handleLinkClick}>
+              Imprint
+            </Link>
+            <Link href="/legal/privacy-policy" onClick={handleLinkClick}>
+              Privacy Policy
+            </Link>
+          </div>
+          <p className="text-xs mt-0">
+            &copy; {new Date().getFullYear()} Generics Studio. All rights
+            reserved.
+          </p>
+        </div>
+
+      </div>
+    </footer>
+  );
 }

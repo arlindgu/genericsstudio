@@ -46,34 +46,34 @@ export default function Header() {
     <>
       <header
         ref={headerRef}
-        className="bg-background/99 p-4 border-b flex justify-between items-center z-2"
+        className="sticky top-0 bg-background py-4 border-b z-2"
       >
-        <Link href="/" className="">
-          <Logo className="h-10 w-auto fill-current" />
-        </Link>
-
-        {/* Desktop navigation */}
-        <div className="space-x-4 items-center hidden md:flex z-1">
-          <Link href="/">Home</Link>
-          <Link href="/about">About</Link>
-          <Link href="/services">Services</Link>
-          <Link href="/case-studies">Projects</Link>
-          <Link
-            href={"/contact"}
-          >
-            <Button>Contact</Button>
+        <div className="container flex justify-between">
+          <Link href="/">
+            <Logo className="h-10 w-auto fill-current" alt="Home" />
           </Link>
-        </div>
 
-        {/* Mobile burger menu button */}
-        <div className="md:hidden flex items-center">
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="focus:outline-none"
-            aria-label="Toggle menu"
-          >
-            <Menu className="w-6 h-6" />
-          </button>
+          {/* Desktop navigation */}
+          <div className="space-x-4 items-center hidden md:flex z-1">
+            <Link href="/">Home</Link>
+            <Link href="/about">About</Link>
+            <Link href="/services">Services</Link>
+            <Link href="/case-studies">Projects</Link>
+            <Link href={"/contact"}>
+              <Button>Contact</Button>
+            </Link>
+          </div>
+
+          {/* Mobile burger menu button */}
+          <div className="md:hidden flex items-center">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="focus:outline-none"
+              aria-label="Toggle menu"
+            >
+              <Menu className="w-6 h-6" />
+            </button>
+          </div>
         </div>
       </header>
 
@@ -83,34 +83,19 @@ export default function Header() {
         style={{ display: "none" }}
         className="fixed inset-0 bg-background z-1 flex flex-col justify-center items-center space-y-8 text-2xl md:hidden"
       >
-        <Link
-          href="/"
-          onClick={() => setIsOpen(false)}
-        >
+        <Link href="/" onClick={() => setIsOpen(false)}>
           Home
         </Link>
-        <Link
-          href="/about"
-          onClick={() => setIsOpen(false)}
-        >
+        <Link href="/about" onClick={() => setIsOpen(false)}>
           About
         </Link>
-        <Link
-          href="/services"
-          onClick={() => setIsOpen(false)}
-        >
+        <Link href="/services" onClick={() => setIsOpen(false)}>
           Services
         </Link>
-        <Link
-          href="/case-studies"
-          onClick={() => setIsOpen(false)}
-        >
+        <Link href="/case-studies" onClick={() => setIsOpen(false)}>
           Projects
         </Link>
-        <Link
-          href="/contact"
-          onClick={() => setIsOpen(false)}
-        >
+        <Link href="/contact" onClick={() => setIsOpen(false)}>
           <Button className="w-full">Contact</Button>
         </Link>
       </div>

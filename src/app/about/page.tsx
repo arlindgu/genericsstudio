@@ -1,4 +1,7 @@
 import PageTitle from "@/components/ui/PageTitle";
+import { generateSEO, seoConfig } from "@/lib/seo";
+
+export const metadata = generateSEO(seoConfig.about);
 
 export default function AboutPage() {
 
