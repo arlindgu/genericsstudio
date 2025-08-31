@@ -32,7 +32,7 @@ export function generateSEO({
     description,
     keywords = [],
     path = '',
-    image = '/og-image.jpg',
+    image = '/opengraph-image.png',
     noIndex = false,
 }: {
     title?: string;
@@ -66,7 +66,7 @@ export function generateSEO({
             description: fullDescription,
             images: [
                 {
-                    url: image, // ✅ Kann jetzt relative URLs verwenden: '/og-image.jpg'
+                    url: image,
                     width: 1200,
                     height: 630,
                     alt: fullTitle,
@@ -141,7 +141,7 @@ export const seoConfig = {
         path: '/projects',
     },
     contact: {
-        title: 'Contact Us - Get in Touch with Generics Studio',
+        title: 'Contact Us - Get in Touch',
         description: 'Have a question or want to start a project? Reach out to us through our contact form or connect with us on social media.',
         keywords: [
             'contact generics studio',
@@ -152,7 +152,7 @@ export const seoConfig = {
         path: '/contact',
     },
     legal: {
-        title: 'Legal Notice & Terms of Service - Generics Studio',
+        title: 'Legal Notice & Terms of Service',
         description: 'Read our legal notice, terms of service, and conditions for using Generics Studio services. Important legal information for our clients and website visitors.',
         keywords: [
             'legal notice generics studio',
@@ -166,7 +166,7 @@ export const seoConfig = {
     },
 
     privacy: {
-        title: 'Privacy Policy - How We Handle Your Data - Generics Studio',
+        title: 'Privacy Policy - How We Handle Your Data',
         description: 'Learn how Generics Studio collects, uses, and protects your personal data. Our comprehensive privacy policy explains your rights and our commitments.',
         keywords: [
             'privacy policy generics studio',
