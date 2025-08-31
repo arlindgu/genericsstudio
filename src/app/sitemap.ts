@@ -35,13 +35,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     },
     {
-      url: 'https://generics.studio/legal/privacy-policy',
+      url: 'https://generics.studio/privacy-policy',
       lastModified: lastMod,
       changeFrequency: 'weekly',
       priority: 0.6,
     },
     {
-      url: 'https://generics.studio/legal/imprint',
+      url: 'https://generics.studio/imprint',
       lastModified: lastMod,
       changeFrequency: 'weekly',
       priority: 0.6,

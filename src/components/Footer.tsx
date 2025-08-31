@@ -13,10 +13,10 @@ export default function Footer() {
 
         <div className="flex flex-row justify-center md:justify-between flex-wrap gap-4">
           <div className="flex flex-row gap-4 text-xs items-center">
-            <Link href="/legal/imprint" onClick={handleLinkClick}>
+            <Link href="/imprint" onClick={handleLinkClick}>
               Imprint
             </Link>
-            <Link href="/legal/privacy-policy" onClick={handleLinkClick}>
+            <Link href="/privacy-policy" onClick={handleLinkClick}>
               Privacy Policy
             </Link>
           </div>

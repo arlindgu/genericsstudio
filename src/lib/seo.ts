@@ -108,7 +108,7 @@ export const seoConfig = {
             'responsive design',
             'mobile-first design'
         ],
-        path: '/services',
+        path: 'services',
     },
     about: {
         title: 'About Studio - Meet the Team Behind Digital Excellence',
@@ -122,7 +122,7 @@ export const seoConfig = {
             'authentic digital identity',
             'performance meets purpose'
         ],
-        path: '/about',
+        path: 'about',
     },
     projects: {
         title: 'Our Projects - Successful Digital Solutions & Case Studies',
@@ -138,7 +138,7 @@ export const seoConfig = {
             'successful websites',
             'client testimonials'
         ],
-        path: '/projects',
+        path: 'projects',
     },
     contact: {
         title: 'Contact Us - Get in Touch',
@@ -149,7 +149,7 @@ export const seoConfig = {
             'project inquiry',
             'customer support'
         ],
-        path: '/contact',
+        path: 'contact',
     },
     legal: {
         title: 'Legal Notice & Terms of Service',
@@ -162,7 +162,7 @@ export const seoConfig = {
             'website terms',
             'service agreement'
         ],
-        path: '/legal',
+        path: 'legal',
     },
 
     privacy: {
@@ -177,6 +177,6 @@ export const seoConfig = {
             'cookie policy',
             'user data rights'
         ],
-        path: '/privacy',
+        path: 'privacy',
     },
 };
