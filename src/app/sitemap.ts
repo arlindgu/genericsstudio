@@ -11,19 +11,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
+      url: 'https://generics.studio/about',
+      lastModified: lastMod,
+      changeFrequency: 'weekly',
+      priority: 0.6,
+    },
+    {
       url: 'https://generics.studio/contact',
       lastModified: lastMod,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: 'https://generics.studio/pricing',
+      url: 'https://generics.studio/services',
       lastModified: lastMod,
       changeFrequency: 'weekly',
       priority: 0.6,
     },
     {
       url: 'https://generics.studio/case-studies',
+      lastModified: lastMod,
+      changeFrequency: 'weekly',
+      priority: 0.6,
+    },
+    {
+      url: 'https://generics.studio/privacy-policy',
+      lastModified: lastMod,
+      changeFrequency: 'weekly',
+      priority: 0.6,
+    },
+    {
+      url: 'https://generics.studio/imprint',
       lastModified: lastMod,
       changeFrequency: 'weekly',
       priority: 0.6,

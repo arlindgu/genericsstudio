@@ -1,9 +1,10 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { Menu } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Logo from "@/components/svgs/genericsstudio.svg"
 
 export default function Header() {
   const headerRef = useRef<HTMLElement>(null);
@@ -24,7 +25,7 @@ export default function Header() {
         gsap.fromTo(
           menuItemsRef.current,
           { opacity: 0, y: -20 },
-          { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" }
+          { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" },
         );
       } else {
         // Hide menu items
@@ -35,7 +36,7 @@ export default function Header() {
           ease: "power2.in",
           onComplete: () => {
             menuItemsRef.current!.style.display = "none";
-          }
+          },
         });
       }
     }
@@ -45,38 +46,35 @@ export default function Header() {
     <>
       <header
         ref={headerRef}
-        className="backdrop-blur-xs m-4 z-2 fixed inset-x-0 top-0 bg-background/80 shadow-sm p-4 border-[1.5px] flex justify-between items-center "
+        className="sticky top-0 bg-background py-4 border-b z-2"
       >
-        <Link href="/" className="">
-          <Image
-            src="/logo.svg"
-            width={1000}
-            height={1000}
-            alt="Logo"
-            className="h-10 w-auto"
-          />
-        </Link>
-
-        {/* Desktop navigation */}
-        <div className="space-x-4 items-center hidden md:flex z-1">
-          <Link href="/">Home</Link>
-          <Link href="/about">About</Link>
-          <Link href="/services">Services</Link>
-          <Link href="/case-studies">Projects</Link>
-          <Link href="/contact" className="bg-trinidad text-powder py-2 px-4">
-            Contact
+        <div className="container flex justify-between">
+          <Link href="/">
+          <p className="sr-only">Logo</p>
+            <Logo className="h-10 w-auto fill-current" alt="Home" />
           </Link>
-        </div>
 
-        {/* Mobile burger menu button */}
-        <div className="md:hidden flex items-center">
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="focus:outline-none"
-            aria-label="Toggle menu"
-          >
-            <Menu className="w-6 h-6" />
-          </button>
+          {/* Desktop navigation */}
+          <div className="space-x-4 items-center hidden md:flex z-1">
+            <Link href="/">Home</Link>
+            <Link href="/about">About</Link>
+            <Link href="/services">Services</Link>
+            <Link href="/case-studies">Projects</Link>
+            <Link href={"/contact"}>
+              <Button>Contact</Button>
+            </Link>
+          </div>
+
+          {/* Mobile burger menu button */}
+          <div className="md:hidden flex items-center">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="focus:outline-none"
+              aria-label="Toggle menu"
+            >
+              <Menu className="w-6 h-6" />
+            </button>
+          </div>
         </div>
       </header>
 
@@ -86,40 +84,20 @@ export default function Header() {
         style={{ display: "none" }}
         className="fixed inset-0 bg-background z-1 flex flex-col justify-center items-center space-y-8 text-2xl md:hidden"
       >
-        <Link
-          href="/"
-          className="hover:text-trinidad transition-colors"
-          onClick={() => setIsOpen(false)}
-        >
+        <Link href="/" onClick={() => setIsOpen(false)}>
           Home
         </Link>
-        <Link
-          href="/about"
-          className="hover:text-trinidad transition-colors"
-          onClick={() => setIsOpen(false)}
-        >
+        <Link href="/about" onClick={() => setIsOpen(false)}>
           About
         </Link>
-        <Link
-          href="/services"
-          className="hover:text-trinidad transition-colors"
-          onClick={() => setIsOpen(false)}
-        >
+        <Link href="/services" onClick={() => setIsOpen(false)}>
           Services
         </Link>
-        <Link
-          href="/case-studies"
-          className="hover:text-trinidad transition-colors"
-          onClick={() => setIsOpen(false)}
-        >
+        <Link href="/case-studies" onClick={() => setIsOpen(false)}>
           Projects
         </Link>
-        <Link
-          href="/contact"
-          className="bg-trinidad text-powder py-3 px-6 hover:bg-opacity-90 transition-all"
-          onClick={() => setIsOpen(false)}
-        >
-          Contact
+        <Link href="/contact" onClick={() => setIsOpen(false)}>
+          <Button className="w-full">Contact</Button>
         </Link>
       </div>
     </>
