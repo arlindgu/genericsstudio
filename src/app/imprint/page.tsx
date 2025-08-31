@@ -20,9 +20,9 @@ export default function ImprintPage() {
             <br />
             Switzerland
             <br />
-            info@generics.studio
+            <a href="mailto:info@generics.studio">info@generics.studio</a>
             <br />
-            +41 79 405 99 55
+            <a href="tel:+41794059955">+41 79 405 99 55</a>
           </p>
           <h2>Persons</h2>
           <p>Arlind Gurgurovci</p>
@@ -32,12 +32,12 @@ export default function ImprintPage() {
           <p>
             The author assumes no liability for the correctness, accuracy,
             timeliness, reliability and completeness of the information.
-          <br />
+            <br />
             Liability claims against the author for material or immaterial
             damage resulting from access to, use or non-use of the published
             information, from misuse of the connection or from technical
             malfunctions are excluded.
-          <br />
+            <br />
             All offers are non-binding. The author expressly reserves the right
             to change, add to, or delete parts of the pages or the entire offer
             without prior notice, or to temporarily or permanently cease

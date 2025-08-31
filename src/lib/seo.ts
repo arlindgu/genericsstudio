@@ -138,7 +138,7 @@ export const seoConfig = {
             'successful websites',
             'client testimonials'
         ],
-        path: 'projects',
+        path: 'case-studies',
     },
     contact: {
         title: 'Contact Us - Get in Touch',

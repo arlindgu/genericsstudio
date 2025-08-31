@@ -51,9 +51,9 @@ export default function PrivacyPolicyPage() {
           <p>
             Arlind Gurgurovci
             <br />
-            info@generics.studio
+            <a href="mailto:info@generics.studio">info@generics.studio</a>
             <br />
-            +41 79 405 99 55
+            <a href="tel:+41794059955">+41 79 405 99 55</a>
           </p>
 
           <h2>3. General principles</h2>
