@@ -162,7 +162,7 @@ export const seoConfig = {
             'website terms',
             'service agreement'
         ],
-        path: 'legal',
+        path: 'imprint',
     },
 
     privacy: {
@@ -177,6 +177,6 @@ export const seoConfig = {
             'cookie policy',
             'user data rights'
         ],
-        path: 'privacy',
+        path: 'privacy-policy',
     },
 };
