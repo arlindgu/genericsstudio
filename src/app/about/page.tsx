@@ -53,7 +53,7 @@ export default function AboutPage() {
 
     return (
       <main>
-        <PageTitle title="About Studio.">
+        <PageTitle title="About Our Creative Studio">
           Meet the team behind the projects. With passion and expertise, we
           transform visions into digital reality and create innovative solutions
           that inspire and convince.
@@ -79,7 +79,9 @@ export default function AboutPage() {
         <section>
           <div className="container">
             <div className="grid lg:grid-cols-12 border-t pt-8">
-              <h2 className="col-span-4">What we value <br/> and how we act</h2>
+              <h2 className="col-span-4">
+                What we value <br /> and how we act
+              </h2>
               <div className="lg:col-span-8 lg:grid lg:grid-cols-2 gap-8">
                 {valueContent.map((statement, index) => (
                   <div key={index}>

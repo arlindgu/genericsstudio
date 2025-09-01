@@ -176,7 +176,7 @@ export default function servicesPage() {
 
     const ServiceCards = [
       {
-        title: "Website Developement",
+        title: "Website Development",
         subtitle: "Crafting digital experiences",
         url: "#web-dev",
         description:
@@ -202,8 +202,7 @@ export default function servicesPage() {
 
   return (
     <main>
-      <PageTitle title="Explore Services.">
-        {" "}
+      <PageTitle title="Explore Our Digital Services">
         Discover our comprehensive range of services. From initial concept to
         final implementation, we accompany you with tailored solutions that
         drive your business forward and create sustainable success.
@@ -233,7 +232,7 @@ export default function servicesPage() {
         <div className="container">
           <div className="grid lg:grid-cols-12 border-t pt-8">
             <h2 id="web-dev" className="col-span-4">
-              Website Developement
+              Website Development
             </h2>
             <div className="lg:col-span-8 lg:grid lg:grid-cols-2 gap-8">
               {WebsiteDevelopmentContent.map((statement, index) => (

@@ -98,8 +98,8 @@ export const seoConfig = {
         path: '',
     },
     services: {
-        title: 'Our Services - Web Development, Branding & Restoration',
-        description: 'Discover our comprehensive services: Custom Next.js websites, authentic branding solutions, and expert website restoration. Tailored solutions for sustainable business success.',
+        title: 'Services - Web Development & Branding',
+        description: 'Discover our services: Custom Next.js websites, authentic branding solutions, and expert website restoration. Tailored for sustainable business success.',
         keywords: [
             'web development services',
             'Next.js websites',
@@ -111,8 +111,8 @@ export const seoConfig = {
         path: 'services',
     },
     about: {
-        title: 'About Studio - Meet the Team Behind Digital Excellence',
-        description: 'Meet the passionate team behind Generics Studio. We transform visions into digital reality with handmade excellence, authentic design, and performance-focused solutions.',
+        title: 'About Us - Meet Our Digital Excellence Team',
+        description: 'Meet the passionate team behind Generics Studio. We transform visions into digital reality with handmade excellence and performance-focused solutions.',
         keywords: [
             'about generics studio',
             'web development team',
@@ -125,8 +125,8 @@ export const seoConfig = {
         path: 'about',
     },
     projects: {
-        title: 'Our Projects - Successful Digital Solutions & Case Studies',
-        description: 'Explore our successfully completed projects including didischocoberrys, Thread IT, and Blendis Barbershop. Each tells a unique story of challenges, solutions, and satisfied clients.',
+        title: 'Projects - Digital Solutions & Case Studies',
+        description: 'Explore our completed projects including didischocoberrys, Thread IT, and Blendis Barbershop. Each tells a story of challenges and solutions.',
         keywords: [
             'web development projects',
             'case studies',

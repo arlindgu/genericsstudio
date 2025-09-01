@@ -7,7 +7,7 @@ export const metadata = generateSEO(seoConfig.privacy);
 export default function PrivacyPolicyPage() {
   return (
     <main>
-      <PageTitle title="Privacy Policy">
+      <PageTitle title="Privacy Policy & Data Protection">
         Last updated on: 09.07.2025
         <br />
         <br />

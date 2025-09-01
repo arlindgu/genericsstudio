@@ -88,7 +88,7 @@ export default function FormComponent() {
                   </div>
                   <div className="flex flex-col">
                     <div className="flex flex-row justify-between items-center mb-1">
-                      <Label>E-Mail Adress</Label>
+                      <Label>E-Mail Address</Label>
                       <Label className="italic text-sm text-muted-foreground">
                         required
                       </Label>

@@ -6,7 +6,9 @@ export const metadata = generateSEO(seoConfig.legal);
 export default function ImprintPage() {
   return (
     <main>
-      <PageTitle title="Imprint">Last updated on: 09.07.2025</PageTitle>
+      <PageTitle title="Legal Information & Imprint">
+        Last updated on: 09.07.2025
+      </PageTitle>
 
       <section>
         <div className="container">

@@ -43,7 +43,7 @@ export default function CaseStudiesPage() {
 
   return (
     <>
-      <PageTitle title="Our Projects.">
+      <PageTitle title="Our Featured Projects Portfolio">
         Take a look at our successfully completed projects. Each project tells a
         unique story of challenges, creative solutions, and satisfied clients
         who trusted us with their vision.
