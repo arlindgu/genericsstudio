@@ -66,7 +66,7 @@ export default function AboutPage() {
               <div className="lg:col-span-8 lg:grid lg:grid-cols-2 gap-8">
                 {purposeContent.map((statement, index) => (
                   <div key={index}>
-                    <h3>{statement.title}</h3>
+                    <h3 className="mt-0">{statement.title}</h3>
                     <p>{statement.text}</p>
                     <p className="muted">{statement.subtitle}</p>
                   </div>
@@ -79,11 +79,11 @@ export default function AboutPage() {
         <section>
           <div className="container">
             <div className="grid lg:grid-cols-12 border-t pt-8">
-              <h2 className="col-span-4">What we value and how we act</h2>
+              <h2 className="col-span-4">What we value <br/> and how we act</h2>
               <div className="lg:col-span-8 lg:grid lg:grid-cols-2 gap-8">
                 {valueContent.map((statement, index) => (
                   <div key={index}>
-                    <h3>{statement.title}</h3>
+                    <h3 className="mt-0">{statement.title}</h3>
                     <p>{statement.text}</p>
                     <p className="muted">{statement.subtitle}</p>
                   </div>

@@ -46,7 +46,7 @@ export default function Header() {
     <>
       <header
         ref={headerRef}
-        className="sticky top-0 bg-background py-4 border-b z-2"
+        className="bg-background py-4 border-b z-2"
       >
         <div className="container flex justify-between">
           <Link href="/">

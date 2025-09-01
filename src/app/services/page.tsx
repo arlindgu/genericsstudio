@@ -238,7 +238,7 @@ export default function servicesPage() {
             <div className="lg:col-span-8 lg:grid lg:grid-cols-2 gap-8">
               {WebsiteDevelopmentContent.map((statement, index) => (
                 <div key={index}>
-                  <h3>{statement.title}</h3>
+                  <h3 className="mt-0">{statement.title}</h3>
                   <p>{statement.text}</p>
                   <p className="muted mb-6">{statement.subtitle}</p>
                   {statement.deliverables.map((deliverable) => (
@@ -261,7 +261,7 @@ export default function servicesPage() {
             <div className="lg:col-span-8 lg:grid lg:grid-cols-2 gap-8">
               {BrandingContent.map((statement, index) => (
                 <div key={index}>
-                  <h3>{statement.title}</h3>
+                  <h3 className="mt-0">{statement.title}</h3>
                   <p>{statement.text}</p>
                   <p className="muted mb-6">{statement.subtitle}</p>
                   {statement.deliverables.map((deliverable) => (
@@ -284,7 +284,7 @@ export default function servicesPage() {
             <div className="lg:col-span-8 lg:grid lg:grid-cols-2 gap-8">
               {RestorationContent.map((statement, index) => (
                 <div key={index}>
-                  <h3>{statement.title}</h3>
+                  <h3 className="mt-0">{statement.title}</h3>
                   <p>{statement.text}</p>
                   <p className="muted mb-6">{statement.subtitle}</p>
                   {statement.deliverables.map((deliverable) => (
