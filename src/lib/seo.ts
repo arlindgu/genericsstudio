@@ -218,4 +218,43 @@ export const seoConfig = {
         ],
         path: 'privacy-policy',
     },
+    branding: {
+        title: 'Branding Services - Professionelle Markenentwicklung',
+        description: 'Entwickeln Sie eine starke Markenidentität: Logo Design, Brand Identity, Corporate Design und umfassende Branding-Strategien für nachhaltigen Unternehmenserfolg.',
+        keywords: [
+            'branding services',
+            'logo design',
+            'brand identity',
+            'corporate design',
+            'markenentwicklung',
+            'visual identity'
+        ],
+        path: 'services/branding',
+    },
+    websiteentwicklung: {
+        title: 'Website Entwicklung - Professionelle Webentwicklung',
+        description: 'Moderne Website-Entwicklung mit Next.js, WordPress und Webflow. Von Landing Pages bis E-Commerce - massgeschneiderte Web-Lösungen für Ihren Erfolg.',
+        keywords: [
+            'website entwicklung',
+            'webentwicklung',
+            'Next.js development',
+            'WordPress websites',
+            'responsive webdesign',
+            'e-commerce development'
+        ],
+        path: 'services/website-entwicklung',
+    },
+    analyse: {
+        title: 'Website Analyse - Professionelle Website-Optimierung',
+        description: 'Umfassende Website-Analyse: Technische Prüfung, UX-Bewertung, SEO-Audit und Conversion-Optimierung für bessere Performance und mehr Erfolg.',
+        keywords: [
+            'website analyse',
+            'website audit',
+            'SEO analyse',
+            'performance optimierung',
+            'conversion optimierung',
+            'UX analyse'
+        ],
+        path: 'services/analyse',
+    },
 };

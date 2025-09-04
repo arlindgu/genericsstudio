@@ -29,6 +29,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     },
     {
+      url: 'https://generics.studio/services/website-entwicklung',
+      lastModified: lastMod,
+      changeFrequency: 'weekly',
+      priority: 0.6,
+    },
+    {
+      url: 'https://generics.studio/services/analyse',
+      lastModified: lastMod,
+      changeFrequency: 'weekly',
+      priority: 0.6,
+    },
+    {
+      url: 'https://generics.studio/service/branding',
+      lastModified: lastMod,
+      changeFrequency: 'weekly',
+      priority: 0.6,
+    },
+    {
       url: 'https://generics.studio/case-studies',
       lastModified: lastMod,
       changeFrequency: 'weekly',
