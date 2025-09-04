@@ -1,6 +1,5 @@
 import PageTitle from "@/components/ui/PageTitle";
-import { Card, CardTitle, CardContent, CardDescription, CardFooter, CardHeader } from "@/components/ui/card"
-import { Plus, Minus } from "lucide-react";
+import { Card, CardTitle, CardContent, CardDescription, CardHeader } from "@/components/ui/card"
 
 export default function WebDevelopmentPage() {
 const FrameworkComparison = [
