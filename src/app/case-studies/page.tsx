@@ -20,33 +20,40 @@ export default function CaseStudiesPage() {
     {
       title: "didischocoberrys",
       description:
-        "For didischocoberrys, we developed a custom landing page focused on consistent branding, user-friendly UI/UX design, and a clear structure to increase conversions. A responsive contact form and targeted SEO optimizations were integrated to improve visibility on Google.",
+        "Für didischocoberrys entwickelten wir eine massgeschneiderte Landing Page mit Fokus auf konsistentes Branding, benutzerfreundliches UI/UX-Design und eine klare Struktur zur Steigerung der Conversion-Rate. Ein responsives Kontaktformular und gezielte SEO-Optimierungen wurden integriert, um die Sichtbarkeit bei Google zu verbessern.",
       url: "https://didis.arlind.io/",
       tags: ["Web Design", "Landing Page", "Branding"],
     },
     {
       title: "Thread IT",
       description:
-        "For Thread IT, we developed a comprehensive web solution that included a custom landing page, user-friendly UI/UX design, and robust SEO optimizations. The project aimed to enhance brand visibility and improve user engagement.",
+        "Für Thread IT entwickelten wir eine umfassende Web-Lösung, die eine massgeschneiderte Landing Page, benutzerfreundliches UI/UX-Design und robuste SEO-Optimierungen umfasste. Das Projekt zielte darauf ab, die Markensichtbarkeit zu erhöhen und die Nutzerbindung zu verbessern.",
       url: "https://threadit.arlind.io/",
-      tags: ["Web Design", "Landing Page", "SEO", "Branding", "Contact Form"],
+      tags: [
+        "Web Design",
+        "Landing Page",
+        "SEO",
+        "Branding",
+        "Kontaktformular",
+      ],
     },
     {
       title: "Blendis Barbershop",
       description:
-        "For Blendis Barbershop, we created a visually stunning website that showcases their services and expertise. The site features a modern design, easy navigation, and a booking system to enhance user experience.",
+        "Für Blendis Barbershop erstellten wir eine visuell beeindruckende Website, die ihre Dienstleistungen und Expertise präsentiert. Die Seite zeichnet sich durch modernes Design, einfache Navigation und ein Buchungssystem zur Verbesserung der Nutzererfahrung aus.",
       url: "https://blendis.arlind.io/",
-      tags: ["Web Design", "Landing Page", "SEO", "booking system"],
+      tags: ["Web Design", "Landing Page", "SEO", "Buchungssystem"],
     },
   ];
 
 
   return (
     <>
-      <PageTitle title="Our Featured Projects Portfolio">
-        Take a look at our successfully completed projects. Each project tells a
-        unique story of challenges, creative solutions, and satisfied clients
-        who trusted us with their vision.
+      <PageTitle title="Unser Portfolio Ausgewählter Projekte">
+        Werfen Sie einen Blick auf unsere erfolgreich abgeschlossenen Projekte.
+        Jedes Projekt erzählt eine einzigartige Geschichte von
+        Herausforderungen, kreativen Lösungen und zufriedenen Kunden, die uns
+        ihr Vision anvertraut haben.
       </PageTitle>
       <section>
         <div className="container flex flex-col gap-4">

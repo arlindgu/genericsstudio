@@ -12,200 +12,201 @@ export default function servicesPage() {
 
   const WebsiteDevelopmentContent = [
     {
-      title: "From Vision to Reality",
-      subtitle: "Code that speaks your language.",
-      text: "Every line of code we write serves your vision. We don't use WordPress, Wix, or templates. Instead, we build with Next.js—crafting websites that are lightning-fast, SEO-optimized, and completely unique. Your business deserves more than a cookie-cutter solution. It deserves a digital foundation built specifically for your goals.",
+      title: "Von der Vision zur Realität",
+      subtitle: "Code, der Ihre Sprache spricht.",
+      text: "Jede Zeile Code, die wir schreiben, dient Ihrer Vision. Wir verwenden kein WordPress, Wix oder Vorlagen. Stattdessen entwickeln wir mit Next.js—und erschaffen Websites, die blitzschnell, SEO-optimiert und vollkommen einzigartig sind. Ihr Unternehmen verdient mehr als eine Standardlösung. Es verdient ein digitales Fundament, das speziell für Ihre Ziele gebaut wurde.",
       deliverables: [
-        "Custom Next.js website",
-        "Responsive design",
-        "SEO optimization",
-        "Performance optimization",
-        "Complete source code",
-        "Deployment on Vercel",
+        "Massgeschneiderte Next.js Website",
+        "Responsives Design",
+        "SEO-Optimierung",
+        "Performance-Optimierung",
+        "Vollständiger Quellcode",
+        "Deployment auf Vercel",
       ],
     },
     {
-      title: "Performance by Design",
-      subtitle: "Speed isn't optional. It's essential.",
-      text: "Slow websites lose customers. We engineer every component for maximum performance—optimized images, clean code, strategic caching. The result? Websites that load instantly and rank higher on Google. Because in today's digital world, patience is a luxury your competitors can't afford to test.",
+      title: "Performance durch Design",
+      subtitle: "Geschwindigkeit ist nicht optional. Sie ist essenziell.",
+      text: "Langsame Websites verlieren Kunden. Wir entwickeln jede Komponente für maximale Performance—optimierte Bilder, sauberer Code, strategisches Caching. Das Ergebnis? Websites, die sofort laden und bei Google höher ranken. Denn in der heutigen digitalen Welt ist Geduld ein Luxus, den sich Ihre Konkurrenten nicht leisten können.",
       deliverables: [
-        "Image optimization",
-        "Code minification",
-        "Caching strategies",
-        "Core Web Vitals optimization",
-        "Performance monitoring setup",
-        "Speed analysis reports",
+        "Bildoptimierung",
+        "Code-Minifizierung",
+        "Caching-Strategien",
+        "Core Web Vitals Optimierung",
+        "Performance-Monitoring Setup",
+        "Geschwindigkeitsanalyse-Reports",
       ],
     },
     {
-      title: "Mobile-First Thinking",
-      subtitle: "Built for the way people actually browse.",
-      text: "Over 60% of web traffic comes from mobile devices. We design and develop with this reality in mind—creating responsive experiences that work flawlessly across all screen sizes. Your website will look stunning on a phone, tablet, or desktop. No compromises. No afterthoughts.",
+      title: "Mobile-First Denken",
+      subtitle: "Gebaut für die Art, wie Menschen tatsächlich browsen.",
+      text: "Über 60% des Web-Traffics stammt von mobilen Geräten. Wir designen und entwickeln mit dieser Realität im Hinterkopf—und schaffen responsive Erlebnisse, die auf allen Bildschirmgrössen einwandfrei funktionieren. Ihre Website wird auf Smartphone, Tablet oder Desktop atemberaubend aussehen. Keine Kompromisse. Keine Nachgedanken.",
       deliverables: [
-        "Mobile-first responsive design",
-        "Cross-browser compatibility",
-        "Touch-optimized interfaces",
-        "Flexible grid systems",
-        "Device testing documentation",
+        "Mobile-First responsives Design",
+        "Cross-Browser-Kompatibilität",
+        "Touch-optimierte Oberflächen",
+        "Flexible Grid-Systeme",
+        "Gerätetest-Dokumentation",
       ],
     },
     {
-      title: "Future-Proof Foundation",
-      subtitle: "Technology that grows with you.",
-      text: "We build websites that last. Using modern frameworks and clean architecture, your site can evolve as your business grows. Need new features? Want to scale? Our code is structured for expansion, not replacement. It's an investment in your digital future, not just a website for today.",
+      title: "Zukunftssicheres Fundament",
+      subtitle: "Technologie, die mit Ihnen wächst.",
+      text: "Wir bauen Websites, die Bestand haben. Mit modernen Frameworks und sauberer Architektur kann Ihre Seite sich entwickeln, während Ihr Unternehmen wächst. Brauchen Sie neue Features? Möchten Sie skalieren? Unser Code ist für Erweiterung strukturiert, nicht für Ersatz. Es ist eine Investition in Ihre digitale Zukunft, nicht nur eine Website für heute.",
       deliverables: [
-        "Scalable architecture",
-        "Clean codebase",
-        "Comprehensive documentation",
-        "GitHub repository",
-        "Update guidelines",
-        "Expansion roadmap",
+        "Skalierbare Architektur",
+        "Saubere Codebasis",
+        "Umfassende Dokumentation",
+        "GitHub Repository",
+        "Update-Richtlinien",
+        "Erweiterungs-Roadmap",
       ],
     },
   ];
 
   const BrandingContent = [
     {
-      title: "Identity That Resonates",
-      subtitle: "More than a logo. A lasting impression.",
-      text: "Your brand is the sum of every interaction, every touchpoint, every moment someone encounters your business. We craft visual identities that don't just look distinctive—they feel authentic. From color psychology to typography choices, every element is designed to communicate your values and connect with your audience on an emotional level.",
+      title: "Identität, die nachhallt",
+      subtitle: "Mehr als ein Logo. Ein bleibender Eindruck.",
+      text: "Ihre Marke ist die Summe jeder Interaktion, jedes Berührungspunkts, jedes Moments, in dem jemand Ihrem Unternehmen begegnet. Wir erschaffen visuelle Identitäten, die nicht nur unverwechselbar aussehen—sie fühlen sich authentisch an. Von Farbpsychologie bis zu Typografie-Entscheidungen ist jedes Element darauf ausgelegt, Ihre Werte zu kommunizieren und emotional mit Ihrem Publikum zu verbinden.",
       deliverables: [
-        "Logo design variations",
-        "Color palette",
-        "Typography system",
-        "Brand personality guide",
-        "Visual mood boards",
-        "Application examples",
+        "Logo-Design Variationen",
+        "Farbpalette",
+        "Typografie-System",
+        "Markenpersönlichkeits-Guide",
+        "Visuelle Mood Boards",
+        "Anwendungsbeispiele",
       ],
     },
     {
-      title: "Strategic Foundation",
-      subtitle: "Purpose-driven design decisions.",
-      text: "Great branding starts with understanding. Who are you? What do you stand for? Who are you trying to reach? We dig deep into your business values, market position, and audience needs. This strategic foundation ensures every design choice has meaning, every color has purpose, and every element supports your business goals.",
+      title: "Strategisches Fundament",
+      subtitle: "Zweckgerichtete Design-Entscheidungen.",
+      text: "Grossartiges Branding beginnt mit Verständnis. Wer sind Sie? Wofür stehen Sie? Wen möchten Sie erreichen? Wir tauchen tief in Ihre Unternehmenswerte, Marktposition und Zielgruppenbedürfnisse ein. Dieses strategische Fundament stellt sicher, dass jede Design-Entscheidung eine Bedeutung hat, jede Farbe einen Zweck erfüllt und jedes Element Ihre Geschäftsziele unterstützt.",
       deliverables: [
-        "Brand strategy document",
-        "Target audience analysis",
-        "Competitive analysis",
-        "Brand positioning statement",
-        "Value proposition",
-        "Messaging framework",
+        "Markenstrategie-Dokument",
+        "Zielgruppen-Analyse",
+        "Wettbewerbsanalyse",
+        "Markenpositionierungs-Statement",
+        "Wertversprechen",
+        "Messaging-Framework",
       ],
     },
     {
-      title: "Cohesive Visual Language",
-      subtitle: "Consistency that builds trust.",
-      text: "Your brand should feel unmistakably yours across every platform, every touchpoint, every interaction. We develop comprehensive brand guidelines that ensure consistency—whether it's your website, business cards, or social media presence. Cohesive branding builds recognition. Recognition builds trust. Trust drives business.",
+      title: "Kohärente Bildsprache",
+      subtitle: "Konsistenz, die Vertrauen schafft.",
+      text: "Ihre Marke sollte sich unverwechselbar anfühlen—über jede Plattform, jeden Berührungspunkt, jede Interaktion hinweg. Wir entwickeln umfassende Marken-Guidelines, die Konsistenz gewährleisten—ob es Ihre Website, Visitenkarten oder Social Media Präsenz ist. Kohärentes Branding schafft Wiedererkennung. Wiedererkennung schafft Vertrauen. Vertrauen treibt Geschäfte an.",
       deliverables: [
-        "Complete brand guidelines",
-        "Logo usage rules",
-        "Color specifications",
-        "Typography guidelines",
-        "Imagery style guide",
-        "Application templates",
+        "Vollständige Marken-Guidelines",
+        "Logo-Verwendungsregeln",
+        "Farbspezifikationen",
+        "Typografie-Richtlinien",
+        "Bildstil-Guide",
+        "Anwendungsvorlagen",
       ],
     },
     {
-      title: "Timeless, Not Trendy",
-      subtitle: "Built to endure, designed to last.",
-      text: "Trends come and go. Great brands endure. We create visual identities that won't look dated in five years—rooted in timeless design principles while feeling fresh and relevant today. Your brand should evolve with your business, not be replaced by it. That's the difference between design and investment.",
+      title: "Zeitlos, nicht trendig",
+      subtitle: "Gebaut um zu bestehen, designt um zu überdauern.",
+      text: "Trends kommen und gehen. Grosse Marken bestehen. Wir schaffen visuelle Identitäten, die in fünf Jahren nicht veraltet aussehen—verwurzelt in zeitlosen Design-Prinzipien, während sie heute frisch und relevant wirken. Ihre Marke sollte sich mit Ihrem Unternehmen entwickeln, nicht von ihm ersetzt werden. Das ist der Unterschied zwischen Design und Investition.",
       deliverables: [
-        "Timeless logo design",
-        "Scalable brand system",
-        "Evolution guidelines",
-        "Brand refresh roadmap",
-        "Long-term brand strategy",
-        "Asset library",
+        "Zeitloses Logo-Design",
+        "Skalierbares Markensystem",
+        "Entwicklungs-Guidelines",
+        "Marken-Refresh Roadmap",
+        "Langzeit-Markenstrategie",
+        "Asset-Bibliothek",
       ],
     },
   ];
 
   const RestorationContent = [
     {
-      title: "Digital Archaeology",
-      subtitle: "Uncovering what made it work.",
-      text: "Every website has a story—what worked, what didn't, what was lost. We analyze your existing digital presence like archaeologists, carefully studying user behavior, performance data, and content effectiveness. We preserve what serves your goals and rebuild what doesn't. Because good restoration honors the past while embracing the future.",
+      title: "Digitale Archäologie",
+      subtitle: "Aufdecken, was funktioniert hat.",
+      text: "Jede Website hat eine Geschichte—was funktioniert hat, was nicht, was verloren ging. Wir analysieren Ihre bestehende digitale Präsenz wie Archäologen und studieren sorgfältig Nutzerverhalten, Performance-Daten und Content-Effektivität. Wir bewahren, was Ihren Zielen dient, und bauen neu auf, was das nicht tut. Denn gute Restauration ehrt die Vergangenheit und umarmt die Zukunft.",
       deliverables: [
-        "Complete website audit",
-        "Performance analysis",
-        "Content inventory",
-        "SEO assessment",
-        "User behavior analysis",
-        "Restoration roadmap",
+        "Vollständiges Website-Audit",
+        "Performance-Analyse",
+        "Content-Inventar",
+        "SEO-Bewertung",
+        "Nutzerverhalten-Analyse",
+        "Restaurations-Roadmap",
       ],
     },
     {
-      title: "Performance Revival",
-      subtitle: "From sluggish to lightning-fast.",
-      text: "Old websites often carry technical debt—outdated code, unoptimized images, bloated plugins. We strip away the unnecessary and rebuild the foundation with modern technology. The result? Dramatically improved load times, better search rankings, and user experiences that feel fresh and responsive. It's not just a facelift—it's a complete transformation.",
+      title: "Performance-Wiederbelebung",
+      subtitle: "Von träge zu blitzschnell.",
+      text: "Alte Websites tragen oft technische Schulden—veralteter Code, unoptimierte Bilder, aufgeblähte Plugins. Wir entfernen das Unnötige und bauen das Fundament mit moderner Technologie neu auf. Das Ergebnis? Drastisch verbesserte Ladezeiten, bessere Suchmaschinen-Rankings und Nutzererfahrungen, die sich frisch und responsiv anfühlen. Es ist nicht nur ein Facelift—es ist eine komplette Transformation.",
       deliverables: [
-        "Modern codebase rebuild",
-        "Performance optimization",
-        "Database cleanup",
-        "Image optimization",
-        "Caching implementation",
-        "Speed improvement report",
+        "Moderne Codebasis-Neuerstellung",
+        "Performance-Optimierung",
+        "Datenbank-Bereinigung",
+        "Bildoptimierung",
+        "Caching-Implementierung",
+        "Geschwindigkeitsverbesserungs-Report",
       ],
     },
     {
-      title: "Content Preservation",
-      subtitle: "Saving what matters most.",
-      text: "Your existing content represents years of work, SEO value, and brand investment. We carefully migrate and optimize your valuable content while improving its structure and presentation. Important pages maintain their search rankings. Key information is preserved and enhanced. Nothing valuable is lost in translation.",
+      title: "Content-Bewahrung",
+      subtitle: "Das Wichtigste retten.",
+      text: "Ihr bestehender Content repräsentiert Jahre der Arbeit, SEO-Wert und Markeninvestition. Wir migrieren und optimieren sorgfältig Ihren wertvollen Content, während wir seine Struktur und Präsentation verbessern. Wichtige Seiten behalten ihre Suchmaschinen-Rankings. Schlüsselinformationen werden bewahrt und verbessert. Nichts Wertvolles geht in der Übersetzung verloren.",
       deliverables: [
-        "Content migration",
-        "SEO preservation",
-        "URL structure optimization",
-        "301 redirect setup",
-        "Content optimization",
-        "Search ranking protection",
+        "Content-Migration",
+        "SEO-Bewahrung",
+        "URL-Struktur-Optimierung",
+        "301-Redirect Setup",
+        "Content-Optimierung",
+        "Suchranking-Schutz",
       ],
     },
     {
-      title: "Modern Foundation",
-      subtitle: "Built for the next decade.",
-      text: "Restoration isn't about returning to how things were—it's about creating what they should have been. We rebuild with modern frameworks, current design principles, and future-focused architecture. Your restored website doesn't just work better today—it's prepared for tomorrow's opportunities and challenges.",
+      title: "Modernes Fundament",
+      subtitle: "Gebaut für das nächste Jahrzehnt.",
+      text: "Restauration bedeutet nicht, zu dem zurückzukehren, was war—es bedeutet zu schaffen, was hätte sein sollen. Wir bauen neu auf mit modernen Frameworks, aktuellen Design-Prinzipien und zukunftsorientierter Architektur. Ihre restaurierte Website funktioniert nicht nur heute besser—sie ist für die Möglichkeiten und Herausforderungen von morgen vorbereitet.",
       deliverables: [
-        "Next.js rebuild",
-        "Modern design system",
-        "Responsive layout",
-        "Future-ready architecture",
-        "Maintenance plan",
-        "Growth strategy",
+        "Next.js Neuerstellung",
+        "Modernes Design-System",
+        "Responsives Layout",
+        "Zukunftsbereite Architektur",
+        "Wartungsplan",
+        "Wachstumsstrategie",
       ],
     },
   ];
 
-    const ServiceCards = [
-      {
-        title: "Website Development",
-        subtitle: "Crafting digital experiences",
-        url: "#web-dev",
-        description:
-          "We create stunning, user-friendly websites that not only look exceptional but drive real results for your business.",
-      },
-      {
-        title: "Branding",
-        subtitle: "Building a strong brand identity",
-        url: "#branding",
-        description:
-          "We help you establish a strong brand identity that resonates with your target audience and sets you apart from the competition.",
-      },
-      {
-        title: "Restoration",
-        subtitle: "Reviving traditions",
-        url: "#restoration",
-        description:
-          "We specialize in restoring and preserving traditional craftsmanship, bringing a touch of history to modern design.",
-      },
-    ];
+  const ServiceCards = [
+    {
+      title: "Webseiten Entwicklung",
+      subtitle: "Digitale Erlebnisse erschaffen",
+      url: "services/website-entwicklung",
+      description:
+        "Wir erstellen atemberaubende, benutzerfreundliche Webseiten, die nicht nur aussergewöhnlich aussehen, sondern echte Ergebnisse für Ihr Unternehmen erzielen.",
+    },
+    {
+      title: "Branding",
+      subtitle: "Eine starke Markenidentität aufbauen",
+      url: "services/branding",
+      description:
+        "Wir helfen Ihnen dabei, eine starke Markenidentität zu etablieren, die bei Ihrer Zielgruppe ankommt und Sie von der Konkurrenz abhebt.",
+    },
+    {
+      title: "Analyse und Restauration",
+      subtitle: "Traditionen wiederbeleben",
+      url: "services/analyse",
+      description:
+        "Wir spezialisieren uns darauf, traditionelle Handwerkskunst zu restaurieren und zu bewahren und bringen einen Hauch von Geschichte in modernes Design.",
+    },
+  ];
 
     
 
   return (
     <main>
-      <PageTitle title="Explore Our Digital Services">
-        Discover our comprehensive range of services. From initial concept to
-        final implementation, we accompany you with tailored solutions that
-        drive your business forward and create sustainable success.
+      <PageTitle title="Entdecken Sie Unsere Digitalen Services">
+        Entdecken Sie unser umfassendes Leistungsspektrum. Von der ersten Idee
+        bis zur finalen Umsetzung begleiten wir Sie mit massgeschneiderten
+        Lösungen, die Ihr Unternehmen voranbringen und nachhaltigen Erfolg
+        schaffen.
       </PageTitle>
       <section>
         <div className="container flex flex-col lg:flex-row gap-8">
@@ -231,13 +232,14 @@ export default function servicesPage() {
       <section>
         <div className="container">
           <div className="grid lg:grid-cols-12 border-t pt-8">
-            <h2 id="web-dev" className="col-span-4">
-              Website Development
+            <h2 id="web-dev" className="col-span-3">
+              Webdesign & Entwicklung
             </h2>
+            <div className="col-span-1" />
             <div className="lg:col-span-8 lg:grid lg:grid-cols-2 gap-8">
               {WebsiteDevelopmentContent.map((statement, index) => (
                 <div key={index}>
-                  <h3 className="mt-0">{statement.title}</h3>
+                  <h3 className="lg:mt-0">{statement.title}</h3>
                   <p>{statement.text}</p>
                   <p className="muted mb-6">{statement.subtitle}</p>
                   {statement.deliverables.map((deliverable) => (
@@ -254,13 +256,14 @@ export default function servicesPage() {
       <section>
         <div className="container">
           <div className="grid lg:grid-cols-12 border-t pt-8">
-            <h2 id="branding" className="col-span-4">
+            <h2 id="branding" className="col-span-3">
               Branding
             </h2>
+            <div className="col-span-1" />
             <div className="lg:col-span-8 lg:grid lg:grid-cols-2 gap-8">
               {BrandingContent.map((statement, index) => (
                 <div key={index}>
-                  <h3 className="mt-0">{statement.title}</h3>
+                  <h3 className="lg:mt-0">{statement.title}</h3>
                   <p>{statement.text}</p>
                   <p className="muted mb-6">{statement.subtitle}</p>
                   {statement.deliverables.map((deliverable) => (
@@ -277,13 +280,14 @@ export default function servicesPage() {
       <section>
         <div className="container">
           <div className="grid lg:grid-cols-12 border-t pt-8">
-            <h2 id="restoration" className="col-span-4">
-              Restoration
+            <h2 id="restoration" className="col-span-3">
+              Restauration
             </h2>
+            <div className="col-span-1" />
             <div className="lg:col-span-8 lg:grid lg:grid-cols-2 gap-8">
               {RestorationContent.map((statement, index) => (
                 <div key={index}>
-                  <h3 className="mt-0">{statement.title}</h3>
+                  <h3 className="lg:mt-0">{statement.title}</h3>
                   <p>{statement.text}</p>
                   <p className="muted mb-6">{statement.subtitle}</p>
                   {statement.deliverables.map((deliverable) => (

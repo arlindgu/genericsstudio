@@ -37,8 +37,8 @@ export default function FormComponent() {
             }
         }
         ).catch(error => {
-            console.error('Error sending message:', error);
-            alert('There was an error sending your message. Please try again later.');
+            console.error('Fehler beim senden der Nachricht:', error);
+            alert('Es gab einen Fehler beim Senden Ihrer Nachricht. Bitte versuchen Sie es später erneut.');
         }
         );
     }
@@ -49,15 +49,16 @@ export default function FormComponent() {
           <div className="flex flex-col items-center justify-center gap-4 mx-auto">
             <Check stroke="#211912" />
             <p className="text-center">
-              Your inquiry has been sent. Please wait patiently for an answer.
+              Vielen Dank für Ihre Nachricht! Wir werden uns so schnell wie
+              möglich bei Ihnen melden.
             </p>
           </div>
         ) : !sent && error ? (
           <div className="flex flex-col items-center justify-center gap-4 mx-auto">
             <X stroke="#211912" />
             <p className="text-center">
-              There has been an Error. Please try again later. If this error
-              persists, feel free to reach out manually.
+              Es gab ein Problem beim Senden Ihrer Nachricht. Bitte versuchen
+              Sie es später erneut oder kontaktieren Sie uns direkt per E-Mail.
             </p>
             <a href="mailto:info@generics.studio" className="text-center">
               info@generics.studio
@@ -73,9 +74,9 @@ export default function FormComponent() {
                 >
                   <div className="flex flex-col">
                     <div className="flex flex-row justify-between items-center mb-1">
-                      <Label>Full Name</Label>
+                      <Label>Vollständiger Name</Label>
                       <Label className="italic text-sm text-muted-foreground">
-                        required
+                        erforderlich
                       </Label>
                     </div>
                     <Input
@@ -88,9 +89,9 @@ export default function FormComponent() {
                   </div>
                   <div className="flex flex-col">
                     <div className="flex flex-row justify-between items-center mb-1">
-                      <Label>E-Mail Address</Label>
+                      <Label>E-Mail Adresse</Label>
                       <Label className="italic text-sm text-muted-foreground">
-                        required
+                        erforderlich
                       </Label>
                     </div>
 
@@ -103,7 +104,7 @@ export default function FormComponent() {
                     />
                   </div>
                   <div className="flex flex-col">
-                    <Label className="mb-1">Website</Label>
+                    <Label className="mb-1">Webseite</Label>
                     <Input
                       type="text"
                       name="website"
@@ -112,11 +113,11 @@ export default function FormComponent() {
                     />
                   </div>
                   <div className="flex flex-col">
-                    <Label className="mb-1">Project Name</Label>
+                    <Label className="mb-1">Projektname</Label>
                     <Input
                       type="text"
                       name="projectName"
-                      placeholder="Max Clothing Store"
+                      placeholder="Max Bekleidungsstore"
                       className="border px-3 py-2"
                     />
                   </div>
@@ -124,11 +125,11 @@ export default function FormComponent() {
                     <Label className="mb-1">Details</Label>
                     <Textarea
                       name="details"
-                      placeholder="My project is about creating a modern e-commerce website for my clothing brand. I need a responsive design, SEO optimization, and a user-friendly interface."
+                      placeholder="Mein Projekt besteht darin, eine moderne E-Commerce-Website für meine Bekleidungsmarke zu erstellen. Ich benötige ein responsives Design, SEO-Optimierung und eine benutzerfreundliche Oberfläche."
                       className="border px-3 py-2 h-fit min-h-36"
                     />
                   </div>
-                  <Button type="submit">Send Message</Button>
+                  <Button type="submit">Nachricht versenden</Button>
                 </Form>
               </CardContent>
             </Card>

@@ -56,12 +56,12 @@ export default function Header() {
 
           {/* Desktop navigation */}
           <div className="space-x-4 items-center hidden md:flex z-1">
-            <Link href="/">Home</Link>
-            <Link href="/about">About</Link>
-            <Link href="/services">Services</Link>
-            <Link href="/case-studies">Projects</Link>
+            <Link href="/" className="hover:underline decoration-[1.5px]">Home</Link>
+            <Link href="/about" className="hover:underline decoration-[1.5px]">Über uns</Link>
+            <Link href="/services" className="hover:underline decoration-[1.5px]">Dienstleistungen</Link>
+            <Link href="/case-studies" className="hover:underline decoration-[1.5px]">Projekte</Link>
             <Link href={"/contact"}>
-              <Button>Contact</Button>
+              <Button>Kontakt</Button>
             </Link>
           </div>
 

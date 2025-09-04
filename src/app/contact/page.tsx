@@ -7,10 +7,11 @@ export const metadata = generateSEO(seoConfig.contact);
 export default function ContactPage() {
     return (
       <main>
-        <PageTitle title="Get In Touch With Us">
-          Have a project idea or questions about our services? We look forward
-          to hearing from you and are happy to provide personal consultation.
-          Let&apos;s plan your next digital venture together.
+        <PageTitle title="Kontaktieren Sie Uns">
+          Haben Sie eine Projektidee oder Fragen zu unseren Dienstleistungen?
+          Wir freuen uns darauf, von Ihnen zu hören und beraten Sie gerne
+          persönlich. Lassen Sie uns gemeinsam Ihr nächstes digitales Vorhaben
+          planen.
         </PageTitle>
         <section>
           <div className="container">

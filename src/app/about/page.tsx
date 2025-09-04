@@ -7,66 +7,67 @@ export default function AboutPage() {
 
     const purposeContent = [
       {
-        title: "Handmade Excellence",
-        subtitle: "No templates. No shortcuts. No compromises.",
-        text: "Every pixel is placed with intention. Every line of code written from scratch. We don't use templates because your vision deserves more than a pre-made solution. We craft digital experiences that are as unique as your story—built from the ground up with modern technology and timeless design principles. In a world of copy-paste solutions, we choose the harder path: creating something truly yours.",
+        title: "Handgemachte Exzellenz",
+        subtitle: "Keine Vorlagen. Keine Abkürzungen. Keine Kompromisse.",
+        text: "Jeder Pixel wird mit Bedacht platziert. Jede Zeile Code von Grund auf geschrieben. Wir verwenden keine Vorlagen, weil Ihre Vision mehr verdient als eine vorgefertigte Lösung. Wir erschaffen digitale Erlebnisse, die so einzigartig sind wie Ihre Geschichte—von Grund auf mit moderner Technologie und zeitlosen Designprinzipien entwickelt. In einer Welt der Copy-Paste-Lösungen wählen wir den schwierigeren Weg: etwas wirklich Ihres zu schaffen.",
       },
       {
-        title: "Authentic Digital Identity",
-        subtitle: "Your brand deserves its own voice.",
-        text: "Generic solutions create generic results. We believe every business has a unique story worth telling—and deserving of a digital presence that reflects that uniqueness. Through careful listening and thoughtful craft, we transform your vision into digital reality. No WordPress themes. No Figma templates. Just pure, authentic digital experiences that speak your language and connect with your audience.",
+        title: "Authentische Digitale Identität",
+        subtitle: "Ihre Marke verdient ihre eigene Stimme.",
+        text: "Generische Lösungen erzeugen generische Ergebnisse. Wir glauben, dass jedes Unternehmen eine einzigartige Geschichte hat, die es wert ist, erzählt zu werden—und eine digitale Präsenz verdient, die diese Einzigartigkeit widerspiegelt. Durch aufmerksames Zuhören und durchdachtes Handwerk verwandeln wir Ihre Vision in digitale Realität. Keine WordPress-Themes. Keine Figma-Vorlagen. Nur pure, authentische digitale Erlebnisse, die Ihre Sprache sprechen und mit Ihrem Publikum verbinden.",
       },
       {
-        title: "Performance Meets Purpose",
-        subtitle: "Beautiful by design. Lightning by code.",
-        text: "Great design without great performance is just pretty decoration. We merge stunning visuals with cutting-edge technology to create websites that don't just look exceptional—they perform exceptionally. Built with Next.js for speed, optimized for search engines, and crafted for conversion. Because in the digital world, beauty and brains aren't mutually exclusive.",
+        title: "Performance trifft Zweck",
+        subtitle: "Schön durch Design. Blitzschnell durch Code.",
+        text: "Grossartiges Design ohne grossartige Performance ist nur hübsche Dekoration. Wir verbinden atemberaubende Optik mit modernster Technologie, um Websites zu schaffen, die nicht nur aussergewöhnlich aussehen—sie leisten aussergewöhnlich. Entwickelt mit Next.js für Geschwindigkeit, optimiert für Suchmaschinen und gestaltet für Conversion. Denn in der digitalen Welt schliessen sich Schönheit und Intelligenz nicht gegenseitig aus.",
       },
       {
-        title: "Beyond the Ordinary",
-        subtitle: "Where vision meets execution.",
-        text: "We don't build websites. We architect digital experiences. Each project begins with understanding not just what you do, but why you do it. From initial concept to final deployment, every decision serves your purpose. No cookie-cutter solutions. No borrowed aesthetics. Just thoughtful design and precise execution that transforms browsers into believers and visitors into customers.",
+        title: "Jenseits des Gewöhnlichen",
+        subtitle: "Wo Vision auf Umsetzung trifft.",
+        text: "Wir bauen keine Websites. Wir entwerfen digitale Erlebnisse. Jedes Projekt beginnt mit dem Verständnis nicht nur dessen, was Sie tun, sondern warum Sie es tun. Von der ersten Idee bis zur finalen Bereitstellung dient jede Entscheidung Ihrem Zweck. Keine Einheitslösungen. Keine geliehene Ästhetik. Nur durchdachtes Design und präzise Umsetzung, die aus Browsern Gläubige und aus Besuchern Kunden macht.",
       },
     ];
 
     const valueContent = [
       {
-        title: "Silence stands out",
-        subtitle: "Less noise. More impact.",
-        text: "In a world of loud design, silence draws attention. We build digital spaces that breathe. Interfaces that don't scream, but whisper with purpose. It's not about doing more. It's about doing less—better. We remove the unnecessary so what matters can resonate. Real impact doesn't need to shout.",
+        title: "Stille fällt auf",
+        subtitle: "Weniger Lärm. Mehr Wirkung.",
+        text: "In einer Welt lauten Designs zieht Stille Aufmerksamkeit auf sich. Wir schaffen digitale Räume, die atmen. Oberflächen, die nicht schreien, sondern mit Absicht flüstern. Es geht nicht darum, mehr zu tun. Es geht darum, weniger zu tun—aber besser. Wir entfernen das Unnötige, damit das Wichtige nachklingen kann. Echte Wirkung muss nicht laut sein.",
       },
       {
-        title: "Design that lingers",
-        subtitle: "Not trendy. Timeless.",
-        text: "Trends fade. Principles last. Our work isn't made to impress today and vanish tomorrow. It's built to endure. We design for clarity, emotion, and structure. Not flash. Not noise. Because good design doesn't ask for attention. It earns it—and keeps it.",
+        title: "Design, das nachhallt",
+        subtitle: "Nicht trendig. Zeitlos.",
+        text: "Trends vergehen. Prinzipien bleiben. Unsere Arbeit ist nicht gemacht, um heute zu beeindrucken und morgen zu verschwinden. Sie ist gebaut, um zu bestehen. Wir gestalten für Klarheit, Emotion und Struktur. Nicht für Effekte. Nicht für Lärm. Denn gutes Design bittet nicht um Aufmerksamkeit. Es verdient sie—und behält sie.",
       },
       {
-        title: "Between the lines",
-        subtitle: "We notice what others miss.",
-        text: "Every project has a surface and a depth. Most stop at the surface. We go deeper—into nuance, rhythm, behavior. Into what's unspoken but felt. Design is language. We read between the lines. We design what others overlook. That's where the difference happens.",
+        title: "Zwischen den Zeilen",
+        subtitle: "Wir bemerken, was andere übersehen.",
+        text: "Jedes Projekt hat eine Oberfläche und eine Tiefe. Die meisten bleiben an der Oberfläche. Wir gehen tiefer—in Nuancen, Rhythmus, Verhalten. In das Unausgesprochene, aber Gefühlte. Design ist Sprache. Wir lesen zwischen den Zeilen. Wir gestalten, was andere übersehen. Dort passiert der Unterschied.",
       },
       {
-        title: "Form meets feeling",
-        subtitle: "Built with logic. Felt with heart.",
-        text: "We bring together structure and emotion. Function and intuition. Every element we craft serves a purpose—technical, aesthetic, emotional. You won't see the logic, but you'll feel it. Because the best experiences aren't explained. They're felt.",
+        title: "Form trifft Gefühl",
+        subtitle: "Mit Logik gebaut. Mit Herz gefühlt.",
+        text: "Wir verbinden Struktur und Emotion. Funktion und Intuition. Jedes Element, das wir erschaffen, dient einem Zweck—technisch, ästhetisch, emotional. Sie werden die Logik nicht sehen, aber Sie werden sie spüren. Denn die besten Erlebnisse werden nicht erklärt. Sie werden gefühlt.",
       },
     ];
 
     return (
       <main>
-        <PageTitle title="About Our Creative Studio">
-          Meet the team behind the projects. With passion and expertise, we
-          transform visions into digital reality and create innovative solutions
-          that inspire and convince.
+        <PageTitle title="Über Unser Kreatives Studio">
+          Lernen Sie das Team hinter den Projekten kennen. Mit Leidenschaft und
+          Expertise verwandeln wir Visionen in digitale Realität und schaffen
+          innovative Lösungen, die begeistern und überzeugen.
         </PageTitle>
 
         <section>
           <div className="container">
             <div className="grid lg:grid-cols-12 border-t pt-8">
-              <h2 className="col-span-4">Our Purpose</h2>
+              <h2 className="col-span-3">Unsere Bestimmung</h2>
+              <div className="col-span-1" />
               <div className="lg:col-span-8 lg:grid lg:grid-cols-2 gap-8">
                 {purposeContent.map((statement, index) => (
                   <div key={index}>
-                    <h3 className="mt-0">{statement.title}</h3>
+                    <h3 className="lg:mt-0">{statement.title}</h3>
                     <p>{statement.text}</p>
                     <p className="muted">{statement.subtitle}</p>
                   </div>
@@ -79,13 +80,14 @@ export default function AboutPage() {
         <section>
           <div className="container">
             <div className="grid lg:grid-cols-12 border-t pt-8">
-              <h2 className="col-span-4">
-                What we value <br /> and how we act
+              <h2 className="col-span-3">
+                Was wir leben und wie wir handeln
               </h2>
+              <div className="col-span-1" />
               <div className="lg:col-span-8 lg:grid lg:grid-cols-2 gap-8">
                 {valueContent.map((statement, index) => (
                   <div key={index}>
-                    <h3 className="mt-0">{statement.title}</h3>
+                    <h3 className="lg:mt-0">{statement.title}</h3>
                     <p>{statement.text}</p>
                     <p className="muted">{statement.subtitle}</p>
                   </div>
