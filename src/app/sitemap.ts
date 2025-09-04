@@ -41,7 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     },
     {
-      url: 'https://generics.studio/service/branding',
+      url: 'https://generics.studio/services/branding',
       lastModified: lastMod,
       changeFrequency: 'weekly',
       priority: 0.6,
