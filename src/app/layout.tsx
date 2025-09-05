@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import localFont from "next/font/local";
+import { useState } from "react";
 
 
 // Import General Sans font using next/font/local
@@ -29,7 +30,7 @@ export default function RootLayout({
   const Time = new Date();
   const hour = Time.getHours();
 
-  if (hour >= 13 || hour <= 6) {
+  if (hour >= 19 || hour <= 6) {
     // Night time: 7 PM - 6 AM
     if (theme !== "dark") {
       setTheme("dark");
