@@ -1,9 +1,10 @@
-import type { Metadata } from "next";
+"use client";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import localFont from "next/font/local";
-import { generateSEO } from "@/lib/seo";
+import { useEffect, useState } from "react";
+
 
 // Import General Sans font using next/font/local
 export const generalSans = localFont({
@@ -18,19 +19,32 @@ export const generalSans = localFont({
   display: "swap",
 });
 
-export const metadata: Metadata = generateSEO({
-  // Verwendet automatisch die defaults
-});
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+        
+  const [theme, setTheme] = useState("light");
+
+  const Time = new Date();
+  const hour = Time.getHours();
+
+  if (hour >= 13 || hour <= 6) {
+    // Night time: 7 PM - 6 AM
+    if (theme !== "dark") {
+      setTheme("dark");
+    }
+  } else {
+    // Day time: 7 AM - 6 PM
+    if (theme !== "light") {
+      setTheme("light");
+    }
+  }
+
   return (
-    <html lang="en" className="light
-    ">
-      <body className={`${generalSans.variable} main-h-screen flex flex-col`}>
+    <html lang="en" className={theme}>
+      <body suppressHydrationWarning className={`${generalSans.variable} main-h-screen flex flex-col`}>
         <Header />
         <main className="flex-1">
           {children}
