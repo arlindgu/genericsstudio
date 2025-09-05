@@ -3,7 +3,6 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import localFont from "next/font/local";
-import { useEffect, useState } from "react";
 
 
 // Import General Sans font using next/font/local
