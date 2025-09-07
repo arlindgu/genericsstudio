@@ -43,7 +43,7 @@ export default function RootLayout({
   }
 
   return (
-    <html lang="en" className={theme}>
+    <html lang="en" className="light">
       <body suppressHydrationWarning className={`${generalSans.variable} main-h-screen flex flex-col`}>
         <Header />
         <main className="flex-1">
