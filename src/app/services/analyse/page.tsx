@@ -1,5 +1,8 @@
 import PageTitle from "@/components/ui/PageTitle";
 import { Card, CardTitle, CardContent, CardDescription, CardHeader } from "@/components/ui/card"
+import { generateSEO, seoConfig } from "@/lib/seo";
+
+export const metadata = generateSEO(seoConfig.analyse);
 
 export default function AnalysePage() {
 
