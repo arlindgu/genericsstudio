@@ -132,89 +132,89 @@ export function generateSEO({
 // Spezifische Seiten-Konfigurationen
 export const seoConfig = {
     home: {
-        title: 'Custom Web Development & Digital Solutions',
-        description: 'We craft stunning, performance-optimized websites with Next.js. No templates, no shortcuts - just handmade digital experiences that drive real business results.',
+        title: 'Individuelle Webentwicklung & Digitale Lösungen',
+        description: 'Wir entwickeln beeindruckende, performance-optimierte Websites mit Next.js. Keine Vorlagen, keine Abkürzungen - nur handgefertigte digitale Erlebnisse, die echte Geschäftsergebnisse erzielen.',
         path: '',
     },
     services: {
-        title: 'Services - Web Development & Branding',
-        description: 'Discover our services: Custom Next.js websites, authentic branding solutions, and expert website restoration. Tailored for sustainable business success.',
+        title: 'Dienstleistungen - Webentwicklung & Branding',
+        description: 'Entdecken Sie unsere Dienstleistungen: Individuelle Next.js-Websites, authentische Branding-Lösungen und professionelle Website-Wiederherstellung. Maßgeschneidert für nachhaltigen Geschäftserfolg.',
         keywords: [
-            'web development services',
+            'webentwicklung dienstleistungen',
             'Next.js websites',
-            'custom branding',
-            'website restoration',
+            'individuelles branding',
+            'website wiederherstellung',
             'responsive design',
             'mobile-first design'
         ],
         path: 'services',
     },
     about: {
-        title: 'About Us - Meet Our Digital Excellence Team',
-        description: 'Meet the passionate team behind Generics Studio. We transform visions into digital reality with handmade excellence and performance-focused solutions.',
+        title: 'Über Uns - Lernen Sie Unser Team Für Digitale Exzellenz Kennen',
+        description: 'Lernen Sie das leidenschaftliche Team hinter Generics Studio kennen. Wir verwandeln Visionen in digitale Realität mit handgefertigter Exzellenz und performance-fokussierten Lösungen.',
         keywords: [
-            'about generics studio',
-            'web development team',
-            'digital agency',
-            'handmade websites',
-            'custom development team',
-            'authentic digital identity',
-            'performance meets purpose'
+            'über generics studio',
+            'webentwicklung team',
+            'digitalagentur',
+            'handgefertigte websites',
+            'individuelles entwicklungsteam',
+            'authentische digitale identität',
+            'performance trifft zweck'
         ],
         path: 'about',
     },
     projects: {
-        title: 'Projects - Digital Solutions & Case Studies',
-        description: 'Explore our completed projects including didischocoberrys, Thread IT, and Blendis Barbershop. Each tells a story of challenges and solutions.',
+        title: 'Projekte - Digitale Lösungen & Fallstudien',
+        description: 'Erkunden Sie unsere abgeschlossenen Projekte wie didischocoberrys, Thread IT und Blendis Barbershop. Jedes erzählt eine Geschichte von Herausforderungen und Lösungen.',
         keywords: [
-            'web development projects',
-            'case studies',
-            'client work',
-            'project portfolio',
+            'webentwicklung projekte',
+            'fallstudien',
+            'kundenarbeit',
+            'projekt portfolio',
             'didischocoberrys',
             'Thread IT',
             'Blendis Barbershop',
-            'successful websites',
-            'client testimonials'
+            'erfolgreiche websites',
+            'kundenbewertungen'
         ],
         path: 'case-studies',
     },
     contact: {
-        title: 'Contact Us - Get in Touch',
-        description: 'Have a question or want to start a project? Reach out to us through our contact form or connect with us on social media.',
+        title: 'Kontakt - Nehmen Sie Kontakt Auf',
+        description: 'Haben Sie eine Frage oder möchten ein Projekt starten? Kontaktieren Sie uns über unser Kontaktformular oder verbinden Sie sich mit uns in den sozialen Medien.',
         keywords: [
-            'contact generics studio',
-            'get in touch',
-            'project inquiry',
-            'customer support'
+            'kontakt generics studio',
+            'kontakt aufnehmen',
+            'projektanfrage',
+            'kundensupport'
         ],
         path: 'contact',
     },
     legal: {
-        title: 'Legal Notice & Terms of Service',
-        description: 'Read our legal notice, terms of service, and conditions for using Generics Studio services. Important legal information for our clients and website visitors.',
+        title: 'Impressum & Allgemeine Geschäftsbedingungen',
+        description: 'Lesen Sie unser Impressum, unsere Allgemeinen Geschäftsbedingungen und Nutzungsbedingungen für Generics Studio Dienstleistungen. Wichtige rechtliche Informationen für unsere Kunden und Website-Besucher.',
         keywords: [
-            'legal notice generics studio',
-            'terms of service',
-            'terms and conditions',
-            'legal information',
-            'website terms',
-            'service agreement'
+            'impressum generics studio',
+            'allgemeine geschäftsbedingungen',
+            'nutzungsbedingungen',
+            'rechtliche informationen',
+            'website bedingungen',
+            'dienstleistungsvertrag'
         ],
         path: 'imprint',
     },
 
     privacy: {
-        title: 'Privacy Policy - How We Handle Your Data',
-        description: 'Learn how Generics Studio collects, uses, and protects your personal data. Our comprehensive privacy policy explains your rights and our commitments.',
+        title: 'Datenschutzerklärung - Wie Wir Mit Ihren Daten Umgehen',
+        description: 'Erfahren Sie, wie Generics Studio Ihre persönlichen Daten sammelt, verwendet und schützt. Unsere umfassende Datenschutzerklärung erklärt Ihre Rechte und unsere Verpflichtungen.',
         keywords: [
-            'privacy policy generics studio',
-            'data protection',
-            'personal data',
-            'GDPR compliance',
-            'data privacy',
-            'cookie policy',
-            'user data rights'
+            'datenschutzerklärung generics studio',
+            'datenschutz',
+            'persönliche daten',
+            'DSGVO compliance',
+            'datenschutz',
+            'cookie richtlinie',
+            'nutzerdatenrechte'
         ],
         path: 'privacy-policy',
     },
@@ -224,23 +224,23 @@ export const seoConfig = {
         keywords: [
             'branding services',
             'logo design',
-            'brand identity',
+            'markenidentität',
             'corporate design',
             'markenentwicklung',
-            'visual identity'
+            'visuelle identität'
         ],
         path: 'services/branding',
     },
     websiteentwicklung: {
         title: 'Website Entwicklung - Professionelle Webentwicklung',
-        description: 'Moderne Website-Entwicklung mit Next.js, WordPress und Webflow. Von Landing Pages bis E-Commerce - massgeschneiderte Web-Lösungen für Ihren Erfolg.',
+        description: 'Moderne Website-Entwicklung mit Next.js, WordPress und Webflow. Von Landing Pages bis E-Commerce - maßgeschneiderte Web-Lösungen für Ihren Erfolg.',
         keywords: [
             'website entwicklung',
             'webentwicklung',
-            'Next.js development',
+            'Next.js entwicklung',
             'WordPress websites',
             'responsive webdesign',
-            'e-commerce development'
+            'e-commerce entwicklung'
         ],
         path: 'services/website-entwicklung',
     },
