@@ -6,13 +6,13 @@ export const metadata = generateSEO(seoConfig.legal);
 export default function ImprintPage() {
   return (
     <main>
-      <PageTitle title="Legal Information & Imprint">
-        Last updated on: 09.07.2025
+      <PageTitle title="Rechtliche Informationen & Impressum">
+        Zuletzt aktualisiert am: 09.09.2025
       </PageTitle>
 
       <section>
         <div className="container">
-          <h2>Responsible entity</h2>
+          <h2>Zuständige Stelle</h2>
           <p>
             Gurgurovci Generics Studio
             <br />
@@ -20,44 +20,49 @@ export default function ImprintPage() {
             <br />
             9500 Wil SG
             <br />
-            Switzerland
+            Schweiz
             <br />
             <a href="mailto:info@generics.studio">info@generics.studio</a>
             <br />
             <a href="tel:+41794059955">+41 79 405 99 55</a>
           </p>
-          <h2>Persons</h2>
+          <h2>Personen</h2>
           <p>Arlind Gurgurovci</p>
-          <h2>Company Name</h2>
+          <h2>Firmenname</h2>
           <p>Gurgurovci Generics Studio</p>
-          <h2>Disclaimer</h2>
+          <h2>Haftungsausschluss</h2>
           <p>
-            The author assumes no liability for the correctness, accuracy,
-            timeliness, reliability and completeness of the information.
+            Der Autor übernimmt keine Gewähr für die Richtigkeit, Genauigkeit,
+            Aktualität, Zuverlässigkeit und Vollständigkeit der Informationen.
             <br />
-            Liability claims against the author for material or immaterial
-            damage resulting from access to, use or non-use of the published
-            information, from misuse of the connection or from technical
-            malfunctions are excluded.
+            Haftungsansprüche gegen den Autor wegen Schäden materieller oder
+            immaterieller , die aus dem Zugriff oder der Nutzung bzw.
+            Nichtnutzung der veröffentlichten Informationen, durch Missbrauch
+            der Verbindung oder durch technische Störungen entstanden sind,
+            werden ausgeschlossen.
             <br />
-            All offers are non-binding. The author expressly reserves the right
-            to change, add to, or delete parts of the pages or the entire offer
-            without prior notice, or to temporarily or permanently cease
-            publication.
+            Alle Angebote sind freibleibend und unverbindlich. Der Autor behält
+            es sich ausdrücklich vor, , Teile der Seiten oder das gesamte
+            Angebot ohne gesonderte Ankündigung zu verändern, zu ergänzen, zu
+            löschen oder die Veröffentlichung von zeitweise oder endgültig
+            einzustellen.
           </p>
-          <h2>Disclaimer for content and links</h2>
+          <h2>Haftungsausschluss für Inhalte und Links</h2>
           <p>
-            References and links to third party websites are outside our area of
-            responsibility. It rejected any responsibility for such websites.
+            Verweise und Links auf Webseiten Dritter liegen außerhalb des
+            Verantwortungsbereiches von . Es wird jegliche Verantwortung für
+            solche Websites abgelehnt.
           </p>
-          Access to and use of such websites is at the user his own risk.
-          <h2>Copyright declaration</h2>
+          Der Zugang zu und die Nutzung von solchen Websites erfolgt auf eigenes
+          Risiko des Nutzers.
+          <h2>Erklärung zum Urheberrecht</h2>
           <p>
-            The copyrights and all other rights to content, images, photos or
-            other files on this website belong exclusively to Gurgurovci
-            Generics Studio or the specifically named rights holders. The
-            written consent of the copyright holder must be obtained in advance
-            for the reproduction of any elements.
+            Die Urheberrechte und alle anderen Rechte an Inhalten, Bildern,
+            Fotos oder anderen Dateien auf dieser Website gehören ausschließlich
+            Gurgurovci Generics Studio oder den speziell genannten
+            Rechteinhabern. Für die Vervielfältigung jeglicher Elemente muss im
+            Voraus die schriftliche Zustimmung des Rechteinhabers eingeholt
+            werden.
           </p>
         </div>
       </section>
