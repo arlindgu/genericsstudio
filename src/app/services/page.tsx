@@ -215,8 +215,8 @@ export default function servicesPage() {
               <CardHeader>
                 <CardAction>
                   <Button variant="ghost" className="size-8">
-                    <Link href={service.url}>
-                      <ArrowUpRight />
+                    <Link href={service.url} aria-label={`Mehr über ${service.title} erfahren`}>
+                      <ArrowUpRight /> 
                     </Link>
                   </Button>
                 </CardAction>
