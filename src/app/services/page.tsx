@@ -123,14 +123,14 @@ export default function servicesPage() {
     {
       title: "Digitale Archäologie",
       subtitle: "Aufdecken, was funktioniert hat.",
-      text: "Jede Website hat eine Geschichte—was funktioniert hat, was nicht, was verloren ging. Wir analysieren Ihre bestehende digitale Präsenz wie Archäologen und studieren sorgfältig Nutzerverhalten, Performance-Daten und Content-Effektivität. Wir bewahren, was Ihren Zielen dient, und bauen neu auf, was das nicht tut. Denn gute Restauration ehrt die Vergangenheit und umarmt die Zukunft.",
+      text: "Jede Website hat eine Geschichte—was funktioniert hat, was nicht, was verloren ging. Wir analysieren Ihre bestehende digitale Präsenz wie Archäologen und studieren sorgfältig Nutzerverhalten, Performance-Daten und Content-Effektivität. Wir bewahren, was Ihren Zielen dient, und bauen neu auf, was das nicht tut. Denn gute Restaurierung ehrt die Vergangenheit und umarmt die Zukunft.",
       deliverables: [
         "Vollständiges Website-Audit",
         "Performance-Analyse",
         "Content-Inventar",
         "SEO-Bewertung",
         "Nutzerverhalten-Analyse",
-        "Restaurations-Roadmap",
+        "Restaurierungs-Roadmap",
       ],
     },
     {
@@ -190,7 +190,7 @@ export default function servicesPage() {
         "Wir helfen Ihnen dabei, eine starke Markenidentität zu etablieren, die bei Ihrer Zielgruppe ankommt und Sie von der Konkurrenz abhebt.",
     },
     {
-      title: "Analyse und Restauration",
+      title: "Analyse und Restaurierung",
       subtitle: "Traditionen wiederbeleben",
       url: "services/analyse",
       description:

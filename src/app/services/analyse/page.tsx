@@ -91,7 +91,7 @@ const PricingContent = [
 
   return (
     <>
-      <PageTitle title="Analyse und Restauration">
+      <PageTitle title="Analyse und Restaurierung">
         Wir helfen Ihnen, Ihre digitale Strategie zu optimieren und fundierte
         Entscheidungen zu treffen.
       </PageTitle>
