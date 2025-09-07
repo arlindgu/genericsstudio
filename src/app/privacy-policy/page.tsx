@@ -233,16 +233,15 @@ export default function PrivacyPolicyPage() {
           </p>
           <h4>b. Löschung und Berichtigung</h4>
           <p>
-            Wir können die Bereitstellung von Informationen oder Daten
-            einschränken oder verweigern, wenn dies unseren rechtlichen
-            Verpflichtungen, unseren eigenen berechtigten Interessen,
-            öffentlichen Interessen oder den Interessen eines Dritten
-            widerspricht. Die Bearbeitung von Ihrer Anfrage unterliegt der
-            gesetzlichen Bearbeitungsfrist von 30 Tagen. Wir können diese Frist
-            jedoch aufgrund eines hohen Aufkommens an Anfragen, aus rechtlichen
-            oder technischen Gründen oder weil wir mehr detaillierte
-            Informationen von Ihnen benötigen, verlängern. Über die Verlängerung
-            der Frist werden Sie rechtzeitig, zumindest in Textform, informiert.
+            Sie haben jederzeit die Möglichkeit, die Löschung oder Berichtigung
+            Ihrer Daten zu verlangen. Wir können dem Antrag widersprechen, wenn
+            gesetzliche Vorschriften uns verpflichten, die Daten länger zu
+            speichern oder unverändert zu belassen, oder wenn Ihr Antrag einer
+            gesetzlichen Vorgabe widerspricht. Bitte beachten Sie, dass die
+            Ausübung Ihrer Rechte im Widerspruch zu vertraglichen Vereinbarungen
+            stehen und entsprechende Auswirkungen auf die Vertragserfüllung
+            haben kann (z. B. vorzeitige Vertragsbeendigung oder Kostenfolgen).
+            Übersetzt mit DeepL.com (kostenlose Version)
           </p>
           <h4>c. Rechtlicher Prozess</h4>
           <p>
@@ -341,11 +340,23 @@ export default function PrivacyPolicyPage() {
           </p>
           <h4>4.4 WhatsApp Business Chat</h4>
           <p>
-            Wir nutzen auf unserer Website den Dienst Google Ads, einen
-            Online-Werbedienst der Google LLC, 1600 Amphitheatre Parkway,
-            Mountain View, CA 94043, USA (im Folgenden Google). Google Ads
-            ermöglicht es uns, Anzeigen in den Google-Suchergebnissen sowie im
-            Google-Werbenetzwerk zu schalten.
+            Für die direkte Kommunikation bieten wir Ihnen die Möglichkeit, uns
+            über WhatsApp Business Chat zu kontaktieren. Dieser Dienst wird von
+            WhatsApp Ireland Limited, 4 Grand Canal Square, Grand Canal Harbour,
+            Dublin 2, Irland, einer Tochtergesellschaft von Meta Inc., 1601
+            Willow Road, Menlo Park, CA 94025, USA. Wenn Sie uns über den
+            WhatsApp Business Chat kontaktieren, werden Ihre Handynummer und der
+            Inhalt Ihrer Nachricht sowie alle anderen Daten, die Sie
+            möglicherweise angegeben haben, an WhatsApp übermittelt und dort
+            verarbeitet. Wir erhalten diese Daten und verwenden sie, um auf Ihre
+            Anfrage zu antworten. WhatsApp verwendet Cookies und andere
+            Technologien, um den Dienst bereitzustellen und die Kommunikation zu
+            ermöglichen. Dabei kann auch Ihre IP-Adresse erfasst und gespeichert
+            werden. Bitte beachten Sie, dass die Nutzung von WhatsApp Business
+            Chat und die Kommunikation über diesen Dienst den
+            Datenschutzbestimmungen von WhatsApp unterliegen. Wir empfehlen
+            Ihnen, diese Bestimmungen zu lesen, bevor Sie den Dienst nutzen.
+            Übersetzt mit DeepL.com (kostenlose Version)
           </p>
           <h4>4.5 Cloudflare CDN</h4>
           <p>
