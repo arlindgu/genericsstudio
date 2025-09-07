@@ -1,67 +1,10 @@
-// lib/seo.ts - Zentrale SEO Konfiguration mit Validierung
+// lib/seo.ts - Zentrale SEO Konfiguration
 import type { Metadata } from 'next';
 
 const baseUrl = process.env.NODE_ENV === 'production'
     ? 'https://generics.studio/'
     : 'http://localhost:3000';
 const siteName = 'Generics Studio';
-
-// ✅ MAX LENGTH KONSTANTEN
-const SEO_LIMITS = {
-    TITLE: 60,
-    DESCRIPTION: 160,
-    KEYWORD: 50
-} as const;
-
-// ✅ VALIDIERUNGS-FUNKTIONEN
-const validateLength = (text: string, maxLength: number, fieldName: string): string => {
-    if (text.length > maxLength) {
-        if (process.env.NODE_ENV === 'development') {
-            console.warn(`⚠️  ${fieldName} ist zu lang: ${text.length}/${maxLength} Zeichen`);
-            console.warn(`Text: "${text}"`);
-        }
-        // In Production: Automatisch kürzen
-        return text.substring(0, maxLength - 3) + '...';
-    }
-    return text;
-};
-
-const validateSeoConfig = (config: any, configName: string) => {
-    const errors: string[] = [];
-
-    if (config.title && config.title.length > SEO_LIMITS.TITLE) {
-        errors.push(`${configName}.title: ${config.title.length}/${SEO_LIMITS.TITLE} Zeichen`);
-    }
-
-    if (config.description && config.description.length > SEO_LIMITS.DESCRIPTION) {
-        errors.push(`${configName}.description: ${config.description.length}/${SEO_LIMITS.DESCRIPTION} Zeichen`);
-    }
-
-    if (config.keywords) {
-        config.keywords.forEach((keyword: string, index: number) => {
-            if (keyword.length > SEO_LIMITS.KEYWORD) {
-                errors.push(`${configName}.keywords[${index}]: "${keyword}" (${keyword.length}/${SEO_LIMITS.KEYWORD} Zeichen)`);
-            }
-        });
-    }
-
-    return errors;
-};
-
-// ✅ SICHERE TRUNCATE FUNKTION
-const safeTruncate = (text: string, maxLength: number): string => {
-    if (text.length <= maxLength) return text;
-
-    // Versuche bei einem Leerzeichen zu trennen
-    const truncated = text.substring(0, maxLength - 3);
-    const lastSpace = truncated.lastIndexOf(' ');
-
-    if (lastSpace > maxLength * 0.8) { // Nur wenn mindestens 80% der Länge erreicht
-        return truncated.substring(0, lastSpace) + '...';
-    }
-
-    return truncated + '...';
-};
 
 // Base SEO Konfiguration
 const baseSEO = {
@@ -123,7 +66,6 @@ const baseSEO = {
     instagramHandle: "@generics.studio"
 };
 
-// ✅ ERWEITERTE GENERATESEO FUNKTION MIT VALIDIERUNG
 export function generateSEO({
     title,
     description,
@@ -139,41 +81,28 @@ export function generateSEO({
     image?: string;
     noIndex?: boolean;
 }): Metadata {
-    // ✅ VALIDIERUNG UND AUTOMATISCHE KÜRZUNG
-    const safeTitle = title ? safeTruncate(title, SEO_LIMITS.TITLE - siteName.length - 3) : '';
-    const fullTitle = safeTitle
-        ? `${safeTitle} | ${siteName}`
+    const fullTitle = title
+        ? `${title} | ${siteName}`
         : baseSEO.defaultTitle;
 
-    const safeDescription = safeTruncate(description || baseSEO.defaultDescription, SEO_LIMITS.DESCRIPTION);
-    const safeKeywords = keywords.map(keyword => safeTruncate(keyword, SEO_LIMITS.KEYWORD));
-    const fullKeywords = [...baseSEO.defaultKeywords, ...safeKeywords];
+    const fullDescription = description || baseSEO.defaultDescription;
+    const fullKeywords = [...baseSEO.defaultKeywords, ...keywords];
     const fullUrl = `${baseSEO.baseUrl}${path}`;
 
-    // ✅ DEVELOPMENT WARNINGS
-    if (process.env.NODE_ENV === 'development') {
-        if (title && title.length > SEO_LIMITS.TITLE - siteName.length - 3) {
-            console.warn(`⚠️  Titel zu lang für "${path}": ${title.length} Zeichen`);
-        }
-        if (description && description.length > SEO_LIMITS.DESCRIPTION) {
-            console.warn(`⚠️  Beschreibung zu lang für "${path}": ${description.length} Zeichen`);
-        }
-    }
-
     return {
-        metadataBase: new URL(baseSEO.baseUrl),
+        metadataBase: new URL(baseSEO.baseUrl), // ✅ Das war das fehlende Stück!
         title: fullTitle,
-        description: safeDescription,
+        description: fullDescription,
         keywords: fullKeywords,
         authors: [{ name: siteName }],
         creator: siteName,
         openGraph: {
             type: 'website',
-            locale: 'de_DE', // ✅ Geändert zu Deutsch
+            locale: 'en_US',
             url: fullUrl,
             siteName,
             title: fullTitle,
-            description: safeDescription,
+            description: fullDescription,
             images: [
                 {
                     url: image,
@@ -200,7 +129,7 @@ export function generateSEO({
     };
 }
 
-// ✅ OPTIMIERTE SEO CONFIG (Gekürzte Versionen)
+// Spezifische Seiten-Konfigurationen
 export const seoConfig = {
     home: {
         title: 'Webentwicklung & Digitale Lösungen',
@@ -305,24 +234,3 @@ export const seoConfig = {
         path: 'services/analyse',
     },
 };
-
-// ✅ VALIDIERUNG BEIM LADEN (Development)
-if (process.env.NODE_ENV === 'development') {
-    const allErrors: string[] = [];
-
-    Object.entries(seoConfig).forEach(([key, config]) => {
-        const errors = validateSeoConfig(config, key);
-        allErrors.push(...errors);
-    });
-
-    if (allErrors.length > 0) {
-        console.error('🚨 SEO CONFIG FEHLER:');
-        allErrors.forEach(error => console.error(`  • ${error}`));
-        console.log('\n📏 Limits: Titel=' + SEO_LIMITS.TITLE + ', Beschreibung=' + SEO_LIMITS.DESCRIPTION + ', Keywords=' + SEO_LIMITS.KEYWORD);
-    } else {
-        console.log('✅ SEO Config ist valide!');
-    }
-}
-
-// ✅ EXPORT DER LIMITS FÜR ANDERE DATEIEN
-export { SEO_LIMITS };
