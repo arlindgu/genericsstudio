@@ -21,28 +21,8 @@ export default function CaseStudiesPage() {
       title: "didischocoberrys",
       description:
         "Für didischocoberrys entwickelten wir eine massgeschneiderte Landing Page mit Fokus auf konsistentes Branding, benutzerfreundliches UI/UX-Design und eine klare Struktur zur Steigerung der Conversion-Rate. Ein responsives Kontaktformular und gezielte SEO-Optimierungen wurden integriert, um die Sichtbarkeit bei Google zu verbessern.",
-      url: "https://didis.arlind.io/",
+      url: "https://didis.generics.studio/",
       tags: ["Web Design", "Landing Page", "Branding"],
-    },
-    {
-      title: "Thread IT",
-      description:
-        "Für Thread IT entwickelten wir eine umfassende Web-Lösung, die eine massgeschneiderte Landing Page, benutzerfreundliches UI/UX-Design und robuste SEO-Optimierungen umfasste. Das Projekt zielte darauf ab, die Markensichtbarkeit zu erhöhen und die Nutzerbindung zu verbessern.",
-      url: "https://threadit.arlind.io/",
-      tags: [
-        "Web Design",
-        "Landing Page",
-        "SEO",
-        "Branding",
-        "Kontaktformular",
-      ],
-    },
-    {
-      title: "Blendis Barbershop",
-      description:
-        "Für Blendis Barbershop erstellten wir eine visuell beeindruckende Website, die ihre Dienstleistungen und Expertise präsentiert. Die Seite zeichnet sich durch modernes Design, einfache Navigation und ein Buchungssystem zur Verbesserung der Nutzererfahrung aus.",
-      url: "https://blendis.arlind.io/",
-      tags: ["Web Design", "Landing Page", "SEO", "Buchungssystem"],
     },
   ];
 
