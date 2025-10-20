@@ -34,7 +34,7 @@ export default function RootLayout({
         <main className="flex-1">
           {children}
           <SpeedInsights />
-          </main>
+        </main>
         <Footer />
       </body>
     </html>
