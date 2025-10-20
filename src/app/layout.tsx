@@ -25,23 +25,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-        
-  const [theme, setTheme] = useState("light");
-
-  const Time = new Date();
-  const hour = Time.getHours();
-
-  if (hour >= 19 || hour <= 6) {
-    // Night time: 7 PM - 6 AM
-    if (theme !== "dark") {
-      setTheme("dark");
-    }
-  } else {
-    // Day time: 7 AM - 6 PM
-    if (theme !== "light") {
-      setTheme("light");
-    }
-  }
 
   return (
     <html lang="de-CH" className="light">
