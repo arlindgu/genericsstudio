@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import localFont from "next/font/local";
 import { useState } from "react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 
 // Import General Sans font using next/font/local
@@ -49,7 +50,10 @@ export default function RootLayout({
         className={`${generalSans.variable} main-h-screen flex flex-col`}
       >
         <Header />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1">
+          {children}
+          <SpeedInsights />
+          </main>
         <Footer />
       </body>
     </html>
