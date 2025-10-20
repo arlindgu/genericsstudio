@@ -1,9 +1,7 @@
-"use client";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import localFont from "next/font/local";
-import { useState } from "react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 
