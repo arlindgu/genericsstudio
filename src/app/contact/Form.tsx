@@ -8,13 +8,18 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
+import { LoadingSpinner } from './sending';
 
 export default function FormComponent() {
 
     const [sent, isSent] = useState(false)
     const [error, setError] = useState(false)
+    const [loading, setLoading] = useState(false)
 
     function sendInquiry(FormData: FormData) {
+
+
+        setLoading(true);
 
         const data = {
             name: FormData.get('name'),
@@ -29,6 +34,7 @@ export default function FormComponent() {
             body: JSON.stringify(data),
         }).then(response => {
             if (response.ok) {
+              setLoading(false);
                 isSent(true);
                 setError(false);
             } else {
@@ -44,8 +50,10 @@ export default function FormComponent() {
     }
 
     return (
-      <div className="flex md:w-xl lg:w-3xl mx-auto">
-        {sent && !error ? (
+      <div className="flex md:w-xl mx-auto">
+        {loading ? (
+          <LoadingSpinner />
+        ) : sent && !error ? (
           <div className="flex flex-col items-center justify-center gap-4 mx-auto">
             <Check stroke="#211912" />
             <p className="text-center">
@@ -66,16 +74,13 @@ export default function FormComponent() {
           </div>
         ) : (
           <div className="flex flex-col items-center justify-center w-full">
-            <Card className='w-full'>
+            <Card className="w-full">
               <CardContent>
-                <Form
-                  action={sendInquiry}
-                  className="flex flex-col gap-4"
-                >
+                <Form action={sendInquiry} className="flex flex-col gap-4">
                   <div className="flex flex-col">
                     <div className="flex flex-row justify-between items-center mb-1">
                       <Label>Vollständiger Name</Label>
-                      <Label className="italic text-sm text-muted-foreground">
+                      <Label className="italic font-light text-xs text-muted-foreground">
                         erforderlich
                       </Label>
                     </div>
@@ -90,7 +95,7 @@ export default function FormComponent() {
                   <div className="flex flex-col">
                     <div className="flex flex-row justify-between items-center mb-1">
                       <Label>E-Mail Adresse</Label>
-                      <Label className="italic text-sm text-muted-foreground">
+                      <Label className="font-light text-xs italic text-muted-foreground">
                         erforderlich
                       </Label>
                     </div>

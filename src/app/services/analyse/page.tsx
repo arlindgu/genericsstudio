@@ -101,7 +101,7 @@ const PricingContent = [
 
       <section>
         <div className="container">
-          <div className="flex flex-col lg:grid lg:grid-cols-12 border-t pt-8">
+          <div className="flex flex-col lg:grid lg:grid-cols-12 border-t border-dotted pt-8">
             <div className="col-span-3">
               <h2 id="web-dev">Unsere Preise</h2>
             </div>
@@ -140,7 +140,7 @@ const PricingContent = [
 
       <section>
         <div className="container">
-          <div className="grid lg:grid-cols-12 border-t pt-8">
+          <div className="grid lg:grid-cols-12 border-t border-dotted pt-8">
             <h2 id="web-dev" className="col-span-3">
               Warum ist eine Webseite so wichtig?
             </h2>
@@ -159,7 +159,7 @@ const PricingContent = [
 
       <section>
         <div className="container">
-          <div className="grid lg:grid-cols-12 border-t pt-8">
+          <div className="grid lg:grid-cols-12 border-t border-dotted pt-8">
             <h2 id="web-dev" className="col-span-3">
               Ablauf der Analyse
             </h2>

@@ -215,8 +215,11 @@ export default function servicesPage() {
               <CardHeader>
                 <CardAction>
                   <Button variant="ghost" className="size-8">
-                    <Link href={service.url} aria-label={`Mehr über ${service.title} erfahren`}>
-                      <ArrowUpRight /> 
+                    <Link
+                      href={service.url}
+                      aria-label={`Mehr über ${service.title} erfahren`}
+                    >
+                      <ArrowUpRight />
                     </Link>
                   </Button>
                 </CardAction>
@@ -231,7 +234,7 @@ export default function servicesPage() {
 
       <section>
         <div className="container">
-          <div className="grid lg:grid-cols-12 border-t pt-8">
+          <div className="grid lg:grid-cols-12 border-t border-dotted pt-8">
             <h2 id="web-dev" className="col-span-3">
               Webdesign & Entwicklung
             </h2>
@@ -255,7 +258,7 @@ export default function servicesPage() {
       </section>
       <section>
         <div className="container">
-          <div className="grid lg:grid-cols-12 border-t pt-8">
+          <div className="grid lg:grid-cols-12 border-t  border-dotted pt-8">
             <h2 id="branding" className="col-span-3">
               Branding
             </h2>
@@ -279,7 +282,7 @@ export default function servicesPage() {
       </section>
       <section>
         <div className="container">
-          <div className="grid lg:grid-cols-12 border-t pt-8">
+          <div className="grid lg:grid-cols-12 border-t border-dotted pt-8">
             <h2 id="restoration" className="col-span-3">
               Restauration
             </h2>

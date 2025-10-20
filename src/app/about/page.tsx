@@ -61,7 +61,7 @@ export default function AboutPage() {
 
         <section>
           <div className="container">
-            <div className="grid lg:grid-cols-12 border-t pt-8">
+            <div className="grid lg:grid-cols-12 border-t border-dotted  pt-8">
               <h2 className="col-span-3">Unsere Bestimmung</h2>
               <div className="col-span-1" />
               <div className="lg:col-span-8 lg:grid lg:grid-cols-2 gap-8">
@@ -79,7 +79,7 @@ export default function AboutPage() {
 
         <section>
           <div className="container">
-            <div className="grid lg:grid-cols-12 border-t pt-8">
+            <div className="grid lg:grid-cols-12 border-t border-dotted pt-8">
               <h2 className="col-span-3">
                 Was wir leben und wie wir handeln
               </h2>

@@ -8,7 +8,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-background border-t z-2 py-4">
+    <footer className="bg-background z-2 py-4 border-t border-dotted">
       <div className="container">
 
         <div className="flex flex-row justify-center md:justify-between flex-wrap gap-4">
