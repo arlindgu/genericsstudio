@@ -167,7 +167,7 @@ const PricingContent = [
             <div className="lg:col-span-8 lg:grid lg:grid-cols-2 gap-8">
               {ProcessContent.map((statement, index) => (
                 <div key={index}>
-                  <p className="lead mt-8 font-semibold text-foreground">
+                  <p className="lead font-semibold text-foreground">
                     {statement.number}
                   </p>
                   <h3 className="mt-0">{statement.title}</h3>

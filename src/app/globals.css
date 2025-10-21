@@ -4,13 +4,14 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-family-sans: var(--font-general-sans), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  --font-general-sans: 'General Sans', sans-serif;
+  --font-jetbrains-mono: 'JetBrains Mono', monospace;
 }
 
 :root {
   --background: oklch(0.9818 0.0054 95.0986);
   --foreground: oklch(0.3438 0.0269 95.7226);
-  --card: oklch(0.9818 0.0054 95.0986);
+  --card: oklch(0.9905 0.0026 106.45);
   --card-foreground: oklch(0.1908 0.0020 106.5859);
   --popover: oklch(1.0000 0 0);
   --popover-foreground: oklch(0.2671 0.0196 98.9390);
@@ -42,7 +43,7 @@
   --sidebar-ring: oklch(0.7731 0 0);
   --font-sans: var(--font-general-sans), Times, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --radius: 0.5rem;
   --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
   --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
@@ -180,7 +181,7 @@
   }
 
   p {
-    @apply leading-7 [&:not(:first-child)]:mt-6;
+    @apply leading-7;
   }
 
   blockquote {
@@ -192,7 +193,7 @@
   }
 
   p.lead {
-    @apply text-muted-foreground text-xl
+    @apply text-muted-foreground text-xl;
   }
 
   div.large {
@@ -204,7 +205,7 @@
   }
 
   p.muted {
-    @apply text-muted-foreground text-sm;
+    @apply text-muted-foreground text-sm mt-2;
   }
 }
 

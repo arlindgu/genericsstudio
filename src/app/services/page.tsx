@@ -183,13 +183,6 @@ export default function servicesPage() {
         "Wir erstellen atemberaubende, benutzerfreundliche Webseiten, die nicht nur aussergewöhnlich aussehen, sondern echte Ergebnisse für Ihr Unternehmen erzielen.",
     },
     {
-      title: "Branding",
-      subtitle: "Eine starke Markenidentität aufbauen",
-      url: "services/branding",
-      description:
-        "Wir helfen Ihnen dabei, eine starke Markenidentität zu etablieren, die bei Ihrer Zielgruppe ankommt und Sie von der Konkurrenz abhebt.",
-    },
-    {
       title: "Analyse und Restaurierung",
       subtitle: "Traditionen wiederbeleben",
       url: "services/analyse",
@@ -211,10 +204,10 @@ export default function servicesPage() {
       <section>
         <div className="container flex flex-col lg:flex-row gap-8">
           {ServiceCards.map((service) => (
-            <Card key={service.title} className="flex-1 min-h-64">
+            <Card key={service.title} className="flex-1">
               <CardHeader>
                 <CardAction>
-                  <Button variant="ghost" className="size-8">
+                  <Button asChild variant="default" className="size-8">
                     <Link
                       href={service.url}
                       aria-label={`Mehr über ${service.title} erfahren`}
@@ -246,7 +239,7 @@ export default function servicesPage() {
                   <p>{statement.text}</p>
                   <p className="muted mb-6">{statement.subtitle}</p>
                   {statement.deliverables.map((deliverable) => (
-                    <Badge key={deliverable} variant="secondary">
+                    <Badge key={deliverable} variant="default">
                       {deliverable}
                     </Badge>
                   ))}
@@ -256,7 +249,7 @@ export default function servicesPage() {
           </div>
         </div>
       </section>
-      <section>
+      <section className="hidden">
         <div className="container">
           <div className="grid lg:grid-cols-12 border-t  border-dotted pt-8">
             <h2 id="branding" className="col-span-3">
@@ -270,7 +263,7 @@ export default function servicesPage() {
                   <p>{statement.text}</p>
                   <p className="muted mb-6">{statement.subtitle}</p>
                   {statement.deliverables.map((deliverable) => (
-                    <Badge key={deliverable} variant="secondary">
+                    <Badge key={deliverable} variant="default">
                       {deliverable}
                     </Badge>
                   ))}
@@ -294,7 +287,7 @@ export default function servicesPage() {
                   <p>{statement.text}</p>
                   <p className="muted mb-6">{statement.subtitle}</p>
                   {statement.deliverables.map((deliverable) => (
-                    <Badge key={deliverable} variant="secondary">
+                    <Badge key={deliverable} variant="default">
                       {deliverable}
                     </Badge>
                   ))}
@@ -304,6 +297,7 @@ export default function servicesPage() {
           </div>
         </div>
       </section>
+
     </main>
   );
 }

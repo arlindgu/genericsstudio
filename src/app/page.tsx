@@ -12,7 +12,7 @@ export default function Home() {
           <Logo className="w-64 md:w-80 lg:w-96 fill-current -mb-4" />
         </h1>
 
-        <p>Until logic breaks or beauty wins</p>
+        <p className="mt-6">Until logic breaks or beauty wins</p>
       </div>
     </>
   );

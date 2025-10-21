@@ -80,9 +80,7 @@ export default function AboutPage() {
         <section>
           <div className="container">
             <div className="grid lg:grid-cols-12 border-t border-dotted pt-8">
-              <h2 className="col-span-3">
-                Was wir leben und wie wir handeln
-              </h2>
+              <h2 className="col-span-3">Was wir leben und wie wir handeln</h2>
               <div className="col-span-1" />
               <div className="lg:col-span-8 lg:grid lg:grid-cols-2 gap-8">
                 {valueContent.map((statement, index) => (
@@ -94,6 +92,22 @@ export default function AboutPage() {
                 ))}
               </div>
             </div>
+          </div>
+        </section>
+        <section>
+          <div className="container border-t text-3xl lg:text-5xl border-dotted pt-8 text-center font-sans font-extralight min-h-screen gap-32 flex flex-col justify-center">
+            <span className="italic">Small by design</span>
+            <span className="">
+              Keine überfüllten Meetings. Keine langwierigen
+              Genehmigungsprozesse. Kein endloses Warten. Nur ein Team, das
+              schnell handelt, frühzeitig Prototypen entwickelt und sich nicht
+              scheut, Dinge zu verwerfen und besser neu zu gestalten.
+            </span>
+            <span className="">
+              Jeder ist nah an der Arbeit dran. Jeder zieht mehr als nur eine
+              Last. So bleiben Projekte schlank, lebendig und kommen voran.
+            </span>
+            <p>Fortschritt vor Prozess. <span className="italic">Immer.</span></p>
           </div>
         </section>
       </main>

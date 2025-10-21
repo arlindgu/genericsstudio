@@ -1,84 +1,56 @@
 import PageTitle from "@/components/ui/PageTitle";
-import { Card, CardTitle, CardContent, CardDescription, CardHeader } from "@/components/ui/card"
+import { Card, CardTitle, CardContent, CardDescription, CardHeader, CardFooter } from "@/components/ui/card"
 import { generateSEO, seoConfig } from "@/lib/seo";
+import { FramerLogo } from "@/components/svgs/framerlogo";
+import { NextJSLogo }  from "@/components/svgs/nextjslogo";
+import { Separator } from "@/components/ui/separator";
+import { Check } from "lucide-react";
 
 export const metadata = generateSEO(seoConfig.websiteentwicklung);
 
 export default function WebDevelopmentPage() {
 const FrameworkComparison = [
   {
-    framework: "WordPress",
-    description: "Das weltweit beliebteste Content-Management-System, ideal für Blogs, Unternehmenswebsites und kleinere Online-Shops.",
-    positive: [
-      "Sehr benutzerfreundlich - Sie können Inhalte selbst verwalten",
-      "Tausende von kostenlosen und kostenpflichtigen Themes verfügbar",
-      "Riesige Community und viele Plugins für Zusatzfunktionen",
-      "SEO-freundlich und gut für Google-Rankings",
-      "Kostengünstig in der Entwicklung und Wartung"
-    ],
-    negative: [
-      "Regelmäßige Updates nötig für Sicherheit",
-      "Kann bei vielen Plugins langsamer werden",
-      "Höheres Sicherheitsrisiko durch Popularität",
-      "Design-Anpassungen können begrenzt sein",
-      "Monatliche Hosting- und Wartungskosten"
-    ]
-  },
-  {
-    framework: "Webflow",
-    description: "Modernes Design-Tool, das visuelles Design mit professionellem Code kombiniert. Perfekt für designorientierte Websites.",
-    positive: [
-      "Pixel-perfektes, individuelles Design möglich",
-      "Sehr schnelle Ladezeiten und moderne Animationen",
-      "Hosting und CMS sind bereits integriert",
-      "Mobile Optimierung ist automatisch perfekt",
-      "Keine Plugins nötig - alles aus einer Hand"
-    ],
-    negative: [
-      "Höhere monatliche Kosten (ab ca. 25 CHF/Monat)",
-      "Weniger flexibel bei komplexen Funktionen",
-      "Sie sind an Webflow als Plattform gebunden",
-      "Begrenzte E-Commerce-Funktionen",
-      "Schwieriger zu migrieren falls gewünscht"
-    ]
-  },
-  {
+    logo: <NextJSLogo className="h-8"/>,
     framework: "Next.js",
-    description: "Modernste Technologie für komplexe Web-Anwendungen und Websites mit höchsten Performance-Anforderungen.",
+    description:
+      "Modernste Technologie für komplexe Web-Anwendungen und Websites mit höchsten Performance-Anforderungen.",
     positive: [
       "Extrem schnelle Ladezeiten und beste Performance",
       "Zukunftssicher und hochmodern",
       "Unbegrenzte Anpassungsmöglichkeiten",
       "Perfekt für komplexe Funktionen und Integrationen",
-      "Sehr gute SEO-Performance"
+      "Sehr gute SEO-Performance",
     ],
     negative: [
       "Höhere Entwicklungskosten",
       "Inhalte können meist nur über Entwickler geändert werden",
       "Komplexer für einfache Website-Anforderungen",
       "Benötigt technisches Know-how für Wartung",
-      "Längere Entwicklungszeit"
-    ]
+      "Längere Entwicklungszeit",
+    ],
   },
   {
+    logo: <FramerLogo className="size-8"/>,
     framework: "Framer",
-    description: "Design-fokussierte Plattform für interaktive, animierte Websites mit beeindruckenden visuellen Effekten.",
+    description:
+      "Design-fokussierte Plattform für interaktive, animierte Websites mit beeindruckenden visuellen Effekten.",
     positive: [
       "Beeindruckende Animationen und Interaktionen",
       "Sehr modernes, zeitgemäßes Design möglich",
       "Einfache Bedienung für Design-Updates",
       "Mobile Optimierung automatisch",
-      "Schnelle Entwicklungszeit für Design-Websites"
+      "Schnelle Entwicklungszeit für Design-Websites",
     ],
     negative: [
       "Begrenzte Funktionalität für komplexe Features",
       "Abhängigkeit von der Framer-Plattform",
       "Nicht ideal für umfangreiche Content-Websites",
       "E-Commerce-Funktionen sehr limitiert",
-      "Monatliche Abo-Kosten erforderlich"
-    ]
+      "Monatliche Abo-Kosten erforderlich",
+    ],
   },
-]
+];
 
 const WebDevelopmentContent = [
   {
@@ -122,50 +94,138 @@ const ProcessContent = [
   },
 ];
 
-const PricingContent = [
+type PricingContent = {
+  name: string;
+  price: string;
+  goodFor: string[];
+  description: string;
+  features: string[];
+  examples: string[];
+};
+
+const pricingContent: PricingContent[] = [
   {
-    name: "Landing Page",
-    price: "899 CHF",
-    pro: "Einmalig",
+    name: "Starter / Mini Business",
+    price: "CHF 500 – 1’000",
+    goodFor: [
+      "Einzelpersonen",
+      "Fahrschulen",
+      "Coiffeure",
+      "Essensstände",
+      "Kleine lokale Services",
+    ],
+    description:
+      "Einfache, saubere Website für kleine Betriebe mit Fokus auf Übersichtlichkeit und Erreichbarkeit. Ideal für erste Online-Präsenz.",
     features: [
-      "Einseitige Website mit 3-5 Sektionen",
-      "Responsive Design für alle Geräte",
-      "Kontaktformular und SEO-Grundlagen",
-      "1 Monat kostenloser Support",
+      "Bis zu 3 Seiten",
+      "Responsives Design",
+      "Kontaktformular",
+      "Google Maps Einbindung",
+      "Calendly oder ähnliches Buchungstool",
+      "Basis SEO-Struktur",
+    ],
+    examples: [
+      "Fahrschule mit Kontaktformular und Kurszeiten",
+      "Foodtruck-Website mit Standort und Menü",
+      "Barbershop mit Buchungslink",
+      "Einzelunternehmer (z. B. Fotograf, Designer) mit Portfolio-Seite",
     ],
   },
   {
-    name: "Business Website",
-    price: "2'499 CHF",
-    pro: "Einmalig",
+    name: "Startup / Kleines KMU",
+    price: "CHF 1’250 – 2’000",
+    goodFor: ["Startups", "kleine Unternehmen", "Dienstleister", "Agenturen"],
+    description:
+      "Individuelles Layout und leichte Animationen mit professionellem Look, abgestimmt auf Branding und Zielgruppe.",
     features: [
-      "5-8 Unterseiten (Home, Über uns, Leistungen, etc.)",
-      "Professionelles Design und CMS-Integration",
-      "SEO-Optimierung und Google Analytics",
-      "Social Media Integration",
-      "3 Monate kostenloser Support",
+      "Bis zu 7 Seiten",
+      "Individuelles Design (Farben, Branding)",
+      "Responsives Layout",
+      "Kontakt- und Angebotsformular",
+      "Einbindung von Tools wie Calendly, Google Reviews, Instagram Feed",
+      "Einfache CMS-Integration (z. B. Notion, Sanity, Framer CMS)",
+    ],
+    examples: [
+      "Beratungsfirma oder Treuhandbüro mit Teamseite",
+      "Kleines Fitnessstudio mit Kursübersicht",
+      "Agentur oder Freelancer-Portfolio",
+      "Startup Landingpage mit Call-to-Action",
     ],
   },
   {
-    name: "E-Commerce Solution",
-    price: "4'999 CHF",
-    pro: "Einmalig",
+    name: "KMU Plus",
+    price: "CHF 2’000 – 3’500",
+    goodFor: [
+      "Arztpraxen",
+      "Fitnessstudios",
+      "Restaurants",
+      "Beratungsunternehmen",
+    ],
+    description:
+      "Umfangreichere Website mit Mehrsprachigkeit, Animationen und strukturiertem CMS. Ideal für wachsende Unternehmen mit klarer Markenidentität.",
     features: [
-      "Vollständiger Online-Shop",
-      "Payment-Integration (Stripe, PayPal)",
-      "Produktverwaltung und Bestellsystem",
-      "Kundenaccounts und Bestellhistorie",
-      "6 Monate Support und Wartung",
+      "Bis zu 12 Seiten",
+      "Mehrsprachigkeit",
+      "SEO-Basics optimiert",
+      "Kleine API-Integrationen (z. B. FormSubmit, SendGrid, externe Datenfeeds)",
+      "Animationen und Micro-Interactions",
+      "CMS-Integration (z. B. Sanity, Payload, Framer CMS)",
+    ],
+    examples: [
+      "Restaurant mit Menü, Reservationstool und Bewertungen",
+      "Arztpraxis mit Team, Leistungen und Kontakt",
+      "Fitnesscenter mit Kursbuchung und Blog",
+      "KMU mit mehrsprachiger Unternehmensseite",
     ],
   },
   {
-    name: "Custom",
-    price: "Auf Anfrage",
+    name: "Corporate / Grossprojekt",
+    price: "CHF 3’500 – 6’000+",
+    goodFor: [
+      "Schulen",
+      "Agenturen",
+      "Organisationen",
+      "mittelgrosse Unternehmen",
+    ],
+    description:
+      "Massgeschneiderte Lösung mit individuellen UI-Komponenten, API-Anbindungen und performanter Architektur. Ideal für grössere Teams und Projekte mit klaren Anforderungen.",
     features: [
-      "Individuelle Web-Anwendungen",
-      "Complex Database Integration",
-      "API-Entwicklung und Schnittstellen",
-      "Enterprise-Lösungen",
+      "Mehr als 12 Seiten",
+      "Komplexe Navigation & Unterseiten",
+      "Headless CMS (z. B. Sanity, Strapi)",
+      "API-Integrationen (z. B. externe Daten, Buchungssysteme)",
+      "Individuelle Animationen & UI-Komponenten",
+      "Optimiert für Performance & SEO",
+    ],
+    examples: [
+      "Schule mit News-Bereich, Team, Formularen und Kalender",
+      "Kreativagentur mit Case Studies und Blog",
+      "Verein oder Organisation mit Mitgliederbereich",
+      "Unternehmenswebsite mit dynamischen Inhalten über API",
+    ],
+  },
+  {
+    name: "Enterprise / Spezialanforderung",
+    price: "Preis auf Anfrage",
+    goodFor: [
+      "Grosse Unternehmen",
+      "Projekte mit hohen technischen Anforderungen",
+    ],
+    description:
+      "Hochindividuelle Next.js-Architektur mit API-Integrationen, Skalierbarkeit und massgeschneidertem Design. Komplett custom Lösung.",
+    features: [
+      "Unbegrenzte Seitenstruktur",
+      "Komplexe API-Integrationen",
+      "Mehrsprachigkeit & Multi-Domain Support",
+      "UX/UI-Konzept & Prototyping inklusive",
+      "Custom Animations & Performance Tuning",
+      "Langfristige Wartung & Support optional",
+    ],
+    examples: [
+      "Grossunternehmen mit mehreren Standorten und APIs (z. B. Datenportale)",
+      "Event-Plattform oder Verzeichnis-Seite mit Filterfunktionen",
+      "Marketingplattform mit dynamischen Inhalten",
+      "Komplexe Landingpage-Systeme mit Headless CMS und Schnittstellen",
     ],
   },
 ];
@@ -181,7 +241,7 @@ const PricingContent = [
         gewinnen.
       </PageTitle>
 
-      <section>
+      <section className="">
         <div className="container">
           <div className="flex flex-col lg:grid lg:grid-cols-12 border-t  border-dotted pt-8">
             <div className="col-span-3">
@@ -196,25 +256,47 @@ const PricingContent = [
                 zahlen nur für die Funktionen, die Sie wirklich benötigen.
                 Perfekt für KMUs, die professionell online durchstarten möchten.
               </p>
-              {PricingContent.map((plan, index) => (
-                <Card key={index} className="">
-                  <CardHeader>
-                    <CardTitle>{plan.name}</CardTitle>
-                    <span className="text-2xl font-bold mt-8">
-                      {plan.price}
-                    </span>
-                    <CardDescription>{plan.pro}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
+            </div>
+          </div>
+          <div className="mt-8 flex flex-col lg:grid lg:grid-cols-2 gap-8 rounded-lg">
+            {pricingContent.map((plan, index) => (
+              <Card key={index} className="lg:last:col-span-2">
+                <CardHeader>
+                  <CardTitle>{plan.name}</CardTitle>
+                  <CardDescription>{plan.description}</CardDescription>
+                  <span className="text-2xl font-mono font-semibold text-primary mt-4">
+                    {plan.price}
+                  </span>
+                </CardHeader>
+                <CardHeader>
+                  <CardTitle>Leistungen</CardTitle>
+                  <CardDescription className="text-foreground">
                     <ul className="list-disc ml-4 space-y-2">
                       {plan.features.map((feature, idx) => (
                         <li key={idx}>{feature}</li>
                       ))}
                     </ul>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+                  </CardDescription>
+                </CardHeader>
+
+                <Separator className="my-2" />
+                <CardHeader>
+                  <CardTitle>Beispiele</CardTitle>
+                  <CardDescription className="text-foreground">
+                    <ul className="list-disc ml-4 space-y-2">
+                      {plan.examples.map((example, idx) => (
+                        <li key={idx}>{example}</li>
+                      ))}
+                    </ul>
+                  </CardDescription>
+                </CardHeader>
+                <CardFooter>
+                  <span className="text-sm text-muted-foreground">
+                    Gut geeignet für: {plan.goodFor.join(", ")}
+                  </span>
+                </CardFooter>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -235,30 +317,35 @@ const PricingContent = [
                 immer die optimale Technologie für Ihr spezifisches Projekt und
                 Ihre Zielgruppe.
               </p>
-              {FrameworkComparison.map((statement, index) => (
-                <div key={index}>
-                  <h3 className="lg:mt-0">{statement.framework}</h3>
-                  <p>{statement.description}</p>
-                  <ul className="mt-4">
-                    <h4>Vorteile</h4>
-                    {statement.positive.map((feature, idx) => (
-                      <li key={idx} className="list-disc ml-5">
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <ul className="mt-4">
-                    <h4>Nachteile</h4>
-                    {statement.negative.map((feature, idx) => (
-                      <li key={idx} className="list-disc ml-5">
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
             </div>
           </div>
+        </div>
+        <div className="flex flex-col lg:grid lg:grid-cols-2 container gap-8">
+          {FrameworkComparison.map((statement, index) => (
+            <div key={index} className="border bg-card p-6">
+              <div className="h-12 bg-foreground h-24 text-background flex items-center justify-center">
+                {statement.logo}
+              </div>
+              <h3 className="mb-0">{statement.framework}</h3>
+              <p>{statement.description}</p>
+              <ul className="mt-4">
+                <h4>Vorteile</h4>
+                {statement.positive.map((feature, idx) => (
+                  <li key={idx} className="list-disc ml-5">
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <ul className="mt-4">
+                <h4>Nachteile</h4>
+                {statement.negative.map((feature, idx) => (
+                  <li key={idx} className="list-disc ml-5">
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -291,7 +378,7 @@ const PricingContent = [
             <div className="lg:col-span-8 lg:grid lg:grid-cols-2 gap-8">
               {ProcessContent.map((statement, index) => (
                 <div key={index}>
-                  <p className="lead mt-8 font-semibold text-foreground">
+                  <p className="lead font-semibold text-foreground">
                     {statement.number}
                   </p>
                   <h3 className="mt-0">{statement.title}</h3>

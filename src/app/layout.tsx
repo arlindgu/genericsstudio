@@ -3,19 +3,19 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import localFont from "next/font/local";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import {JetBrains_Mono} from "next/font/google";
 
+export const jetBrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains-mono",
+  weight: ["400", "700"],
+  display: "swap",
+});
 
 // Import General Sans font using next/font/local
-export const generalSans = localFont({
-  src: [
-    {
-      path: "../../public/fonts/general-sans/GeneralSans-Variable.woff2",
-      weight: "100 900",
-      style: "normal",
-    },
-  ],
+const generalSans = localFont({
+  src: "../fonts/GeneralSans-Variable.woff2",
   variable: "--font-general-sans",
-  display: "swap",
 });
 
 export default function RootLayout({
@@ -28,7 +28,7 @@ export default function RootLayout({
     <html lang="de-CH" className="light">
       <body
         suppressHydrationWarning
-        className={`${generalSans.variable} main-h-screen flex flex-col`}
+        className={`${generalSans.variable} ${jetBrainsMono.variable} main-h-screen flex flex-col`}
       >
         <Header />
         <main className="flex-1">
