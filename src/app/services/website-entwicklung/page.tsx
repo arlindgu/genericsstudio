@@ -1,10 +1,9 @@
 import PageTitle from "@/components/ui/PageTitle";
-import { Card, CardTitle, CardContent, CardDescription, CardHeader, CardFooter } from "@/components/ui/card"
+import { Card, CardTitle, CardDescription, CardHeader, CardFooter } from "@/components/ui/card"
 import { generateSEO, seoConfig } from "@/lib/seo";
 import { FramerLogo } from "@/components/svgs/framerlogo";
 import { NextJSLogo }  from "@/components/svgs/nextjslogo";
 import { Separator } from "@/components/ui/separator";
-import { Check } from "lucide-react";
 
 export const metadata = generateSEO(seoConfig.websiteentwicklung);
 
