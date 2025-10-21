@@ -1,31 +1,54 @@
-import { JSX } from "react";
 import PageTitle from "@/components/ui/PageTitle";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { generateSEO, seoConfig } from "@/lib/seo";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { ArrowUpRight } from "lucide-react";
 
 export const metadata = generateSEO(seoConfig.projects);
 
 export default function CaseStudiesPage() {
 
-  type CaseStudiesPageProps = {
+type Content = {
+  accordionTitle: string;
+  accordionDescription: string;
+  accordionContent: {
     title: string;
-    description: JSX.Element | string;
-    url: string;
-    tags: string[];
-  };
+    person: string;
+    description: string;
+    url?: string;
+    image: string;
+  }[];
+};
 
-  const caseStudies: CaseStudiesPageProps[] = [
-    {
-      title: "didischocoberrys",
-      description:
-        "Für didischocoberrys entwickelten wir eine massgeschneiderte Landing Page mit Fokus auf konsistentes Branding, benutzerfreundliches UI/UX-Design und eine klare Struktur zur Steigerung der Conversion-Rate. Ein responsives Kontaktformular und gezielte SEO-Optimierungen wurden integriert, um die Sichtbarkeit bei Google zu verbessern.",
-      url: "https://didis.generics.studio/",
-      tags: ["Web Design", "Landing Page", "Branding"],
-    },
-  ];
-
+const caseStudyContent: Content[] = [
+  {
+    accordionTitle: "Interfaces in Action",
+    accordionDescription:
+      "Entdecken Sie, wie wir intuitive und benutzerfreundliche Schnittstellen für komplexe Systeme entwickelt haben.",
+    accordionContent: [
+      {
+        title: "Webseiten Entwicklung",
+        person: "didischocoberries",
+        description:
+          "Redesign und Entwicklung einer modernen, responsiven Webseite für ein aufstrebendes Startup im Food-Bereich. Das Ziel war, eine digitale Präsenz zu schaffen, die die Frische, Qualität und Persönlichkeit der Marke visuell und technisch transportiert. Das bestehende Design wurde vollständig überarbeitet, um eine klarere Informationsstruktur, stärkere Markenidentität und eine nahtlose User Experience auf allen Geräten zu gewährleisten. Neben dem neuen Look stand vor allem die Performance im Fokus – schnelle Ladezeiten, optimierte Bilder und ein auf Conversion ausgerichtetes Layout. Interaktive Elemente, wie animierte Produktdarstellungen und intuitive Navigation, sorgen für ein lebendiges Nutzererlebnis. Das Projekt wurde mit Next.js realisiert, inklusive Headless-CMS-Anbindung zur einfachen Pflege von Inhalten. Das Ergebnis: eine flexible, skalierbare Plattform, die den Spirit eines modernen Food-Startups authentisch widerspiegelt und bereit ist für Wachstum.",
+        url: "https://didis.generics.studio",
+        image: "/project_pics/didis_thumb.png",
+      },
+      {
+        title: "Webseiten Entwicklung",
+        person: "Blendis Barbershop",
+        description:
+          "Entwicklung einer modernen Webseite mit Next.js inklusive Integration eines Terminbuchungssystems. Fokus auf klares, minimalistisches Design, hohe Performance und einfache Wartung. Die Seite spiegelt den Stil des Barbershops wider und bietet Kunden eine intuitive Möglichkeit, direkt online Termine zu buchen.",
+        image: "/blendis_barbershop.png",
+      },
+    ],
+  },
+];
 
   return (
     <>
@@ -37,23 +60,47 @@ export default function CaseStudiesPage() {
       </PageTitle>
       <section>
         <div className="container flex flex-col gap-4">
-          {caseStudies.map(({ title, description, url, tags }) => (
-            <Link key={title} href={url}>
-              <Card className="hover:bg-primary hover:text-background transition-all duration-200">
-                <CardHeader>
-                  <CardTitle className="uppercase">{title}</CardTitle>
-                  <p>{description}</p>
-                </CardHeader>
-                <CardContent>
-                  {tags.map((tag) => (
-                    <Badge key={tag} variant="secondary" className="uppercase">
-                      {tag}
-                    </Badge>
-                  ))}
-                </CardContent>
-              </Card>
-            </Link>
-          ))}
+          <Accordion type="single" collapsible>
+            {caseStudyContent.map(
+              ({ accordionTitle, accordionDescription, accordionContent }) => (
+                <AccordionItem
+                  key={accordionTitle}
+                  value={accordionTitle}
+                  className="rounded-none first:border-t border-dotted last:border-b py-12"
+                >
+                  <AccordionTrigger className="rounded-none border-dotted text-3xl">
+                    {accordionTitle}
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <p className="mb-8 text-lg leading-6 text-muted-foreground max-w-xl">
+                      {accordionDescription}
+                    </p>
+                    {accordionContent.map((item) => (
+                      <div key={item.person + item.title} className="mb-12">
+                        <div className="grid gap-4 lg:grid-cols-3">
+                          <div className="lg:col-span-1 mb-4">
+                            <h2 className="mt-0 font-mono">{item.person}</h2>
+                            <h4 className="mt-0 font-medium">{item.title}</h4>
+                          </div>
+                          <div className="lg:col-span-2 mb-4">
+                            <p className="mb-4">{item.description}</p>
+                            {item.url && (
+                              <Link
+                              className="underline inline-flex items-center"
+                              href={item.url}
+                            >
+                              View Project <ArrowUpRight size="12" />
+                            </Link>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </AccordionContent>
+                </AccordionItem>
+              )
+            )}
+          </Accordion>
         </div>
       </section>
     </>

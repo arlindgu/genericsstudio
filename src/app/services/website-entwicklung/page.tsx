@@ -4,6 +4,7 @@ import { generateSEO, seoConfig } from "@/lib/seo";
 import { FramerLogo } from "@/components/svgs/framerlogo";
 import { NextJSLogo }  from "@/components/svgs/nextjslogo";
 import { Separator } from "@/components/ui/separator";
+import GridContent from "@/components/ui/sections/gridContent";
 
 export const metadata = generateSEO(seoConfig.websiteentwicklung);
 
@@ -319,10 +320,11 @@ const pricingContent: PricingContent[] = [
             </div>
           </div>
         </div>
-        <div className="flex flex-col lg:grid lg:grid-cols-2 container gap-8">
+        <div className="flex flex-col lg:grid lg:grid-cols-12 container space-y-6 lg:space-x-6">
+          <div className="col-span-4"/>
           {FrameworkComparison.map((statement, index) => (
-            <div key={index} className="border bg-card p-6">
-              <div className="h-12 bg-foreground h-24 text-background flex items-center justify-center">
+            <div key={index} className="border bg-card p-6 col-span-4">
+              <div className="bg-foreground h-24 text-background flex items-center justify-center">
                 {statement.logo}
               </div>
               <h3 className="mb-0">{statement.framework}</h3>
@@ -348,24 +350,12 @@ const pricingContent: PricingContent[] = [
         </div>
       </section>
 
-      <section>
-        <div className="container">
-          <div className="grid lg:grid-cols-12 border-t border-dotted pt-8">
-            <h2 id="web-dev" className="col-span-3">
-              Warum ist eine Webseite so wichtig?
-            </h2>
-            <div className="col-span-1" />
-            <div className="lg:col-span-8 lg:grid lg:grid-cols-2 gap-8">
-              {WebDevelopmentContent.map((statement, index) => (
-                <div key={index}>
-                  <h3 className="lg:mt-0">{statement.title}</h3>
-                  <p>{statement.text}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <GridContent
+        data={{
+          leftTitle: "Warum ist eine Webseite so wichtig?",
+          content: WebDevelopmentContent,
+        }}
+      />
 
       <section>
         <div className="container">

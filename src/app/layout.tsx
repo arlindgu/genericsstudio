@@ -18,6 +18,11 @@ const generalSans = localFont({
   variable: "--font-general-sans",
 });
 
+const Boska = localFont({
+  src: "../fonts/Boska-Variable.woff2",
+  variable: "--font-boska",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -28,7 +33,7 @@ export default function RootLayout({
     <html lang="de-CH" className="light">
       <body
         suppressHydrationWarning
-        className={`${generalSans.variable} ${jetBrainsMono.variable} main-h-screen flex flex-col`}
+        className={`${generalSans.variable} ${jetBrainsMono.variable} ${Boska.variable} main-h-screen flex flex-col`}
       >
         <Header />
         <main className="flex-1">

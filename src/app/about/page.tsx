@@ -1,9 +1,33 @@
 import PageTitle from "@/components/ui/PageTitle";
 import { generateSEO, seoConfig } from "@/lib/seo";
+import GridContent from "@/components/ui/sections/gridContent";
 
 export const metadata = generateSEO(seoConfig.about);
 
 export default function AboutPage() {
+
+  const lastContent = [
+    {
+      title: "Klein aus Überzeugung",
+      subtitle: "Weniger Lärm. Mehr Wirkung.",
+      text: "Dieses Studio ist bewusst klein gehalten. Keine überfüllten Meetings, keine endlosen Abstimmungsschleifen, keine Wartespiele. Nur ein fokussiertes Team, das schnell handelt, früh prototypisiert und keine Angst hat, Dinge einzureissen und besser wieder aufzubauen. Unsere Grösse ist unsere Stärke—sie hält uns beweglich, direkt und menschlich.",
+    },
+    {
+      title: "Nähe zur Arbeit",
+      subtitle: "Jeder ist beteiligt. Jeder trägt Verantwortung.",
+      text: "Hier gibt es keine Zuschauer. Jeder im Team ist nah am Projekt, am Code, am Design, am Kunden. Wir glauben daran, dass echte Qualität nur entsteht, wenn alle Beteiligten Verantwortung übernehmen und über ihre Rolle hinaus denken. Wir arbeiten nicht in Abteilungen—wir arbeiten gemeinsam.",
+    },
+    {
+      title: "Schnelligkeit durch Klarheit",
+      subtitle: "Keine Bürokratie. Kein Overhead.",
+      text: "In grossen Agenturen geht Zeit in Prozessen verloren. Bei uns fliesst sie direkt in die Arbeit. Weniger Hierarchie, mehr Initiative. Wir entscheiden schnell, testen früh und reagieren sofort. So bleibt jedes Projekt lebendig, anpassungsfähig und nah an seiner ursprünglichen Idee.",
+    },
+    {
+      title: "Fortschritt vor Prozess",
+      subtitle: "Immer in Bewegung. Immer im Aufbau.",
+      text: "Stillstand ist Rückschritt. Wir glauben an iteratives Arbeiten, an das Bauen, Testen, Lernen und Wiederaufbauen. Unser Ziel ist nicht Perfektion im ersten Versuch, sondern stetige Verbesserung. Fortschritt über Prozess—immer.",
+    },
+  ];
 
     const purposeContent = [
       {
@@ -58,58 +82,12 @@ export default function AboutPage() {
           Expertise verwandeln wir Visionen in digitale Realität und schaffen
           innovative Lösungen, die begeistern und überzeugen.
         </PageTitle>
+        
+        <GridContent data={{ leftTitle: "Unsere Bestimmung", content: purposeContent }} />
 
-        <section>
-          <div className="container">
-            <div className="grid lg:grid-cols-12 border-t border-dotted  pt-8">
-              <h2 className="col-span-3">Unsere Bestimmung</h2>
-              <div className="col-span-1" />
-              <div className="lg:col-span-8 lg:grid lg:grid-cols-2 gap-8">
-                {purposeContent.map((statement, index) => (
-                  <div key={index}>
-                    <h3 className="lg:mt-0">{statement.title}</h3>
-                    <p>{statement.text}</p>
-                    <p className="muted">{statement.subtitle}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+        <GridContent data={{ leftTitle: "Was wir leben und wie wir handeln", content: valueContent }} />
 
-        <section>
-          <div className="container">
-            <div className="grid lg:grid-cols-12 border-t border-dotted pt-8">
-              <h2 className="col-span-3">Was wir leben und wie wir handeln</h2>
-              <div className="col-span-1" />
-              <div className="lg:col-span-8 lg:grid lg:grid-cols-2 gap-8">
-                {valueContent.map((statement, index) => (
-                  <div key={index}>
-                    <h3 className="lg:mt-0">{statement.title}</h3>
-                    <p>{statement.text}</p>
-                    <p className="muted">{statement.subtitle}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-        <section>
-          <div className="container border-t text-3xl lg:text-5xl border-dotted pt-8 text-center font-sans font-extralight min-h-screen gap-32 flex flex-col justify-center">
-            <span className="italic">Small by design</span>
-            <span className="">
-              Keine überfüllten Meetings. Keine langwierigen
-              Genehmigungsprozesse. Kein endloses Warten. Nur ein Team, das
-              schnell handelt, frühzeitig Prototypen entwickelt und sich nicht
-              scheut, Dinge zu verwerfen und besser neu zu gestalten.
-            </span>
-            <span className="">
-              Jeder ist nah an der Arbeit dran. Jeder zieht mehr als nur eine
-              Last. So bleiben Projekte schlank, lebendig und kommen voran.
-            </span>
-            <p>Fortschritt vor Prozess. <span className="italic">Immer.</span></p>
-          </div>
-        </section>
+        <GridContent data={{ leftTitle: "Small by Design", content: lastContent }} />
       </main>
     );
 }
