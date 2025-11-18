@@ -1,6 +1,9 @@
+"use client";
+
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "../ui/button";
 import SectionTitle from "../sectiontitle";
+import Booking from "../booking";
 
 export default function Pricing() {
   return (
@@ -97,6 +100,18 @@ export default function Pricing() {
             <Button className="mx-6">Get Started</Button>
           </Card>
         </div>
+        <Card className="flex-3 mt-4 rounded-none shadow-none relative">
+          <CardHeader>
+            <CardTitle className="text-2xl">Don't know what you need?</CardTitle>
+            <CardDescription>
+              Book a discovery call with us, and we'll help you identify the best
+              path forward for your project.
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <Booking />
+          </CardContent>
+        </Card>
       </div>
     </section>
   );
