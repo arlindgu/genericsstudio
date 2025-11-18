@@ -16,10 +16,10 @@ export default function Hero() {
           </h1>
           <div>
             <Button className="mt-8" variant="default" size="lg">
-              Get in touch
+              Kontakt aufnehmen
             </Button>
             <Button className="mt-8 ml-4" variant="ghost" size="lg">
-              See our work
+              Sieh dir unsere Arbeit an
             </Button>
           </div>
         </div>
