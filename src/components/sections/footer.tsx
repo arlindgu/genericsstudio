@@ -1,24 +1,21 @@
 import { Chair } from "../svgs/chair";
+import { GenericsStudioLogo } from "../svgs/genericsstudiologo";
 
 
 const Socials = [
   {
-    name: "Twitter",
-    href: "https://twitter.com/generics_studio",
-  },
-  {
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/company/generics-studio/",
+    name: "Cosmos",
+    href: "https://www.cosmos.so/genericsstudio",
   },
   {
     name: "Instagram",
-    href: "https://www.instagram.com/generics.studio/",
+    href: "https://www.instagram.com/genericsstudio/",
   },
 ]
 
 export default function Footer() {
     return (
-      <footer className="h-screen relative py-6 bg-background px-10 flex flex-col items-center justify-center">
+      <footer className="h-screen relative py-6 px-10 flex flex-col items-center justify-center">
         <div className="flex gap-24 items-center">
           <ul className="text-center">
             <li className="mb-4">
@@ -49,8 +46,12 @@ export default function Footer() {
           </ul>
           <div className="text-center flex flex-col items-center justify-center">
             <Chair className="w-32 h-32 mb-6 scale-x-[-1] " />
-            <p>hey@generics.studio</p>
-            <p>+41 79 405 99 55</p>
+            <a className="hover:underline" href="mailto:hello@generics.studio">
+              hello@generics.studio
+            </a>
+            <a className="hover:underline" href="https://api.whatsapp.com/send/?phone=41794059955">
+              +41 79 405 99 55
+            </a>
           </div>
 
           <ul className="text-center">
@@ -69,10 +70,24 @@ export default function Footer() {
           </ul>
         </div>
 
-        <p className="self-end text-center absolute inset-12 text-sm mx-auto">
-          &copy; {new Date().getFullYear()} Generics Studio. All rights
-          reserved.
-        </p>
+        <div className="flex w-full justify-between items-center px-12 absolute bottom-8">
+          <p className="text-sm">
+            &copy; {new Date().getFullYear()} Generics Studio. All rights
+            reserved.
+          </p>
+          <ul className="flex gap-6">
+            <li className="">
+              <a href="#" className="hover:underline">
+                Privacy Policy
+              </a>
+            </li>
+            <li className="">
+              <a href="#" className="hover:underline">
+                Imprint
+              </a>
+            </li>
+          </ul>
+        </div>
       </footer>
     );
 }

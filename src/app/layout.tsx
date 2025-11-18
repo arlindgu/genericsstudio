@@ -4,6 +4,7 @@ import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import { JetBrains_Mono } from "next/font/google";
+import Footer from "@/components/sections/footer";
 
 
 const jetBrainsMono = JetBrains_Mono({
@@ -36,10 +37,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${jetBrainsMono.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${jetBrainsMono.variable} ${geistMono.variable} subpixel-antialiased`}
       >
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

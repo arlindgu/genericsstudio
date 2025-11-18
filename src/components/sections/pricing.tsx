@@ -9,103 +9,113 @@ export default function Pricing() {
   return (
     <section className="min-h-[50vh] bg-foreground py-24 flex flex-col items-center justify-center">
       <div className="flex flex-col container px-10">
-        <SectionTitle dark title="Good Design Shouldn't Break the Bank">
-          Ironically, bad design is often the most expensive investment a
-          company makes. Hidden costs of poor performance, lost conversions, and
-          constant fixes drain budgets invisibly. We believe exceptional design
-          should be accessible—not a luxury reserved for the few. That's why
-          we've structured our pricing to be transparent, fair, and focused on
-          real value.
+        <SectionTitle dark title="Gutes Design sollte kein Vermögen kosten">
+          Ironischerweise ist schlechtes Design oft die teuerste Investition,
+          die ein Unternehmen tätigt. Versteckte Kosten durch schlechte
+          Leistung, verlorene Konversionen und ständige Korrekturen belasten das
+          Budget auf unsichtbare Weise. Wir glauben, dass außergewöhnliches
+          Design zugänglich sein sollte – und kein Luxus, der nur wenigen
+          vorbehalten ist. Deshalb haben wir unsere Preisgestaltung transparent,
+          fair und auf den tatsächlichen Wert ausgerichtet gestaltet.
         </SectionTitle>
 
         <div className="flex items-end gap-4 mt-6">
           <Card className="flex-3 rounded-none shadow-none relative h-124">
             <CardHeader>
               <CardTitle className="text-2xl">
-                Web Design and Development
+                Webdesign und Entwicklung
               </CardTitle>
               <CardDescription>
-                Ideal for startups and small businesses looking to establish a
-                strong online presence with essential features and clean design.
+                Ideal für Start-ups und kleine Unternehmen, die eine starke
+                Online-Präsenz mit wesentlichen Funktionen und klarem Design
+                aufbauen möchten.
               </CardDescription>
             </CardHeader>
             <CardContent>
               <ul className="list-disc pl-5 space-y-2">
-                <li>Custom website design tailored to your brand</li>
-                <li>Responsive design for mobile and desktop</li>
-                <li>Basic SEO optimization</li>
-                <li>Content management system integration</li>
-                <li>Initial content upload (up to 10 pages)</li>
-                <li>1 month of post-launch support</li>
+                <li>
+                  Maßgeschneidertes Webdesign, das auf Ihre Marke zugeschnitten
+                  ist
+                </li>
+                <li>Responsives Design für Mobilgeräte und Desktop</li>
+                <li>Grundlegende SEO-Optimierung</li>
+                <li>Integration eines Content-Management-Systems</li>
+                <li>Initiales Hochladen von Inhalten (bis zu 10 Seiten)</li>
+                <li>1 Monat Support nach dem Launch</li>
               </ul>
             </CardContent>
             <CardFooter>
               <p className="text-sm text-muted-background">
-                Starting at $2,000 - Custom quotes available based on project
-                scope.
+                Ab 2.000 $ – Individuelle Angebote je nach Projektumfang
+                möglich. Umfang.
               </p>
             </CardFooter>
-            <Button className="mx-6">Get Started</Button>
+            <Button className="mx-6">Loslegen</Button>
           </Card>
           <Card className="flex-3 rounded-none shadow-none relative">
             <CardHeader>
-              <CardTitle className="text-2xl">Analysis</CardTitle>
+              <CardTitle className="text-2xl">Analyse</CardTitle>
               <CardDescription>
-                Perfect for growing businesses needing in-depth market research,
-                user behavior insights, and strategic recommendations.
+                Ideal für wachsende Unternehmen, die detaillierte
+                Marktforschung, Einblicke in das Nutzerverhalten und
+                strategische Empfehlungen benötigen.
               </CardDescription>
             </CardHeader>
             <CardContent>
               <ul className="list-disc pl-5 space-y-2">
-                <li>Comprehensive market research and competitor analysis</li>
-                <li>User behavior and journey mapping</li>
-                <li>Data-driven insights and recommendations</li>
-                <li>Performance benchmarking report</li>
-                <li>Strategic roadmap development</li>
-                <li>3 months of consultation support</li>
+                <li>Umfassende Marktforschung und Wettbewerbsanalyse</li>
+                <li>Nutzerverhalten und Customer-Journey-Mapping</li>
+                <li>Datengestützte Erkenntnisse und Empfehlungen</li>
+                <li>Performance-Benchmarking-Bericht</li>
+                <li>Strategische Roadmap-Entwicklung</li>
+                <li>3 Monate Beratungsunterstützung</li>
               </ul>
             </CardContent>
             <CardFooter>
               <p className="text-sm text-muted-background">
-                Starting at $3,000 - Custom quotes available based on project
-                scope.
+                Ab 3.000 $ – Individuelle Angebote je nach Projektumfang
+                verfügbar. Umfang.
               </p>
             </CardFooter>
-            <Button className="mx-6">Get Started</Button>
+            <Button className="mx-6">Loslegen</Button>
           </Card>
           <Card className="flex-3 rounded-none shadow-none relative">
             <CardHeader>
-              <CardTitle className="text-2xl">Restoration</CardTitle>
+              <CardTitle className="text-2xl">Restaurierung</CardTitle>
               <CardDescription>
-                Designed for established brands aiming to revamp their digital
-                presence with modern design and improved functionality.
+                Entwickelt für etablierte Marken, die ihre digitale Präsenz mit
+                modernem Design und verbesserter Funktionalität neu gestalten
+                möchten.
               </CardDescription>
             </CardHeader>
             <CardContent>
               <ul className="list-disc pl-5 space-y-2">
-                <li>Website audit and performance analysis</li>
-                <li>Modern design refresh and redesign</li>
-                <li>Performance optimization and speed improvements</li>
-                <li>Security updates and compliance review</li>
-                <li>Content restructuring and updates</li>
-                <li>3 months of ongoing support</li>
+                <li>Website-Audit und Leistungsanalyse</li>
+                <li>Modernes Design-Refresh und Neugestaltung</li>
+                <li>Leistungsoptimierung und Geschwindigkeitsverbesserungen</li>
+                <li>Sicherheitsupdates und Compliance-Überprüfung</li>
+                <li>Inhaltsumstrukturierung und Aktualisierungen</li>
+                <li>3 Monate laufende Unterstützung</li>
               </ul>
             </CardContent>
             <CardFooter>
               <p className="text-sm text-muted-background">
-                Starting at $5,000 - Custom quotes available based on project
-                scope.
+                Ab 5.000 $ – Individuelle Angebote je nach Projektumfang
+                verfügbar. Umfang.
               </p>
             </CardFooter>
-            <Button className="mx-6">Get Started</Button>
+            <Button className="mx-6">Loslegen</Button>
           </Card>
         </div>
         <Card className="flex-3 mt-4 rounded-none shadow-none relative">
           <CardHeader>
-            <CardTitle className="text-2xl">Don't know what you need?</CardTitle>
+            <CardTitle className="text-2xl">
+              Sie wissen nicht, was Sie brauchen?
+            </CardTitle>
             <CardDescription>
-              Book a discovery call with us, and we'll help you identify the best
-              path forward for your project.
+              Vereinbaren Sie einen Termin für ein unverbindliches Gespräch mit
+              uns, und wir helfen Ihnen dabei, den besten Weg für Ihr Projekt zu
+              finden.
             </CardDescription>
           </CardHeader>
           <CardContent>

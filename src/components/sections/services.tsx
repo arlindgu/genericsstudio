@@ -6,20 +6,23 @@ export default function Services() {
   return (
     <section className="min-h-[50vh] py-24 flex flex-col items-center justify-center">
       <div className="flex flex-col container px-10">
-        <SectionTitle title="We create to last">
-          Our commitment to timeless design and functionality drives us to
-          create digital experiences that endure. We believe in crafting
-          websites and brand identities that captivate and remain relevant
-          over time. By focusing on clarity, emotion, and structure, we ensure
-            every project is built to withstand the evolving digital landscape.
+        <SectionTitle title="Wir schaffen, um zu bleiben">
+          Unser Bekenntnis zu zeitlosem Design und Funktionalität treibt uns
+          dazu an, digitale Erlebnisse zu schaffen, die Bestand haben. Wir
+          glauben daran, Websites und Markenidentitäten zu entwickeln, die
+          begeistern und über lange Zeit relevant bleiben. Indem wir uns auf
+          Klarheit, Emotion und Struktur konzentrieren, stellen wir sicher, dass
+          jedes Projekt so gestaltet ist, dass es der sich ständig
+          weiterentwickelnden digitalen Landschaft standhält.
         </SectionTitle>
 
         <div className="flex flex-row mt-12 gap-8 items-center">
           <Card className="rounded-none shadow-none h-114 border-none relative flex-1">
             <div className="absolute bottom-0 p-6 z-1 text-background">
-              <p className="text-2xl font-bold">Web Design and Development</p>
+              <p className="text-2xl font-bold">Webdesign und Entwicklung</p>
               <p className="text-muted-background max-w-2/3">
-                We design and develop custom websites tailored to your brand's
+                Wir entwerfen und entwickeln maßgeschneiderte Websites, die auf
+                die individuellen Bedürfnisse Ihrer Marke zugeschnitten sind.
                 unique needs.
               </p>
             </div>
@@ -31,21 +34,22 @@ export default function Services() {
             />
           </Card>
           <p className="flex-1">
-            We're on a mission to create websites and brand design that spark
-            excitement—just like a Grand Slam Tennis match. Partnering with
-            exceptional brands that share our ambition for good design, we
-            approach every project with intensity, strategy, and genuine
-            partnership. It's not just about your website. It's about game, set,
-            and match for your brand.
+            Wir haben es uns zur Aufgabe gemacht, Websites und Markendesigns zu
+            entwickeln, die Begeisterung wecken – genau wie ein
+            Grand-Slam-Tennismatch. In Zusammenarbeit mit außergewöhnlichen
+            Marken, die unsere Ambitionen für gutes Design teilen, gehen wir
+            jedes Projekt mit Intensität, Strategie und echter Partnerschaft an.
+            Es geht nicht nur um Ihre Website. Es geht um Spiel, Satz und Sieg
+            für Ihre Marke.
           </p>
         </div>
         <div className="flex flex-row mt-12 gap-8 items-center">
           <Card className="rounded-none order-1 shadow-none h-114 border-none relative flex-1">
             <div className="absolute bottom-0 p-6 z-1 text-background">
-              <p className="text-2xl font-bold">Analysis</p>
+              <p className="text-2xl font-bold">Analyse</p>
               <p className="text-muted-background max-w-2/3">
-                In-depth market research and user behavior insights to inform
-                strategic decisions.
+                Umfassende Marktforschung und Einblicke in das Nutzerverhalten
+                als Grundlage für strategische Entscheidungen.
               </p>
             </div>
             <Image
@@ -56,23 +60,29 @@ export default function Services() {
             />
           </Card>
           <p className="flex-1">
-            Our approach emphasizes subtlety and depth over noise. We don't
-            chase trends; instead, we create work that stands the test of time
-            by focusing on clarity, emotion, and structure. Every element serves
-            a purpose—whether technical, aesthetic, or emotional—resulting in
-            experiences that feel intuitive and natural. We read between the
-            lines and design what others overlook, building with logic but
-            creating feelings. This is where real impact happens: in the spaces
-            others miss, in the details that resonate without being obvious.
+            Unser Ansatz betont Subtilität und Tiefe gegenüber Lärm. Wir jagen
+            keinen Trends hinterher, sondern schaffen Werke, die den Test der
+            Zeit bestehen, indem wir uns auf Klarheit, Emotion und Struktur
+            konzentrieren. Jedes Element erfüllt einen Zweck – sei es technisch,
+            ästhetisch oder emotional – und führt zu Erfahrungen, die sich
+            intuitiv und natürlich anfühlen. Wir lesen zwischen den Zeilen und
+            gestalten, was andere übersehen, bauen mit Logik, schaffen aber
+            dennoch etwas, das sich intuitiv und natürlich anfühlt. Jedes
+            Element erfüllt einen Zweck – sei es technisch, ästhetisch oder
+            emotional – und führt zu Erlebnissen, die sich intuitiv und
+            natürlich anfühlen. Wir lesen zwischen den Zeilen und entwerfen, was
+            andere übersehen, bauen mit Logik, aber schaffen Gefühle. Hier
+            entsteht die wahre Wirkung: in den Räumen, die andere übersehen, in
+            den Details, die ohne offensichtlich zu sein, nachhallen.
           </p>
         </div>
         <div className="flex flex-row mt-12 gap-8 items-center">
           <Card className="rounded-none shadow-none h-114 border-none relative flex-1">
             <div className="absolute bottom-0 p-6 z-1 text-background">
-              <p className="text-2xl font-bold">Restoration</p>
+              <p className="text-2xl font-bold">Restaurierung</p>
               <p className="text-muted-background max-w-2/3">
-                In-depth market research and user behavior insights to inform
-                strategic decisions.
+                Revitalisierung und Modernisierung bestehender digitaler
+                Ressourcen zur Verbesserung der Leistung und Benutzererfahrung.
               </p>
             </div>
             <Image
@@ -83,15 +93,17 @@ export default function Services() {
             />
           </Card>
           <p className="flex-1">
-            We stay deliberately small to maintain speed, directness, and
-            accountability. With minimal hierarchy and maximum collaboration,
-            every team member is closely involved in projects, eliminating
-            unnecessary meetings and bureaucratic overhead. This structure
-            enables us to make rapid decisions, prototype early, and
-            continuously improve. We prioritize progress over process, ensuring
-            each project remains adaptable and true to its original vision.
-            Here, there are no spectators—only a focused team moving fast and
-            building better.
+            Wir bleiben bewusst klein, um Schnelligkeit, Direktheit und
+            Verantwortlichkeit zu gewährleisten. Mit minimaler Hierarchie und
+            maximaler Zusammenarbeit ist jedes Teammitglied eng in die Projekte
+            eingebunden, wodurch unnötige Besprechungen und bürokratischer
+            Aufwand vermieden werden. Diese Struktur ermöglicht es uns, schnelle
+            Entscheidungen zu treffen, frühzeitig Prototypen zu entwickeln und
+            uns kontinuierlich zu verbessern. Wir legen mehr Wert auf
+            Fortschritt als auf Prozesse und stellen so sicher, dass jedes
+            Projekt anpassungsfähig bleibt und seiner ursprünglichen Vision treu
+            bleibt. Hier gibt es keine Zuschauer – nur ein fokussiertes Team,
+            das schnell vorankommt und bessere Ergebnisse erzielt.
           </p>
         </div>
       </div>
