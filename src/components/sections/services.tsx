@@ -1,20 +1,18 @@
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
+import SectionTitle from "../sectiontitle";
 
 export default function Services() {
   return (
     <section className="min-h-[50vh] py-24 flex flex-col items-center justify-center">
       <div className="flex flex-col container px-10">
-        <div className="max-w-3xl flex flex-col gap-6">
-          <h2 className="text-6xl font-bold">We create to last</h2>
-          <p className="text-xl text-muted-foreground">
-            Our commitment to timeless design and functionality drives us to
-            create digital experiences that endure. We believe in crafting
-            websites and brand identities that captivate and remain relevant
-            over time. By focusing on clarity, emotion, and structure, we ensure
+        <SectionTitle title="We create to last">
+          Our commitment to timeless design and functionality drives us to
+          create digital experiences that endure. We believe in crafting
+          websites and brand identities that captivate and remain relevant
+          over time. By focusing on clarity, emotion, and structure, we ensure
             every project is built to withstand the evolving digital landscape.
-          </p>
-        </div>
+        </SectionTitle>
 
         <div className="flex flex-row mt-12 gap-8 items-center">
           <Card className="rounded-none shadow-none h-114 border-none relative flex-1">

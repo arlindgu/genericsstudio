@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
+import SectionTitle from "../sectiontitle";
 
 
 const ProjectsContent = [
@@ -28,17 +29,12 @@ export default function Projects() {
   return (
     <section className="min-h-[50vh] bg-muted py-24 flex flex-col items-center justify-center">
       <div className="flex flex-col container px-10">
-        <div className="max-w-3xl flex flex-col gap-6">
-          <h2 className="text-6xl font-bold">
-            The eyes, Chico. <br /> They never lie.
-          </h2>
-          <p className="text-xl text-muted-foreground">
-            Words describe vision. But work speaks louder than any pitch ever
+        <SectionTitle title="The eyes, Chico. They never lie.">
+          Words describe vision. But work speaks louder than any pitch ever
             could. Our projects tell the story of what we believe in—bold
             design, flawless performance, and brands that stand out. Let's show
             you what exceptional looks like.
-          </p>
-        </div>
+          </SectionTitle>
         <div className="grid grid-cols-2 grid-rows-2 gap-4 mt-6">
           {ProjectsContent.map((project, index) => (
           <Card key={index} className="rounded-none shadow-none relative h-124 overflow-hidden grayscale opacity-75 hover:grayscale-0 hover:opacity-100 transition-all duration-500">

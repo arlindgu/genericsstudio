@@ -1,25 +1,21 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "../ui/button";
+import SectionTitle from "../sectiontitle";
 
 export default function Pricing() {
   return (
-    <section className="min-h-[50vh] bg-foreground text-background py-24 flex flex-col items-center justify-center">
+    <section className="min-h-[50vh] bg-foreground py-24 flex flex-col items-center justify-center">
       <div className="flex flex-col container px-10">
-        <div className="max-w-3xl flex flex-col gap-6">
-          <h2 className="text-6xl font-bold">
-            Good Design Shouldn't Break the Bank
-          </h2>
-          <p className="text-xl text-muted-background">
-            Ironically, bad design is often the most expensive investment a
-            company makes. Hidden costs of poor performance, lost conversions,
-            and constant fixes drain budgets invisibly. We believe exceptional
-            design should be accessible—not a luxury reserved for the few.
-            That's why we've structured our pricing to be transparent, fair, and
-            focused on real value.
-          </p>
-        </div>
+        <SectionTitle dark title="Good Design Shouldn't Break the Bank">
+          Ironically, bad design is often the most expensive investment a
+          company makes. Hidden costs of poor performance, lost conversions, and
+          constant fixes drain budgets invisibly. We believe exceptional design
+          should be accessible—not a luxury reserved for the few. That's why
+          we've structured our pricing to be transparent, fair, and focused on
+          real value.
+        </SectionTitle>
 
-        <div className="flex gap-4 mt-6">
+        <div className="flex items-end gap-4 mt-6">
           <Card className="flex-3 rounded-none shadow-none relative h-124">
             <CardHeader>
               <CardTitle className="text-2xl">
@@ -46,7 +42,7 @@ export default function Pricing() {
                 scope.
               </p>
             </CardFooter>
-            <Button>Get Started</Button>
+            <Button className="mx-6">Get Started</Button>
           </Card>
           <Card className="flex-3 rounded-none shadow-none relative">
             <CardHeader>
@@ -72,7 +68,7 @@ export default function Pricing() {
                 scope.
               </p>
             </CardFooter>
-            <Button>Get Started</Button>
+            <Button className="mx-6">Get Started</Button>
           </Card>
           <Card className="flex-3 rounded-none shadow-none relative">
             <CardHeader>
@@ -98,7 +94,7 @@ export default function Pricing() {
                 scope.
               </p>
             </CardFooter>
-            <Button>Get Started</Button>
+            <Button className="mx-6">Get Started</Button>
           </Card>
         </div>
       </div>

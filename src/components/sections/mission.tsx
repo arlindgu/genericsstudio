@@ -2,6 +2,8 @@
 
 import { Card} from "@/components/ui/card";
 import CircularText from "@/components/CircularText";
+import SectionTitle from "@/components/sectiontitle";
+import { Circle, Heart, MessageCircle } from "lucide-react";
 
 
 export default function Mission() {
@@ -9,18 +11,13 @@ export default function Mission() {
       <section className="min-h-[50vh] bg-muted py-24 flex flex-col items-center justify-center">
         <div className="flex flex-col container px-10">
           <div className="flex flex-row">
-            <div className="max-w-3xl flex flex-col gap-6">
-              <h2 className="text-6xl font-mono font-bold tracking-tighter">
-                We create with purpose, built on dialogue and care.
-              </h2>
-              <p className="text-xl text-muted-foreground">
-                At Generics Studio, we’re on the mission to create websites and
-                brand design that spark excitement – just like a Grand Slam
-                Tennis match. Partnering with exceptional brands that share our
-                ambition for good design. It’s not just about your website. It’s
-                about game, set, and match for your brand.
-              </p>
-            </div>
+            <SectionTitle title="We create with purpose, built on dialogue and care.">
+              At Generics Studio, we’re on the mission to create websites and
+              brand design that spark excitement – just like a Grand Slam Tennis
+              match. Partnering with exceptional brands that share our ambition
+              for good design. It’s not just about your website. It’s about
+              game, set, and match for your brand.
+            </SectionTitle>
             <CircularText
               text="MADE*BY*GENERICS*STUDIO*"
               onHover="speedUp"
@@ -29,9 +26,40 @@ export default function Mission() {
           </div>
           <div className="flex flex-row mt-12 gap-8">
             <div className="flex-1 gap-4 grid grid-cols-2 grid-rows-2">
-              <Card className="row-span-2 rounded-none shadow-none relative"></Card>
-              <Card className="rounded-none shadow-none relative"></Card>
-              <Card className="rounded-none shadow-none relative"></Card>
+              <Card className="col-span-2 rounded-none border-none shadow-none relative flex items-center justify-center">
+                <Circle
+                  className="m-6"
+                  fill="orange"
+                  stroke="orange"
+                  size={96}
+                  strokeWidth={1.5}
+                />
+              </Card>
+              <Card className="rounded-none border-none shadow-none relative flex items-center justify-center">
+                <Heart
+                  className="m-6 absolute"
+                  size={96}
+                  fill="red"
+                  stroke="red"
+                  strokeWidth={1.5}
+                />
+                <Heart
+                  className="m-6 animate-ping"
+                  size={96}
+                  fill="red"
+                  stroke="red"
+                  strokeWidth={1.5}
+                />
+              </Card>
+              <Card className="rounded-none border-none shadow-none relative flex items-center justify-center">
+                <MessageCircle
+                  className="m-6"
+                  size={96}
+                  strokeWidth={1.5}
+                  fill="black"
+                  stroke="black"
+                />
+              </Card>
             </div>
             <div className="flex-1 flex flex-col gap-4">
               <p>

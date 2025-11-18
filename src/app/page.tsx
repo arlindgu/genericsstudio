@@ -1,3 +1,4 @@
+import Footer from "@/components/sections/footer";
 import Hero from "@/components/sections/hero";
 import Mission from "@/components/sections/mission";
 import Pricing from "@/components/sections/pricing";
@@ -17,6 +18,7 @@ export default function Home() {
       <Projects />
       <Process />
       <Pricing />
+      <Footer />
     </main>
   );
 }
