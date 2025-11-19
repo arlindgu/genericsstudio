@@ -16,7 +16,7 @@ const Socials = [
 export default function Footer() {
     return (
       <footer className="h-screen relative py-6 px-10 flex flex-col items-center justify-center">
-        <div className="flex flex-col lg:flex-row gap-24 items-center">
+        <div className="flex flex-col lg:flex-row gap-6 mb-12 lg:mb-0 lg:gap-24 items-center">
           <ul className="text-center">
             <li className="mb-4">
               <a href="#" className="hover:underline">
@@ -54,7 +54,7 @@ export default function Footer() {
             </a>
           </div>
 
-          <ul className="text-center">
+          <ul className="text-center flex gap-8 lg:block" >
             {Socials.map((social) => (
               <li key={social.name} className="mb-4">
                 <a
