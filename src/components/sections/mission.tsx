@@ -20,7 +20,7 @@ export default function Mission() {
               Spiel, Satz und Sieg für Ihre Marke.
             </SectionTitle>
           </div>
-          <div className="flex flex-row mt-12 gap-8">
+          <div className="flex flex-col lg:flex-row mt-12 gap-8">
             <div className="flex-1 items-center justify-center flex">
               <CircularText
                 text="MADE*BY*GENERICS*STUDIO*"

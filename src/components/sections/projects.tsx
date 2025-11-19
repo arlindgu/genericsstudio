@@ -36,7 +36,7 @@ export default function Projects() {
           von der Masse abheben. Lassen Sie uns Ihnen zeigen, wie
           außergewöhnlich aussieht.
         </SectionTitle>
-        <div className="grid grid-cols-2 grid-rows-2 gap-4 mt-6">
+        <div className="grid lg:grid-cols-2 grid-rows-2 gap-4 mt-6">
           {ProjectsContent.map((project, index) => (
             <Card
               key={index}

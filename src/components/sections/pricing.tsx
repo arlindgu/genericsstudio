@@ -19,7 +19,7 @@ export default function Pricing() {
           fair und auf den tatsächlichen Wert ausgerichtet gestaltet.
         </SectionTitle>
 
-        <div className="flex items-end gap-4 mt-6">
+        <div className="flex flex-col lg:flex-rowitems-end gap-4 mt-6">
           <Card className="flex-3 rounded-none shadow-none relative h-124">
             <CardHeader>
               <CardTitle className="text-2xl">
@@ -118,8 +118,15 @@ export default function Pricing() {
               finden.
             </CardDescription>
           </CardHeader>
-          <CardContent>
+          <CardContent className="hidden lg:block">
             <Booking />
+          </CardContent>
+          <CardContent className="lg:hidden">
+            <Button asChild>
+              <a href="https://cal.com/genericsstudio/discovery-call">
+                Termin vereinbaren
+              </a>
+            </Button>
           </CardContent>
         </Card>
       </div>

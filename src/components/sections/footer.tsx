@@ -16,7 +16,7 @@ const Socials = [
 export default function Footer() {
     return (
       <footer className="h-screen relative py-6 px-10 flex flex-col items-center justify-center">
-        <div className="flex gap-24 items-center">
+        <div className="flex flex-col lg:flex-row gap-24 items-center">
           <ul className="text-center">
             <li className="mb-4">
               <a href="#" className="hover:underline">
@@ -70,12 +70,12 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div className="flex w-full justify-between items-center px-12 absolute bottom-8">
+        <div className="flex flex-col lg:flex-row w-full justify-between items-center px-12 absolute bottom-8">
           <p className="text-sm">
             &copy; {new Date().getFullYear()} Generics Studio. All rights
             reserved.
           </p>
-          <ul className="flex gap-6">
+          <ul className="flex mt-4 gap-6">
             <li className="">
               <a href="#" className="hover:underline">
                 Privacy Policy

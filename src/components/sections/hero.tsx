@@ -11,10 +11,10 @@ export default function Hero() {
        "
       >
         <div className="z-1">
-          <h1 className="text-7xl font-bold">
+          <h1 className="text-6xl lg:text-7xl font-bold font-mono">
             Until logic breaks <br /> or beauty wins
           </h1>
-          <div>
+          <div className="flex flex-col justify-center items-center lg:flex-row">
             <Button className="mt-8" variant="default" size="lg">
               Kontakt aufnehmen
             </Button>

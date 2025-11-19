@@ -14,7 +14,7 @@ export default function Process() {
           eine Partnerschaft, die auf Transparenz und Vertrauen basiert.
         </SectionTitle>
 
-        <div className="flex flex-row mt-12 gap-8">
+        <div className="flex flex-col lg:flex-row mt-12 gap-8">
           <div className="flex flex-col hover:bg-background hover:text-foreground hover:transition-all duration-700 justify-center flex-3 bg-foreground text-background p-6">
             <Telescope className="mb-4" size={48} strokeWidth={1.5} />
             <h3 className="text-2xl font-bold mb-2">Entdecken & Definieren</h3>

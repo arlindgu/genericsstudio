@@ -16,11 +16,11 @@ export default function Services() {
           weiterentwickelnden digitalen Landschaft standhält.
         </SectionTitle>
 
-        <div className="flex flex-row mt-12 gap-8 items-center">
+        <div className="flex flex-col lg:flex-row mt-12 gap-8 items-center">
           <Card className="rounded-none shadow-none h-114 border-none relative flex-1">
-            <div className="absolute bottom-0 p-6 z-1 text-background">
+            <div className="lg:absolute bottom-0 p-6 z-1 text-background">
               <p className="text-2xl font-bold">Webdesign und Entwicklung</p>
-              <p className="text-muted-background max-w-2/3">
+              <p className="text-muted-background lg:max-w-2/3">
                 Wir entwerfen und entwickeln maßgeschneiderte Websites, die auf
                 die individuellen Bedürfnisse Ihrer Marke zugeschnitten sind.
                 unique needs.
@@ -43,11 +43,11 @@ export default function Services() {
             für Ihre Marke.
           </p>
         </div>
-        <div className="flex flex-row mt-12 gap-8 items-center">
-          <Card className="rounded-none order-1 shadow-none h-114 border-none relative flex-1">
-            <div className="absolute bottom-0 p-6 z-1 text-background">
+        <div className="flex flex-col lg:flex-row mt-12 gap-8 items-center">
+          <Card className="rounded-none lg:order-1 shadow-none h-114 border-none relative flex-1">
+            <div className="lg:absolute bottom-0 p-6 z-1 text-background">
               <p className="text-2xl font-bold">Analyse</p>
-              <p className="text-muted-background max-w-2/3">
+              <p className="text-muted-background lg:max-w-2/3">
                 Umfassende Marktforschung und Einblicke in das Nutzerverhalten
                 als Grundlage für strategische Entscheidungen.
               </p>
@@ -76,11 +76,11 @@ export default function Services() {
             den Details, die ohne offensichtlich zu sein, nachhallen.
           </p>
         </div>
-        <div className="flex flex-row mt-12 gap-8 items-center">
+        <div className="flex flex-col lg:flex-row mt-12 gap-8 items-center">
           <Card className="rounded-none shadow-none h-114 border-none relative flex-1">
-            <div className="absolute bottom-0 p-6 z-1 text-background">
+            <div className="lg:absolute bottom-0 p-6 z-1 text-background">
               <p className="text-2xl font-bold">Restaurierung</p>
-              <p className="text-muted-background max-w-2/3">
+              <p className="text-muted-background lg:max-w-2/3">
                 Revitalisierung und Modernisierung bestehender digitaler
                 Ressourcen zur Verbesserung der Leistung und Benutzererfahrung.
               </p>
