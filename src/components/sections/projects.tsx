@@ -34,9 +34,9 @@ export default function Projects() {
           jemals könnte. Unsere Projekte erzählen die Geschichte dessen, woran
           wir glauben – mutiges Design, makellose Leistung und Marken, die sich
           von der Masse abheben. Lassen Sie uns Ihnen zeigen, wie
-          außergewöhnlich aussieht.
+          aussergewöhnlich aussieht.
         </SectionTitle>
-        <div className="grid lg:grid-cols-2 grid-rows-2 gap-4 mt-6">
+        <div className="grid lg:grid-cols-3 gap-4 mt-6">
           {ProjectsContent.map((project, index) => (
             <Card
               key={index}
@@ -52,7 +52,7 @@ export default function Projects() {
                 src={project.mainImage}
                 alt={project.title}
                 fill
-                className="object-cover mt-16 hover:scale-105 transition-transform duration-500 shadow-2xl"
+                className="object-cover hover:scale-105 transition-transform duration-500 shadow-2xl"
               />
               <div className="bottom-0 items-center p-6 text-background inset-x-0 flex justify-between absolute">
                 <p className="font-mono font-bold text-2xl">{project.title}</p>

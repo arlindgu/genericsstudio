@@ -25,22 +25,22 @@ export default function Footer() {
             </li>
             <li className="mb-4">
               <a href="#about" className="hover:underline">
-                About
+                Das Studio
               </a>
             </li>
             <li className="mb-4">
               <a href="#services" className="hover:underline">
-                Services
+                Dienstleistungen
               </a>
             </li>
             <li className="mb-4">
               <a href="#work" className="hover:underline">
-                Our Work
+                Unsere Arbeit
               </a>
             </li>
             <li className="mb-4">
               <a href="#contact" className="hover:underline">
-                Contact
+                Kontakt
               </a>
             </li>
           </ul>
@@ -75,15 +75,15 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Generics Studio. All rights
             reserved.
           </p>
-          <ul className="flex mt-4 gap-6">
+          <ul className="flex gap-6 text-xs">
             <li className="">
               <a href="#" className="hover:underline">
-                Privacy Policy
+                Datenschutzerklärung
               </a>
             </li>
             <li className="">
               <a href="#" className="hover:underline">
-                Imprint
+                Impressum
               </a>
             </li>
           </ul>

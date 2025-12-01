@@ -15,7 +15,7 @@ export default function Mission() {
               Bei Generics Studio haben wir es uns zur Aufgabe gemacht, Websites
               und Markendesigns zu entwickeln, die Begeisterung wecken – genau
               wie ein Grand-Slam-Tennismatch . Wir arbeiten mit
-              außergewöhnlichen Marken zusammen, die unsere Ambitionen für gutes
+              aussergewöhnlichen Marken zusammen, die unsere Ambitionen für gutes
               Design teilen. Es geht nicht nur um Ihre Website. Es geht um
               Spiel, Satz und Sieg für Ihre Marke.
             </SectionTitle>
@@ -31,10 +31,10 @@ export default function Mission() {
             </div>
             <div className="flex-3 flex flex-col gap-4">
               <p>
-                Wir entwickeln maßgeschneiderte digitale Erlebnisse von Grund
+                Wir entwickeln massgeschneiderte digitale Erlebnisse von Grund
                 auf neu und lehnen generische Lösungen und vorgefertigte
                 Vorlagen ab. Jedes Projekt wird als einzigartig behandelt, wobei
-                sowohl dem Design als auch dem Code große Aufmerksamkeit
+                sowohl dem Design als auch dem Code grosse Aufmerksamkeit
                 geschenkt wird. Anstatt WordPress-Themes oder Figma-Vorlagen zu
                 verwenden, schaffen wir authentische digitale Identitäten, die
                 die einzigartige Geschichte jedes Kunden widerspiegeln – indem
