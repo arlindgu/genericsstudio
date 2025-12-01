@@ -4,92 +4,36 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "../ui/button";
 import SectionTitle from "../sectiontitle";
 import Booking from "../booking";
+import Link from "next/link";
 
-const webDesignContent = [
+const servicesPricingOverview = [
   {
-    title: "Starter",
+    title: "Webdesign",
     description:
-      "Ideal für kleine Projekte und einfache Webauftritte mit klarer Struktur und sauberem Design.",
-    price: "Ab 1000 CHF",
-    features: [
-      "Massgeschneidertes Webdesign",
-      "Responsives Design",
-      "Basis SEO",
-      "CMS Integration",
-      "Initialer Content Upload (bis 10 Seiten)",
-      "1 Monat Support",
-    ],
+      "Massgeschneiderte Websites, moderne UX/UI und schnelle Umsetzung.",
+    startingPrice: "Ab 600 CHF",
+    link: "/webdesign",
   },
   {
-    title: "Business",
+    title: "Branding & Logos",
     description:
-      "Für wachsende Marken, die ein stärkeres Fundament, Branding Anpassungen und mehr Funktion brauchen.",
-    price: "Ab 2500 CHF",
-    features: [
-      "Individuelles Webdesign + Branding",
-      "Erweiterte SEO",
-      "Blog/News Einrichtung",
-      "Analytics Integration",
-      "Performance Optimierung",
-      "2 Monate Support",
-    ],
+      "Logoentwicklung, Markenidentitaet und komplette Brand Guidelines.",
+    startingPrice: "Ab 300 CHF",
+    link: "/branding",
   },
   {
-    title: "Pro",
+    title: "Grafikdesign",
     description:
-      "Für voll personalisierte, komplexere Projekte mit vielen Funktionen und hohen Anforderungen.",
-    price: "Ab 5000 CHF",
-    features: [
-      "UX Konzept + voll individualisiertes Design",
-      "Advanced SEO",
-      "Automationen und Formulare",
-      "Mehrsprachigkeit",
-      "Security Hardening + Hosting Setup",
-      "3 Monate Support",
-    ],
-  },
-];
-
-const restaurationContent = [
-  {
-    title: "Refresh",
-    description:
-      "Ideal für leichte Modernisierungen und kleine Design Updates.",
-    price: "Ab 1500 CHF",
-    features: [
-      "Design Refresh",
-      "Content Cleanup",
-      "Grund Performance Optimierung",
-      "Kleine UX Verbesserungen",
-      "1 Monat Betreuung",
-    ],
+      "Social Media Designs, Illustrationen, Werbegrafiken und mehr.",
+    startingPrice: "Ab 80 CHF",
+    link: "/graphicdesign",
   },
   {
-    title: "Revamp",
+    title: "Print Design",
     description:
-      "Für Websites, die ein deutlich besseres Design und echte technische Verbesserungen brauchen.",
-    price: "Ab 3500 CHF",
-    features: [
-      "Redesign im bestehenden System",
-      "Volle Performance Optimierung",
-      "Security Checks",
-      "Struktur Anpassungen",
-      "2 Monate Betreuung",
-    ],
-  },
-  {
-    title: "Rebuild",
-    description:
-      "Für komplette Neuaufbereitung inkl. neuem Design, Struktur und Technik.",
-    price: "Ab 5000 CHF",
-    features: [
-      "Komplettes Audit",
-      "Modernes UX/UI Redesign",
-      "CMS Umbau wenn nötig",
-      "Pro Performance und Security Setup",
-      "Content Migration + Neuordnung",
-      "3 Monate Betreuung",
-    ],
+      "Flyer, Karten, Broschueren, Menu Karten und druckfertige Layouts.",
+    startingPrice: "Ab 100 CHF",
+    link: "/printdesign",
   },
 ];
 
@@ -107,8 +51,8 @@ export default function Pricing() {
           fair und auf den tatsächlichen Wert ausgerichtet gestaltet.
         </SectionTitle>
 
-        <div className="lg:grid lg:grid-cols-3 flex-col flex gap-6 mt-12">
-          {webDesignContent.map((plan, index) => (
+        <div className="lg:grid lg:grid-cols-4 flex-col flex gap-6 mt-12">
+          {servicesPricingOverview.map((plan, index) => (
             <Card
               key={index}
               className="rounded-none shadow-none relative flex flex-col justify-around"
@@ -116,49 +60,21 @@ export default function Pricing() {
               <CardHeader>
                 <CardTitle className="text-2xl">{plan.title}</CardTitle>
                 <CardDescription>{plan.description}</CardDescription>
-                <CardTitle className="text-xl mt-2">{plan.price}</CardTitle>
+                <CardTitle className="text-xl mt-2">{plan.startingPrice}</CardTitle>
               </CardHeader>
-              <CardContent>
-                <ul className="list-disc pl-5 space-y-2">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx}>{feature}</li>
-                  ))}
-                </ul>
-              </CardContent>
               <CardFooter>
                 <p className="text-sm text-muted-foreground">
                   Individuelle Angebote je nach Projektumfang möglich.
                 </p>
               </CardFooter>
-              <Button className="mx-6">Loslegen</Button>
+              <Button asChild className="mx-6">
+                <Link href={plan.link}>
+                Mehr erfahren</Link>
+              </Button>
             </Card>
           ))}
-          {restaurationContent.map((plan, index) => (
-            <Card
-              key={index}
-              className="rounded-none shadow-none relative flex flex-col justify-around"
-            >
-              <CardHeader>
-                <CardTitle className="text-2xl">{plan.title}</CardTitle>
-                <CardDescription>{plan.description}</CardDescription>
-                <CardTitle className="text-xl mt-2">{plan.price}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="list-disc pl-5 space-y-2">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx}>{feature}</li>
-                  ))}
-                </ul>
-              </CardContent>
-              <CardFooter>
-                <p className="text-sm text-muted-foreground">
-                  Individuelle Angebote je nach Projektumfang möglich.
-                </p>
-              </CardFooter>
-              <Button className="mx-6">Loslegen</Button>
-            </Card>
-          ))}
-          <Card className="col-span-3 rounded-none shadow-none relative">
+
+          <Card className="col-span-4 rounded-none shadow-none relative">
             <CardHeader>
               <CardTitle className="text-2xl">
                 Sie wissen nicht, was Sie brauchen?

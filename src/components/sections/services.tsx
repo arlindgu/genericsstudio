@@ -1,6 +1,34 @@
-import { Card } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import SectionTitle from "../sectiontitle";
+import { Frame, LayoutPanelTop, Palette, Telescope, VectorSquare } from "lucide-react";
+
+const ServicesContent = [
+  {
+    title: "Webdesign",
+    description:
+      "Massgeschneiderte Websites, moderne UI/UX, schnelle Performance und responsive Umsetzung.",
+    icon: <LayoutPanelTop className="mb-4" size={48} strokeWidth={1.5} />,
+  },
+  {
+    title: "Branding & Logos",
+    description:
+      "Logo-Design, Markenidentitaet, Farbkonzepte und visuelle Guidelines fuer einen klaren und starken Markenauftritt.",
+    icon: <Frame className="mb-4" size={48} strokeWidth={1.5} />,
+  },
+  {
+    title: "Grafikdesign",
+    description:
+      "Individuelle Grafiken, Illustrationen, Social Media Visuals und alles, was visuell wirkt.",
+    icon: <VectorSquare className="mb-4" size={48} strokeWidth={1.5} />,
+  },
+  {
+    title: "Print Design",
+    description:
+      "Flyer, Visitenkarten, Menu Karten, Broschueren und weitere analoge Designs, sauber fuers Drucken vorbereitet.",
+    icon: <Palette className="mb-4" size={48} strokeWidth={1.5} />,
+  },
+];
 
 export default function Services() {
   return (
@@ -16,43 +44,19 @@ export default function Services() {
           weiterentwickelnden digitalen Landschaft standhält.
         </SectionTitle>
 
-        <div className="flex lg:flex-row flex-col gap-8 mt-12">
-          <div className="flex-1 flex flex-col lg:flex-row gap-8 items-center">
-            <Card className="rounded-none shadow-none h-114 bg-foreground border-none relative flex-1">
-              <div className="lg:absolute bottom-0 p-6 z-1 text-background">
-                <p className="text-2xl font-bold">Webdesign und Entwicklung</p>
-                <p className="text-muted-background lg:max-w-2/3">
-                  Wir entwerfen und entwickeln massgeschneiderte Websites, die
-                  auf die individuellen Bedürfnisse Ihrer Marke zugeschnitten
-                  sind. unique needs.
-                </p>
-              </div>
-              <Image
-                src="/services/webdesign.png"
-                alt="Web Design"
-                fill
-                className="object-cover z-0 grayscale mask-t-from-0.5"
-              />
-            </Card>
-          </div>
-          <div className="flex-1 flex flex-col lg:flex-row gap-8 items-center">
-            <Card className="rounded-none bg-foreground shadow-none h-114 border-none relative flex-1">
-              <div className="lg:absolute bottom-0 p-6 z-1 text-background">
-                <p className="text-2xl font-bold">Restaurierung</p>
-                <p className="text-muted-background lg:max-w-2/3">
-                  Revitalisierung und Modernisierung bestehender digitaler
-                  Ressourcen zur Verbesserung der Leistung und
-                  Benutzererfahrung.
-                </p>
-              </div>
-              <Image
-                src="/services/restoration.png"
-                alt="Web Design"
-                fill
-                className="object-cover z-0 grayscale mask-t-from-0.5"
-              />
-            </Card>
-          </div>
+        <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 mt-12">
+          {ServicesContent.map((service, index) => (
+            <div
+              key={index}
+              className="flex flex-col hover:bg-background hover:text-foreground hover:transition-all duration-700 justify-center flex-3 bg-foreground text-background p-6"
+            >
+            <div className="flex items-center justify-start mb-4">
+              {service.icon}
+            </div>
+              <h3 className="text-2xl font-bold mb-2">{service.title}</h3>
+              <p>{service.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

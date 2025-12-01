@@ -36,7 +36,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <script src="https://t.contentsquare.net/uxa/d889db3356b8e.js"></script>
       <body
         className={`${geistSans.variable} ${jetBrainsMono.variable} ${geistMono.variable} subpixel-antialiased`}
       >
