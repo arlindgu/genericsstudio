@@ -32,7 +32,7 @@ const ServicesContent = [
 
 export default function Services() {
   return (
-    <section className="min-h-[50vh] py-24 flex flex-col items-center justify-center">
+    <section className="min-h-[50vh] bg-muted py-24 flex flex-col items-center justify-center">
       <div className="flex flex-col container px-10">
         <SectionTitle title="Wir schaffen, um zu bleiben">
           Unser Bekenntnis zu zeitlosem Design und Funktionalität treibt uns

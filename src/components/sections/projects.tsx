@@ -40,19 +40,14 @@ export default function Projects() {
           {ProjectsContent.map((project, index) => (
             <Card
               key={index}
-              className="rounded-none shadow-none relative h-124 overflow-hidden grayscale opacity-75 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+              className="rounded-none bg-linear-to-t from-black to-background  shadow-none relative h-124 overflow-hidden grayscale opacity-75 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
             >
-              <Image
-                src={project.backgroundImage}
-                alt="Project 1"
-                fill
-                className="object-cover"
-              />
               <Image
                 src={project.mainImage}
                 alt={project.title}
-                fill
-                className="object-cover hover:scale-105 transition-transform duration-500 shadow-2xl"
+                width={400}
+                height={300}
+                className="hover:scale-105 transition-transform duration-500 absolute inset-0"
               />
               <div className="bottom-0 items-center p-6 text-background inset-x-0 flex justify-between absolute">
                 <p className="font-mono font-bold text-2xl">{project.title}</p>

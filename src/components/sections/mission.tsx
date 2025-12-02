@@ -8,7 +8,7 @@ import { Circle, Heart, MessageCircle, Rocket } from "lucide-react";
 
 export default function Mission() {
     return (
-      <section className="min-h-[50vh] bg-muted py-24 flex flex-col items-center justify-center">
+      <section className="min-h-[50vh] py-24 flex flex-col items-center justify-center">
         <div className="flex flex-col container px-10">
           <div className="flex flex-col lg:flex-row">
             <SectionTitle title="Wir schaffen mit Bedacht, basierend auf Leidenschaft und Sorgfalt">
