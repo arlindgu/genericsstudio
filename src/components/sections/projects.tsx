@@ -29,7 +29,7 @@ export default function Projects() {
   return (
     <section className="min-h-[50vh] bg-muted py-24 flex flex-col items-center justify-center">
       <div className="flex flex-col container px-10">
-        <SectionTitle title="Die Augen, Chico. Die lügen nie.">
+        <SectionTitle title="Echtes Design verratet sich selbst">
           Worte beschreiben Visionen. Aber Taten sagen mehr als jede Werbung es
           jemals könnte. Unsere Projekte erzählen die Geschichte dessen, woran
           wir glauben – mutiges Design, makellose Leistung und Marken, die sich

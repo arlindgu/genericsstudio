@@ -8,7 +8,7 @@ import CTA from "@/components/sections/cta"
 const webDesignContent = [
   {
     title: "Starter",
-    description: "Ideal fuer kleine Projekte und einfache Webauftritte.",
+    description: "Ideal für kleine Projekte und einfache Webauftritte.",
     price: "Ab 600 CHF",
     features: [
       "Individuelles Webdesign",
@@ -21,7 +21,7 @@ const webDesignContent = [
   },
   {
     title: "Business",
-    description: "Fuers kleine Unternehmen mit mehr Anforderungen.",
+    description: "Fürs kleine Unternehmen mit mehr Anforderungen.",
     price: "Ab 1500 CHF",
     features: [
       "Individuelles Webdesign + leichte Branding Anpassungen",
@@ -34,7 +34,7 @@ const webDesignContent = [
   },
   {
     title: "Pro",
-    description: "Fuers voll personalisierte, funktionsreiche Projekt.",
+    description: "Fürs voll personalisierte, funktionsreiche Projekt.",
     price: "Ab 3000 CHF",
     features: [
       "UX Konzept + Custom UI",

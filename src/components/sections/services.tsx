@@ -13,7 +13,7 @@ const ServicesContent = [
   {
     title: "Branding & Logos",
     description:
-      "Logo-Design, Markenidentitaet, Farbkonzepte und visuelle Guidelines fuer einen klaren und starken Markenauftritt.",
+      "Logo-Design, Markenidentität, Farbkonzepte und visuelle Guidelines für einen klaren und starken Markenauftritt.",
     icon: <Frame className="mb-4" size={48} strokeWidth={1.5} />,
   },
   {
@@ -25,7 +25,7 @@ const ServicesContent = [
   {
     title: "Print Design",
     description:
-      "Flyer, Visitenkarten, Menu Karten, Broschueren und weitere analoge Designs, sauber fuers Drucken vorbereitet.",
+      "Flyer, Visitenkarten, Menü Karten, Broschüren und weitere analoge Designs, sauber fürs Drucken vorbereitet.",
     icon: <Palette className="mb-4" size={48} strokeWidth={1.5} />,
   },
 ];

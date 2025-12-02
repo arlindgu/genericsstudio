@@ -13,7 +13,7 @@ import { LoadingSpinner } from "./sending";
 export default function FormComponent() {
   const [sent, isSent] = useState(false);
   const [error, setError] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   function sendInquiry(FormData: FormData) {
     setLoading(true);
@@ -69,7 +69,7 @@ export default function FormComponent() {
             es später erneut oder kontaktieren Sie uns direkt per E-Mail.
           </p>
           <a href="mailto:info@generics.studio" className="text-center">
-            info@generics.studio
+            hello@generics.studio
           </a>
         </div>
       ) : (

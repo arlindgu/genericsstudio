@@ -8,19 +8,19 @@ import CTA from "@/components/sections/cta";
 const brandingContent = [
   {
     title: "Basic",
-    description: "Ideal fuer neue kleine Marken oder einfache Logoentwicklung.",
+    description: "Ideal für neue kleine Marken oder einfache Logoentwicklung.",
     price: "Ab 300 CHF",
     features: [
       "1 Logo Konzept",
       "2 Revisionen",
       "Farbschema Basis",
-      "Typografie Vorschlaege",
+      "Typografie Vorschläge",
       "Export in allen Formaten",
     ],
   },
   {
     title: "Identity",
-    description: "Fuers stabile Markenfundament mit klarer visueller Linie.",
+    description: "Fürs stabile Markenfundament mit klarer visueller Linie.",
     price: "Ab 700 CHF",
     features: [
       "2–3 Logo Konzepte",
@@ -32,7 +32,7 @@ const brandingContent = [
   },
   {
     title: "Full Branding",
-    description: "Komplette Markenidentitaet mit allem drum und dran.",
+    description: "Komplette Markenidentität mit allem drum und dran.",
     price: "Ab 1200 CHF",
     features: [
       "Logo Set + Varianten",

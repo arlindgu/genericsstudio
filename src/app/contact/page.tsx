@@ -3,14 +3,23 @@
 import PageHeader from "@/components/sections/pageheader";
 import FormComponent from "./Form";
 import SectionTitle from "@/components/sectiontitle";
+import Noise from "@/components/Noise";
 
 export default function ContactPage() {
     return (
       <main>
+        <div
+          className="fixed inset-0 pointer-events-none"
+          style={{
+            zIndex: 100,
+          }}
+        >
+          <Noise />
+        </div>
         <PageHeader title="Kontakt">
-          Haben Sie ein Projekt im Kopf oder moechten Sie mehr ueber unsere
+          Haben Sie ein Projekt im Kopf oder möchten Sie mehr über unsere
           Dienstleistungen erfahren? Kontaktieren Sie uns noch heute, um Ihre
-          Ideen zu besprechen und herauszufinden, wie wir Ihnen helfen koennen,
+          Ideen zu besprechen und herauszufinden, wie wir Ihnen helfen können,
           Ihre Vision zum Leben zu erwecken.
         </PageHeader>
         <section className="min-h-[50vh] py-24 flex flex-col items-center justify-center">

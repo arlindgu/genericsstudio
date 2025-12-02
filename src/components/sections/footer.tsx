@@ -19,27 +19,12 @@ export default function Footer() {
         <div className="flex flex-col lg:flex-row gap-6 mb-12 lg:mb-0 lg:gap-24 items-center">
           <ul className="text-center">
             <li className="mb-4">
-              <a href="#" className="hover:underline">
+              <a href="/" className="hover:underline">
                 Home
               </a>
             </li>
             <li className="mb-4">
-              <a href="#about" className="hover:underline">
-                Das Studio
-              </a>
-            </li>
-            <li className="mb-4">
-              <a href="#services" className="hover:underline">
-                Dienstleistungen
-              </a>
-            </li>
-            <li className="mb-4">
-              <a href="#work" className="hover:underline">
-                Unsere Arbeit
-              </a>
-            </li>
-            <li className="mb-4">
-              <a href="#contact" className="hover:underline">
+              <a href="/contact" className="hover:underline">
                 Kontakt
               </a>
             </li>

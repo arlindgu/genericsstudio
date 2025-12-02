@@ -8,7 +8,7 @@ import CTA from "@/components/sections/cta";
 const printDesignContent = [
   {
     title: "Basic",
-    description: "Ideal fuer einzelne kleine Print Projekte.",
+    description: "Ideal für einzelne kleine Print Projekte.",
     price: "Ab 100 CHF",
     features: [
       "Einseitiges Design (Flyer, Karte etc.)",
@@ -18,7 +18,7 @@ const printDesignContent = [
   },
   {
     title: "Standard",
-    description: "Fuers gaengige Printmaterial fuer Unternehmen.",
+    description: "Fürs gängige Printmaterial für Unternehmen.",
     price: "Ab 250 CHF",
     features: [
       "Mehrseitige Designs oder Sets",
@@ -29,11 +29,11 @@ const printDesignContent = [
   },
   {
     title: "Premium",
-    description: "Fuers volle Printpaket eines Unternehmens.",
+    description: "Fürs volle Printpaket eines Unternehmens.",
     price: "Ab 500 CHF",
     features: [
       "Komplettes Print Set",
-      "Broschueren / Menu Karten",
+      "Broschüren / Menü Karten",
       "Sonderformate",
       "Professionelle Druckvorbereitung",
       "4 Revisionen",

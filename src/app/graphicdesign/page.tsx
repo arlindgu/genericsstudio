@@ -8,7 +8,7 @@ import CTA from "@/components/sections/cta";
 const graphicDesignContent = [
   {
     title: "Starter",
-    description: "Fuers schnelle, einfache Grafiken.",
+    description: "Fürs schnelle, einfache Grafiken.",
     price: "Ab 80 CHF",
     features: [
       "1 Design (z. B. Social Post)",
@@ -18,7 +18,7 @@ const graphicDesignContent = [
   },
   {
     title: "Creative",
-    description: "Fuers regelmaessige oder komplexere Grafiken.",
+    description: "Fürs regelmässige oder komplexere Grafiken.",
     price: "Ab 250 CHF",
     features: [
       "Bis 5 Grafiken",
@@ -29,7 +29,7 @@ const graphicDesignContent = [
   },
   {
     title: "Pro Package",
-    description: "Fuers volle Grafikpaket mit mehr Umfang.",
+    description: "Fürs volle Grafikpaket mit mehr Umfang.",
     price: "Ab 500 CHF",
     features: [
       "Bis 12 Grafiken",

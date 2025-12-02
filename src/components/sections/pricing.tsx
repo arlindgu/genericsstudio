@@ -17,7 +17,7 @@ const servicesPricingOverview = [
   {
     title: "Branding & Logos",
     description:
-      "Logoentwicklung, Markenidentitaet und komplette Brand Guidelines.",
+      "Logoentwicklung, Markenidentität und komplette Brand Guidelines.",
     startingPrice: "Ab 300 CHF",
     link: "/branding",
   },
@@ -31,7 +31,7 @@ const servicesPricingOverview = [
   {
     title: "Print Design",
     description:
-      "Flyer, Karten, Broschueren, Menu Karten und druckfertige Layouts.",
+      "Flyer, Karten, Broschüren, Menu Karten und druckfertige Layouts.",
     startingPrice: "Ab 100 CHF",
     link: "/printdesign",
   },
