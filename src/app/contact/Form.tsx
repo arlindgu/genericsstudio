@@ -13,7 +13,7 @@ import { LoadingSpinner } from "./sending";
 export default function FormComponent() {
   const [sent, isSent] = useState(false);
   const [error, setError] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   function sendInquiry(FormData: FormData) {
     setLoading(true);
