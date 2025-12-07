@@ -64,7 +64,7 @@ export default function WebdesignPage() {
       </PageHeader>
       <Pricing
         pricingData={webDesignContent}
-        title="Webdesign Preise"
+        title="Preise"
         description="Wählen Sie den Plan, der am besten zu Ihren Bedürfnissen passt."
       />
       <CTA />

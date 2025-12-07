@@ -60,7 +60,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Generics Studio. All rights
             reserved.
           </p>
-          <ul className="flex gap-6 text-xs">
+          <ul className="flex gap-6 text-xs hidden">
             <li className="">
               <a href="#" className="hover:underline">
                 Datenschutzerklärung

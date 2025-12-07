@@ -58,7 +58,7 @@ export default function PrintDesignPage() {
       </PageHeader>
       <Pricing
         pricingData={printDesignContent}
-        title="Print Design Preise"
+        title="Preise"
         description="Wählen Sie den Plan, der am besten zu Ihren Bedürfnissen passt."
       />
       <CTA />

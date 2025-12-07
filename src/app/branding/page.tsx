@@ -56,13 +56,13 @@ export default function BrandingPage() {
       >
         <Noise />
       </div>
-      <PageHeader title="Webdesign Dienstleistungen">
+      <PageHeader title="Branding">
         Erstellen Sie atemberaubende, benutzerfreundliche Websites, die Ihre
         Marke zum Leben erwecken und Ihre Zielgruppe begeistern.
       </PageHeader>
       <Pricing
         pricingData={brandingContent}
-        title="Branding"
+        title="Preise"
         description="Wählen Sie den Plan, der am besten zu Ihren Bedürfnissen passt."
       />
       <CTA />

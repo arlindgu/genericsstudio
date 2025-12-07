@@ -57,7 +57,7 @@ export default function GraphicDesignPage() {
       </PageHeader>
       <Pricing
         pricingData={graphicDesignContent}
-        title="Grafikdesign Preise"
+        title="Preise"
         description="Wählen Sie den Plan, der am besten zu Ihren Bedürfnissen passt."
       />
       <CTA />
