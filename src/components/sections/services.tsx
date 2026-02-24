@@ -6,26 +6,22 @@ import { Frame, LayoutPanelTop, Palette, Telescope, VectorSquare } from "lucide-
 const ServicesContent = [
   {
     title: "Webdesign",
-    description:
-      "Massgeschneiderte Websites, moderne UI/UX, schnelle Performance und responsive Umsetzung.",
+    description: "Individuell gebaut. Schnell geladen. Sofort bereit.",
     icon: <LayoutPanelTop className="mb-4" size={48} strokeWidth={1.5} />,
   },
   {
     title: "Branding & Logos",
-    description:
-      "Logo-Design, Markenidentität, Farbkonzepte und visuelle Guidelines für einen klaren und starken Markenauftritt.",
+    description: "Ihr Name. Ihre Farben. Ihre Identität.",
     icon: <Frame className="mb-4" size={48} strokeWidth={1.5} />,
   },
   {
     title: "Grafikdesign",
-    description:
-      "Individuelle Grafiken, Illustrationen, Social Media Visuals und alles, was visuell wirkt.",
+    description: "Alles, was ins Auge fällt.",
     icon: <VectorSquare className="mb-4" size={48} strokeWidth={1.5} />,
   },
   {
     title: "Print Design",
-    description:
-      "Flyer, Visitenkarten, Menü Karten, Broschüren und weitere analoge Designs, sauber fürs Drucken vorbereitet.",
+    description: "Analog. Sauber. Druckfertig.",
     icon: <Palette className="mb-4" size={48} strokeWidth={1.5} />,
   },
 ];
@@ -33,15 +29,9 @@ const ServicesContent = [
 export default function Services() {
   return (
     <section className="min-h-[50vh] bg-muted py-24 flex flex-col items-center justify-center">
-      <div className="flex flex-col container px-10">
-        <SectionTitle title="Wir schaffen, um zu bleiben">
-          Unser Bekenntnis zu zeitlosem Design und Funktionalität treibt uns
-          dazu an, digitale Erlebnisse zu schaffen, die Bestand haben. Wir
-          glauben daran, Websites und Markenidentitäten zu entwickeln, die
-          begeistern und über lange Zeit relevant bleiben. Indem wir uns auf
-          Klarheit, Emotion und Struktur konzentrieren, stellen wir sicher, dass
-          jedes Projekt so gestaltet ist, dass es der sich ständig
-          weiterentwickelnden digitalen Landschaft standhält.
+      <div className="flex flex-col container px-10 max-w-7xl mx-auto">
+        <SectionTitle title="Vier Disziplinen. Ein Ziel.">
+          Design, das auffällt. Code, der performt. Beides aus einer Hand.
         </SectionTitle>
 
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 mt-12">

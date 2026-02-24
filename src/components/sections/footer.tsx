@@ -15,8 +15,8 @@ const Socials = [
 
 export default function Footer() {
     return (
-      <footer className="h-screen relative py-6 px-10 flex flex-col items-center justify-center">
-        <div className="flex flex-col lg:flex-row gap-6 mb-12 lg:mb-0 lg:gap-24 items-center">
+      <footer className="h-screen relative py-6 flex flex-col items-center justify-center">
+        <div className="flex flex-col lg:flex-row gap-6 mb-12 lg:mb-0 lg:gap-24 items-center px-10">
           <ul className="text-center">
             <li className="mb-4">
               <a href="/" className="hover:underline">
@@ -55,7 +55,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div className="flex flex-col lg:flex-row w-full justify-between items-center px-12 absolute bottom-8">
+        <div className="flex flex-col lg:flex-row w-full justify-between items-center px-10 absolute bottom-8 left-1/2 -translate-x-1/2">
           <p className="text-sm">
             &copy; {new Date().getFullYear()} Generics Studio. All rights
             reserved.

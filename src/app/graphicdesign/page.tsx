@@ -1,6 +1,5 @@
 "use client";
 
-import Noise from "@/components/Noise";
 import PageHeader from "@/components/sections/pageheader";
 import Pricing from "@/components/servicessections/pricing";
 import CTA from "@/components/sections/cta";
@@ -43,17 +42,8 @@ const graphicDesignContent = [
 export default function GraphicDesignPage() {
   return (
     <main className="relative">
-      <div
-        className="fixed inset-0 pointer-events-none"
-        style={{
-          zIndex: 100,
-        }}
-      >
-        <Noise />
-      </div>
       <PageHeader title="Grafikdesign">
-        Erstellen Sie atemberaubende, benutzerfreundliche Websites, die Ihre
-        Marke zum Leben erwecken und Ihre Zielgruppe begeistern.
+        Grafiken, die hängen bleiben.
       </PageHeader>
       <Pricing
         pricingData={graphicDesignContent}

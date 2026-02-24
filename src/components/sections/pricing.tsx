@@ -40,15 +40,9 @@ const servicesPricingOverview = [
 export default function Pricing() {
   return (
     <section className="min-h-[50vh] bg-foreground py-24 flex flex-col items-center justify-center">
-      <div className="flex flex-col container px-10">
-        <SectionTitle dark title="Gutes Design sollte kein Vermögen kosten">
-          Ironischerweise ist schlechtes Design oft die teuerste Investition,
-          die ein Unternehmen tätigt. Versteckte Kosten durch schlechte
-          Leistung, verlorene Konversionen und ständige Korrekturen belasten das
-          Budget auf unsichtbare Weise. Wir glauben, dass aussergewöhnliches
-          Design zugänglich sein sollte – und kein Luxus, der nur wenigen
-          vorbehalten ist. Deshalb haben wir unsere Preisgestaltung transparent,
-          fair und auf den tatsächlichen Wert ausgerichtet gestaltet.
+      <div className="flex flex-col container px-10 max-w-7xl mx-auto">
+        <SectionTitle dark title="Klar. Fair. Ohne Überraschungen.">
+          Transparente Preise für echte Qualität. Was du siehst, ist was du bekommst.
         </SectionTitle>
 
         <div className="lg:grid lg:grid-cols-4 flex-col flex gap-6 mt-12">
@@ -77,12 +71,10 @@ export default function Pricing() {
           <Card className="col-span-4 rounded-none shadow-none relative">
             <CardHeader>
               <CardTitle className="text-2xl">
-                Sie wissen nicht, was Sie brauchen?
+                Du weißt nicht, was du brauchst?
               </CardTitle>
               <CardDescription>
-                Vereinbaren Sie einen Termin für ein unverbindliches Gespräch
-                mit uns, und wir helfen Ihnen dabei, den besten Weg für Ihr
-                Projekt zu finden.
+                Buch einen kostenlosen Termin mit uns — wir helfen dir, den besten Weg für dein Projekt zu finden.
               </CardDescription>
             </CardHeader>
             <CardContent className="hidden lg:block">

@@ -28,7 +28,7 @@ type PricingProps = {
 export default function Pricing({ pricingData, title, description }: PricingProps) {
   return (
     <section className="min-h-[50vh] bg-background py-24 flex flex-col items-center justify-center">
-      <div className="flex flex-col container px-10">
+      <div className="flex flex-col container px-10 max-w-7xl mx-auto">
         <SectionTitle title={title}>
             {description}
         </SectionTitle>
@@ -62,12 +62,10 @@ export default function Pricing({ pricingData, title, description }: PricingProp
           <Card className="col-span-4 bg-foreground text-background rounded-none shadow-none relative">
             <CardHeader>
               <CardTitle className="text-2xl">
-                Sie wissen nicht, was Sie brauchen?
+                Du weißt nicht, was du brauchst?
               </CardTitle>
               <CardDescription className="text-background/75">
-                Vereinbaren Sie einen Termin für ein unverbindliches Gespräch
-                mit uns, und wir helfen Ihnen dabei, den besten Weg für Ihr
-                Projekt zu finden.
+                Buch einen kostenlosen Termin mit uns — wir helfen dir, den besten Weg für dein Projekt zu finden.
               </CardDescription>
             </CardHeader>
             <CardContent className="hidden lg:block">

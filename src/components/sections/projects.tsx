@@ -28,7 +28,7 @@ const ProjectsContent = [
 export default function Projects() {
   return (
     <section className="min-h-[50vh] bg-muted py-24 flex flex-col items-center justify-center">
-      <div className="flex flex-col container px-10">
+      <div className="flex flex-col container px-10 max-w-7xl mx-auto">
         <SectionTitle title="Echtes Design verratet sich selbst">
           Worte beschreiben Visionen. Aber Taten sagen mehr als jede Werbung es
           jemals könnte. Unsere Projekte erzählen die Geschichte dessen, woran

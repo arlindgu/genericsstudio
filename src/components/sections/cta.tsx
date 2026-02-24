@@ -1,20 +1,25 @@
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { ArrowRight } from "lucide-react";
 
 export default function CTA() {
-    return (
-      <section className="h-[calc(100vh/2)] bg-foreground text-background flex-col flex justify-center items-center">
-        <div className="max-w-sm text-center">
-          <h3>Bereit, Ihr Projekt zu starten?</h3>
-          <p>
-            Kontaktieren Sie uns noch heute, um Ihre Vision zum Leben zu
-            erwecken.
-          </p>
+  return (
+    <section className="bg-foreground text-background py-24">
+      <div className="container px-10 max-w-7xl mx-auto">
+        <div className=" pt-16 flex flex-col lg:flex-row lg:items-end justify-between gap-12">
+          <h2 className="text-6xl lg:text-8xl font-mono font-bold tracking-tighter leading-none">
+            Dein nächstes<br />Projekt beginnt<br />hier.
+          </h2>
+          <div className="flex flex-col gap-6 lg:items-end">
+            <Link
+              href="/contact"
+              className="group inline-flex items-center gap-3 bg-background text-foreground px-8 py-4 font-medium text-lg hover:gap-5 transition-all duration-300 w-fit"
+            >
+              Jetzt anfragen
+              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform duration-300" />
+            </Link>
+          </div>
         </div>
-        <Button asChild variant="outline" className="mt-6 text-foreground">
-          <Link href="/contact">Kontakt aufnehmen</Link>
-        </Button>
-      </section>
-    );
+      </div>
+    </section>
+  );
 }

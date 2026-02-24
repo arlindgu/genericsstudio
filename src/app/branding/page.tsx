@@ -1,6 +1,5 @@
 "use client";
 
-import Noise from "@/components/Noise";
 import PageHeader from "@/components/sections/pageheader";
 import Pricing from "@/components/servicessections/pricing";
 import CTA from "@/components/sections/cta";
@@ -48,17 +47,8 @@ const brandingContent = [
 export default function BrandingPage() {
   return (
     <main className="relative">
-      <div
-        className="fixed inset-0 pointer-events-none"
-        style={{
-          zIndex: 100,
-        }}
-      >
-        <Noise />
-      </div>
       <PageHeader title="Branding">
-        Erstellen Sie atemberaubende, benutzerfreundliche Websites, die Ihre
-        Marke zum Leben erwecken und Ihre Zielgruppe begeistern.
+        Ihre Marke. Ihre Sprache. Unverkennbar.
       </PageHeader>
       <Pricing
         pricingData={brandingContent}
