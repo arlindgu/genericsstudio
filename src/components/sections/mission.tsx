@@ -1,5 +1,3 @@
-"use client";
-
 import CircularText from "@/components/CircularText";
 import SectionTitle from "@/components/sectiontitle";
 import Link from "next/link";

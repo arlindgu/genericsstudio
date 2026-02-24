@@ -1,4 +1,3 @@
-"use client";
 import Hero from "@/components/sections/hero";
 import Mission from "@/components/sections/mission";
 import Pricing from "@/components/sections/pricing";

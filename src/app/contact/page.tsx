@@ -1,5 +1,3 @@
-"use client";
-
 import PageHeader from "@/components/sections/pageheader";
 import Booking from "@/components/booking";
 import { Mail, MessageCircle } from "lucide-react";

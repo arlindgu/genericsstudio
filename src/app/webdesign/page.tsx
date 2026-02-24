@@ -1,5 +1,3 @@
-"use client";
-
 import PageHeader from "@/components/sections/pageheader";
 import Pricing from "@/components/servicessections/pricing";
 import CTA from "@/components/sections/cta"

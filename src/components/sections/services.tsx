@@ -1,5 +1,3 @@
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import Image from "next/image";
 import SectionTitle from "../sectiontitle";
 import { Frame, LayoutPanelTop, Palette, Telescope, VectorSquare } from "lucide-react";
 

@@ -1,6 +1,6 @@
 
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
+import { Geist } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import { JetBrains_Mono } from "next/font/google";
@@ -19,11 +19,6 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
   title: "Generics Studio",
   description: "Generics Studio - Zeitloses Webdesign und Branding mit Leidenschaft und Präzision.",
@@ -37,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${jetBrainsMono.variable} ${geistMono.variable} subpixel-antialiased`}
+        className={`${geistSans.variable} ${jetBrainsMono.variable} antialiased`}
       >
         <Navbar />
         {children}

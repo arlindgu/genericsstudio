@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect } from 'react';
 import { motion, useAnimation, useMotionValue } from 'motion/react';
 
@@ -37,7 +39,6 @@ const CircularText = ({ text, spinDuration = 20, onHover = 'speedUp', className 
 
   const handleHoverStart = () => {
     const start = rotation.get();
-    console.log('CircularText mounted with text:', text);
     if (!onHover) return;
 
     let transitionConfig;

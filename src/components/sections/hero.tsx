@@ -1,5 +1,3 @@
-"use client";
-
 import { Button } from "../ui/button";
 import { Chair } from "../svgs/chair";
 import Link from "next/link";
