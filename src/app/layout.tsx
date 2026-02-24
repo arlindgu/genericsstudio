@@ -1,45 +1,41 @@
-import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import localFont from "next/font/local";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import {JetBrains_Mono} from "next/font/google";
 
-export const jetBrainsMono = JetBrains_Mono({
+import type { Metadata } from "next";
+import { Geist } from "next/font/google";
+import "./globals.css";
+import Navbar from "@/components/navbar";
+import { JetBrains_Mono } from "next/font/google";
+import Footer from "@/components/sections/footer";
+
+
+const jetBrainsMono = JetBrains_Mono({
+  variable: "--font-jet-brains-mono",
   subsets: ["latin"],
-  variable: "--font-jetbrains-mono",
   weight: ["400", "700"],
   display: "swap",
 });
 
-// Import General Sans font using next/font/local
-const generalSans = localFont({
-  src: "../fonts/GeneralSans-Variable.woff2",
-  variable: "--font-general-sans",
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
 });
 
-const Boska = localFont({
-  src: "../fonts/Boska-Variable.woff2",
-  variable: "--font-boska",
-});
+export const metadata: Metadata = {
+  title: "Generics Studio",
+  description: "Generics Studio - Zeitloses Webdesign und Branding mit Leidenschaft und Präzision.",
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
-    <html lang="de-CH" className="light">
+    <html lang="en">
       <body
-        suppressHydrationWarning
-        className={`${generalSans.variable} ${jetBrainsMono.variable} ${Boska.variable} main-h-screen flex flex-col`}
+        className={`${geistSans.variable} ${jetBrainsMono.variable} antialiased`}
       >
-        <Header />
-        <main className="flex-1">
-          {children}
-          <SpeedInsights />
-        </main>
+        <Navbar />
+        {children}
         <Footer />
       </body>
     </html>

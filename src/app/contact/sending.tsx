@@ -13,16 +13,16 @@ export function LoadingSpinner() {
     <>
       <Empty className="w-full">
         <EmptyHeader>
-          <EmptyMedia variant="icon">
-            <Spinner />
+          <EmptyMedia className="rounded-none bg-foreground" variant="icon">
+            <Spinner className="text-background" />
           </EmptyMedia>
-          <EmptyTitle>Processing your request</EmptyTitle>
+          <EmptyTitle>Bearbeitung Ihrer Anfrage</EmptyTitle>
           <EmptyDescription>
-            Please wait while we process your request. Do not refresh the page.
+            Bitte warten Sie, während wir Ihre Anfrage bearbeiten. Aktualisieren
+            Sie die Seite nicht.
           </EmptyDescription>
         </EmptyHeader>
-        <EmptyContent>
-        </EmptyContent>
+        <EmptyContent></EmptyContent>
       </Empty>
     </>
   );
