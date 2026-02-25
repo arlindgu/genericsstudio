@@ -1,4 +1,15 @@
+import type { Metadata } from "next";
 import PageHeader from "@/components/sections/pageheader";
+
+export const metadata: Metadata = {
+  title: "Branding & Logo Design",
+  description: "Logoentwicklung und Markenidentität aus der Schweiz. Von einfachem Logo bis zu vollständigen Brand Guidelines. Ab 300 CHF.",
+  openGraph: {
+    title: "Branding & Logo Design Schweiz – Ihre Marke. Unverkennbar.",
+    description: "Professionelle Logoentwicklung und Markenidentität. Styleguides, Brand Elements und mehr. Ab 300 CHF.",
+    url: "https://generics.studio/branding",
+  },
+};
 import Pricing from "@/components/servicessections/pricing";
 import CTA from "@/components/sections/cta";
 

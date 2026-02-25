@@ -73,18 +73,6 @@ export default function Mission() {
                 ))}
               </div>
             </section>
-
-            <section className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
-              <p className="text-muted-foreground max-w-sm leading-relaxed">
-                Bereit für einen Auftritt, der für dich arbeitet?
-              </p>
-              <Link
-                href="/contact"
-                className="shrink-0 bg-foreground text-background px-6 py-3 font-medium hover:bg-background hover:text-foreground transition-all duration-300"
-              >
-                Projekt anfragen
-              </Link>
-            </section>
           </div>
         </div>
       </div>

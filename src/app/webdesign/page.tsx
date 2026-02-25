@@ -1,4 +1,15 @@
+import type { Metadata } from "next";
 import PageHeader from "@/components/sections/pageheader";
+
+export const metadata: Metadata = {
+  title: "Webdesign",
+  description: "Professionelles Webdesign aus der Schweiz. Individuell entwickelte Websites – responsiv, schnell und unverkennbar. Ab 600 CHF.",
+  openGraph: {
+    title: "Webdesign Schweiz – Individuell, schnell und unverkennbar",
+    description: "Massgeschneiderte Websites aus der Schweiz. Responsiv, SEO-optimiert und modern. Ab 600 CHF.",
+    url: "https://generics.studio/webdesign",
+  },
+};
 import Pricing from "@/components/servicessections/pricing";
 import CTA from "@/components/sections/cta"
 

@@ -8,7 +8,6 @@ import {
 } from "@/components/ui/card";
 import { Button } from "../ui/button";
 import SectionTitle from "../sectiontitle";
-import Booking from "../booking";
 
 type PricingPlan = {
     title: string;
@@ -66,12 +65,9 @@ export default function Pricing({ pricingData, title, description }: PricingProp
                 Buch einen kostenlosen Termin mit uns — wir helfen dir, den besten Weg für dein Projekt zu finden.
               </CardDescription>
             </CardHeader>
-            <CardContent className="hidden lg:block">
-              <Booking />
-            </CardContent>
-            <CardContent className="lg:hidden">
-              <Button asChild>
-                <a href="https://cal.com/genericsstudio/discovery-call">
+            <CardContent>
+              <Button asChild variant={"secondary"}>
+                <a href="https://cal.com/genericsstudio/discovery-call" target="_blank" rel="noopener noreferrer">
                   Termin vereinbaren
                 </a>
               </Button>

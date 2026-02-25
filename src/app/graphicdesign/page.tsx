@@ -1,4 +1,15 @@
+import type { Metadata } from "next";
 import PageHeader from "@/components/sections/pageheader";
+
+export const metadata: Metadata = {
+  title: "Grafikdesign",
+  description: "Professionelles Grafikdesign aus der Schweiz. Social Media Designs, Illustrationen und Werbegrafiken. Ab 80 CHF.",
+  openGraph: {
+    title: "Grafikdesign Schweiz – Grafiken, die hängen bleiben.",
+    description: "Social Media Posts, Illustrationen, Templates und mehr. Kreatives Grafikdesign aus der Schweiz. Ab 80 CHF.",
+    url: "https://generics.studio/graphicdesign",
+  },
+};
 import Pricing from "@/components/servicessections/pricing";
 import CTA from "@/components/sections/cta";
 

@@ -1,20 +1,33 @@
+import type { Metadata } from "next";
 import PageHeader from "@/components/sections/pageheader";
-import Booking from "@/components/booking";
-import { Mail, MessageCircle } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Kontakt",
+  description: "Schreib uns direkt per E-Mail oder WhatsApp. Kein Kontaktformular, kein Hin und Her – wir melden uns innerhalb von 24 Stunden.",
+  openGraph: {
+    title: "Kontakt – Generics Studio",
+    description: "Nimm Kontakt auf. Per E-Mail, WhatsApp oder buche direkt einen kostenlosen Termin.",
+    url: "https://generics.studio/contact",
+  },
+};
+import { Button } from "@/components/ui/button";
+import { Calendar, Mail, MessageCircle } from "lucide-react";
 
 export default function ContactPage() {
   return (
     <main>
-      <PageHeader title="Kontakt">
-        Projekt im Kopf? Wir hören zu.
-      </PageHeader>
+      <PageHeader title="Kontakt">Projekt im Kopf? Wir hören zu.</PageHeader>
       <section className="py-24">
         <div className="container px-10 max-w-7xl mx-auto flex flex-col gap-16">
-
           <div className="flex flex-col gap-6">
             <div className="max-w-xl">
-              <h2 className="text-4xl font-mono font-bold tracking-tighter mb-4">Schreib uns.</h2>
-              <p className="text-xl text-muted-foreground">Kein Kontaktformular. Kein Hin und Her. Einfach direkt — per E-Mail oder WhatsApp. Wir melden uns innerhalb von 24 Stunden.</p>
+              <h2 className="text-4xl font-mono font-bold tracking-tighter mb-4">
+                Schreib uns.
+              </h2>
+              <p className="text-xl text-muted-foreground">
+                Kein Kontaktformular. Kein Hin und Her. Einfach direkt — per
+                E-Mail oder WhatsApp. Wir melden uns innerhalb von 24 Stunden.
+              </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-6">
               <a
@@ -23,8 +36,12 @@ export default function ContactPage() {
               >
                 <Mail size={32} strokeWidth={1.5} />
                 <div>
-                  <p className="text-sm uppercase tracking-widest mb-1 opacity-60">E-Mail</p>
-                  <p className="text-xl font-mono font-bold">hello@generics.studio</p>
+                  <p className="text-sm uppercase tracking-widest mb-1 opacity-60">
+                    E-Mail
+                  </p>
+                  <p className="text-xl font-mono font-bold">
+                    hello@generics.studio
+                  </p>
                 </div>
               </a>
               <a
@@ -35,8 +52,12 @@ export default function ContactPage() {
               >
                 <MessageCircle size={32} strokeWidth={1.5} />
                 <div>
-                  <p className="text-sm uppercase tracking-widest mb-1 opacity-60">WhatsApp</p>
-                  <p className="text-xl font-mono font-bold">+41 79 405 99 55</p>
+                  <p className="text-sm uppercase tracking-widest mb-1 opacity-60">
+                    WhatsApp
+                  </p>
+                  <p className="text-xl font-mono font-bold">
+                    +41 79 405 99 55
+                  </p>
                 </div>
               </a>
             </div>
@@ -44,12 +65,29 @@ export default function ContactPage() {
 
           <div className="flex flex-col gap-6">
             <div className="max-w-xl">
-              <h2 className="text-4xl font-mono font-bold tracking-tighter mb-4">Oder direkt einen Termin buchen.</h2>
-              <p className="text-xl text-muted-foreground">Kostenloses 30-Minuten-Gespräch. Kein Druck, nur ein offenes Gespräch über dein Projekt.</p>
+              <h2 className="text-4xl font-mono font-bold tracking-tighter mb-4">
+                Oder direkt einen Termin buchen.
+              </h2>
+              <p className="text-xl text-muted-foreground">
+                Kostenloses 30-Minuten-Gespräch. Kein Druck, nur ein offenes
+                Gespräch über dein Projekt.
+              </p>
             </div>
-            <Booking />
+            <div className="flex flex-col sm:flex-row gap-6">
+              <a
+                href="https://cal.com/genericsstudio/discovery-call"
+                className="group flex-1 flex flex-col gap-4 bg-foreground text-background p-10 hover:bg-background hover:text-foreground transition-all duration-500"
+              >
+                <Calendar size={32} strokeWidth={1.5} />
+                <div>
+                  <p className="text-sm uppercase tracking-widest mb-1 opacity-60">
+                    Termin buchen
+                  </p>
+                  <p className="text-xl font-mono font-bold">Kostenloses Gespräch</p>
+                </div>
+              </a>
+            </div>
           </div>
-
         </div>
       </section>
     </main>

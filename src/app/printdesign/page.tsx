@@ -1,4 +1,15 @@
+import type { Metadata } from "next";
 import PageHeader from "@/components/sections/pageheader";
+
+export const metadata: Metadata = {
+  title: "Printdesign",
+  description: "Druckfertiges Printdesign aus der Schweiz. Flyer, Visitenkarten, Broschüren und mehr – präzise und professionell. Ab 100 CHF.",
+  openGraph: {
+    title: "Printdesign Schweiz – Analog. Präzise. Unübersehbar.",
+    description: "Druckfertige Layouts für Flyer, Visitenkarten, Broschüren und Menükarten. Ab 100 CHF.",
+    url: "https://generics.studio/printdesign",
+  },
+};
 import Pricing from "@/components/servicessections/pricing";
 import CTA from "@/components/sections/cta";
 
