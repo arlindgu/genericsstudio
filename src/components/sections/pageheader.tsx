@@ -1,5 +1,5 @@
-import CircularText from "../CircularText";
-import { Chair } from "../svgs/chair";
+import Link from "next/link";
+import { AnimateIn } from "@/components/ui/animate-in";
 
 export default function PageHeader({
   title,
@@ -9,20 +9,27 @@ export default function PageHeader({
   children?: React.ReactNode;
 }>) {
   return (
-    <section className="min-h-[50vh] bg-foreground text-background py-24 flex items-center justify-center">
-      <div className="flex flex-col lg:flex-row items-center container px-10 max-w-7xl mx-auto">
-        <div className="mb-16 lg:mb-0 relative lg:flex-1">
-          <CircularText
-            text="MADE*BY*GENERICS*STUDIO*"
-            onHover="speedUp"
-            spinDuration={20}
-            className=""
-          />
+    <section className="bg-foreground text-background pt-24 pb-16 border-b border-background/10">
+      <div className="container px-10 max-w-7xl mx-auto flex flex-col gap-8">
+        <AnimateIn>
+        <div className="flex items-center gap-2 font-mono text-xs tracking-[0.2em] uppercase text-background/40">
+          <Link href="/" className="hover:text-background transition-colors duration-300 z-1">
+            Generics Studio
+          </Link>
+          <span>/</span>
+          <span>{title}</span>
         </div>
-        <div className="relative lg:flex-3 text-center lg:text-left">
-          <h1 className="text-5xl lg:text-7xl font-bold font-mono">{title}</h1>
-          <p className="max-w-xl mt-2">{children}</p>
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+          <h1 className="font-mono font-bold tracking-tighter leading-[0.875] text-6xl lg:text-8xl">
+            {title}
+          </h1>
+          {children && (
+            <p className="text-background/60 text-base max-w-sm leading-relaxed">
+              {children}
+            </p>
+          )}
         </div>
+        </AnimateIn>
       </div>
     </section>
   );

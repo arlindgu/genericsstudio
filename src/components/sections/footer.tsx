@@ -1,78 +1,93 @@
-import { Chair } from "../svgs/chair";
 import { GenericsStudioLogo } from "../svgs/genericsstudiologo";
+import Link from "next/link";
+import { getTranslations } from "next-intl/server";
 
+const socials = [
+  { label: "Instagram", href: "https://www.instagram.com/genericsstudio/" },
+  { label: "Cosmos", href: "https://www.cosmos.so/genericsstudio" },
+];
 
-const Socials = [
-  {
-    name: "Cosmos",
-    href: "https://www.cosmos.so/genericsstudio",
-  },
-  {
-    name: "Instagram",
-    href: "https://www.instagram.com/genericsstudio/",
-  },
-]
+export default async function Footer() {
+  const t = await getTranslations("footer");
+  const links = t.raw("links") as { label: string; href: string }[];
 
-export default function Footer() {
-    return (
-      <footer className="h-screen relative py-6 flex flex-col items-center justify-center">
-        <div className="flex flex-col lg:flex-row gap-6 mb-12 lg:mb-0 lg:gap-24 items-center px-10">
-          <ul className="text-center">
-            <li className="mb-4">
-              <a href="/" className="hover:underline">
-                Home
+  return (
+    <footer className="border-t border-border pt-16 pb-8">
+      <div className="container px-10 max-w-7xl mx-auto flex flex-col gap-16">
+        <div className="flex flex-col lg:flex-row justify-between gap-12">
+          <div className="flex flex-col gap-6">
+            <Link href="/">
+              <GenericsStudioLogo className="h-10 w-auto" />
+            </Link>
+            <div className="flex flex-col gap-1 font-mono text-sm text-muted-foreground">
+              <a
+                href="mailto:hello@generics.studio"
+                className="hover:text-foreground transition-colors duration-300"
+              >
+                hello@generics.studio
               </a>
-            </li>
-            <li className="mb-4">
-              <a href="/contact" className="hover:underline">
-                Kontakt
+              <a
+                href="https://api.whatsapp.com/send/?phone=41794059955"
+                className="hover:text-foreground transition-colors duration-300"
+              >
+                +41 79 405 99 55
               </a>
-            </li>
-          </ul>
-          <div className="text-center flex flex-col items-center justify-center">
-            <Chair className="w-32 h-32 mb-6 scale-x-[-1] " />
-            <a className="hover:underline" href="mailto:hello@generics.studio">
-              hello@generics.studio
-            </a>
-            <a className="hover:underline" href="https://api.whatsapp.com/send/?phone=41794059955">
-              +41 79 405 99 55
-            </a>
+            </div>
           </div>
 
-          <ul className="text-center flex gap-8 lg:block" >
-            {Socials.map((social) => (
-              <li key={social.name} className="mb-4">
-                <a
-                  href={social.href}
-                  className="hover:underline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {social.name}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <div className="flex gap-16 lg:gap-24">
+            <div className="flex flex-col gap-4">
+              <span className="font-mono text-xs tracking-[0.2em] uppercase text-muted-foreground">
+                {t("pages")}
+              </span>
+              <ul className="flex flex-col gap-2">
+                {links.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-sm hover:text-brand transition-colors duration-300"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="flex flex-col gap-4">
+              <span className="font-mono text-xs tracking-[0.2em] uppercase text-muted-foreground">
+                {t("social")}
+              </span>
+              <ul className="flex flex-col gap-2">
+                {socials.map((s) => (
+                  <li key={s.href}>
+                    <a
+                      href={s.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm hover:text-brand transition-colors duration-300"
+                    >
+                      {s.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
 
-        <div className="flex flex-col lg:flex-row w-full justify-between items-center px-10 absolute bottom-8 left-1/2 -translate-x-1/2">
-          <p className="text-sm">
-            &copy; {new Date().getFullYear()} Generics Studio. All rights
-            reserved.
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-t border-border pt-8">
+          <p className="font-mono text-xs text-muted-foreground tracking-[0.1em]">
+            © {new Date().getFullYear()} Generics Studio. {t("copyright")}
           </p>
-          <ul className="flex gap-6 text-xs hidden">
-            <li className="">
-              <a href="#" className="hover:underline">
-                Datenschutzerklärung
-              </a>
-            </li>
-            <li className="">
-              <a href="#" className="hover:underline">
-                Impressum
-              </a>
-            </li>
-          </ul>
+          <Link
+            href="/imprint"
+            className="font-mono text-xs text-muted-foreground hover:text-foreground transition-colors duration-300 tracking-[0.1em]"
+          >
+            {t("imprint")}
+          </Link>
         </div>
-      </footer>
-    );
+      </div>
+    </footer>
+  );
 }

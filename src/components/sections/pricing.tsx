@@ -1,88 +1,97 @@
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "../ui/button";
-import SectionTitle from "../sectiontitle";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { AnimateIn } from "@/components/ui/animate-in";
+import { getTranslations } from "next-intl/server";
 
-const servicesPricingOverview = [
-  {
-    title: "Webdesign",
-    description:
-      "Massgeschneiderte Websites, moderne UX/UI und schnelle Umsetzung.",
-    startingPrice: "Ab 600 CHF",
-    link: "/webdesign",
-  },
-  {
-    title: "Branding & Logos",
-    description:
-      "Logoentwicklung, Markenidentität und komplette Brand Guidelines.",
-    startingPrice: "Ab 300 CHF",
-    link: "/branding",
-  },
-  {
-    title: "Grafikdesign",
-    description:
-      "Social Media Designs, Illustrationen, Werbegrafiken und mehr.",
-    startingPrice: "Ab 80 CHF",
-    link: "/graphicdesign",
-  },
-  {
-    title: "Print Design",
-    description:
-      "Flyer, Karten, Broschüren, Menu Karten und druckfertige Layouts.",
-    startingPrice: "Ab 100 CHF",
-    link: "/printdesign",
-  },
-];
+export default async function Pricing() {
+  const t = await getTranslations("pricing");
+  const items = t.raw("items") as {
+    title: string;
+    description: string;
+    startingPrice: string;
+    link: string;
+  }[];
+  const cta = t.raw("cta") as { title: string; description: string; button: string };
 
-export default function Pricing() {
   return (
-    <section className="min-h-[50vh] bg-foreground py-24 flex flex-col items-center justify-center">
-      <div className="flex flex-col container px-10 max-w-7xl mx-auto">
-        <SectionTitle dark title="Klar. Fair. Ohne Überraschungen.">
-          Transparente Preise für echte Qualität. Was du siehst, ist was du bekommst.
-        </SectionTitle>
+    <section className="py-24 border-t border-border bg-foreground text-background">
+      <div className="container px-10 max-w-7xl mx-auto flex flex-col gap-12">
 
-        <div className="lg:grid lg:grid-cols-4 flex-col flex gap-6 mt-12">
-          {servicesPricingOverview.map((plan, index) => (
-            <Card
-              key={index}
-              className="rounded-none shadow-none relative flex flex-col justify-around"
-            >
-              <CardHeader>
-                <CardTitle className="text-2xl">{plan.title}</CardTitle>
-                <CardDescription>{plan.description}</CardDescription>
-                <CardTitle className="text-xl mt-2">{plan.startingPrice}</CardTitle>
-              </CardHeader>
-              <CardFooter>
-                <p className="text-sm text-muted-foreground">
-                  Individuelle Angebote je nach Projektumfang möglich.
-                </p>
-              </CardFooter>
-              <Button asChild className="mx-6">
-                <Link href={plan.link}>
-                Mehr erfahren</Link>
-              </Button>
-            </Card>
-          ))}
-
-          <Card className="col-span-4 rounded-none shadow-none relative">
-            <CardHeader>
-              <CardTitle className="text-2xl">
-                Du weißt nicht, was du brauchst?
-              </CardTitle>
-              <CardDescription>
-                Buch einen kostenlosen Termin mit uns — wir helfen dir, den besten Weg für dein Projekt zu finden.
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <Button asChild>
-                <a href="https://cal.com/genericsstudio/discovery-call" target="_blank" rel="noopener noreferrer">
-                  Termin vereinbaren
-                </a>
-              </Button>
-            </CardContent>
-          </Card>
+        <AnimateIn>
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
+          <div className="flex flex-col gap-4">
+            <span className="font-mono text-xs tracking-[0.2em] uppercase text-background/40">
+              {t("label")}
+            </span>
+            <h2 className="font-mono font-bold tracking-tighter leading-[0.9] text-5xl lg:text-7xl">
+              {t("title").split("\n").map((line, i, arr) => (
+                <span key={i}>{line}{i < arr.length - 1 && <br />}</span>
+              ))}
+            </h2>
+          </div>
+          <p className="text-background/60 text-base max-w-sm leading-relaxed">
+            {t("description")}
+          </p>
         </div>
+        </AnimateIn>
+
+        <AnimateIn delay={0.1}>
+        <div className="-mx-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-t border-background/10">
+          {items.map((plan, i) => (
+            <Link
+              key={plan.title}
+              href={plan.link}
+              className={[
+                "group p-10 flex flex-col gap-6 hover:bg-background hover:text-foreground transition-colors duration-500",
+                i < 2 ? "border-b md:border-b-0 border-background/10" : "",
+                i < 3 ? "lg:border-r border-background/10" : "",
+                i % 2 === 0 ? "md:border-r lg:border-r-0 border-background/10" : "",
+                i < 3 ? "lg:border-r" : "",
+              ].join(" ")}
+            >
+              <div className="flex flex-col gap-2 flex-1">
+                <h3 className="text-xl font-mono font-bold">{plan.title}</h3>
+                <p className="text-sm text-background/60 group-hover:text-foreground/60 transition-colors duration-500 leading-relaxed">
+                  {plan.description}
+                </p>
+              </div>
+              <div className="flex items-end justify-between">
+                <span className="font-mono font-bold text-brand">
+                  {plan.startingPrice}
+                </span>
+                <ArrowRight
+                  size={14}
+                  className="group-hover:translate-x-1 transition-transform duration-300"
+                />
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        </AnimateIn>
+
+        <AnimateIn delay={0.15}>
+        <div className="-mx-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 border-t border-background/10 px-10 pt-10">
+          <div className="flex flex-col gap-1">
+            <p className="font-mono font-bold text-lg">
+              {cta.title}
+            </p>
+            <p className="text-background/60 text-sm">
+              {cta.description}
+            </p>
+          </div>
+          <a
+            href="https://cal.com/genericsstudio/discovery-call"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-3 bg-background text-foreground px-7 py-3.5 font-medium text-sm hover:gap-5 transition-all duration-300 flex-shrink-0"
+          >
+            {cta.button}
+            <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform duration-300" />
+          </a>
+        </div>
+        </AnimateIn>
+
       </div>
     </section>
   );

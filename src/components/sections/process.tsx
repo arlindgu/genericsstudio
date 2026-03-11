@@ -1,37 +1,60 @@
-import { LineSquiggle, Telescope, Rocket } from "lucide-react";
-import SectionTitle from "../sectiontitle";
+import { getTranslations } from "next-intl/server";
+import { AnimateIn } from "@/components/ui/animate-in";
 
-export default function Process() {
+export default async function Process() {
+  const t = await getTranslations("process");
+  const steps = t.raw("steps") as {
+    number: string;
+    title: string;
+    description: string;
+  }[];
+
   return (
-    <section className="min-h-[50vh] py-24 flex flex-col items-center justify-center">
-      <div className="flex flex-col container px-10 max-w-7xl mx-auto">
-        <SectionTitle title="Drei Schritte. Ein Ergebnis.">
-          Kein Chaos. Kein Warten. Von der Idee bis zum Launch — klar und direkt.
-        </SectionTitle>
+    <section className="py-24 border-t border-border">
+      <div className="container px-10 max-w-7xl mx-auto flex flex-col gap-12">
 
-        <div className="flex flex-col lg:flex-row mt-12 gap-8">
-          <div className="flex flex-col hover:bg-background hover:text-foreground hover:transition-all duration-700 justify-center flex-3 bg-foreground text-background p-6">
-            <Telescope className="mb-4" size={48} strokeWidth={1.5} />
-            <h3 className="text-2xl font-bold mb-2">Entdecken & Definieren</h3>
-            <p>
-              Wir hören zu. Stellen die richtigen Fragen. Und bauen den Plan, der alles Weitere trägt.
-            </p>
+        <AnimateIn>
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
+          <div className="flex flex-col gap-4">
+            <span className="font-mono text-xs tracking-[0.2em] uppercase text-muted-foreground">
+              {t("label")}
+            </span>
+            <h2 className="font-mono font-bold tracking-tighter leading-[0.9] text-5xl lg:text-7xl">
+              {t("title").split("\n").map((line, i, arr) => (
+                <span key={i}>{line}{i < arr.length - 1 && <br />}</span>
+              ))}
+            </h2>
           </div>
-          <div className="flex flex-col justify-center flex-3 bg-foreground text-background hover:bg-background hover:text-foreground hover:transition-all duration-700 p-6">
-            <LineSquiggle className="mb-4" size={48} strokeWidth={1.5} />
-            <h3 className="text-2xl font-bold mb-2">Design & Entwicklung</h3>
-            <p>
-              Frühe Prototypen. Schnelles Feedback. Jede Entscheidung mit Absicht.
-            </p>
-          </div>
-          <div className="flex flex-col justify-center flex-3 bg-foreground text-background p-6 hover:bg-background hover:text-foreground hover:transition-all duration-700">
-            <Rocket className="mb-4" size={48} strokeWidth={1.5} />
-            <h3 className="text-2xl font-bold mb-2">Launch & Support</h3>
-            <p>
-              Reibungslos live. Vollständig übergeben. Bereit zu wachsen.
-            </p>
-          </div>
+          <p className="text-muted-foreground text-base max-w-sm leading-relaxed">
+            {t("description")}
+          </p>
         </div>
+        </AnimateIn>
+
+        <AnimateIn delay={0.1}>
+        <div className="-mx-10 flex flex-col lg:flex-row border-t border-border">
+          {steps.map((step, i) => (
+            <div
+              key={step.number}
+              className={[
+                "flex-1 p-10 flex flex-col gap-6",
+                i < steps.length - 1 ? "border-b lg:border-b-0 lg:border-r border-border" : "",
+              ].join(" ")}
+            >
+              <span className="font-mono text-4xl font-bold text-brand">
+                {step.number}
+              </span>
+              <div className="flex flex-col gap-2">
+                <h3 className="text-xl font-mono font-bold">{step.title}</h3>
+                <p className="text-muted-foreground leading-relaxed text-sm">
+                  {step.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+        </AnimateIn>
+
       </div>
     </section>
   );

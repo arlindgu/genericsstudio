@@ -1,80 +1,61 @@
-import CircularText from "@/components/CircularText";
-import SectionTitle from "@/components/sectiontitle";
-import Link from "next/link";
+import { getTranslations } from "next-intl/server";
+import { AnimateIn } from "@/components/ui/animate-in";
 
-const benefits = [
-  {
-    title: "Mehr Anfragen",
-    description:
-      "Designs, die Vertrauen aufbauen und Besucher zum Handeln bringen — nicht nur zum Schauen.",
-  },
-  {
-    title: "Schneller live",
-    description:
-      "Erste Prototypen in Tagen. Kein endloses Hin und Her, kein Warten auf Freigaben.",
-  },
-  {
-    title: "Keine Templates",
-    description:
-      "100% individuell entwickelt. Dein Auftritt sieht aus wie kein anderer — weil er keiner ist.",
-  },
-  {
-    title: "Direkte Kommunikation",
-    description:
-      "Du sprichst mit den Machern, nicht mit einem Projektmanager. Kurze Wege, klare Antworten.",
-  },
-  {
-    title: "Langfristig stark",
-    description:
-      "Zeitlose Designs ohne Ablaufdatum. Keine Neugestaltung nach zwei Jahren.",
-  },
-  {
-    title: "Messbare Wirkung",
-    description:
-      "Struktur, Hierarchie und Conversion-Logik sind von Anfang an eingebaut — nicht nachträglich.",
-  },
-];
+export default async function Mission() {
+  const t = await getTranslations("mission");
+  const benefits = t.raw("benefits") as {
+    number: string;
+    title: string;
+    description: string;
+  }[];
 
-export default function Mission() {
   return (
-    <section className="min-h-[50vh] py-24 flex flex-col items-center justify-center max-w-7xl mx-auto">
-      <div className="flex flex-col container px-10">
-        <div className="flex flex-col lg:flex-row">
-          <SectionTitle title="Deine Website, die verkauft. Nicht nur existiert.">
-            Die meisten Websites verlieren täglich potenzielle Kunden — durch
-            schlechte Struktur, generisches Design und fehlende Klarheit. Wir
-            bauen digitale Auftritte, die das ändern.
-          </SectionTitle>
-          <div className="flex-1 items-center mt-12 lg:mt-0 justify-center flex">
-            <CircularText
-              text="MADE*BY*GENERICS*STUDIO*"
-              onHover="speedUp"
-              spinDuration={20}
-              className="relative"
-            />
-          </div>
-        </div>
+    <section className="py-24 border-t border-border">
+      <div className="container px-10 max-w-7xl mx-auto flex flex-col gap-12">
 
-        <div className="flex flex-col lg:flex-row mt-12 gap-8">
-          <div className="flex-3 flex flex-col gap-16">
-            <section className="space-y-6">
-              <h3 className="text-xl font-medium max-w-md">
-                Was du konkret bekommst, wenn du mit uns arbeitest.
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {benefits.map((benefit) => (
-                  <div
-                    key={benefit.title}
-                    className="flex flex-col justify-center bg-foreground text-background p-6 hover:bg-background hover:text-foreground transition-all duration-700"
-                  >
-                    <h3 className="text-2xl font-bold mb-2">{benefit.title}</h3>
-                    <p>{benefit.description}</p>
-                  </div>
-                ))}
-              </div>
-            </section>
+        <AnimateIn>
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
+          <div className="flex flex-col gap-4 max-w-2xl">
+            <span className="font-mono text-xs tracking-[0.2em] uppercase text-muted-foreground">
+              {t("label")}
+            </span>
+            <h2 className="font-mono font-bold tracking-tighter leading-[0.9] text-5xl lg:text-7xl">
+              {t("title")}
+            </h2>
           </div>
+          <p className="text-muted-foreground text-base max-w-sm leading-relaxed">
+            {t("description")}
+          </p>
         </div>
+        </AnimateIn>
+
+        <AnimateIn delay={0.1}>
+        <div className="-mx-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-border">
+          {benefits.map((benefit, i) => (
+            <div
+              key={benefit.number}
+              className={[
+                "group p-10 flex flex-col gap-6 hover:bg-foreground hover:text-background transition-colors duration-500",
+                i < 3 ? "border-b border-border" : "",
+                i % 3 !== 2 ? "lg:border-r border-border" : "",
+                i % 2 === 0 ? "md:border-r lg:border-r-0 border-border" : "",
+                i % 3 !== 2 ? "lg:border-r" : "",
+              ].join(" ")}
+            >
+              <span className="font-mono text-xs tracking-[0.2em] uppercase text-muted-foreground group-hover:text-background/40 transition-colors duration-500">
+                {benefit.number}
+              </span>
+              <div className="flex flex-col gap-2 flex-1">
+                <h3 className="text-xl font-mono font-bold">{benefit.title}</h3>
+                <p className="text-sm leading-relaxed text-muted-foreground group-hover:text-background/70 transition-colors duration-500">
+                  {benefit.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+        </AnimateIn>
+
       </div>
     </section>
   );

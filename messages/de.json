@@ -1,0 +1,385 @@
+{
+  "hero": {
+    "line1": "Wir bauen",
+    "line2": "Websites,",
+    "line3": "die bleiben.",
+    "badge": "Plätze frei für 2026",
+    "description": "Massgeschneidert, schnell und unverkennbar – für Unternehmen, die mehr wollen als Mittelmass.",
+    "cta": "Anfragen",
+    "services": "Leistungen"
+  },
+  "mission": {
+    "label": "Warum Generics Studio",
+    "title": "Deine Website, die verkauft. Nicht nur existiert.",
+    "description": "Die meisten Websites verlieren täglich potenzielle Kunden — durch schlechte Struktur, generisches Design und fehlende Klarheit.",
+    "benefits": [
+      {
+        "number": "01",
+        "title": "Mehr Anfragen",
+        "description": "Designs, die Vertrauen aufbauen und Besucher zum Handeln bringen — nicht nur zum Schauen."
+      },
+      {
+        "number": "02",
+        "title": "Schneller live",
+        "description": "Erste Prototypen in Tagen. Kein endloses Hin und Her, kein Warten auf Freigaben."
+      },
+      {
+        "number": "03",
+        "title": "Keine Templates",
+        "description": "100% individuell entwickelt. Dein Auftritt sieht aus wie kein anderer — weil er keiner ist."
+      },
+      {
+        "number": "04",
+        "title": "Direkte Kommunikation",
+        "description": "Du sprichst mit den Machern, nicht mit einem Projektmanager. Kurze Wege, klare Antworten."
+      },
+      {
+        "number": "05",
+        "title": "Langfristig stark",
+        "description": "Zeitlose Designs ohne Ablaufdatum. Keine Neugestaltung nach zwei Jahren."
+      },
+      {
+        "number": "06",
+        "title": "Messbare Wirkung",
+        "description": "Struktur, Hierarchie und Conversion-Logik sind von Anfang an eingebaut — nicht nachträglich."
+      }
+    ]
+  },
+  "services": {
+    "label": "Leistungen",
+    "title": "Vier Disziplinen.\nEin Ziel.",
+    "more": "Mehr erfahren",
+    "items": [
+      {
+        "number": "01",
+        "title": "Webdesign",
+        "description": "Individuell gebaut. Schnell geladen. Sofort bereit.",
+        "href": "/webdesign"
+      },
+      {
+        "number": "02",
+        "title": "Branding & Logos",
+        "description": "Ihr Name. Ihre Farben. Ihre Identität.",
+        "href": "/branding"
+      },
+      {
+        "number": "03",
+        "title": "Grafikdesign",
+        "description": "Alles, was ins Auge fällt.",
+        "href": "/graphicdesign"
+      },
+      {
+        "number": "04",
+        "title": "Print Design",
+        "description": "Analog. Sauber. Druckfertig.",
+        "href": "/printdesign"
+      }
+    ]
+  },
+  "process": {
+    "label": "Ablauf",
+    "title": "Drei Schritte.\nEin Ergebnis.",
+    "description": "Kein Chaos. Kein Warten. Von der Idee bis zum Launch — klar und direkt.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Entdecken & Definieren",
+        "description": "Wir hören zu. Stellen die richtigen Fragen. Und bauen den Plan, der alles Weitere trägt."
+      },
+      {
+        "number": "02",
+        "title": "Design & Entwicklung",
+        "description": "Frühe Prototypen. Schnelles Feedback. Jede Entscheidung mit Absicht."
+      },
+      {
+        "number": "03",
+        "title": "Launch & Support",
+        "description": "Reibungslos live. Vollständig übergeben. Bereit zu wachsen."
+      }
+    ]
+  },
+  "pricing": {
+    "label": "Preise",
+    "title": "Klar. Fair.\nOhne Kompromisse.",
+    "description": "Transparente Preise für echte Qualität. Was du siehst, ist was du bekommst.",
+    "cta": {
+      "title": "Du weisst nicht, was du brauchst?",
+      "description": "Kostenloses 30-Minuten-Gespräch. Kein Druck, nur offener Austausch.",
+      "button": "Termin vereinbaren"
+    },
+    "items": [
+      {
+        "title": "Webdesign",
+        "description": "Massgeschneiderte Websites, moderne UX/UI und schnelle Umsetzung.",
+        "startingPrice": "Ab 600 CHF",
+        "link": "/webdesign"
+      },
+      {
+        "title": "Branding & Logos",
+        "description": "Logoentwicklung, Markenidentität und komplette Brand Guidelines.",
+        "startingPrice": "Ab 300 CHF",
+        "link": "/branding"
+      },
+      {
+        "title": "Grafikdesign",
+        "description": "Social Media Designs, Illustrationen, Werbegrafiken und mehr.",
+        "startingPrice": "Ab 80 CHF",
+        "link": "/graphicdesign"
+      },
+      {
+        "title": "Print Design",
+        "description": "Flyer, Karten, Broschüren, Menükarten und druckfertige Layouts.",
+        "startingPrice": "Ab 100 CHF",
+        "link": "/printdesign"
+      }
+    ]
+  },
+  "cta": {
+    "label": "Nächster Schritt",
+    "title": "Dein nächstes\nProjekt beginnt\nhier.",
+    "button": "Jetzt anfragen"
+  },
+  "footer": {
+    "pages": "Seiten",
+    "social": "Social",
+    "copyright": "All rights reserved.",
+    "imprint": "Impressum",
+    "links": [
+      { "label": "Home", "href": "/" },
+      { "label": "Webdesign", "href": "/webdesign" },
+      { "label": "Branding", "href": "/branding" },
+      { "label": "Grafikdesign", "href": "/graphicdesign" },
+      { "label": "Printdesign", "href": "/printdesign" },
+      { "label": "Blog", "href": "/blog" },
+      { "label": "Kontakt", "href": "/contact" }
+    ]
+  },
+  "blog": {
+    "readingTime": "Lesezeit",
+    "back": "Alle Beiträge",
+    "header": {
+      "title": "Blog",
+      "description": "Gedanken zu Design, Webentwicklung und Markenführung."
+    },
+    "meta": {
+      "title": "Blog",
+      "description": "Gedanken zu Webdesign, Branding und Grafikdesign vom Team Generics Studio."
+    }
+  },
+  "contact": {
+    "header": {
+      "title": "Kontakt",
+      "description": "Projekt im Kopf? Wir hören zu."
+    },
+    "label": "Melde dich",
+    "title": "Kein Formular.\nEinfach direkt.",
+    "description": "Kein Hin und Her, kein Warten auf Freigaben. Wir sind direkt erreichbar — per E-Mail, WhatsApp oder Termin.",
+    "meta": {
+      "title": "Kontakt",
+      "description": "Schreib uns direkt per E-Mail oder WhatsApp. Kein Kontaktformular, kein Hin und Her – wir melden uns innerhalb von 24 Stunden."
+    },
+    "options": [
+      {
+        "number": "01",
+        "label": "E-Mail",
+        "title": "hello@generics.studio",
+        "description": "Schreib uns direkt. Wir antworten innerhalb von 24 Stunden.",
+        "href": "mailto:hello@generics.studio",
+        "external": false
+      },
+      {
+        "number": "02",
+        "label": "WhatsApp",
+        "title": "+41 79 405 99 55",
+        "description": "Kurze Frage? Einfach eine Nachricht schicken.",
+        "href": "https://api.whatsapp.com/send/?phone=41794059955",
+        "external": false
+      },
+      {
+        "number": "03",
+        "label": "Termin buchen",
+        "title": "Kostenloses Gespräch",
+        "description": "30 Minuten, kein Druck – einfach offen über dein Projekt reden.",
+        "href": "https://cal.com/genericsstudio/discovery-call",
+        "external": true
+      }
+    ]
+  },
+  "imprint": {
+    "header": {
+      "title": "Impressum",
+      "description": "Rechtliche Angaben zu Generics Studio."
+    },
+    "meta": {
+      "title": "Impressum",
+      "description": "Impressum und rechtliche Angaben von Generics Studio."
+    }
+  },
+  "pages": {
+    "webdesign": {
+      "meta": {
+        "title": "Webdesign",
+        "description": "Professionelles Webdesign aus der Schweiz. Individuell entwickelte Websites – responsiv, schnell und unverkennbar. Ab 600 CHF."
+      },
+      "header": {
+        "title": "Webdesign",
+        "description": "Individuell gebaut. Schnell. Unverkennbar."
+      },
+      "pricing": {
+        "title": "Preise",
+        "description": "Wählen Sie den Plan, der am besten zu Ihren Bedürfnissen passt.",
+        "note": "Individuelle Angebote je nach Projektumfang möglich.",
+        "cta": {
+          "title": "Du weisst nicht, was du brauchst?",
+          "description": "Kostenloses 30-Minuten-Gespräch. Kein Druck, nur offener Austausch.",
+          "button": "Termin vereinbaren"
+        },
+        "plans": [
+          {
+            "title": "Starter",
+            "description": "Ideal für kleine Projekte und einfache Webauftritte.",
+            "price": "Ab 600 CHF",
+            "features": ["Individuelles Webdesign", "Responsiv", "Basis SEO", "CMS Setup", "Bis 5 Seiten", "1 Monat Support"]
+          },
+          {
+            "title": "Business",
+            "description": "Fürs kleine Unternehmen mit mehr Anforderungen.",
+            "price": "Ab 1500 CHF",
+            "features": ["Individuelles Webdesign + leichte Branding Anpassungen", "Erweiterte SEO", "Blog/News Setup", "Analytics Integration", "Performance Optimierung", "2 Monate Support"]
+          },
+          {
+            "title": "Pro",
+            "description": "Fürs voll personalisierte, funktionsreiche Projekt.",
+            "price": "Ab 3000 CHF",
+            "features": ["UX Konzept + Custom UI", "Advanced SEO", "Automationen", "Mehrsprachigkeit", "Security Setup + Hosting Setup", "3 Monate Support"]
+          }
+        ]
+      }
+    },
+    "branding": {
+      "meta": {
+        "title": "Branding & Logo Design",
+        "description": "Logoentwicklung und Markenidentität aus der Schweiz. Von einfachem Logo bis zu vollständigen Brand Guidelines. Ab 300 CHF."
+      },
+      "header": {
+        "title": "Branding",
+        "description": "Ihre Marke. Ihre Sprache. Unverkennbar."
+      },
+      "pricing": {
+        "title": "Preise",
+        "description": "Wählen Sie den Plan, der am besten zu Ihren Bedürfnissen passt.",
+        "note": "Individuelle Angebote je nach Projektumfang möglich.",
+        "cta": {
+          "title": "Du weisst nicht, was du brauchst?",
+          "description": "Kostenloses 30-Minuten-Gespräch. Kein Druck, nur offener Austausch.",
+          "button": "Termin vereinbaren"
+        },
+        "plans": [
+          {
+            "title": "Basic",
+            "description": "Ideal für neue kleine Marken oder einfache Logoentwicklung.",
+            "price": "Ab 300 CHF",
+            "features": ["1 Logo Konzept", "2 Revisionen", "Farbschema Basis", "Typografie Vorschläge", "Export in allen Formaten"]
+          },
+          {
+            "title": "Identity",
+            "description": "Fürs stabile Markenfundament mit klarer visueller Linie.",
+            "price": "Ab 700 CHF",
+            "features": ["2–3 Logo Konzepte", "Brand Colors Palette", "Typografie Setup", "Mini Styleguide (PDF)", "3 Revisionen"]
+          },
+          {
+            "title": "Full Branding",
+            "description": "Komplette Markenidentität mit allem drum und dran.",
+            "price": "Ab 1200 CHF",
+            "features": ["Logo Set + Varianten", "Farbpalette + Typografie System", "Brand Elements / Patterns", "Brand Guidelines Dokument", "Social Media Assets", "4 Revisionen"]
+          }
+        ]
+      }
+    },
+    "graphicdesign": {
+      "meta": {
+        "title": "Grafikdesign",
+        "description": "Professionelles Grafikdesign aus der Schweiz. Social Media Designs, Illustrationen und Werbegrafiken. Ab 80 CHF."
+      },
+      "header": {
+        "title": "Grafikdesign",
+        "description": "Grafiken, die hängen bleiben."
+      },
+      "pricing": {
+        "title": "Preise",
+        "description": "Wählen Sie den Plan, der am besten zu Ihren Bedürfnissen passt.",
+        "note": "Individuelle Angebote je nach Projektumfang möglich.",
+        "cta": {
+          "title": "Du weisst nicht, was du brauchst?",
+          "description": "Kostenloses 30-Minuten-Gespräch. Kein Druck, nur offener Austausch.",
+          "button": "Termin vereinbaren"
+        },
+        "plans": [
+          {
+            "title": "Starter",
+            "description": "Fürs schnelle, einfache Grafiken.",
+            "price": "Ab 80 CHF",
+            "features": ["1 Design (z. B. Social Post)", "2 Revisionen", "Export in allen Formaten"]
+          },
+          {
+            "title": "Creative",
+            "description": "Fürs regelmässige oder komplexere Grafiken.",
+            "price": "Ab 250 CHF",
+            "features": ["Bis 5 Grafiken", "Illustrationen optional", "Social Media Templates", "3 Revisionen"]
+          },
+          {
+            "title": "Pro Package",
+            "description": "Fürs volle Grafikpaket mit mehr Umfang.",
+            "price": "Ab 500 CHF",
+            "features": ["Bis 12 Grafiken", "Custom Illustrationen", "Brand Templates", "4 Revisionen"]
+          }
+        ]
+      }
+    },
+    "printdesign": {
+      "meta": {
+        "title": "Printdesign",
+        "description": "Druckfertiges Printdesign aus der Schweiz. Flyer, Visitenkarten, Broschüren und mehr – präzise und professionell. Ab 100 CHF."
+      },
+      "header": {
+        "title": "Printdesign",
+        "description": "Analog. Präzise. Unübersehbar."
+      },
+      "pricing": {
+        "title": "Preise",
+        "description": "Wählen Sie den Plan, der am besten zu Ihren Bedürfnissen passt.",
+        "note": "Individuelle Angebote je nach Projektumfang möglich.",
+        "cta": {
+          "title": "Du weisst nicht, was du brauchst?",
+          "description": "Kostenloses 30-Minuten-Gespräch. Kein Druck, nur offener Austausch.",
+          "button": "Termin vereinbaren"
+        },
+        "plans": [
+          {
+            "title": "Basic",
+            "description": "Ideal für einzelne kleine Print Projekte.",
+            "price": "Ab 100 CHF",
+            "features": ["Einseitiges Design (Flyer, Karte etc.)", "Druckfertige Dateien", "2 Revisionen"]
+          },
+          {
+            "title": "Standard",
+            "description": "Fürs gängige Printmaterial für Unternehmen.",
+            "price": "Ab 250 CHF",
+            "features": ["Mehrseitige Designs oder Sets", "Visitenkarten + Flyer + Poster", "Druckoptimierung", "3 Revisionen"]
+          },
+          {
+            "title": "Premium",
+            "description": "Fürs volle Printpaket eines Unternehmens.",
+            "price": "Ab 500 CHF",
+            "features": ["Komplettes Print Set", "Broschüren / Menü Karten", "Sonderformate", "Professionelle Druckvorbereitung", "4 Revisionen"]
+          }
+        ]
+      }
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "blog": "Blog",
+    "contact": "Kontakt"
+  }
+}

@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --color-brand: oklch(0.6389 0.226 34.51);
+  --color-brand: oklch(0.62 0.20 42);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -132,4 +132,55 @@
   h3 {
     @apply text-[2.25rem]
   }
+}
+
+.blog-content p {
+  @apply text-lg leading-relaxed mb-6;
+}
+
+.blog-content h2 {
+  @apply text-3xl font-mono font-bold tracking-tight mt-12 mb-4;
+}
+
+.blog-content h3 {
+  @apply text-2xl font-mono font-bold tracking-tight mt-8 mb-3;
+}
+
+.blog-content ul {
+  @apply mb-6 flex flex-col gap-3;
+}
+
+.blog-content ul li {
+  @apply flex items-start gap-3 text-lg;
+}
+
+.blog-content ul li::before {
+  content: "";
+  @apply mt-3 w-1.5 h-1.5 rounded-full bg-foreground flex-shrink-0;
+}
+
+.blog-content ol {
+  @apply mb-6 flex flex-col gap-3 list-decimal list-inside;
+}
+
+.blog-content ol li {
+  @apply text-lg;
+}
+
+.blog-content strong {
+  @apply font-bold;
+}
+
+.blog-content em {
+  @apply italic;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(1deg); }
 }

@@ -1,51 +1,66 @@
-import SectionTitle from "../sectiontitle";
-import { Frame, LayoutPanelTop, Palette, Telescope, VectorSquare } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { AnimateIn } from "@/components/ui/animate-in";
+import { getTranslations } from "next-intl/server";
 
-const ServicesContent = [
-  {
-    title: "Webdesign",
-    description: "Individuell gebaut. Schnell geladen. Sofort bereit.",
-    icon: <LayoutPanelTop className="mb-4" size={48} strokeWidth={1.5} />,
-  },
-  {
-    title: "Branding & Logos",
-    description: "Ihr Name. Ihre Farben. Ihre Identität.",
-    icon: <Frame className="mb-4" size={48} strokeWidth={1.5} />,
-  },
-  {
-    title: "Grafikdesign",
-    description: "Alles, was ins Auge fällt.",
-    icon: <VectorSquare className="mb-4" size={48} strokeWidth={1.5} />,
-  },
-  {
-    title: "Print Design",
-    description: "Analog. Sauber. Druckfertig.",
-    icon: <Palette className="mb-4" size={48} strokeWidth={1.5} />,
-  },
-];
+export default async function Services() {
+  const t = await getTranslations("services");
+  const items = t.raw("items") as {
+    number: string;
+    title: string;
+    description: string;
+    href: string;
+  }[];
 
-export default function Services() {
   return (
-    <section className="min-h-[50vh] bg-muted py-24 flex flex-col items-center justify-center">
-      <div className="flex flex-col container px-10 max-w-7xl mx-auto">
-        <SectionTitle title="Vier Disziplinen. Ein Ziel.">
-          Design, das auffällt. Code, der performt. Beides aus einer Hand.
-        </SectionTitle>
+    <section className="py-24 border-t border-border" id="leistungen">
+      <div className="container px-10 max-w-7xl mx-auto flex flex-col gap-12">
 
-        <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 mt-12">
-          {ServicesContent.map((service, index) => (
-            <div
-              key={index}
-              className="flex flex-col hover:bg-background hover:text-foreground hover:transition-all duration-700 justify-center flex-3 bg-foreground text-background p-6"
+        <AnimateIn>
+        <div className="flex flex-col gap-4">
+          <span className="font-mono text-xs tracking-[0.2em] uppercase text-muted-foreground">
+            {t("label")}
+          </span>
+          <h2 className="font-mono font-bold tracking-tighter leading-[0.9] text-5xl lg:text-7xl">
+            {t("title").split("\n").map((line, i) => (
+              <span key={i}>{line}{i < t("title").split("\n").length - 1 && <br />}</span>
+            ))}
+          </h2>
+        </div>
+        </AnimateIn>
+
+        <AnimateIn delay={0.1}>
+        <div className="-mx-10 grid grid-cols-1 lg:grid-cols-2 border-t border-border">
+          {items.map((service, i) => (
+            <Link
+              key={service.number}
+              href={service.href}
+              className={[
+                "group p-10 flex flex-col gap-6 hover:bg-foreground hover:text-background transition-colors duration-500",
+                i < 2 ? "border-b border-border" : "",
+                i % 2 === 0 ? "lg:border-r border-border" : "",
+              ].join(" ")}
             >
-            <div className="flex items-center justify-start mb-4">
-              {service.icon}
-            </div>
-              <h3 className="text-2xl font-bold mb-2">{service.title}</h3>
-              <p>{service.description}</p>
-            </div>
+              <span className="font-mono text-xs tracking-[0.2em] uppercase text-muted-foreground group-hover:text-background/40 transition-colors duration-500">
+                {service.number}
+              </span>
+              <div className="flex flex-col gap-2 flex-1">
+                <h3 className="text-3xl font-mono font-bold tracking-tight">
+                  {service.title}
+                </h3>
+                <p className="text-muted-foreground group-hover:text-background/70 transition-colors duration-500">
+                  {service.description}
+                </p>
+              </div>
+              <div className="flex items-center gap-2 text-sm font-mono group-hover:gap-4 transition-all duration-300">
+                {t("more")}
+                <ArrowRight size={14} />
+              </div>
+            </Link>
           ))}
         </div>
+        </AnimateIn>
+
       </div>
     </section>
   );
