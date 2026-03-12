@@ -32,14 +32,12 @@ export default async function Process() {
         </AnimateIn>
 
         <AnimateIn delay={0.1}>
-        <div className="-mx-10 flex flex-col lg:flex-row border-t border-border">
+        <div className="-mx-10 flex flex-col lg:flex-row border-border">
           {steps.map((step, i) => (
             <div
               key={step.number}
-              className={[
-                "flex-1 p-10 flex flex-col gap-6",
-                i < steps.length - 1 ? "border-b lg:border-b-0 lg:border-r border-border" : "",
-              ].join(" ")}
+              className=
+                "flex-1 p-10 flex flex-col gap-6 border-b lg:border-b-0 last:border-0 lg:border-r lg:last:border-r-0"
             >
               <span className="font-mono text-4xl font-bold text-brand">
                 {step.number}

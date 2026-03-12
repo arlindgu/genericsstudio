@@ -58,7 +58,7 @@ export default async function ContactPage() {
             </p>
           </div>
 
-          <div className="-mx-10 flex flex-col lg:flex-row border-t border-border">
+          <div className="-mx-10 flex flex-col lg:flex-row border-border">
             {options.map((option, i) => (
               <a
                 key={option.number}
