@@ -1,0 +1,83 @@
+---
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+
+const content = {
+  de: {
+    heading: "So entsteht deine Marke.",
+    description: "Drei Phasen. Keine Überraschungen. Du weisst jederzeit, wo wir stehen und was als Nächstes kommt.",
+    steps: [
+      {
+        number: "01",
+        title: "Discovery & Briefing",
+        description: "Wir lernen dein Unternehmen, deine Zielgruppe und deine Mitbewerber kennen. Gemeinsam definieren wir Tonalität, Positionierung und visuelle Richtung. Du bekommst einen klaren Rahmen, bevor ein einziges Design entsteht.",
+      },
+      {
+        number: "02",
+        title: "Konzept & Gestaltung",
+        description: "Auf Basis des Briefings entwickeln wir Logo-Konzepte, Farbpalette und Typografie-System. Du siehst erste Entwürfe, gibst Feedback, wir verfeinern. Keine unendlichen Revisionsrunden — fokussiert, klar, effizient.",
+      },
+      {
+        number: "03",
+        title: "Übergabe & Guidelines",
+        description: "Du bekommst alle finalen Dateien in allen Formaten sowie ein vollständiges Brand-Guidelines-Dokument. Damit kannst du sofort loslegen — und jeder, der je mit deiner Marke arbeitet, weiss genau, wie.",
+      },
+    ],
+  },
+  en: {
+    heading: "How your brand is built.",
+    description: "Three phases. No surprises. You always know where we are and what comes next.",
+    steps: [
+      {
+        number: "01",
+        title: "Discovery & briefing",
+        description: "We learn about your business, your audience, and your competitors. Together we define tone, positioning, and visual direction. You get a clear brief before a single design is created.",
+      },
+      {
+        number: "02",
+        title: "Concept & design",
+        description: "Based on the brief, we develop logo concepts, colour palette, and typography system. You see initial drafts, give feedback, we refine. No endless revision rounds — focused, clear, efficient.",
+      },
+      {
+        number: "03",
+        title: "Handover & guidelines",
+        description: "You receive all final files in all formats, plus a complete brand guidelines document. You can start immediately — and everyone who ever works with your brand knows exactly how.",
+      },
+    ],
+  },
+};
+
+const c = locale === "de" ? content.de : content.en;
+---
+
+<section class="px-6 md:px-10 border-t border-[rgba(255,255,255,0.06)]">
+  <div class="max-w-7xl mx-auto">
+
+    <div class="py-20 flex flex-col lg:flex-row lg:justify-between gap-8 lg:gap-16">
+      <h2 class="text-[clamp(1.75rem,3vw,2.5rem)] fw-510 leading-[1.08] tracking-[-0.04em] text-[#f7f8f8] lg:max-w-[44%]">
+        {c.heading}
+      </h2>
+      <p class="text-[15px] text-[#8a8f98] leading-[1.7] fw-400 lg:max-w-[42%] flex items-center">
+        {c.description}
+      </p>
+    </div>
+
+    <div class="border-t border-[rgba(255,255,255,0.06)]">
+      {c.steps.map((step) => (
+        <div class="flex items-start gap-8 py-10 border-b border-[rgba(255,255,255,0.06)]">
+          <span class="text-[11px] fw-510 text-[#3d4047] tracking-[0.1em] flex-shrink-0 w-7 mt-[6px]">{step.number}</span>
+          <div class="flex flex-col lg:flex-row lg:gap-16 flex-1">
+            <h3 class="text-[clamp(1.1rem,2vw,1.4rem)] fw-510 text-[#f7f8f8] tracking-[-0.03em] leading-tight lg:w-72 flex-shrink-0 mb-4 lg:mb-0">
+              {step.title}
+            </h3>
+            <p class="text-[14px] text-[#62666d] leading-[1.75] fw-400 flex-1 max-w-2xl">{step.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

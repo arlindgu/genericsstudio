@@ -1,6 +1,8 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import PageHeader from "@/components/PageHeader.astro";
+import GraphicDesignComparison from "@/components/sections/GraphicDesignComparison.astro";
+import GraphicDesignFeatures from "@/components/sections/GraphicDesignFeatures.astro";
 import ServicePricing from "@/components/sections/ServicePricing.astro";
 import { useTranslations } from "@/i18n/utils";
 
@@ -25,6 +27,8 @@ type PricingCta = { title: string; description: string; button: string };
       title={t("pages.graphicdesign.header.title")}
       description={t("pages.graphicdesign.header.description")}
     />
+    <GraphicDesignComparison locale={locale} />
+    <GraphicDesignFeatures locale={locale} />
     <ServicePricing
       title={t("pages.graphicdesign.pricing.title")}
       description={t("pages.graphicdesign.pricing.description")}

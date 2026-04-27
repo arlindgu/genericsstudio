@@ -1,0 +1,144 @@
+---
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+
+const de = {
+  heading: "Druckfertig oder druckfähig?",
+  description: "Eine falsch aufbereitete Datei kostet Zeit, Geld und Nerven. Wir liefern Dateien, die beim ersten Mal funktionieren.",
+  labelA: "Falsch aufbereitete Datei",
+  labelB: "Professionelle Druckvorbereitung",
+  captionA: "RGB-Farbraum, 72 DPI und fehlender Beschnittrand. Das Ergebnis: falsche Farben, unscharfe Kanten und Reklamationen.",
+  captionB: "CMYK-Farbraum, 300 DPI, 3 mm Beschnittrand und korrekte ICC-Profile. Beim ersten Druck perfekt.",
+  specsA: [
+    { label: "Farbraum", value: "RGB", ok: false },
+    { label: "Auflösung", value: "72 DPI", ok: false },
+    { label: "Beschnittrand", value: "Kein", ok: false },
+    { label: "Farbprofil", value: "Unbekannt", ok: false },
+  ],
+  specsB: [
+    { label: "Farbraum", value: "CMYK", ok: true },
+    { label: "Auflösung", value: "300+ DPI", ok: true },
+    { label: "Beschnittrand", value: "3 mm", ok: true },
+    { label: "Farbprofil", value: "ISO Coated v2", ok: true },
+  ],
+};
+
+const en = {
+  heading: "Print-ready or print-capable?",
+  description: "A poorly prepared file costs time, money and frustration. We deliver files that work the first time.",
+  labelA: "Incorrectly prepared file",
+  labelB: "Professional print preparation",
+  captionA: "RGB colour mode, 72 DPI, and no bleed. The result: wrong colours, blurry edges, and print rejections.",
+  captionB: "CMYK colour mode, 300 DPI, 3 mm bleed, and correct ICC profiles. Perfect on the first print.",
+  specsA: [
+    { label: "Colour mode", value: "RGB", ok: false },
+    { label: "Resolution", value: "72 DPI", ok: false },
+    { label: "Bleed", value: "None", ok: false },
+    { label: "Colour profile", value: "Unknown", ok: false },
+  ],
+  specsB: [
+    { label: "Colour mode", value: "CMYK", ok: true },
+    { label: "Resolution", value: "300+ DPI", ok: true },
+    { label: "Bleed", value: "3 mm", ok: true },
+    { label: "Colour profile", value: "ISO Coated v2", ok: true },
+  ],
+};
+
+const c = locale === "de" ? de : en;
+---
+
+<section class="px-6 md:px-10">
+  <div class="max-w-7xl mx-auto">
+
+    <div class="py-20 flex flex-col lg:flex-row lg:justify-between gap-8 lg:gap-16">
+      <h2 class="text-[clamp(1.75rem,3vw,2.5rem)] fw-510 leading-[1.08] tracking-[-0.04em] text-[#f7f8f8] lg:max-w-[44%]">
+        {c.heading}
+      </h2>
+      <p class="text-[16px] text-[#8a8f98] leading-[1.7] fw-400 lg:max-w-[42%] flex items-center">
+        {c.description}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 border-t border-[rgba(255,255,255,0.06)] pt-10 pb-10">
+
+      <!-- Panel A: Wrong file -->
+      <div>
+        <div class="bg-[#0d0e0f] rounded-[8px] p-6 mb-6 border border-[rgba(255,255,255,0.05)]">
+          <div class="rounded-[6px] border border-dashed border-[rgba(255,78,67,0.3)] p-4 mb-5 relative">
+            <div class="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-[#ff4e43] flex items-center justify-center">
+              <span class="text-[9px] text-white fw-590">!</span>
+            </div>
+            <div class="h-16 rounded-[4px] mb-3 overflow-hidden relative">
+              <div class="absolute inset-0 bg-gradient-to-r from-[#e74c3c] via-[#3498db] to-[#f1c40f] opacity-60"></div>
+              <div class="absolute inset-1 flex items-center justify-center">
+                <div class="h-2 w-20 rounded bg-[rgba(255,255,255,0.1)]"></div>
+              </div>
+            </div>
+            <p class="text-[10px] text-[#ff4e43] fw-510 text-center">document_final_v3.png</p>
+          </div>
+          <div class="flex flex-col">
+            {c.specsA.map(spec => (
+              <div class="flex justify-between items-center py-2 border-b border-[rgba(255,255,255,0.04)] last:border-0">
+                <span class="text-[11px] text-[#3d4047] fw-400">{spec.label}</span>
+                <div class="flex items-center gap-1.5">
+                  <div class="w-1.5 h-1.5 rounded-full bg-[#ff4e43]"></div>
+                  <span class="text-[11px] text-[#ff4e43] fw-510">{spec.value}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class="flex items-center gap-2 mb-2">
+          <div class="w-2 h-2 rounded-full bg-[#ff4e43] flex-shrink-0"></div>
+          <h3 class="text-[15px] fw-590 text-[#f7f8f8] tracking-[-0.015em]">{c.labelA}</h3>
+        </div>
+        <p class="text-[13px] text-[#62666d] leading-[1.65] fw-400">{c.captionA}</p>
+      </div>
+
+      <!-- Panel B: Professional prep -->
+      <div>
+        <div class="bg-[#0d0e0f] rounded-[8px] p-6 mb-6 border border-[rgba(255,255,255,0.05)]">
+          <div class="rounded-[6px] border border-[rgba(12,206,107,0.2)] p-4 mb-5 relative">
+            <div class="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-[#0cce6b] flex items-center justify-center">
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <div class="h-16 rounded-[4px] mb-3 overflow-hidden relative bg-[#0a0b12]">
+              <div class="absolute inset-0 border border-dashed border-[rgba(12,206,107,0.2)]"></div>
+              <div class="absolute inset-[3px] bg-[rgba(94,106,210,0.08)] flex items-center justify-center">
+                <div class="flex items-center gap-2">
+                  <div class="w-5 h-5 rounded-[3px] bg-[#5e6ad2] flex items-center justify-center">
+                    <span class="text-[8px] fw-590 text-white">G</span>
+                  </div>
+                  <div class="h-2 w-12 rounded bg-[rgba(247,248,248,0.1)]"></div>
+                </div>
+              </div>
+            </div>
+            <p class="text-[10px] text-[#0cce6b] fw-510 text-center">flyer_druckfertig_CMYK.pdf</p>
+          </div>
+          <div class="flex flex-col">
+            {c.specsB.map(spec => (
+              <div class="flex justify-between items-center py-2 border-b border-[rgba(255,255,255,0.04)] last:border-0">
+                <span class="text-[11px] text-[#3d4047] fw-400">{spec.label}</span>
+                <div class="flex items-center gap-1.5">
+                  <div class="w-1.5 h-1.5 rounded-full bg-[#0cce6b]"></div>
+                  <span class="text-[11px] text-[#0cce6b] fw-510">{spec.value}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class="flex items-center gap-2 mb-2">
+          <div class="w-2 h-2 rounded-full bg-[#0cce6b] flex-shrink-0"></div>
+          <h3 class="text-[15px] fw-590 text-[#f7f8f8] tracking-[-0.015em]">{c.labelB}</h3>
+        </div>
+        <p class="text-[13px] text-[#62666d] leading-[1.65] fw-400">{c.captionB}</p>
+      </div>
+
+    </div>
+  </div>
+</section>

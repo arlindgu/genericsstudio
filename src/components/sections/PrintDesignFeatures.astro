@@ -1,0 +1,126 @@
+---
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+
+const features = {
+  de: {
+    heading: "Was du bekommst.",
+    description: "Kein DIY-Ausdruck, keine halbfertigen Layouts. Professionelles Printdesign, das bei jedem Drucker weltweit funktioniert.",
+    items: [
+      {
+        number: "01",
+        title: "Druckfertige PDF-Dateien",
+        spec: "CMYK · 300 DPI · 3 mm Beschnittrand",
+        description: "CMYK-Farbraum, korrekter Beschnittrand, eingebettete Schriften. Kein Nachbearbeiten, keine Reklamation beim Drucker."
+      },
+      {
+        number: "02",
+        title: "Mehrseitige Layouts",
+        spec: "Broschüren · Menükarten · Kataloge",
+        description: "Durchgängige Gestaltung über alle Seiten. Jede Seite aufeinander abgestimmt, jede Spalte ausgerichtet, jeder Abstand konsistent."
+      },
+      {
+        number: "03",
+        title: "Visitenkarten & Briefpapier",
+        spec: "85 × 55 mm · DIN A4 · einseitig / doppelseitig",
+        description: "Corporate Identity im kleinen Format. Logo, Farbwelt und Typografie konsequent umgesetzt — ob einseitig oder doppelseitig."
+      },
+      {
+        number: "04",
+        title: "Flyer & Plakate",
+        spec: "A6 – A0 · Digital- & Offsetdruck",
+        description: "Von A6 bis A0. Jedes Format korrekt angelegt, mit Sonderformaten auf Anfrage. Optimiert für Offset- und Digitaldruck."
+      },
+      {
+        number: "05",
+        title: "Korrekte Farbprofile",
+        spec: "ISO Coated v2 · PSO Uncoated · Sonderprofile",
+        description: "Das passende Profil je nach Druckverfahren und Papier. Farben, die auf dem Papier so aussehen wie am Bildschirm."
+      },
+      {
+        number: "06",
+        title: "Druckerei-Koordination",
+        spec: "Korrekturbogen · Farbprobe · Lieferung",
+        description: "Auf Wunsch koordinieren wir direkt mit deiner Druckerei: Korrekturbogen prüfen, Farbproben abnehmen, Lieferung sicherstellen."
+      }
+    ]
+  },
+  en: {
+    heading: "What you get.",
+    description: "No DIY prints, no half-finished layouts. Professional print design that works at any printer in the world.",
+    items: [
+      {
+        number: "01",
+        title: "Print-ready PDF files",
+        spec: "CMYK · 300 DPI · 3 mm bleed",
+        description: "CMYK colour mode, correct bleed, embedded fonts. No rework, no rejections at the print shop."
+      },
+      {
+        number: "02",
+        title: "Multi-page layouts",
+        spec: "Brochures · menus · catalogues",
+        description: "Consistent design throughout every page. Every spread aligned, every column precise, every margin deliberate."
+      },
+      {
+        number: "03",
+        title: "Business cards & letterheads",
+        spec: "85 × 55 mm · DIN A4 · single / double-sided",
+        description: "Corporate identity in a small format. Logo, colour scheme, and typography applied consistently — single or double-sided."
+      },
+      {
+        number: "04",
+        title: "Flyers & posters",
+        spec: "A6 – A0 · offset & digital print",
+        description: "From A6 to A0. Every format set up correctly, with special formats on request. Optimised for both offset and digital printing."
+      },
+      {
+        number: "05",
+        title: "Correct colour profiles",
+        spec: "ISO Coated v2 · PSO Uncoated · custom",
+        description: "The right profile for each print process and paper type. Colours that look on paper the same as on screen."
+      },
+      {
+        number: "06",
+        title: "Print shop coordination",
+        spec: "Proof sheets · colour samples · delivery",
+        description: "On request we coordinate directly with your print shop: reviewing proof sheets, approving colour samples, ensuring delivery."
+      }
+    ]
+  }
+};
+
+const content = locale === "de" ? features.de : features.en;
+---
+
+<section class="px-6 md:px-10 border-t border-[rgba(255,255,255,0.06)]">
+  <div class="max-w-7xl mx-auto">
+
+    <div class="py-20 flex flex-col lg:flex-row lg:justify-between gap-6 lg:gap-16">
+      <h2 class="text-[clamp(1.75rem,3vw,2.5rem)] fw-510 leading-[1.08] tracking-[-0.04em] text-[#f7f8f8] lg:max-w-[44%]">
+        {content.heading}
+      </h2>
+      <p class="text-[15px] text-[#8a8f98] leading-[1.7] fw-400 lg:max-w-[42%] flex items-center">
+        {content.description}
+      </p>
+    </div>
+
+    <div class="border-t border-[rgba(255,255,255,0.06)] mb-16">
+      {content.items.map((item) => (
+        <div class="flex items-start gap-8 py-8 border-b border-[rgba(255,255,255,0.06)]">
+          <span class="text-[11px] fw-510 text-[#3d4047] tracking-[0.1em] w-7 flex-shrink-0 mt-[5px]">{item.number}</span>
+          <div class="grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-x-16 gap-y-2 flex-1">
+            <div>
+              <h3 class="text-[16px] fw-590 text-[#f7f8f8] tracking-[-0.02em] mb-1.5">{item.title}</h3>
+              <span class="text-[11px] fw-400 text-[#3d4047] tracking-[0.03em]">{item.spec}</span>
+            </div>
+            <p class="text-[14px] text-[#62666d] leading-[1.75] fw-400">{item.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
