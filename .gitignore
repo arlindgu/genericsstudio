@@ -20,6 +20,8 @@
 .DS_Store
 *.pem
 .vscode
+.astro
+.claude
 
 
 # debug
