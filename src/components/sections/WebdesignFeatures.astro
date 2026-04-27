@@ -1,0 +1,115 @@
+---
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+
+const features = {
+  de: {
+    heading: "Was du bekommst.",
+    description: "Kein Baukastensystem. Kein Plugin-Wirrwarr. Jede Website wird von Grund auf für dein Business entwickelt.",
+    items: [
+      {
+        number: "01",
+        title: "Blitzschnelle Ladezeiten",
+        description: "Kein JavaScript-Overhead, keine ungenutzten Plugins. Jede Seite wird statisch generiert und über ein globales CDN ausgeliefert. Unter 1 Sekunde Ladezeit ist Standard."
+      },
+      {
+        number: "02",
+        title: "SEO von Anfang an",
+        description: "Sauberes semantisches HTML, strukturierte Daten (Schema.org), automatische Sitemap, optimierte Meta-Tags und Core Web Vitals im grünen Bereich. Nicht als Nachgedanke, sondern als Fundament."
+      },
+      {
+        number: "03",
+        title: "Sicherheit ohne Kompromisse",
+        description: "Keine WordPress-Angriffsfläche, keine veralteten Plugins, keine öffentlichen Admin-Panels. Statisch gerenderte Seiten haben keine Datenbank, die man angreifen kann."
+      },
+      {
+        number: "04",
+        title: "Vollständig responsiv",
+        description: "Mobile-first entwickelt und auf allen Gerätegrössen getestet. Kein generisches Breakpoint-Raster, sondern ein Layout, das für dein Design gemacht wurde."
+      },
+      {
+        number: "05",
+        title: "Einfache Inhaltsverwaltung",
+        description: "Auf Wunsch mit einem Headless CMS verbunden, sodass du Texte, Bilder und Seiten selbst bearbeiten kannst. Ohne technische Kenntnisse, ohne uns anzurufen."
+      },
+      {
+        number: "06",
+        title: "Übergabe mit Dokumentation",
+        description: "Du bekommst die vollständige Kontrolle. Hosting, Domain, CMS und Code gehören dir. Mit einer verständlichen Anleitung, damit du weisst, was du hast."
+      }
+    ]
+  },
+  en: {
+    heading: "What you get.",
+    description: "No page builders. No plugin chaos. Every website is developed from scratch for your business.",
+    items: [
+      {
+        number: "01",
+        title: "Lightning-fast load times",
+        description: "No JavaScript overhead, no unused plugins. Every page is statically generated and delivered via a global CDN. Under 1 second load time is standard."
+      },
+      {
+        number: "02",
+        title: "SEO built in from day one",
+        description: "Clean semantic HTML, structured data (Schema.org), automatic sitemap, optimised meta tags and green Core Web Vitals. Not an afterthought, but a foundation."
+      },
+      {
+        number: "03",
+        title: "Security without compromise",
+        description: "No WordPress attack surface, no outdated plugins, no public admin panels. Statically rendered sites have no database to attack."
+      },
+      {
+        number: "04",
+        title: "Fully responsive",
+        description: "Mobile-first developed and tested across all screen sizes. Not a generic breakpoint grid, but a layout made for your design."
+      },
+      {
+        number: "05",
+        title: "Simple content management",
+        description: "Optionally connected to a headless CMS so you can edit text, images and pages yourself. No technical knowledge required, no need to call us."
+      },
+      {
+        number: "06",
+        title: "Handover with documentation",
+        description: "You get full control. Hosting, domain, CMS and code belong to you. With a clear guide so you know exactly what you have."
+      }
+    ]
+  }
+};
+
+const content = locale === "de" ? features.de : features.en;
+---
+
+<section class="px-6 md:px-10 py-32 border-t border-[rgba(255,255,255,0.06)]">
+  <div class="max-w-7xl mx-auto">
+
+    <div class="flex flex-col lg:flex-row lg:justify-between gap-8 lg:gap-16 mb-20">
+      <h2 class="text-[clamp(1.75rem,3vw,2.5rem)] fw-510 leading-[1.08] tracking-[-0.04em] text-[#f7f8f8] lg:max-w-[44%]">
+        {content.heading}
+      </h2>
+      <p class="text-[16px] text-[#8a8f98] leading-[1.7] fw-400 lg:max-w-[42%] flex items-center">
+        {content.description}
+      </p>
+    </div>
+
+    <div class="flex flex-col border-t border-[rgba(255,255,255,0.06)]">
+      {
+        content.items.map((item) => (
+          <div class="flex items-start gap-8 py-7 border-b border-[rgba(255,255,255,0.06)]">
+            <p class="text-[11px] fw-510 text-[#3d4047] tracking-[0.1em] flex-shrink-0 w-7 mt-0.5">{item.number}</p>
+            <div class="flex flex-col lg:flex-row lg:gap-16 flex-1 min-w-0">
+              <h3 class="text-[15px] fw-590 text-[#f7f8f8] tracking-[-0.015em] lg:w-56 flex-shrink-0 mb-2 lg:mb-0">
+                {item.title}
+              </h3>
+              <p class="text-[13px] text-[#62666d] leading-[1.65] fw-400 flex-1">{item.description}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,32 @@
+---
+interface Props {
+  label?: string;
+  title: string;
+  description?: string;
+  center?: boolean;
+}
+
+const { label, title, description, center = false } = Astro.props;
+---
+
+<div class={center ? "text-center" : ""}>
+  {
+    label && (
+      <p class="text-[#62666d] text-xs font-[510] uppercase tracking-[0.12em] mb-3">
+        {label}
+      </p>
+    )
+  }
+  <h2
+    class="text-3xl md:text-4xl font-[510] text-[#f7f8f8] leading-tight tracking-[-0.704px] whitespace-pre-line"
+  >
+    {title}
+  </h2>
+  {
+    description && (
+      <p class="text-[#8a8f98] text-base md:text-lg mt-4 leading-relaxed max-w-2xl">
+        {description}
+      </p>
+    )
+  }
+</div>

@@ -1,0 +1,84 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/components/sections/Hero.astro";
+import Mission from "@/components/sections/Mission.astro";
+import Services from "@/components/sections/Services.astro";
+import Process from "@/components/sections/Process.astro";
+import Pricing from "@/components/sections/Pricing.astro";
+import CTA from "@/components/sections/CTA.astro";
+import { useTranslations } from "@/i18n/utils";
+
+export function getStaticPaths() {
+  return [{ params: { locale: "de" } }, { params: { locale: "en" } }];
+}
+
+const { locale } = Astro.params;
+const { t, tRaw } = useTranslations(locale);
+
+type Benefit = { number: string; title: string; description: string };
+type ServiceItem = { number: string; title: string; description: string; href: string };
+type Step = { number: string; title: string; description: string };
+type PricingItem = { title: string; description: string; startingPrice: string; link: string };
+type PricingCta = { title: string; description: string; button: string };
+---
+
+<Layout
+  title={t("hero.title") + " " + t("hero.subtitle")}
+  description={t("hero.description")}
+  locale={locale}
+>
+  <main>
+    <Hero
+      badge={t("hero.badge")}
+      title={t("hero.title")}
+      subtitle={t("hero.subtitle")}
+      description={t("hero.description")}
+      ctaLabel={t("hero.cta")}
+      ctaSecondary={t("hero.ctaSecondary")}
+      locale={locale}
+    />
+
+    <Mission
+      label={t("mission.label")}
+      title={t("mission.title")}
+      subtitle={t("mission.subtitle")}
+      description={t("mission.description")}
+      benefits={tRaw<Benefit[]>("mission.benefits")}
+    />
+
+    <Services
+      label={t("services.label")}
+      title={t("services.title")}
+      subtitle={t("services.subtitle")}
+      more={t("services.more")}
+      items={tRaw<ServiceItem[]>("services.items")}
+      locale={locale}
+    />
+
+    <Process
+      label={t("process.label")}
+      title={t("process.title")}
+      subtitle={t("process.subtitle")}
+      description={t("process.description")}
+      steps={tRaw<Step[]>("process.steps")}
+    />
+
+    <Pricing
+      label={t("pricing.label")}
+      title={t("pricing.title")}
+      subtitle={t("pricing.subtitle")}
+      description={t("pricing.description")}
+      cta={tRaw<PricingCta>("pricing.cta")}
+      items={tRaw<PricingItem[]>("pricing.items")}
+      locale={locale}
+    />
+
+    <CTA
+      label={t("cta.label")}
+      title={t("cta.title")}
+      subtitle={t("cta.subtitle")}
+      button={t("cta.button")}
+      locale={locale}
+    />
+  </main>
+</Layout>

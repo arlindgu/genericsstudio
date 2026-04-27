@@ -1,0 +1,40 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import PageHeader from "@/components/PageHeader.astro";
+import WebdesignComparison from "@/components/sections/WebdesignComparison.astro";
+import WebdesignFeatures from "@/components/sections/WebdesignFeatures.astro";
+import ServicePricing from "@/components/sections/ServicePricing.astro";
+import { useTranslations } from "@/i18n/utils";
+
+export function getStaticPaths() {
+  return [{ params: { locale: "de" } }, { params: { locale: "en" } }];
+}
+
+const { locale } = Astro.params;
+const { t, tRaw } = useTranslations(locale);
+
+type Plan = { title: string; description: string; price: string; features: string[] };
+type PricingCta = { title: string; description: string; button: string };
+---
+
+<Layout
+  title={t("pages.webdesign.meta.title")}
+  description={t("pages.webdesign.meta.description")}
+  locale={locale}
+>
+  <main>
+    <PageHeader
+      title={t("pages.webdesign.header.title")}
+      description={t("pages.webdesign.header.description")}
+    />
+    <WebdesignComparison locale={locale} />
+    <WebdesignFeatures locale={locale} />
+    <ServicePricing
+      title={t("pages.webdesign.pricing.title")}
+      description={t("pages.webdesign.pricing.description")}
+      note={t("pages.webdesign.pricing.note")}
+      cta={tRaw<PricingCta>("pages.webdesign.pricing.cta")}
+      plans={tRaw<Plan[]>("pages.webdesign.pricing.plans")}
+    />
+  </main>
+</Layout>

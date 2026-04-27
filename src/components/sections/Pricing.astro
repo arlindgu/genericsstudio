@@ -1,0 +1,80 @@
+---
+interface PricingItem {
+  title: string;
+  description: string;
+  startingPrice: string;
+  link: string;
+}
+
+interface PricingCta {
+  title: string;
+  description: string;
+  button: string;
+}
+
+interface Props {
+  label: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  cta: PricingCta;
+  items: PricingItem[];
+  locale: string;
+}
+
+const { label, title, subtitle, description, cta, items, locale } = Astro.props;
+---
+
+<section class="px-6 md:px-10 py-32 border-t border-[rgba(255,255,255,0.06)]" id="pricing">
+  <div class="max-w-7xl mx-auto">
+
+    <!-- 2-col intro -->
+    <div class="flex flex-col lg:flex-row lg:justify-between gap-8 lg:gap-16 mb-16">
+      <h2 class="text-[clamp(1.75rem,3vw,2.5rem)] fw-510 leading-[1.08] tracking-[-0.04em] text-[#f7f8f8] lg:max-w-[44%]">
+        {title}<br />{subtitle}
+      </h2>
+      <p class="text-[16px] text-[#8a8f98] leading-[1.7] fw-400 lg:max-w-[42%] flex items-center">
+        {description}
+      </p>
+    </div>
+
+    <!-- Pricing rows -->
+    <div class="flex flex-col border-t border-[rgba(255,255,255,0.06)] mb-16">
+      {
+        items.map((item) => (
+          <a
+            href={`/${locale}${item.link}`}
+            class="group flex items-center justify-between py-6 border-b border-[rgba(255,255,255,0.06)]"
+          >
+            <div class="flex-1 min-w-0 mr-8">
+              <h3 class="text-[15px] fw-590 text-[#f7f8f8] tracking-[-0.01em] mb-1 group-hover:text-white transition-colors">
+                {item.title}
+              </h3>
+              <p class="text-[13px] text-[#62666d] fw-400 leading-[1.5]">{item.description}</p>
+            </div>
+            <p class="text-[13px] fw-510 text-[#62666d] group-hover:text-[#7170ff] transition-colors flex-shrink-0">
+              {item.startingPrice} →
+            </p>
+          </a>
+        ))
+      }
+    </div>
+
+    <!-- CTA: plain text + button, no card wrapper -->
+    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
+      <div>
+        <p class="text-[15px] fw-590 text-[#f7f8f8] tracking-[-0.01em] mb-0.5">{cta.title}</p>
+        <p class="text-[13px] text-[#62666d] fw-400">{cta.description}</p>
+      </div>
+      <a
+        href="https://cal.com/genericsstudio/discovery-call"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex-shrink-0 inline-flex items-center justify-center h-8 px-4 rounded-[6px] text-[13px] fw-510 bg-[#5e6ad2] text-white hover:bg-[#6b77e0] transition-colors"
+      >
+        {cta.button}
+      </a>
+    </div>
+
+  </div>
+</section>

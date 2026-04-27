@@ -1,0 +1,117 @@
+---
+import GenericsStudioLogo from "@/components/svgs/GenericsStudioLogo.astro";
+import { useTranslations } from "@/i18n/utils";
+
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+const { t, tRaw } = useTranslations(locale);
+
+type FooterLink = { label: string; href: string };
+const links = tRaw<FooterLink[]>("footer.links");
+const currentPath = Astro.url.pathname;
+---
+
+<footer class="border-t border-[rgba(255,255,255,0.06)] pt-16 pb-12 px-6 md:px-10 mt-0">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-10 mb-16">
+      <!-- Brand -->
+      <div class="col-span-2 md:col-span-1">
+        <a href={`/${locale}`} class="inline-block mb-4">
+          <GenericsStudioLogo class="h-7 w-auto text-[#f7f8f8] opacity-60 hover:opacity-90 transition-opacity" />
+        </a>
+        <p class="text-[12px] text-[#3d4047] leading-[1.7] fw-400 max-w-[220px]">
+          {locale === "de"
+            ? "Design- und Webagentur aus der Schweiz."
+            : "Design and web agency from Switzerland."}
+        </p>
+      </div>
+
+      <!-- Pages -->
+      <div>
+        <p class="text-[11px] fw-510 uppercase tracking-[0.12em] text-[#3d4047] mb-4">{t("footer.pages")}</p>
+        <ul class="flex flex-col gap-2.5">
+          {links.map((link) => (
+            <li>
+              <a
+                href={`/${locale}${link.href}`}
+                class="text-[13px] text-[#62666d] hover:text-[#d0d6e0] transition-colors fw-400"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <p class="text-[11px] fw-510 uppercase tracking-[0.12em] text-[#3d4047] mb-4">
+          {locale === "de" ? "Leistungen" : "Services"}
+        </p>
+        <ul class="flex flex-col gap-2.5">
+          {[
+            { label: locale === "de" ? "Webdesign" : "Web Design", href: "/webdesign" },
+            { label: "Branding", href: "/branding" },
+            { label: locale === "de" ? "Grafikdesign" : "Graphic Design", href: "/graphicdesign" },
+            { label: locale === "de" ? "Printdesign" : "Print Design", href: "/printdesign" },
+          ].map((link) => (
+            <li>
+              <a
+                href={`/${locale}${link.href}`}
+                class="text-[13px] text-[#62666d] hover:text-[#d0d6e0] transition-colors fw-400"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Contact + Language -->
+      <div>
+        <p class="text-[11px] fw-510 uppercase tracking-[0.12em] text-[#3d4047] mb-4">
+          {locale === "de" ? "Kontakt" : "Contact"}
+        </p>
+        <ul class="flex flex-col gap-2.5 mb-8">
+          <li>
+            <a href="mailto:hello@generics.studio" class="text-[13px] text-[#62666d] hover:text-[#d0d6e0] transition-colors fw-400">
+              hello@generics.studio
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/genericsstudio" target="_blank" rel="noopener" class="text-[13px] text-[#62666d] hover:text-[#d0d6e0] transition-colors fw-400">
+              Instagram
+            </a>
+          </li>
+        </ul>
+
+        <p class="text-[11px] fw-510 uppercase tracking-[0.12em] text-[#3d4047] mb-3">
+          Language
+        </p>
+        <div class="flex gap-3">
+          <a
+            href={`/de${currentPath.replace(`/${locale}`, "")}`}
+            class={`text-[12px] fw-510 transition-colors ${locale === "de" ? "text-[#f7f8f8]" : "text-[#3d4047] hover:text-[#62666d]"}`}
+          >Deutsch</a>
+          <span class="text-[#3d4047]">/</span>
+          <a
+            href={`/en${currentPath.replace(`/${locale}`, "")}`}
+            class={`text-[12px] fw-510 transition-colors ${locale === "en" ? "text-[#f7f8f8]" : "text-[#3d4047] hover:text-[#62666d]"}`}
+          >English</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-[rgba(255,255,255,0.05)] pt-6 flex flex-col sm:flex-row justify-between gap-3">
+      <p class="text-[11px] text-[#3d4047] fw-400">
+        &copy; {new Date().getFullYear()} Gurgurovci Studio. {t("footer.copyright")}
+      </p>
+      <a href={`/${locale}/imprint`} class="text-[11px] text-[#3d4047] hover:text-[#62666d] transition-colors fw-400">
+        {t("footer.imprint")}
+      </a>
+    </div>
+  </div>
+</footer>

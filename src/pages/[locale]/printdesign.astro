@@ -1,0 +1,36 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import PageHeader from "@/components/PageHeader.astro";
+import ServicePricing from "@/components/sections/ServicePricing.astro";
+import { useTranslations } from "@/i18n/utils";
+
+export function getStaticPaths() {
+  return [{ params: { locale: "de" } }, { params: { locale: "en" } }];
+}
+
+const { locale } = Astro.params;
+const { t, tRaw } = useTranslations(locale);
+
+type Plan = { title: string; description: string; price: string; features: string[] };
+type PricingCta = { title: string; description: string; button: string };
+---
+
+<Layout
+  title={t("pages.printdesign.meta.title")}
+  description={t("pages.printdesign.meta.description")}
+  locale={locale}
+>
+  <main>
+    <PageHeader
+      title={t("pages.printdesign.header.title")}
+      description={t("pages.printdesign.header.description")}
+    />
+    <ServicePricing
+      title={t("pages.printdesign.pricing.title")}
+      description={t("pages.printdesign.pricing.description")}
+      note={t("pages.printdesign.pricing.note")}
+      cta={tRaw<PricingCta>("pages.printdesign.pricing.cta")}
+      plans={tRaw<Plan[]>("pages.printdesign.pricing.plans")}
+    />
+  </main>
+</Layout>

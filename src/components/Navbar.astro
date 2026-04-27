@@ -1,0 +1,73 @@
+---
+import GenericsStudioLogo from "@/components/svgs/GenericsStudioLogo.astro";
+import { useTranslations } from "@/i18n/utils";
+
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+const { t } = useTranslations(locale);
+
+const currentPath = Astro.url.pathname;
+const isActive = (href: string) => currentPath.startsWith(`/${locale}${href}`);
+---
+
+<nav
+  class="w-full backdrop-blur-md bg-[rgba(8,9,10,0.8)] px-6 md:px-10 sticky top-0 z-50 border-b border-[rgba(255,255,255,0.06)] h-14"
+>
+  <div class="max-w-7xl mx-auto h-full flex items-center justify-between">
+    <a href={`/${locale}`} class="flex items-center flex-shrink-0 mr-10">
+      <GenericsStudioLogo class="h-8 w-auto text-[#f7f8f8]" />
+    </a>
+
+    <!-- Desktop nav links -->
+    <ul class="hidden md:flex items-center gap-1 flex-1">
+      <li>
+        <a
+          href={`/${locale}/webdesign`}
+          class={`px-3 h-8 inline-flex items-center text-[13px] fw-510 rounded-[6px] transition-colors ${isActive("/webdesign") ? "text-[#f7f8f8] bg-[rgba(255,255,255,0.06)]" : "text-[#8a8f98] hover:text-[#d0d6e0] hover:bg-[rgba(255,255,255,0.04)]"}`}
+        >
+          {locale === "de" ? "Webdesign" : "Web Design"}
+        </a>
+      </li>
+      <li>
+        <a
+          href={`/${locale}/branding`}
+          class={`px-3 h-8 inline-flex items-center text-[13px] fw-510 rounded-[6px] transition-colors ${isActive("/branding") ? "text-[#f7f8f8] bg-[rgba(255,255,255,0.06)]" : "text-[#8a8f98] hover:text-[#d0d6e0] hover:bg-[rgba(255,255,255,0.04)]"}`}
+        >
+          Branding
+        </a>
+      </li>
+      <li>
+        <a
+          href={`/${locale}/blog`}
+          class={`px-3 h-8 inline-flex items-center text-[13px] fw-510 rounded-[6px] transition-colors ${isActive("/blog") ? "text-[#f7f8f8] bg-[rgba(255,255,255,0.06)]" : "text-[#8a8f98] hover:text-[#d0d6e0] hover:bg-[rgba(255,255,255,0.04)]"}`}
+        >
+          Blog
+        </a>
+      </li>
+    </ul>
+
+    <div class="flex items-center gap-3">
+      <!-- Language switcher -->
+      <div class="hidden sm:flex items-center gap-1">
+        <a
+          href={currentPath.replace(`/${locale}`, "/de")}
+          class={`px-2 h-7 inline-flex items-center text-[12px] fw-510 rounded-[4px] transition-colors ${locale === "de" ? "text-[#f7f8f8] bg-[rgba(255,255,255,0.06)]" : "text-[#62666d] hover:text-[#8a8f98]"}`}
+        >DE</a>
+        <a
+          href={currentPath.replace(`/${locale}`, "/en")}
+          class={`px-2 h-7 inline-flex items-center text-[12px] fw-510 rounded-[4px] transition-colors ${locale === "en" ? "text-[#f7f8f8] bg-[rgba(255,255,255,0.06)]" : "text-[#62666d] hover:text-[#8a8f98]"}`}
+        >EN</a>
+      </div>
+
+      <a
+        href={`/${locale}/contact`}
+        class="inline-flex items-center justify-center h-8 px-4 rounded-[6px] text-[13px] fw-510 bg-[#5e6ad2] text-white hover:bg-[#6b77e0] transition-colors"
+      >
+        {t("nav.contact")}
+      </a>
+    </div>
+  </div>
+</nav>

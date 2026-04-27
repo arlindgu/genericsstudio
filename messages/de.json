@@ -1,107 +1,110 @@
 {
   "hero": {
-    "line1": "Wir bauen",
-    "line2": "Websites,",
-    "line3": "die bleiben.",
-    "badge": "Plätze frei für 2026",
-    "description": "Massgeschneidert, schnell und unverkennbar – für Unternehmen, die mehr wollen als Mittelmass.",
-    "cta": "Anfragen",
-    "services": "Leistungen"
+    "badge": "Neue Projekte für 2026 möglich",
+    "title": "Websites, die verkaufen.",
+    "subtitle": "Nicht nur existieren.",
+    "description": "Massgeschneiderte Websites, Markenidentitäten und Grafikdesign, entwickelt in der Schweiz für Unternehmen, die sich vom Standard abheben.",
+    "cta": "Projekt anfragen",
+    "ctaSecondary": "Leistungen ansehen"
   },
   "mission": {
     "label": "Warum Generics Studio",
-    "title": "Deine Website, die verkauft. Nicht nur existiert.",
-    "description": "Die meisten Websites verlieren täglich potenzielle Kunden — durch schlechte Struktur, generisches Design und fehlende Klarheit.",
+    "title": "Deine Website ist dein bester Verkäufer.",
+    "subtitle": "Macht sie ihren Job?",
+    "description": "Die meisten Websites verlieren täglich Kunden: durch langsame Ladezeiten, generische Templates und unklare Botschaften. Wir bauen Sites, die aktiv für dein Business arbeiten.",
     "benefits": [
       {
         "number": "01",
-        "title": "Mehr Anfragen",
-        "description": "Designs, die Vertrauen aufbauen und Besucher zum Handeln bringen — nicht nur zum Schauen."
+        "title": "Höhere Conversion-Rate",
+        "description": "Klare Struktur, Hierarchie und Conversion-Logik. Von Anfang an eingebaut, nicht nachträglich hinzugefügt."
       },
       {
         "number": "02",
-        "title": "Schneller live",
-        "description": "Erste Prototypen in Tagen. Kein endloses Hin und Her, kein Warten auf Freigaben."
+        "title": "Live in Tagen, nicht Monaten",
+        "description": "Erster funktionierender Prototyp innerhalb von Tagen. Kein endloses Hin und Her, direkt zum Ergebnis."
       },
       {
         "number": "03",
-        "title": "Keine Templates",
-        "description": "100% individuell entwickelt. Dein Auftritt sieht aus wie kein anderer — weil er keiner ist."
+        "title": "100% individuell, keine Templates",
+        "description": "Jeder Pixel wird für deine Marke gebaut. Deine Website sieht aus wie keine andere, weil sie für niemand anderen gemacht wurde."
       },
       {
         "number": "04",
-        "title": "Direkte Kommunikation",
-        "description": "Du sprichst mit den Machern, nicht mit einem Projektmanager. Kurze Wege, klare Antworten."
+        "title": "Du sprichst direkt mit den Machern",
+        "description": "Kein Account Manager, kein Mittelmann. Du arbeitest direkt mit den Personen, die dein Projekt bauen."
       },
       {
         "number": "05",
-        "title": "Langfristig stark",
-        "description": "Zeitlose Designs ohne Ablaufdatum. Keine Neugestaltung nach zwei Jahren."
+        "title": "Zeitloses Design",
+        "description": "Wir designen für Langlebigkeit, nicht für Trends. Keine peinliche Neugestaltung nach zwei Jahren nötig."
       },
       {
         "number": "06",
-        "title": "Messbare Wirkung",
-        "description": "Struktur, Hierarchie und Conversion-Logik sind von Anfang an eingebaut — nicht nachträglich."
+        "title": "Schweizer Qualitätsstandard",
+        "description": "Präzision, Zuverlässigkeit und Sorgfalt, angewendet auf jede Zeile Code und jede Designentscheidung."
       }
     ]
   },
   "services": {
     "label": "Leistungen",
-    "title": "Vier Disziplinen.\nEin Ziel.",
+    "title": "Vier Disziplinen.",
+    "subtitle": "Ein Qualitätsstandard.",
     "more": "Mehr erfahren",
     "items": [
       {
         "number": "01",
-        "title": "Webdesign",
-        "description": "Individuell gebaut. Schnell geladen. Sofort bereit.",
+        "title": "Webdesign & Entwicklung",
+        "description": "Massgeschneiderte Websites, die schnell laden, in der Suche ranken und Besucher zu Kunden machen. Ab 600 CHF.",
         "href": "/webdesign"
       },
       {
         "number": "02",
-        "title": "Branding & Logos",
-        "description": "Ihr Name. Ihre Farben. Ihre Identität.",
+        "title": "Branding & Logodesign",
+        "description": "Eine Markenidentität, die dich sofort erkennbar macht: Logo, Farben, Typografie und Guidelines.",
         "href": "/branding"
       },
       {
         "number": "03",
         "title": "Grafikdesign",
-        "description": "Alles, was ins Auge fällt.",
+        "description": "Social Media Grafiken, Illustrationen, Werbemittel. Visuelle Inhalte, die den Scroll stoppen.",
         "href": "/graphicdesign"
       },
       {
         "number": "04",
-        "title": "Print Design",
-        "description": "Analog. Sauber. Druckfertig.",
+        "title": "Printdesign",
+        "description": "Flyer, Visitenkarten, Broschüren, Menükarten. Druckfertige Dateien, präzise geliefert.",
         "href": "/printdesign"
       }
     ]
   },
   "process": {
-    "label": "Ablauf",
-    "title": "Drei Schritte.\nEin Ergebnis.",
-    "description": "Kein Chaos. Kein Warten. Von der Idee bis zum Launch — klar und direkt.",
+    "label": "So arbeiten wir",
+    "title": "Vom ersten Gespräch",
+    "subtitle": "zur fertigen Website.",
+    "description": "Kein Chaos, kein Warten. Jedes Projekt folgt demselben bewährten Ablauf, damit du immer weisst, was als Nächstes kommt.",
     "steps": [
       {
         "number": "01",
-        "title": "Entdecken & Definieren",
-        "description": "Wir hören zu. Stellen die richtigen Fragen. Und bauen den Plan, der alles Weitere trägt."
+        "title": "Discovery-Call",
+        "description": "Wir verstehen dein Unternehmen, deine Ziele und deine Zielgruppe. Du bekommst einen klaren Umfang und ehrlichen Zeitplan, bevor du dich festlegst."
       },
       {
         "number": "02",
         "title": "Design & Entwicklung",
-        "description": "Frühe Prototypen. Schnelles Feedback. Jede Entscheidung mit Absicht."
+        "description": "Du siehst innerhalb von Tagen einen funktionierenden Prototyp. Feedback-Runden sind kurz und fokussiert. Jede Entscheidung hat einen Grund."
       },
       {
         "number": "03",
-        "title": "Launch & Support",
-        "description": "Reibungslos live. Vollständig übergeben. Bereit zu wachsen."
+        "title": "Launch & Übergabe",
+        "description": "Wir gehen live nach deinem Zeitplan. Vollständige Übergabe mit Dokumentation, damit du nie von uns abhängig bist."
       }
     ]
   },
   "pricing": {
     "label": "Preise",
-    "title": "Klar. Fair.\nOhne Kompromisse.",
-    "description": "Transparente Preise für echte Qualität. Was du siehst, ist was du bekommst.",
+    "title": "Transparente Preise.",
+    "subtitle": "Keine Überraschungen.",
+    "description": "Feste Startpreise, damit du sicher planen kannst. Jedes Projekt wird vor Beginn genau besprochen.",
     "cta": {
       "title": "Du weisst nicht, was du brauchst?",
       "description": "Kostenloses 30-Minuten-Gespräch. Kein Druck, nur offener Austausch.",
@@ -135,9 +138,10 @@
     ]
   },
   "cta": {
-    "label": "Nächster Schritt",
-    "title": "Dein nächstes\nProjekt beginnt\nhier.",
-    "button": "Jetzt anfragen"
+    "label": "Bereit loszulegen?",
+    "title": "Für die Zukunft gebaut.",
+    "subtitle": "Heute verfügbar.",
+    "button": "Projekt starten"
   },
   "footer": {
     "pages": "Seiten",
@@ -173,10 +177,10 @@
     },
     "label": "Melde dich",
     "title": "Kein Formular.\nEinfach direkt.",
-    "description": "Kein Hin und Her, kein Warten auf Freigaben. Wir sind direkt erreichbar — per E-Mail, WhatsApp oder Termin.",
+    "description": "Kein Hin und Her, kein Warten auf Freigaben. Wir sind direkt erreichbar: per E-Mail, WhatsApp oder Termin.",
     "meta": {
       "title": "Kontakt",
-      "description": "Schreib uns direkt per E-Mail oder WhatsApp. Kein Kontaktformular, kein Hin und Her – wir melden uns innerhalb von 24 Stunden."
+      "description": "Schreib uns direkt per E-Mail oder WhatsApp. Kein Kontaktformular, kein Hin und Her. Wir melden uns innerhalb von 24 Stunden."
     },
     "options": [
       {
@@ -199,7 +203,7 @@
         "number": "03",
         "label": "Termin buchen",
         "title": "Kostenloses Gespräch",
-        "description": "30 Minuten, kein Druck – einfach offen über dein Projekt reden.",
+        "description": "30 Minuten, kein Druck. Einfach offen über dein Projekt reden.",
         "href": "https://cal.com/genericsstudio/discovery-call",
         "external": true
       }
@@ -219,7 +223,7 @@
     "webdesign": {
       "meta": {
         "title": "Webdesign",
-        "description": "Professionelles Webdesign aus der Schweiz. Individuell entwickelte Websites – responsiv, schnell und unverkennbar. Ab 600 CHF."
+        "description": "Professionelles Webdesign aus der Schweiz. Individuell entwickelte Websites, responsiv, schnell und unverkennbar. Ab 600 CHF."
       },
       "header": {
         "title": "Webdesign",
@@ -285,7 +289,7 @@
             "title": "Identity",
             "description": "Fürs stabile Markenfundament mit klarer visueller Linie.",
             "price": "Ab 700 CHF",
-            "features": ["2–3 Logo Konzepte", "Brand Colors Palette", "Typografie Setup", "Mini Styleguide (PDF)", "3 Revisionen"]
+            "features": ["2 bis 3 Logo Konzepte", "Brand Colors Palette", "Typografie Setup", "Mini Styleguide (PDF)", "3 Revisionen"]
           },
           {
             "title": "Full Branding",
@@ -339,7 +343,7 @@
     "printdesign": {
       "meta": {
         "title": "Printdesign",
-        "description": "Druckfertiges Printdesign aus der Schweiz. Flyer, Visitenkarten, Broschüren und mehr – präzise und professionell. Ab 100 CHF."
+        "description": "Druckfertiges Printdesign aus der Schweiz. Flyer, Visitenkarten, Broschüren und mehr, präzise und professionell. Ab 100 CHF."
       },
       "header": {
         "title": "Printdesign",
