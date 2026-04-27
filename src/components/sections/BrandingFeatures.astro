@@ -68,8 +68,7 @@ const c = locale === "de" ? content.de : content.en;
     <div class="border-t border-[rgba(255,255,255,0.06)]">
       {c.steps.map((step) => (
         <div class="flex items-start gap-8 py-10 border-b border-[rgba(255,255,255,0.06)]">
-          <span class="text-[11px] fw-510 text-[#3d4047] tracking-[0.1em] flex-shrink-0 w-7 mt-[6px]">{step.number}</span>
-          <div class="flex flex-col lg:flex-row lg:gap-16 flex-1">
+          <div class="flex flex-col lg:flex-row lg:justify-between flex-1">
             <h3 class="text-[clamp(1.1rem,2vw,1.4rem)] fw-510 text-[#f7f8f8] tracking-[-0.03em] leading-tight lg:w-72 flex-shrink-0 mb-4 lg:mb-0">
               {step.title}
             </h3>
