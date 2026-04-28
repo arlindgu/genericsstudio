@@ -36,43 +36,31 @@ const options = tRaw<ContactOption[]>("contact.options");
     <section class="py-24 px-6 md:px-10">
       <div class="max-w-7xl mx-auto">
         <div class="mb-16 max-w-xl">
-          <p class="text-[#62666d] text-xs font-[510] uppercase tracking-[0.12em] mb-3">
-            {t("contact.label")}
-          </p>
-          <h2
-            class="text-3xl md:text-4xl font-[510] text-[#f7f8f8] tracking-[-0.704px] leading-tight whitespace-pre-line mb-4"
-          >
+          <h2 class="text-section-heading fw-510 text-[#f7f8f8] tracking-[-0.04em] leading-tight whitespace-pre-line mb-4">
             {t("contact.title")}
           </h2>
-          <p class="text-[#8a8f98] text-base leading-relaxed">
+          <p class="text-body text-[#8a8f98] leading-[1.7] fw-400">
             {t("contact.description")}
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="flex flex-col border-t border-[rgba(255,255,255,0.06)]">
           {
             options.map((option) => (
               <a
                 href={option.href}
                 target={option.external ? "_blank" : undefined}
                 rel={option.external ? "noopener noreferrer" : undefined}
-                class="group flex flex-col p-8 bg-[rgba(255,255,255,0.02)] border border-[rgba(255,255,255,0.08)] rounded-[12px] hover:bg-[rgba(255,255,255,0.04)] hover:border-[rgba(255,255,255,0.12)] transition-all duration-200"
+                class="group flex items-center justify-between py-6 border-b border-[rgba(255,255,255,0.06)]"
               >
-                <span class="text-xs font-[510] text-[#62666d] tracking-[0.1em] block mb-4">
-                  {option.number}
-                </span>
-                <p class="text-xs font-[510] text-[#62666d] uppercase tracking-[0.1em] mb-2">
-                  {option.label}
-                </p>
-                <p class="text-lg font-[590] text-[#f7f8f8] tracking-[-0.288px] mb-2 group-hover:text-white transition-colors">
-                  {option.title}
-                </p>
-                <p class="text-sm text-[#8a8f98] leading-relaxed">
-                  {option.description}
-                </p>
-                <div class="mt-6 flex items-center gap-2 text-sm font-[510] text-[#62666d] group-hover:text-[#7170ff] transition-colors">
-                  {option.external ? "Open ↗" : "→"}
+                <div class="flex-1 min-w-0 mr-8">
+                  <p class="text-label fw-510 text-[#3d4047] tracking-[0.1em] uppercase mb-1">{option.label}</p>
+                  <h3 class="text-body fw-590 text-[#f7f8f8] tracking-[-0.01em] mb-0.5 group-hover:text-white transition-colors">{option.title}</h3>
+                  <p class="text-label text-[#62666d] fw-400">{option.description}</p>
                 </div>
+                <p class="text-label fw-510 text-[#62666d] group-hover:text-[#7170ff] transition-colors flex-shrink-0">
+                  {option.external ? "↗" : "→"}
+                </p>
               </a>
             ))
           }

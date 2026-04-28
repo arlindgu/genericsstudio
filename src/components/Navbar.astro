@@ -11,6 +11,14 @@ const { t } = useTranslations(locale);
 
 const currentPath = Astro.url.pathname;
 const isActive = (href: string) => currentPath.startsWith(`/${locale}${href}`);
+
+const navLinks = [
+  { href: "/webdesign",     label: locale === "de" ? "Webdesign"    : "Web Design"     },
+  { href: "/branding",      label: "Branding"                                           },
+  { href: "/graphicdesign", label: locale === "de" ? "Grafikdesign" : "Graphic Design"  },
+  { href: "/printdesign",   label: locale === "de" ? "Printdesign"  : "Print Design"    },
+  { href: "/blog",          label: "Blog"                                                },
+];
 ---
 
 <nav
@@ -24,66 +32,128 @@ const isActive = (href: string) => currentPath.startsWith(`/${locale}${href}`);
     <div class="flex items-center gap-3">
       <!-- Desktop nav links -->
       <ul class="hidden md:flex items-center gap-1">
-        <li>
-          <a
-            href={`/${locale}/webdesign`}
-            class={`px-3 h-8 inline-flex items-center text-[13px] fw-510 rounded-[6px] transition-colors ${isActive("/webdesign") ? "text-[#f7f8f8] bg-[rgba(255,255,255,0.06)]" : "text-[#8a8f98] hover:text-[#d0d6e0] hover:bg-[rgba(255,255,255,0.04)]"}`}
-          >
-            {locale === "de" ? "Webdesign" : "Web Design"}
-          </a>
-        </li>
-        <li>
-          <a
-            href={`/${locale}/branding`}
-            class={`px-3 h-8 inline-flex items-center text-[13px] fw-510 rounded-[6px] transition-colors ${isActive("/branding") ? "text-[#f7f8f8] bg-[rgba(255,255,255,0.06)]" : "text-[#8a8f98] hover:text-[#d0d6e0] hover:bg-[rgba(255,255,255,0.04)]"}`}
-          >
-            Branding
-          </a>
-        </li>
-        <li>
-          <a
-            href={`/${locale}/graphicdesign`}
-            class={`px-3 h-8 inline-flex items-center text-[13px] fw-510 rounded-[6px] transition-colors ${isActive("/graphicdesign") ? "text-[#f7f8f8] bg-[rgba(255,255,255,0.06)]" : "text-[#8a8f98] hover:text-[#d0d6e0] hover:bg-[rgba(255,255,255,0.04)]"}`}
-          >
-            {locale === "de" ? "Grafikdesign" : "Graphic Design"}
-          </a>
-        </li>
-        <li>
-          <a
-            href={`/${locale}/printdesign`}
-            class={`px-3 h-8 inline-flex items-center text-[13px] fw-510 rounded-[6px] transition-colors ${isActive("/printdesign") ? "text-[#f7f8f8] bg-[rgba(255,255,255,0.06)]" : "text-[#8a8f98] hover:text-[#d0d6e0] hover:bg-[rgba(255,255,255,0.04)]"}`}
-          >
-            {locale === "de" ? "Printdesign" : "Print Design"}
-          </a>
-        </li>
-        <li>
-          <a
-            href={`/${locale}/blog`}
-            class={`px-3 h-8 inline-flex items-center text-[13px] fw-510 rounded-[6px] transition-colors ${isActive("/blog") ? "text-[#f7f8f8] bg-[rgba(255,255,255,0.06)]" : "text-[#8a8f98] hover:text-[#d0d6e0] hover:bg-[rgba(255,255,255,0.04)]"}`}
-          >
-            Blog
-          </a>
-        </li>
+        {navLinks.map((link) => (
+          <li>
+            <a
+              href={`/${locale}${link.href}`}
+              class={`px-3 h-8 inline-flex items-center text-label fw-510 rounded-[6px] transition-colors ${isActive(link.href) ? "text-[#f7f8f8] bg-[rgba(255,255,255,0.06)]" : "text-[#8a8f98] hover:text-[#d0d6e0] hover:bg-[rgba(255,255,255,0.04)]"}`}
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
       </ul>
 
-      <!-- Language switcher -->
+      <!-- Language switcher (desktop + tablet) -->
       <div class="hidden sm:flex items-center gap-1">
         <a
           href={currentPath.replace(`/${locale}`, "/de")}
-          class={`px-2 h-7 inline-flex items-center text-[12px] fw-510 rounded-[4px] transition-colors ${locale === "de" ? "text-[#f7f8f8] bg-[rgba(255,255,255,0.06)]" : "text-[#62666d] hover:text-[#8a8f98]"}`}
+          class={`px-2 h-7 inline-flex items-center text-label fw-510 rounded-[4px] transition-colors ${locale === "de" ? "text-[#f7f8f8] bg-[rgba(255,255,255,0.06)]" : "text-[#62666d] hover:text-[#8a8f98]"}`}
         >DE</a>
         <a
           href={currentPath.replace(`/${locale}`, "/en")}
-          class={`px-2 h-7 inline-flex items-center text-[12px] fw-510 rounded-[4px] transition-colors ${locale === "en" ? "text-[#f7f8f8] bg-[rgba(255,255,255,0.06)]" : "text-[#62666d] hover:text-[#8a8f98]"}`}
+          class={`px-2 h-7 inline-flex items-center text-label fw-510 rounded-[4px] transition-colors ${locale === "en" ? "text-[#f7f8f8] bg-[rgba(255,255,255,0.06)]" : "text-[#62666d] hover:text-[#8a8f98]"}`}
         >EN</a>
       </div>
 
+      <!-- Burger button (mobile only) -->
+      <button
+        id="menu-toggle"
+        class="md:hidden flex items-center justify-center w-8 h-8 text-[#8a8f98] hover:text-[#f7f8f8] transition-colors"
+        aria-label="Menu"
+        aria-expanded="false"
+      >
+        <!-- Hamburger icon -->
+        <svg id="icon-open" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+        <!-- Close icon -->
+        <svg id="icon-close" class="hidden" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+
       <a
         href={`/${locale}/contact`}
-        class="inline-flex items-center justify-center h-8 px-4 rounded-[6px] text-[13px] fw-510 bg-[#5e6ad2] text-white hover:bg-[#6b77e0] transition-colors"
+        class="hidden md:inline-flex items-center justify-center h-8 px-4 rounded-[6px] text-label fw-510 bg-[#5e6ad2] text-white hover:bg-[#6b77e0] transition-colors"
       >
         {t("nav.contact")}
       </a>
     </div>
   </div>
 </nav>
+
+<!-- Mobile menu -->
+<div
+  id="mobile-menu"
+  class="hidden md:hidden fixed top-14 left-0 right-0 bottom-0 z-40 bg-[#08090a]"
+>
+  <div class="px-6 py-4 flex flex-col h-full overflow-y-auto">
+    <!-- Nav links -->
+    <div class="flex flex-col border-t border-[rgba(255,255,255,0.06)]">
+      {navLinks.map((link) => (
+        <a
+          href={`/${locale}${link.href}`}
+          class={`flex items-center h-14 border-b border-[rgba(255,255,255,0.06)] text-body fw-510 transition-colors ${isActive(link.href) ? "text-[#f7f8f8]" : "text-[#8a8f98]"}`}
+        >
+          {link.label}
+        </a>
+      ))}
+    </div>
+
+    <!-- Contact CTA -->
+    <a
+      href={`/${locale}/contact`}
+      class="mt-6 inline-flex items-center justify-center h-10 px-6 rounded-[6px] text-label fw-510 bg-[#5e6ad2] text-white hover:bg-[#6b77e0] transition-colors w-full"
+    >
+      {t("nav.contact")}
+    </a>
+
+    <!-- Language switcher -->
+    <div class="flex items-center gap-2 mt-4">
+      <a
+        href={currentPath.replace(`/${locale}`, "/de")}
+        class={`px-3 h-8 inline-flex items-center text-label fw-510 rounded-[4px] transition-colors ${locale === "de" ? "text-[#f7f8f8] bg-[rgba(255,255,255,0.06)]" : "text-[#62666d] hover:text-[#8a8f98]"}`}
+      >DE</a>
+      <a
+        href={currentPath.replace(`/${locale}`, "/en")}
+        class={`px-3 h-8 inline-flex items-center text-label fw-510 rounded-[4px] transition-colors ${locale === "en" ? "text-[#f7f8f8] bg-[rgba(255,255,255,0.06)]" : "text-[#62666d] hover:text-[#8a8f98]"}`}
+      >EN</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  const toggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("mobile-menu");
+  const iconOpen = document.getElementById("icon-open");
+  const iconClose = document.getElementById("icon-close");
+
+  function openMenu() {
+    menu?.classList.remove("hidden");
+    iconOpen?.classList.add("hidden");
+    iconClose?.classList.remove("hidden");
+    toggle?.setAttribute("aria-expanded", "true");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeMenu() {
+    menu?.classList.add("hidden");
+    iconOpen?.classList.remove("hidden");
+    iconClose?.classList.add("hidden");
+    toggle?.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
+  }
+
+  toggle?.addEventListener("click", () => {
+    const isOpen = !menu?.classList.contains("hidden");
+    isOpen ? closeMenu() : openMenu();
+  });
+
+  menu?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+</script>

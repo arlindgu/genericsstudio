@@ -22,7 +22,7 @@ const currentPath = Astro.url.pathname;
         <a href={`/${locale}`} class="inline-block mb-4">
           <GenericsStudioLogo class="h-7 w-auto text-[#f7f8f8] opacity-60 hover:opacity-90 transition-opacity" />
         </a>
-        <p class="text-[12px] text-[#3d4047] leading-[1.7] fw-400 max-w-[220px]">
+        <p class="text-label text-[#3d4047] leading-[1.7] fw-400 max-w-[220px]">
           {locale === "de"
             ? "Design- und Webagentur aus der Schweiz."
             : "Design and web agency from Switzerland."}
@@ -31,13 +31,13 @@ const currentPath = Astro.url.pathname;
 
       <!-- Pages -->
       <div>
-        <p class="text-[11px] fw-510 uppercase tracking-[0.12em] text-[#3d4047] mb-4">{t("footer.pages")}</p>
+        <p class="text-label fw-510 uppercase tracking-[0.12em] text-[#3d4047] mb-4">{t("footer.pages")}</p>
         <ul class="flex flex-col gap-2.5">
           {links.map((link) => (
             <li>
               <a
                 href={`/${locale}${link.href}`}
-                class="text-[13px] text-[#62666d] hover:text-[#d0d6e0] transition-colors fw-400"
+                class="text-label text-[#62666d] hover:text-[#d0d6e0] transition-colors fw-400"
               >
                 {link.label}
               </a>
@@ -48,7 +48,7 @@ const currentPath = Astro.url.pathname;
 
       <!-- Services -->
       <div>
-        <p class="text-[11px] fw-510 uppercase tracking-[0.12em] text-[#3d4047] mb-4">
+        <p class="text-label fw-510 uppercase tracking-[0.12em] text-[#3d4047] mb-4">
           {locale === "de" ? "Leistungen" : "Services"}
         </p>
         <ul class="flex flex-col gap-2.5">
@@ -61,7 +61,7 @@ const currentPath = Astro.url.pathname;
             <li>
               <a
                 href={`/${locale}${link.href}`}
-                class="text-[13px] text-[#62666d] hover:text-[#d0d6e0] transition-colors fw-400"
+                class="text-label text-[#62666d] hover:text-[#d0d6e0] transition-colors fw-400"
               >
                 {link.label}
               </a>
@@ -72,44 +72,44 @@ const currentPath = Astro.url.pathname;
 
       <!-- Contact + Language -->
       <div>
-        <p class="text-[11px] fw-510 uppercase tracking-[0.12em] text-[#3d4047] mb-4">
+        <p class="text-label fw-510 uppercase tracking-[0.12em] text-[#3d4047] mb-4">
           {locale === "de" ? "Kontakt" : "Contact"}
         </p>
         <ul class="flex flex-col gap-2.5 mb-8">
           <li>
-            <a href="mailto:hello@generics.studio" class="text-[13px] text-[#62666d] hover:text-[#d0d6e0] transition-colors fw-400">
+            <a href="mailto:hello@generics.studio" class="text-label text-[#62666d] hover:text-[#d0d6e0] transition-colors fw-400">
               hello@generics.studio
             </a>
           </li>
           <li>
-            <a href="https://www.instagram.com/genericsstudio" target="_blank" rel="noopener" class="text-[13px] text-[#62666d] hover:text-[#d0d6e0] transition-colors fw-400">
+            <a href="https://www.instagram.com/genericsstudio" target="_blank" rel="noopener" class="text-label text-[#62666d] hover:text-[#d0d6e0] transition-colors fw-400">
               Instagram
             </a>
           </li>
         </ul>
 
-        <p class="text-[11px] fw-510 uppercase tracking-[0.12em] text-[#3d4047] mb-3">
+        <p class="text-label fw-510 uppercase tracking-[0.12em] text-[#3d4047] mb-3">
           Language
         </p>
         <div class="flex gap-3">
           <a
             href={`/de${currentPath.replace(`/${locale}`, "")}`}
-            class={`text-[12px] fw-510 transition-colors ${locale === "de" ? "text-[#f7f8f8]" : "text-[#3d4047] hover:text-[#62666d]"}`}
+            class={`text-label fw-510 transition-colors ${locale === "de" ? "text-[#f7f8f8]" : "text-[#3d4047] hover:text-[#62666d]"}`}
           >Deutsch</a>
           <span class="text-[#3d4047]">/</span>
           <a
             href={`/en${currentPath.replace(`/${locale}`, "")}`}
-            class={`text-[12px] fw-510 transition-colors ${locale === "en" ? "text-[#f7f8f8]" : "text-[#3d4047] hover:text-[#62666d]"}`}
+            class={`text-label fw-510 transition-colors ${locale === "en" ? "text-[#f7f8f8]" : "text-[#3d4047] hover:text-[#62666d]"}`}
           >English</a>
         </div>
       </div>
     </div>
 
     <div class="border-t border-[rgba(255,255,255,0.05)] pt-6 flex flex-col sm:flex-row justify-between gap-3">
-      <p class="text-[11px] text-[#3d4047] fw-400">
+      <p class="text-label text-[#3d4047] fw-400">
         &copy; {new Date().getFullYear()} Gurgurovci Studio. {t("footer.copyright")}
       </p>
-      <a href={`/${locale}/imprint`} class="text-[11px] text-[#3d4047] hover:text-[#62666d] transition-colors fw-400">
+      <a href={`/${locale}/imprint`} class="text-label text-[#3d4047] hover:text-[#62666d] transition-colors fw-400">
         {t("footer.imprint")}
       </a>
     </div>

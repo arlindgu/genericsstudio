@@ -32,34 +32,29 @@ const posts = (await getCollection(collectionKey)).sort(
       <div class="max-w-7xl mx-auto">
         {
           posts.length === 0 ? (
-            <p class="text-[#8a8f98]">No posts yet.</p>
+            <p class="text-body text-[#8a8f98]">No posts yet.</p>
           ) : (
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="flex flex-col border-t border-[rgba(255,255,255,0.06)]">
               {posts.map((post) => (
                 <a
                   href={`/${locale}/blog/${post.id}`}
-                  class="group flex flex-col p-6 bg-[rgba(255,255,255,0.02)] border border-[rgba(255,255,255,0.08)] rounded-[8px] hover:bg-[rgba(255,255,255,0.04)] hover:border-[rgba(255,255,255,0.12)] transition-all duration-200"
+                  class="group flex items-start justify-between py-6 border-b border-[rgba(255,255,255,0.06)]"
                 >
-                  <div class="flex items-center gap-2 mb-4">
-                    <span class="text-xs font-[510] text-[#62666d] bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-full px-2.5 py-0.5">
-                      {post.data.category}
-                    </span>
-                    <span class="text-xs text-[#62666d]">
-                      {post.data.readingTime} {t("blog.readingTime")}
-                    </span>
+                  <div class="flex-1 min-w-0 mr-8">
+                    <p class="text-label text-[#3d4047] fw-400 mb-1.5">
+                      {new Date(post.data.date).toLocaleDateString(
+                        locale === "de" ? "de-CH" : "en-GB",
+                        { year: "numeric", month: "long", day: "numeric" }
+                      )}
+                    </p>
+                    <h2 class="text-body fw-590 text-[#f7f8f8] tracking-[-0.015em] mb-1 group-hover:text-white transition-colors">
+                      {post.data.title}
+                    </h2>
+                    <p class="text-label text-[#62666d] leading-[1.6] fw-400">
+                      {post.data.description}
+                    </p>
                   </div>
-                  <h2 class="text-base font-[590] text-[#f7f8f8] tracking-[-0.24px] mb-2 group-hover:text-white transition-colors leading-snug">
-                    {post.data.title}
-                  </h2>
-                  <p class="text-sm text-[#8a8f98] leading-relaxed flex-1 mb-4">
-                    {post.data.description}
-                  </p>
-                  <p class="text-xs text-[#62666d]">
-                    {new Date(post.data.date).toLocaleDateString(
-                      locale === "de" ? "de-CH" : "en-GB",
-                      { year: "numeric", month: "long", day: "numeric" }
-                    )}
-                  </p>
+                  <span class="text-label fw-510 text-[#62666d] group-hover:text-[#7170ff] transition-colors flex-shrink-0 mt-0.5">→</span>
                 </a>
               ))}
             </div>

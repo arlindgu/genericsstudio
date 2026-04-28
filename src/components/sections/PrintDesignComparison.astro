@@ -53,11 +53,11 @@ const c = locale === "de" ? de : en;
 <section class="px-6 md:px-10">
   <div class="max-w-7xl mx-auto">
 
-    <div class="py-20 flex flex-col lg:flex-row lg:justify-between gap-8 lg:gap-16">
-      <h2 class="text-[clamp(1.75rem,3vw,2.5rem)] fw-510 leading-[1.08] tracking-[-0.04em] text-[#f7f8f8] lg:max-w-[44%]">
+    <div class="py-28 flex flex-col lg:flex-row lg:justify-between gap-8 lg:gap-16">
+      <h2 class="text-section-heading fw-510 leading-[1.08] tracking-[-0.04em] text-[#f7f8f8] lg:max-w-[44%]">
         {c.heading}
       </h2>
-      <p class="text-[16px] text-[#8a8f98] leading-[1.7] fw-400 lg:max-w-[42%] flex items-center">
+      <p class="text-body text-[#8a8f98] leading-[1.7] fw-400 lg:max-w-[42%] flex items-center">
         {c.description}
       </p>
     </div>
@@ -69,7 +69,7 @@ const c = locale === "de" ? de : en;
         <div class="bg-[#0d0e0f] rounded-[8px] p-6 mb-6 border border-[rgba(255,255,255,0.05)]">
           <div class="rounded-[6px] border border-dashed border-[rgba(255,78,67,0.3)] p-4 mb-5 relative">
             <div class="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-[#ff4e43] flex items-center justify-center">
-              <span class="text-[9px] text-white fw-590">!</span>
+              <span class="text-label text-white fw-590">!</span>
             </div>
             <div class="h-16 rounded-[4px] mb-3 overflow-hidden relative">
               <div class="absolute inset-0 bg-gradient-to-r from-[#e74c3c] via-[#3498db] to-[#f1c40f] opacity-60"></div>
@@ -77,15 +77,15 @@ const c = locale === "de" ? de : en;
                 <div class="h-2 w-20 rounded bg-[rgba(255,255,255,0.1)]"></div>
               </div>
             </div>
-            <p class="text-[10px] text-[#ff4e43] fw-510 text-center">document_final_v3.png</p>
+            <p class="text-label text-[#ff4e43] fw-510 text-center">document_final_v3.png</p>
           </div>
           <div class="flex flex-col">
             {c.specsA.map(spec => (
               <div class="flex justify-between items-center py-2 border-b border-[rgba(255,255,255,0.04)] last:border-0">
-                <span class="text-[11px] text-[#3d4047] fw-400">{spec.label}</span>
+                <span class="text-label text-[#3d4047] fw-400">{spec.label}</span>
                 <div class="flex items-center gap-1.5">
                   <div class="w-1.5 h-1.5 rounded-full bg-[#ff4e43]"></div>
-                  <span class="text-[11px] text-[#ff4e43] fw-510">{spec.value}</span>
+                  <span class="text-label text-[#ff4e43] fw-510">{spec.value}</span>
                 </div>
               </div>
             ))}
@@ -93,9 +93,9 @@ const c = locale === "de" ? de : en;
         </div>
         <div class="flex items-center gap-2 mb-2">
           <div class="w-2 h-2 rounded-full bg-[#ff4e43] flex-shrink-0"></div>
-          <h3 class="text-[15px] fw-590 text-[#f7f8f8] tracking-[-0.015em]">{c.labelA}</h3>
+          <h3 class="text-body fw-590 text-[#f7f8f8] tracking-[-0.015em]">{c.labelA}</h3>
         </div>
-        <p class="text-[13px] text-[#62666d] leading-[1.65] fw-400">{c.captionA}</p>
+        <p class="text-label text-[#62666d] leading-[1.65] fw-400">{c.captionA}</p>
       </div>
 
       <!-- Panel B: Professional prep -->
@@ -112,21 +112,21 @@ const c = locale === "de" ? de : en;
               <div class="absolute inset-[3px] bg-[rgba(94,106,210,0.08)] flex items-center justify-center">
                 <div class="flex items-center gap-2">
                   <div class="w-5 h-5 rounded-[3px] bg-[#5e6ad2] flex items-center justify-center">
-                    <span class="text-[8px] fw-590 text-white">G</span>
+                    <span class="text-label fw-590 text-white">G</span>
                   </div>
                   <div class="h-2 w-12 rounded bg-[rgba(247,248,248,0.1)]"></div>
                 </div>
               </div>
             </div>
-            <p class="text-[10px] text-[#0cce6b] fw-510 text-center">flyer_druckfertig_CMYK.pdf</p>
+            <p class="text-label text-[#0cce6b] fw-510 text-center">flyer_druckfertig_CMYK.pdf</p>
           </div>
           <div class="flex flex-col">
             {c.specsB.map(spec => (
               <div class="flex justify-between items-center py-2 border-b border-[rgba(255,255,255,0.04)] last:border-0">
-                <span class="text-[11px] text-[#3d4047] fw-400">{spec.label}</span>
+                <span class="text-label text-[#3d4047] fw-400">{spec.label}</span>
                 <div class="flex items-center gap-1.5">
                   <div class="w-1.5 h-1.5 rounded-full bg-[#0cce6b]"></div>
-                  <span class="text-[11px] text-[#0cce6b] fw-510">{spec.value}</span>
+                  <span class="text-label text-[#0cce6b] fw-510">{spec.value}</span>
                 </div>
               </div>
             ))}
@@ -134,9 +134,9 @@ const c = locale === "de" ? de : en;
         </div>
         <div class="flex items-center gap-2 mb-2">
           <div class="w-2 h-2 rounded-full bg-[#0cce6b] flex-shrink-0"></div>
-          <h3 class="text-[15px] fw-590 text-[#f7f8f8] tracking-[-0.015em]">{c.labelB}</h3>
+          <h3 class="text-body fw-590 text-[#f7f8f8] tracking-[-0.015em]">{c.labelB}</h3>
         </div>
-        <p class="text-[13px] text-[#62666d] leading-[1.65] fw-400">{c.captionB}</p>
+        <p class="text-label text-[#62666d] leading-[1.65] fw-400">{c.captionB}</p>
       </div>
 
     </div>

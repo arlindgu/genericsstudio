@@ -258,6 +258,36 @@
             "features": ["UX Konzept + Custom UI", "Advanced SEO", "Automationen", "Mehrsprachigkeit", "Security Setup + Hosting Setup", "3 Monate Support"]
           }
         ]
+      },
+      "hosting": {
+        "title": "Hosting & Wartung",
+        "description": "Deine Website läuft, bleibt aktuell und du kümmerst dich um nichts.",
+        "note": "Alle Pläne monatlich kündbar. Setup-Gebühr einmalig 150 CHF.",
+        "cta": {
+          "title": "Unsicher welcher Plan passt?",
+          "description": "Kostenloses Gespräch — wir finden gemeinsam die richtige Lösung.",
+          "button": "Termin vereinbaren"
+        },
+        "plans": [
+          {
+            "title": "Basic",
+            "description": "Alles was deine Website braucht, um sicher und schnell online zu bleiben.",
+            "price": "29 CHF/Mo.",
+            "features": ["Managed Hosting (SSD, CDN, SSL)", "Wöchentliche Backups", "Uptime-Monitoring 24/7", "Sicherheitsmonitoring", "Monatlicher Status-Report"]
+          },
+          {
+            "title": "Care",
+            "description": "Aktive Pflege damit deine Website immer auf dem neuesten Stand ist.",
+            "price": "79 CHF/Mo.",
+            "features": ["Alles aus Basic", "CMS- & Plugin-Updates", "1h Inhaltsänderungen pro Monat", "Performance-Check monatlich", "Prioritäts-Support (48h)"]
+          },
+          {
+            "title": "Ultra",
+            "description": "Vollständige Betreuung — du konzentrierst dich auf dein Geschäft.",
+            "price": "149 CHF/Mo.",
+            "features": ["Alles aus Care", "4h Inhaltsänderungen pro Monat", "SEO-Monitoring & Optimierungen", "Monatlicher Analytics-Bericht", "Prioritäts-Support (24h)"]
+          }
+        ]
       }
     },
     "branding": {

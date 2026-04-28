@@ -36,5 +36,12 @@ type PricingCta = { title: string; description: string; button: string };
       cta={tRaw<PricingCta>("pages.webdesign.pricing.cta")}
       plans={tRaw<Plan[]>("pages.webdesign.pricing.plans")}
     />
+    <ServicePricing
+      title={t("pages.webdesign.hosting.title")}
+      description={t("pages.webdesign.hosting.description")}
+      note={t("pages.webdesign.hosting.note")}
+      cta={tRaw<PricingCta>("pages.webdesign.hosting.cta")}
+      plans={tRaw<Plan[]>("pages.webdesign.hosting.plans")}
+    />
   </main>
 </Layout>

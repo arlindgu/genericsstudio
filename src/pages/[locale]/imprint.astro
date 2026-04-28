@@ -67,7 +67,7 @@ const sections = [
         {
           sections.map((section) => (
             <div class="flex flex-col lg:flex-row gap-8 border-t border-[rgba(255,255,255,0.05)] pt-10">
-              <h2 class="text-xs font-[510] text-[#62666d] uppercase tracking-[0.12em] lg:w-64 flex-shrink-0 pt-0.5">
+              <h2 class="text-label font-[510] text-[#62666d] uppercase tracking-[0.12em] lg:w-64 flex-shrink-0 pt-0.5">
                 {section.title}
               </h2>
               <div class="flex-1">
@@ -75,7 +75,7 @@ const sections = [
                   <dl class="flex flex-col gap-3">
                     {section.items.map((item) => (
                       <div class="flex gap-6">
-                        <dt class="text-xs font-[510] text-[#62666d] w-24 flex-shrink-0 pt-0.5">
+                        <dt class="text-label font-[510] text-[#62666d] w-24 flex-shrink-0 pt-0.5">
                           {item.label}
                         </dt>
                         <dd class="text-sm text-[#d0d6e0]">
