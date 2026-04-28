@@ -5,13 +5,17 @@
     "subtitle": "Nicht nur existieren.",
     "description": "Massgeschneiderte Websites, Markenidentitäten und Grafikdesign, entwickelt in der Schweiz für Unternehmen, die sich vom Standard abheben.",
     "cta": "Projekt anfragen",
-    "ctaSecondary": "Leistungen ansehen"
+    "ctaSecondary": "Leistungen ansehen",
+    "meta": {
+      "title": "Webdesign & Grafikdesign aus Wil SG, Schweiz",
+      "description": "Massgeschneiderte Websites, Logos und Grafikdesign für KMUs und Restaurants in der Schweiz. Aus Wil SG. Schnell, individuell und unverkennbar. Ab 600 CHF."
+    }
   },
   "mission": {
     "label": "Warum Generics Studio",
-    "title": "Deine Website ist dein bester Verkäufer.",
+    "title": "Eine gute Website ist der beste Verkäufer.",
     "subtitle": "Macht sie ihren Job?",
-    "description": "Die meisten Websites verlieren täglich Kunden: durch langsame Ladezeiten, generische Templates und unklare Botschaften. Wir bauen Sites, die aktiv für dein Business arbeiten.",
+    "description": "Die meisten Websites verlieren täglich Kunden: durch langsame Ladezeiten, generische Templates und unklare Botschaften. Wir bauen Sites, die aktiv für das Unternehmen arbeiten.",
     "benefits": [
       {
         "number": "01",
@@ -26,12 +30,12 @@
       {
         "number": "03",
         "title": "100% individuell, keine Templates",
-        "description": "Jeder Pixel wird für deine Marke gebaut. Deine Website sieht aus wie keine andere, weil sie für niemand anderen gemacht wurde."
+        "description": "Jeder Pixel wird für die Marke gebaut. Das Ergebnis sieht aus wie keine andere Website, weil es für niemand anderen gemacht wurde."
       },
       {
         "number": "04",
-        "title": "Du sprichst direkt mit den Machern",
-        "description": "Kein Account Manager, kein Mittelmann. Du arbeitest direkt mit den Personen, die dein Projekt bauen."
+        "title": "Direkter Kontakt mit den Machern",
+        "description": "Kein Account Manager, kein Mittelmann. Direkter Austausch mit den Personen, die das Projekt bauen."
       },
       {
         "number": "05",
@@ -60,7 +64,7 @@
       {
         "number": "02",
         "title": "Branding & Logodesign",
-        "description": "Eine Markenidentität, die dich sofort erkennbar macht: Logo, Farben, Typografie und Guidelines.",
+        "description": "Eine Markenidentität, die sofort erkennbar macht: Logo, Farben, Typografie und Guidelines.",
         "href": "/branding"
       },
       {
@@ -81,22 +85,22 @@
     "label": "So arbeiten wir",
     "title": "Vom ersten Gespräch",
     "subtitle": "zur fertigen Website.",
-    "description": "Kein Chaos, kein Warten. Jedes Projekt folgt demselben bewährten Ablauf, damit du immer weisst, was als Nächstes kommt.",
+    "description": "Kein Chaos, kein Warten. Jedes Projekt folgt demselben bewährten Ablauf mit klarer Kommunikation auf jedem Schritt.",
     "steps": [
       {
         "number": "01",
         "title": "Discovery-Call",
-        "description": "Wir verstehen dein Unternehmen, deine Ziele und deine Zielgruppe. Du bekommst einen klaren Umfang und ehrlichen Zeitplan, bevor du dich festlegst."
+        "description": "Wir verstehen das Unternehmen, die Ziele und die Zielgruppe. Ein klarer Umfang und ehrlicher Zeitplan, bevor eine Entscheidung fällt."
       },
       {
         "number": "02",
         "title": "Design & Entwicklung",
-        "description": "Du siehst innerhalb von Tagen einen funktionierenden Prototyp. Feedback-Runden sind kurz und fokussiert. Jede Entscheidung hat einen Grund."
+        "description": "Innerhalb von Tagen ist ein funktionierender Prototyp sichtbar. Feedback-Runden sind kurz und fokussiert. Jede Entscheidung hat einen Grund."
       },
       {
         "number": "03",
         "title": "Launch & Übergabe",
-        "description": "Wir gehen live nach deinem Zeitplan. Vollständige Übergabe mit Dokumentation, damit du nie von uns abhängig bist."
+        "description": "Wir gehen live nach vereinbartem Zeitplan. Vollständige Übergabe mit Dokumentation, ohne weitere Abhängigkeit."
       }
     ]
   },
@@ -104,10 +108,10 @@
     "label": "Preise",
     "title": "Transparente Preise.",
     "subtitle": "Keine Überraschungen.",
-    "description": "Feste Startpreise, damit du sicher planen kannst. Jedes Projekt wird vor Beginn genau besprochen.",
+    "description": "Feste Startpreise für sichere Planung. Jedes Projekt wird vor Beginn genau besprochen.",
     "cta": {
-      "title": "Du weisst nicht, was du brauchst?",
-      "description": "Kostenloses 30-Minuten-Gespräch. Kein Druck, nur offener Austausch.",
+      "title": "Noch nicht sicher, was gebraucht wird?",
+      "description": "Kostenlose 30-Minuten-Beratung. Kein Druck, offener Austausch.",
       "button": "Termin vereinbaren"
     },
     "items": [
@@ -166,8 +170,8 @@
       "description": "Gedanken zu Design, Webentwicklung und Markenführung."
     },
     "meta": {
-      "title": "Blog",
-      "description": "Gedanken zu Webdesign, Branding und Grafikdesign vom Team Generics Studio."
+      "title": "Blog. Webdesign, Branding und Design Tipps",
+      "description": "Beiträge zu Webdesign, Branding und Grafikdesign von Generics Studio aus Wil SG. Tipps und Einblicke für KMUs und kleine Unternehmen in der Schweiz."
     }
   },
   "contact": {
@@ -175,19 +179,19 @@
       "title": "Kontakt",
       "description": "Projekt im Kopf? Wir hören zu."
     },
-    "label": "Melde dich",
+    "label": "Kontakt aufnehmen",
     "title": "Kein Formular.\nEinfach direkt.",
     "description": "Kein Hin und Her, kein Warten auf Freigaben. Wir sind direkt erreichbar: per E-Mail, WhatsApp oder Termin.",
     "meta": {
-      "title": "Kontakt",
-      "description": "Schreib uns direkt per E-Mail oder WhatsApp. Kein Kontaktformular, kein Hin und Her. Wir melden uns innerhalb von 24 Stunden."
+      "title": "Kontakt. Projekt anfragen in Wil SG",
+      "description": "Generics Studio aus Wil SG ist direkt per E-Mail oder WhatsApp erreichbar. Kein Kontaktformular, kein Hin und Her. Antwort innerhalb von 24 Stunden."
     },
     "options": [
       {
         "number": "01",
         "label": "E-Mail",
         "title": "hello@generics.studio",
-        "description": "Schreib uns direkt. Wir antworten innerhalb von 24 Stunden.",
+        "description": "Direkt erreichbar. Antwort innerhalb von 24 Stunden.",
         "href": "mailto:hello@generics.studio",
         "external": false
       },
@@ -203,7 +207,7 @@
         "number": "03",
         "label": "Termin buchen",
         "title": "Kostenloses Gespräch",
-        "description": "30 Minuten, kein Druck. Einfach offen über dein Projekt reden.",
+        "description": "30 Minuten, kein Druck. Ein offenes Gespräch über das Projekt.",
         "href": "https://cal.com/genericsstudio/discovery-call",
         "external": true
       }
@@ -222,8 +226,8 @@
   "pages": {
     "webdesign": {
       "meta": {
-        "title": "Webdesign",
-        "description": "Professionelles Webdesign aus der Schweiz. Individuell entwickelte Websites, responsiv, schnell und unverkennbar. Ab 600 CHF."
+        "title": "Webdesign Wil SG für KMUs und Restaurants",
+        "description": "Professionelles Webdesign aus Wil SG für KMUs, Restaurants und kleine Unternehmen. Responsive, schnell und 100% individuell, kein Template. Ab 600 CHF."
       },
       "header": {
         "title": "Webdesign",
@@ -231,11 +235,11 @@
       },
       "pricing": {
         "title": "Preise",
-        "description": "Wählen Sie den Plan, der am besten zu Ihren Bedürfnissen passt.",
+        "description": "Passende Pakete für jedes Projektvorhaben.",
         "note": "Individuelle Angebote je nach Projektumfang möglich.",
         "cta": {
-          "title": "Du weisst nicht, was du brauchst?",
-          "description": "Kostenloses 30-Minuten-Gespräch. Kein Druck, nur offener Austausch.",
+          "title": "Noch nicht sicher, was gebraucht wird?",
+          "description": "Kostenlose 30-Minuten-Beratung. Kein Druck, offener Austausch.",
           "button": "Termin vereinbaren"
         },
         "plans": [
@@ -262,8 +266,8 @@
     },
     "branding": {
       "meta": {
-        "title": "Branding & Logo Design",
-        "description": "Logoentwicklung und Markenidentität aus der Schweiz. Von einfachem Logo bis zu vollständigen Brand Guidelines. Ab 300 CHF."
+        "title": "Logodesign & Branding Wil SG für KMUs und Startups",
+        "description": "Logoentwicklung und Markenidentität aus Wil SG für kleine Unternehmen und Restaurants in der Ostschweiz. Von Logo bis Brand Guidelines. Ab 300 CHF."
       },
       "header": {
         "title": "Branding",
@@ -271,11 +275,11 @@
       },
       "pricing": {
         "title": "Preise",
-        "description": "Wählen Sie den Plan, der am besten zu Ihren Bedürfnissen passt.",
+        "description": "Passende Pakete für jedes Projektvorhaben.",
         "note": "Individuelle Angebote je nach Projektumfang möglich.",
         "cta": {
-          "title": "Du weisst nicht, was du brauchst?",
-          "description": "Kostenloses 30-Minuten-Gespräch. Kein Druck, nur offener Austausch.",
+          "title": "Noch nicht sicher, was gebraucht wird?",
+          "description": "Kostenlose 30-Minuten-Beratung. Kein Druck, offener Austausch.",
           "button": "Termin vereinbaren"
         },
         "plans": [
@@ -302,8 +306,8 @@
     },
     "graphicdesign": {
       "meta": {
-        "title": "Grafikdesign",
-        "description": "Professionelles Grafikdesign aus der Schweiz. Social Media Designs, Illustrationen und Werbegrafiken. Ab 80 CHF."
+        "title": "Grafikdesign Wil SG. Social Media und Werbegrafiken",
+        "description": "Professionelles Grafikdesign aus Wil SG. Social Media Grafiken, Illustrationen und Werbemittel für KMUs und Restaurants in der Schweiz. Ab 80 CHF."
       },
       "header": {
         "title": "Grafikdesign",
@@ -311,11 +315,11 @@
       },
       "pricing": {
         "title": "Preise",
-        "description": "Wählen Sie den Plan, der am besten zu Ihren Bedürfnissen passt.",
+        "description": "Passende Pakete für jedes Projektvorhaben.",
         "note": "Individuelle Angebote je nach Projektumfang möglich.",
         "cta": {
-          "title": "Du weisst nicht, was du brauchst?",
-          "description": "Kostenloses 30-Minuten-Gespräch. Kein Druck, nur offener Austausch.",
+          "title": "Noch nicht sicher, was gebraucht wird?",
+          "description": "Kostenlose 30-Minuten-Beratung. Kein Druck, offener Austausch.",
           "button": "Termin vereinbaren"
         },
         "plans": [
@@ -342,8 +346,8 @@
     },
     "printdesign": {
       "meta": {
-        "title": "Printdesign",
-        "description": "Druckfertiges Printdesign aus der Schweiz. Flyer, Visitenkarten, Broschüren und mehr, präzise und professionell. Ab 100 CHF."
+        "title": "Printdesign Wil SG. Flyer, Visitenkarten und Broschüren",
+        "description": "Druckfertiges Printdesign aus Wil SG. Flyer, Visitenkarten, Broschüren und Menükarten für KMUs und Restaurants. Präzise und professionell. Ab 100 CHF."
       },
       "header": {
         "title": "Printdesign",
@@ -351,11 +355,11 @@
       },
       "pricing": {
         "title": "Preise",
-        "description": "Wählen Sie den Plan, der am besten zu Ihren Bedürfnissen passt.",
+        "description": "Passende Pakete für jedes Projektvorhaben.",
         "note": "Individuelle Angebote je nach Projektumfang möglich.",
         "cta": {
-          "title": "Du weisst nicht, was du brauchst?",
-          "description": "Kostenloses 30-Minuten-Gespräch. Kein Druck, nur offener Austausch.",
+          "title": "Noch nicht sicher, was gebraucht wird?",
+          "description": "Kostenlose 30-Minuten-Beratung. Kein Druck, offener Austausch.",
           "button": "Termin vereinbaren"
         },
         "plans": [

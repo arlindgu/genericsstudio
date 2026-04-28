@@ -27,12 +27,60 @@ const formattedDate = new Date(post.data.date).toLocaleDateString(
   locale === "de" ? "de-CH" : "en-GB",
   { year: "numeric", month: "long", day: "numeric" }
 );
+
+const siteUrl = "https://generics.studio";
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: post.data.title,
+  description: post.data.description,
+  datePublished: post.data.date,
+  image: `${siteUrl}/opengraph-image.png`,
+  author: {
+    "@type": "Organization",
+    "@id": `${siteUrl}/#organization`,
+    name: "Generics Studio",
+  },
+  publisher: {
+    "@type": "Organization",
+    "@id": `${siteUrl}/#organization`,
+    name: "Generics Studio",
+    logo: { "@type": "ImageObject", url: `${siteUrl}/opengraph-image.png` },
+  },
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": `${siteUrl}/${locale}/blog/${post.id}`,
+  },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: `${siteUrl}/${locale}/` },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: locale === "de" ? "Blog" : "Blog",
+      item: `${siteUrl}/${locale}/blog`,
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: post.data.title,
+      item: `${siteUrl}/${locale}/blog/${post.id}`,
+    },
+  ],
+};
 ---
 
 <Layout
   title={post.data.title}
   description={post.data.description}
   locale={locale}
+  type="article"
+  schema={[articleSchema, breadcrumbSchema]}
 >
   <main>
     <!-- Article header -->

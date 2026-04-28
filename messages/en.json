@@ -5,13 +5,17 @@
     "subtitle": "Not just exist.",
     "description": "Custom-built websites, brand identities, and graphic design, crafted in Switzerland for businesses that refuse to look ordinary.",
     "cta": "Start a project",
-    "ctaSecondary": "View services"
+    "ctaSecondary": "View services",
+    "meta": {
+      "title": "Web Design & Graphic Design from Wil SG, Switzerland",
+      "description": "Custom-built websites, logos and graphic design for Swiss SMEs and restaurants. Based in Wil SG, Switzerland. Fast, individual and unmistakable. From CHF 600."
+    }
   },
   "mission": {
     "label": "Why Generics Studio",
-    "title": "Your website is your best salesperson.",
+    "title": "A good website is the best salesperson.",
     "subtitle": "Is it doing its job?",
-    "description": "Most websites silently lose customers every day: through slow load times, generic templates, and unclear messaging. We build sites that actively work for your business.",
+    "description": "Most websites silently lose customers every day: through slow load times, generic templates, and unclear messaging. We build sites that actively work for the business.",
     "benefits": [
       {
         "number": "01",
@@ -26,12 +30,12 @@
       {
         "number": "03",
         "title": "100% custom, no templates",
-        "description": "Every pixel is built for your brand. Your website looks like no other because it was made for no one else."
+        "description": "Every pixel is built for the brand. The result looks like no other website because it was made for no one else."
       },
       {
         "number": "04",
-        "title": "You speak directly to the makers",
-        "description": "No account managers, no middlemen. You work directly with the people building your project. Fast decisions, clear answers."
+        "title": "Direct access to the makers",
+        "description": "No account managers, no middlemen. Work directly with the people building the project. Fast decisions, clear answers."
       },
       {
         "number": "05",
@@ -86,17 +90,17 @@
       {
         "number": "01",
         "title": "Discovery call",
-        "description": "We understand your business, goals, and audience. You get a clear scope and honest timeline, before any commitment."
+        "description": "We understand the business, goals, and audience. A clear scope and honest timeline are provided before any commitment."
       },
       {
         "number": "02",
         "title": "Design & build",
-        "description": "You see a working prototype within days. Feedback rounds are short and focused. Every decision has a reason."
+        "description": "A working prototype is ready within days. Feedback rounds are short and focused. Every decision has a reason."
       },
       {
         "number": "03",
         "title": "Launch & handover",
-        "description": "We go live on your schedule. Full handover with documentation so you're never dependent on us."
+        "description": "We go live on the agreed schedule. Full handover with documentation so there is never a dependency on us."
       }
     ]
   },
@@ -106,8 +110,8 @@
     "subtitle": "No surprises.",
     "description": "Fixed starting prices so you can plan with confidence. Every project is scoped before work begins.",
     "cta": {
-      "title": "Not sure what you need?",
-      "description": "Free 30-minute consultation. No pressure, just open conversation.",
+      "title": "Not sure where to start?",
+      "description": "Free 30-minute consultation. No pressure, open conversation.",
       "button": "Book a call"
     },
     "items": [
@@ -141,7 +145,7 @@
     "label": "Ready to start?",
     "title": "Built for the future.",
     "subtitle": "Available today.",
-    "button": "Start your project"
+    "button": "Start a project"
   },
   "footer": {
     "pages": "Pages",
@@ -166,8 +170,8 @@
       "description": "Thoughts on design, web development and brand management."
     },
     "meta": {
-      "title": "Blog",
-      "description": "Thoughts on web design, branding and graphic design from the Generics Studio team."
+      "title": "Blog. Web Design, Branding and Design Tips",
+      "description": "Articles on web design, branding and graphic design from Generics Studio in Wil SG. Tips and insights for SMEs and small businesses in Switzerland."
     }
   },
   "contact": {
@@ -175,19 +179,19 @@
       "title": "Contact",
       "description": "Project in mind? We're listening."
     },
-    "label": "Get in touch",
+    "label": "Reach out",
     "title": "No forms.\nJust direct.",
     "description": "No back and forth, no waiting for approvals. We're directly reachable: by email, WhatsApp or appointment.",
     "meta": {
-      "title": "Contact",
-      "description": "Write to us directly by email or WhatsApp. No contact form, no back and forth. We'll get back to you within 24 hours."
+      "title": "Contact. Start Your Project in Wil SG",
+      "description": "Reach Generics Studio directly by email or WhatsApp. No contact form, no back and forth. We respond within 24 hours."
     },
     "options": [
       {
         "number": "01",
         "label": "Email",
         "title": "hello@generics.studio",
-        "description": "Write to us directly. We respond within 24 hours.",
+        "description": "Directly reachable. Response within 24 hours.",
         "href": "mailto:hello@generics.studio",
         "external": false
       },
@@ -203,7 +207,7 @@
         "number": "03",
         "label": "Book a call",
         "title": "Free consultation",
-        "description": "30 minutes, no pressure. Just an open chat about your project.",
+        "description": "30 minutes, no pressure. An open conversation about the project.",
         "href": "https://cal.com/genericsstudio/discovery-call",
         "external": true
       }
@@ -222,8 +226,8 @@
   "pages": {
     "webdesign": {
       "meta": {
-        "title": "Web Design",
-        "description": "Professional web design from Switzerland. Individually developed websites, responsive, fast and unmistakable. From CHF 600."
+        "title": "Web Design Wil SG for SMEs and Restaurants",
+        "description": "Professional web design from Wil SG for SMEs, restaurants and small businesses. Responsive, fast and 100% custom, no templates. From CHF 600."
       },
       "header": {
         "title": "Web Design",
@@ -231,11 +235,11 @@
       },
       "pricing": {
         "title": "Pricing",
-        "description": "Choose the plan that best suits your needs.",
+        "description": "Packages to match every project scope.",
         "note": "Individual quotes available depending on project scope.",
         "cta": {
-          "title": "Not sure what you need?",
-          "description": "Free 30-minute consultation. No pressure, just open conversation.",
+          "title": "Not sure where to start?",
+          "description": "Free 30-minute consultation. No pressure, open conversation.",
           "button": "Book a call"
         },
         "plans": [
@@ -262,8 +266,8 @@
     },
     "branding": {
       "meta": {
-        "title": "Branding & Logo Design",
-        "description": "Logo development and brand identity from Switzerland. From simple logo to complete brand guidelines. From CHF 300."
+        "title": "Logo Design & Branding Wil SG for SMEs and Startups",
+        "description": "Logo development and brand identity from Wil SG for small businesses and restaurants in Eastern Switzerland. From logo to brand guidelines. From CHF 300."
       },
       "header": {
         "title": "Branding",
@@ -271,11 +275,11 @@
       },
       "pricing": {
         "title": "Pricing",
-        "description": "Choose the plan that best suits your needs.",
+        "description": "Packages to match every project scope.",
         "note": "Individual quotes available depending on project scope.",
         "cta": {
-          "title": "Not sure what you need?",
-          "description": "Free 30-minute consultation. No pressure, just open conversation.",
+          "title": "Not sure where to start?",
+          "description": "Free 30-minute consultation. No pressure, open conversation.",
           "button": "Book a call"
         },
         "plans": [
@@ -302,8 +306,8 @@
     },
     "graphicdesign": {
       "meta": {
-        "title": "Graphic Design",
-        "description": "Professional graphic design from Switzerland. Social media designs, illustrations and advertising graphics. From CHF 80."
+        "title": "Graphic Design Wil SG. Social Media and Advertising",
+        "description": "Professional graphic design from Wil SG. Social media graphics, illustrations and advertising materials for SMEs and restaurants in Switzerland. From CHF 80."
       },
       "header": {
         "title": "Graphic Design",
@@ -311,11 +315,11 @@
       },
       "pricing": {
         "title": "Pricing",
-        "description": "Choose the plan that best suits your needs.",
+        "description": "Packages to match every project scope.",
         "note": "Individual quotes available depending on project scope.",
         "cta": {
-          "title": "Not sure what you need?",
-          "description": "Free 30-minute consultation. No pressure, just open conversation.",
+          "title": "Not sure where to start?",
+          "description": "Free 30-minute consultation. No pressure, open conversation.",
           "button": "Book a call"
         },
         "plans": [
@@ -342,8 +346,8 @@
     },
     "printdesign": {
       "meta": {
-        "title": "Print Design",
-        "description": "Print-ready design from Switzerland. Flyers, business cards, brochures and more, precise and professional. From CHF 100."
+        "title": "Print Design Wil SG. Flyers, Business Cards and Brochures",
+        "description": "Print-ready design from Wil SG. Flyers, business cards, brochures and menus for SMEs and restaurants. Precise and professional. From CHF 100."
       },
       "header": {
         "title": "Print Design",
@@ -351,11 +355,11 @@
       },
       "pricing": {
         "title": "Pricing",
-        "description": "Choose the plan that best suits your needs.",
+        "description": "Packages to match every project scope.",
         "note": "Individual quotes available depending on project scope.",
         "cta": {
-          "title": "Not sure what you need?",
-          "description": "Free 30-minute consultation. No pressure, just open conversation.",
+          "title": "Not sure where to start?",
+          "description": "Free 30-minute consultation. No pressure, open conversation.",
           "button": "Book a call"
         },
         "plans": [

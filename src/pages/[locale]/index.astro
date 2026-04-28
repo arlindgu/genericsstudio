@@ -20,12 +20,27 @@ type ServiceItem = { number: string; title: string; description: string; href: s
 type Step = { number: string; title: string; description: string };
 type PricingItem = { title: string; description: string; startingPrice: string; link: string };
 type PricingCta = { title: string; description: string; button: string };
+
+const siteUrl = "https://generics.studio";
+
+const homeSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${siteUrl}/${locale}/`,
+  name: t("hero.meta.title"),
+  description: t("hero.meta.description"),
+  url: `${siteUrl}/${locale}/`,
+  isPartOf: { "@id": `${siteUrl}/#website` },
+  about: { "@id": `${siteUrl}/#organization` },
+  inLanguage: locale === "de" ? "de-CH" : "en",
+};
 ---
 
 <Layout
-  title={t("hero.title") + " " + t("hero.subtitle")}
-  description={t("hero.description")}
+  title={t("hero.meta.title")}
+  description={t("hero.meta.description")}
   locale={locale}
+  schema={homeSchema}
 >
   <main>
     <Hero
