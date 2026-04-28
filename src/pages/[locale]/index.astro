@@ -22,14 +22,15 @@ type PricingItem = { title: string; description: string; startingPrice: string; 
 type PricingCta = { title: string; description: string; button: string };
 
 const siteUrl = "https://generics.studio";
+const localePath = locale === "de" ? siteUrl : `${siteUrl}/en`;
 
 const homeSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": `${siteUrl}/${locale}/`,
+  "@id": `${localePath}/`,
   name: t("hero.meta.title"),
   description: t("hero.meta.description"),
-  url: `${siteUrl}/${locale}/`,
+  url: `${localePath}/`,
   isPartOf: { "@id": `${siteUrl}/#website` },
   about: { "@id": `${siteUrl}/#organization` },
   inLanguage: locale === "de" ? "de-CH" : "en",

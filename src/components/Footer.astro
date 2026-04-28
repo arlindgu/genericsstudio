@@ -12,6 +12,9 @@ const { t, tRaw } = useTranslations(locale);
 type FooterLink = { label: string; href: string };
 const links = tRaw<FooterLink[]>("footer.links");
 const currentPath = Astro.url.pathname;
+const lp = (path: string) => locale === "de" ? path : `/en${path}`;
+const toDeHref = locale === "en" ? currentPath.replace(/^\/en/, "") || "/" : currentPath;
+const toEnHref = locale === "de" ? `/en${currentPath}` : currentPath;
 ---
 
 <footer class="border-t border-[rgba(255,255,255,0.06)] pt-16 pb-12 px-6 md:px-10 mt-0">
@@ -19,7 +22,7 @@ const currentPath = Astro.url.pathname;
     <div class="grid grid-cols-2 md:grid-cols-4 gap-10 mb-16">
       <!-- Brand -->
       <div class="col-span-2 md:col-span-1">
-        <a href={`/${locale}`} class="inline-block mb-4">
+        <a href={lp("/")} class="inline-block mb-4">
           <GenericsStudioLogo class="h-7 w-auto text-[#f7f8f8] opacity-60 hover:opacity-90 transition-opacity" />
         </a>
         <p class="text-label text-[#3d4047] leading-[1.7] fw-400 max-w-[220px]">
@@ -36,7 +39,7 @@ const currentPath = Astro.url.pathname;
           {links.map((link) => (
             <li>
               <a
-                href={`/${locale}${link.href}`}
+                href={lp(link.href)}
                 class="text-label text-[#62666d] hover:text-[#d0d6e0] transition-colors fw-400"
               >
                 {link.label}
@@ -60,7 +63,7 @@ const currentPath = Astro.url.pathname;
           ].map((link) => (
             <li>
               <a
-                href={`/${locale}${link.href}`}
+                href={lp(link.href)}
                 class="text-label text-[#62666d] hover:text-[#d0d6e0] transition-colors fw-400"
               >
                 {link.label}
@@ -93,12 +96,12 @@ const currentPath = Astro.url.pathname;
         </p>
         <div class="flex gap-3">
           <a
-            href={`/de${currentPath.replace(`/${locale}`, "")}`}
+            href={toDeHref}
             class={`text-label fw-510 transition-colors ${locale === "de" ? "text-[#f7f8f8]" : "text-[#3d4047] hover:text-[#62666d]"}`}
           >Deutsch</a>
           <span class="text-[#3d4047]">/</span>
           <a
-            href={`/en${currentPath.replace(`/${locale}`, "")}`}
+            href={toEnHref}
             class={`text-label fw-510 transition-colors ${locale === "en" ? "text-[#f7f8f8]" : "text-[#3d4047] hover:text-[#62666d]"}`}
           >English</a>
         </div>
@@ -109,7 +112,7 @@ const currentPath = Astro.url.pathname;
       <p class="text-label text-[#3d4047] fw-400">
         &copy; {new Date().getFullYear()} Gurgurovci Studio. {t("footer.copyright")}
       </p>
-      <a href={`/${locale}/imprint`} class="text-label text-[#3d4047] hover:text-[#62666d] transition-colors fw-400">
+      <a href={lp("/imprint")} class="text-label text-[#3d4047] hover:text-[#62666d] transition-colors fw-400">
         {t("footer.imprint")}
       </a>
     </div>

@@ -29,6 +29,7 @@ const formattedDate = new Date(post.data.date).toLocaleDateString(
 );
 
 const siteUrl = "https://generics.studio";
+const localePath = locale === "de" ? siteUrl : `${siteUrl}/en`;
 
 const articleSchema = {
   "@context": "https://schema.org",

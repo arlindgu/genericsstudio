@@ -28,9 +28,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImageURL = new URL(ogImage, Astro.site);
 const fullTitle = `${title} | Generics Studio`;
 
-const pathWithoutLocale = Astro.url.pathname.replace(/^\/(de|en)/, "") || "/";
-const deHref = `${siteUrl}/de${pathWithoutLocale}`;
-const enHref = `${siteUrl}/en${pathWithoutLocale}`;
+const pathForAlternate = locale === "en"
+  ? Astro.url.pathname.replace(/^\/en/, "") || "/"
+  : Astro.url.pathname;
+const deHref = `${siteUrl}${pathForAlternate}`;
+const enHref = `${siteUrl}/en${pathForAlternate}`;
 
 const ogLocale = locale === "de" ? "de_CH" : "en_US";
 const ogLocaleAlternate = locale === "de" ? "en_US" : "de_CH";

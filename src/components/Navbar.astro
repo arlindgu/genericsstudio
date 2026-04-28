@@ -10,7 +10,10 @@ const { locale } = Astro.props;
 const { t } = useTranslations(locale);
 
 const currentPath = Astro.url.pathname;
-const isActive = (href: string) => currentPath.startsWith(`/${locale}${href}`);
+const lp = (path: string) => locale === "de" ? path : `/en${path}`;
+const isActive = (href: string) => currentPath.startsWith(locale === "de" ? href : `/en${href}`);
+const toDeHref = locale === "en" ? currentPath.replace(/^\/en/, "") || "/" : currentPath;
+const toEnHref = locale === "de" ? `/en${currentPath}` : currentPath;
 
 const navLinks = [
   { href: "/webdesign",     label: locale === "de" ? "Webdesign"    : "Web Design"     },
@@ -25,7 +28,7 @@ const navLinks = [
   class="w-full backdrop-blur-md bg-[rgba(8,9,10,0.8)] px-6 md:px-10 sticky top-0 z-50 border-b border-[rgba(255,255,255,0.06)] h-14"
 >
   <div class="max-w-7xl mx-auto h-full flex items-center justify-between">
-    <a href={`/${locale}`} class="flex items-center flex-shrink-0">
+    <a href={lp("/")} class="flex items-center flex-shrink-0">
       <GenericsStudioLogo class="h-8 w-auto text-[#f7f8f8]" />
     </a>
 
@@ -35,7 +38,7 @@ const navLinks = [
         {navLinks.map((link) => (
           <li>
             <a
-              href={`/${locale}${link.href}`}
+              href={lp(link.href)}
               class={`px-3 h-8 inline-flex items-center text-label fw-510 rounded-[6px] transition-colors ${isActive(link.href) ? "text-[#f7f8f8] bg-[rgba(255,255,255,0.06)]" : "text-[#8a8f98] hover:text-[#d0d6e0] hover:bg-[rgba(255,255,255,0.04)]"}`}
             >
               {link.label}
@@ -47,11 +50,11 @@ const navLinks = [
       <!-- Language switcher (desktop + tablet) -->
       <div class="hidden sm:flex items-center gap-1">
         <a
-          href={currentPath.replace(`/${locale}`, "/de")}
+          href={toDeHref}
           class={`px-2 h-7 inline-flex items-center text-label fw-510 rounded-[4px] transition-colors ${locale === "de" ? "text-[#f7f8f8] bg-[rgba(255,255,255,0.06)]" : "text-[#62666d] hover:text-[#8a8f98]"}`}
         >DE</a>
         <a
-          href={currentPath.replace(`/${locale}`, "/en")}
+          href={toEnHref}
           class={`px-2 h-7 inline-flex items-center text-label fw-510 rounded-[4px] transition-colors ${locale === "en" ? "text-[#f7f8f8] bg-[rgba(255,255,255,0.06)]" : "text-[#62666d] hover:text-[#8a8f98]"}`}
         >EN</a>
       </div>
@@ -77,7 +80,7 @@ const navLinks = [
       </button>
 
       <a
-        href={`/${locale}/contact`}
+        href={lp("/contact")}
         class="hidden md:inline-flex items-center justify-center h-8 px-4 rounded-[6px] text-label fw-510 bg-[#c96c30] text-white hover:bg-[#d97838] transition-colors"
       >
         {t("nav.contact")}
@@ -96,7 +99,7 @@ const navLinks = [
     <div class="flex flex-col border-t border-[rgba(255,255,255,0.06)]">
       {navLinks.map((link) => (
         <a
-          href={`/${locale}${link.href}`}
+          href={lp(link.href)}
           class={`flex items-center h-14 border-b border-[rgba(255,255,255,0.06)] text-body fw-510 transition-colors ${isActive(link.href) ? "text-[#f7f8f8]" : "text-[#8a8f98]"}`}
         >
           {link.label}
@@ -106,7 +109,7 @@ const navLinks = [
 
     <!-- Contact CTA -->
     <a
-      href={`/${locale}/contact`}
+      href={lp("/contact")}
       class="mt-6 inline-flex items-center justify-center h-10 px-6 rounded-[6px] text-label fw-510 bg-[#c96c30] text-white hover:bg-[#d97838] transition-colors w-full"
     >
       {t("nav.contact")}
@@ -115,11 +118,11 @@ const navLinks = [
     <!-- Language switcher -->
     <div class="flex items-center gap-2 mt-4">
       <a
-        href={currentPath.replace(`/${locale}`, "/de")}
+        href={toDeHref}
         class={`px-3 h-8 inline-flex items-center text-label fw-510 rounded-[4px] transition-colors ${locale === "de" ? "text-[#f7f8f8] bg-[rgba(255,255,255,0.06)]" : "text-[#62666d] hover:text-[#8a8f98]"}`}
       >DE</a>
       <a
-        href={currentPath.replace(`/${locale}`, "/en")}
+        href={toEnHref}
         class={`px-3 h-8 inline-flex items-center text-label fw-510 rounded-[4px] transition-colors ${locale === "en" ? "text-[#f7f8f8] bg-[rgba(255,255,255,0.06)]" : "text-[#62666d] hover:text-[#8a8f98]"}`}
       >EN</a>
     </div>

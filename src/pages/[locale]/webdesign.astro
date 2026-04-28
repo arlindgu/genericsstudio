@@ -17,6 +17,7 @@ type Plan = { title: string; description: string; price: string; features: strin
 type PricingCta = { title: string; description: string; button: string };
 
 const siteUrl = "https://generics.studio";
+const localePath = locale === "de" ? siteUrl : `${siteUrl}/en`;
 
 const serviceSchema = {
   "@context": "https://schema.org",

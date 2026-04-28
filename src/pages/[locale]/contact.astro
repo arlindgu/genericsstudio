@@ -22,6 +22,7 @@ type ContactOption = {
 const options = tRaw<ContactOption[]>("contact.options");
 
 const siteUrl = "https://generics.studio";
+const localePath = locale === "de" ? siteUrl : `${siteUrl}/en`;
 
 const contactSchema = {
   "@context": "https://schema.org",
