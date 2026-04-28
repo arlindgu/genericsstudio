@@ -8,11 +8,7 @@ import Pricing from "@/components/sections/Pricing.astro";
 import CTA from "@/components/sections/CTA.astro";
 import { useTranslations } from "@/i18n/utils";
 
-export function getStaticPaths() {
-  return [{ params: { locale: "en" } }];
-}
-
-const { locale } = Astro.params;
+const locale = "de";
 const { t, tRaw } = useTranslations(locale);
 
 type Benefit = { number: string; title: string; description: string };
@@ -22,18 +18,17 @@ type PricingItem = { title: string; description: string; startingPrice: string; 
 type PricingCta = { title: string; description: string; button: string };
 
 const siteUrl = "https://generics.studio";
-const localePath = locale === "de" ? siteUrl : `${siteUrl}/en`;
 
 const homeSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": `${localePath}/`,
+  "@id": `${siteUrl}/`,
   name: t("hero.meta.title"),
   description: t("hero.meta.description"),
-  url: `${localePath}/`,
+  url: `${siteUrl}/`,
   isPartOf: { "@id": `${siteUrl}/#website` },
   about: { "@id": `${siteUrl}/#organization` },
-  inLanguage: locale === "de" ? "de-CH" : "en",
+  inLanguage: "de-CH",
 };
 ---
 

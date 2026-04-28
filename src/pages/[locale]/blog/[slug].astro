@@ -51,7 +51,7 @@ const articleSchema = {
   },
   mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": `${siteUrl}/${locale}/blog/${post.id}`,
+    "@id": `${localePath}/blog/${post.id}`,
   },
 };
 
@@ -59,18 +59,18 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: `${siteUrl}/${locale}/` },
+    { "@type": "ListItem", position: 1, name: "Home", item: `${localePath}/` },
     {
       "@type": "ListItem",
       position: 2,
       name: locale === "de" ? "Blog" : "Blog",
-      item: `${siteUrl}/${locale}/blog`,
+      item: `${localePath}/blog`,
     },
     {
       "@type": "ListItem",
       position: 3,
       name: post.data.title,
-      item: `${siteUrl}/${locale}/blog/${post.id}`,
+      item: `${localePath}/blog/${post.id}`,
     },
   ],
 };
