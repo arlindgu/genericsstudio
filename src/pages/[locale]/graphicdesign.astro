@@ -15,12 +15,44 @@ const { t, tRaw } = useTranslations(locale);
 
 type Plan = { title: string; description: string; price: string; features: string[] };
 type PricingCta = { title: string; description: string; button: string };
+
+const siteUrl = "https://generics.studio";
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: locale === "de" ? "Grafikdesign" : "Graphic Design",
+  serviceType: "Graphic Design",
+  description: t("pages.graphicdesign.meta.description"),
+  provider: { "@id": `${siteUrl}/#organization` },
+  areaServed: [
+    { "@type": "City", name: "Wil" },
+    { "@type": "AdministrativeArea", name: "Kanton St. Gallen" },
+    { "@type": "Country", name: "Schweiz" },
+  ],
+  offers: { "@type": "AggregateOffer", lowPrice: "80", priceCurrency: "CHF", offerCount: "3" },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: `${siteUrl}/${locale}/` },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: locale === "de" ? "Grafikdesign" : "Graphic Design",
+      item: `${siteUrl}/${locale}/graphicdesign`,
+    },
+  ],
+};
 ---
 
 <Layout
   title={t("pages.graphicdesign.meta.title")}
   description={t("pages.graphicdesign.meta.description")}
   locale={locale}
+  schema={[serviceSchema, breadcrumbSchema]}
 >
   <main>
     <PageHeader

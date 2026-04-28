@@ -20,12 +20,37 @@ type ContactOption = {
 };
 
 const options = tRaw<ContactOption[]>("contact.options");
+
+const siteUrl = "https://generics.studio";
+
+const contactSchema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  name: locale === "de" ? "Kontakt – Generics Studio" : "Contact – Generics Studio",
+  url: `${siteUrl}/${locale}/contact`,
+  isPartOf: { "@id": `${siteUrl}/#website` },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: `${siteUrl}/${locale}/` },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: locale === "de" ? "Kontakt" : "Contact",
+      item: `${siteUrl}/${locale}/contact`,
+    },
+  ],
+};
 ---
 
 <Layout
   title={t("contact.meta.title")}
   description={t("contact.meta.description")}
   locale={locale}
+  schema={[contactSchema, breadcrumbSchema]}
 >
   <main>
     <PageHeader

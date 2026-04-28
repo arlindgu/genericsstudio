@@ -1,0 +1,16 @@
+{
+  "name": "Generics Studio",
+  "short_name": "Generics Studio",
+  "description": "Webdesign & Grafikdesign aus Wil SG, Schweiz",
+  "theme_color": "#5e6ad2",
+  "background_color": "#08090a",
+  "display": "browser",
+  "start_url": "/de/",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}
