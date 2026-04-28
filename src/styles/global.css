@@ -14,9 +14,9 @@
   --color-foreground-4: #62666d;
 
   /* Brand — DESIGN.md §2 */
-  --color-brand: #5e6ad2;
-  --color-brand-bright: #7170ff;
-  --color-brand-light: #828fff;
+  --color-brand: #c96c30;
+  --color-brand-bright: #e0813e;
+  --color-brand-light: #e89a68;
 
   /* Status */
   --color-success: #27a644;
@@ -26,13 +26,13 @@
   --color-background: #08090a;
   --color-muted: #0f1011;
   --color-muted-foreground: #8a8f98;
-  --color-primary: #5e6ad2;
+  --color-primary: #c96c30;
   --color-primary-foreground: #ffffff;
   --color-secondary: rgba(255, 255, 255, 0.04);
   --color-secondary-foreground: #d0d6e0;
   --color-border: rgba(255, 255, 255, 0.08);
   --color-input: rgba(255, 255, 255, 0.08);
-  --color-ring: #5e6ad2;
+  --color-ring: #c96c30;
   --color-card: rgba(255, 255, 255, 0.02);
   --color-card-foreground: #f7f8f8;
   --color-popover: #191a1b;
@@ -40,6 +40,16 @@
   --color-destructive: #ef4444;
   --color-accent: rgba(255, 255, 255, 0.04);
   --color-accent-foreground: #d0d6e0;
+
+  /* Type scale — base 1rem, ratio ×1.25 */
+  --text-label:   0.8rem;              /* step −1  labels, step numbers */
+  --text-body:    1rem;                /* step  0  body text            */
+  --text-ui:      1.25rem;             /* step +1  UI, small headings   */
+  --text-h3:      1.5625rem;           /* step +2  h3                   */
+  --text-h2:      1.953125rem;         /* step +3  section headings     */
+  --text-h1:      2.44140625rem;       /* step +4  large headings       */
+  --text-display: 3.0517578125rem;     /* step +5  display              */
+  --text-hero:    3.814697265625rem;   /* step +6  hero max             */
 
   /* Font */
   --font-sans: "Inter", system-ui, sans-serif;
@@ -61,7 +71,7 @@
   --card-foreground: #f7f8f8;
   --popover: #191a1b;
   --popover-foreground: #f7f8f8;
-  --primary: #5e6ad2;
+  --primary: #c96c30;
   --primary-foreground: #ffffff;
   --secondary: rgba(255, 255, 255, 0.04);
   --secondary-foreground: #d0d6e0;
@@ -73,8 +83,29 @@
   --destructive-foreground: #f7f8f8;
   --border: rgba(255, 255, 255, 0.08);
   --input: rgba(255, 255, 255, 0.08);
-  --ring: #5e6ad2;
+  --ring: #c96c30;
   --radius: 0.375rem;
+}
+
+/* Responsive heading size utilities */
+@utility text-section-heading {
+  font-size: clamp(var(--text-h2), 3vw, var(--text-h1));
+}
+
+@utility text-page-heading {
+  font-size: clamp(var(--text-h1), 4vw, var(--text-display));
+}
+
+@utility text-hero-heading {
+  font-size: clamp(var(--text-h1), 5vw, var(--text-display));
+}
+
+@utility text-pageheader-heading {
+  font-size: clamp(var(--text-h1), 5vw, var(--text-hero));
+}
+
+@utility text-step-heading {
+  font-size: clamp(var(--text-ui), 2vw, var(--text-h3));
 }
 
 /* Explicit font-weight utilities for Inter Variable */
@@ -106,7 +137,7 @@
   }
 
   ::selection {
-    background-color: rgba(94, 106, 210, 0.3);
+    background-color: rgba(201, 108, 48, 0.3);
   }
 }
 
@@ -189,13 +220,13 @@
 }
 
 .blog-content a {
-  color: #7170ff;
+  color: #e0813e;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
 .blog-content a:hover {
-  color: #828fff;
+  color: #e89a68;
 }
 
 /* Animations */

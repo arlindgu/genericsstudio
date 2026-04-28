@@ -10,17 +10,17 @@ interface Props {
 const { label, title, subtitle, button, locale } = Astro.props;
 ---
 
-<section class="px-6 md:px-10 py-40 border-t border-[rgba(255,255,255,0.06)]">
+<section class="px-6 md:px-10 py-48 border-t border-[rgba(255,255,255,0.06)]">
   <div class="max-w-7xl mx-auto text-center">
     <h2
-      class="text-[clamp(2rem,4vw,3rem)] fw-510 leading-[1.04] tracking-[-0.04em] text-[#f7f8f8] mb-12"
+      class="text-page-heading fw-510 leading-[1.04] tracking-[-0.04em] text-[#f7f8f8] mb-12"
     >
       {title}<br />{subtitle}
     </h2>
     <div class="flex flex-wrap gap-3 justify-center">
       <a
         href={`/${locale}/contact`}
-        class="inline-flex items-center justify-center h-11 px-7 rounded-[6px] text-[14px] fw-510 bg-[#5e6ad2] text-white hover:bg-[#6b77e0] transition-colors"
+        class="inline-flex items-center justify-center h-11 px-7 rounded-[6px] text-body fw-510 bg-[#c96c30] text-white hover:bg-[#d97838] transition-colors"
       >
         {button}
       </a>
@@ -28,7 +28,7 @@ const { label, title, subtitle, button, locale } = Astro.props;
         href="https://cal.com/genericsstudio/discovery-call"
         target="_blank"
         rel="noopener noreferrer"
-        class="inline-flex items-center justify-center h-11 px-7 rounded-[6px] text-[14px] fw-510 bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.08)] text-[#d0d6e0] hover:bg-[rgba(255,255,255,0.07)] transition-colors"
+        class="inline-flex items-center justify-center h-11 px-7 rounded-[6px] text-body fw-510 bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.08)] text-[#d0d6e0] hover:bg-[rgba(255,255,255,0.07)] transition-colors"
       >
         {locale === "de" ? "Kostenloses Gespräch" : "Free consultation"}
       </a>

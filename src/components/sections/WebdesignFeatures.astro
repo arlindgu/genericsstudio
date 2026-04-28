@@ -5,110 +5,92 @@ interface Props {
 
 const { locale } = Astro.props;
 
-const features = {
+const content = {
   de: {
     heading: "Was du bekommst.",
     description: "Kein Baukastensystem. Kein Plugin-Wirrwarr. Jede Website wird von Grund auf für dein Business entwickelt.",
+    stats: [
+      { value: "> 98", label: "Lighthouse Score" },
+      { value: "< 1s", label: "Ladezeit" },
+      { value: "0", label: "WordPress Plugins" },
+    ],
     items: [
-      {
-        number: "01",
-        title: "Blitzschnelle Ladezeiten",
-        description: "Kein JavaScript-Overhead, keine ungenutzten Plugins. Jede Seite wird statisch generiert und über ein globales CDN ausgeliefert. Unter 1 Sekunde Ladezeit ist Standard."
-      },
-      {
-        number: "02",
-        title: "SEO von Anfang an",
-        description: "Sauberes semantisches HTML, strukturierte Daten (Schema.org), automatische Sitemap, optimierte Meta-Tags und Core Web Vitals im grünen Bereich. Nicht als Nachgedanke, sondern als Fundament."
-      },
-      {
-        number: "03",
-        title: "Sicherheit ohne Kompromisse",
-        description: "Keine WordPress-Angriffsfläche, keine veralteten Plugins, keine öffentlichen Admin-Panels. Statisch gerenderte Seiten haben keine Datenbank, die man angreifen kann."
-      },
-      {
-        number: "04",
-        title: "Vollständig responsiv",
-        description: "Mobile-first entwickelt und auf allen Gerätegrössen getestet. Kein generisches Breakpoint-Raster, sondern ein Layout, das für dein Design gemacht wurde."
-      },
-      {
-        number: "05",
-        title: "Einfache Inhaltsverwaltung",
-        description: "Auf Wunsch mit einem Headless CMS verbunden, sodass du Texte, Bilder und Seiten selbst bearbeiten kannst. Ohne technische Kenntnisse, ohne uns anzurufen."
-      },
-      {
-        number: "06",
-        title: "Übergabe mit Dokumentation",
-        description: "Du bekommst die vollständige Kontrolle. Hosting, Domain, CMS und Code gehören dir. Mit einer verständlichen Anleitung, damit du weisst, was du hast."
-      }
-    ]
+      { number: "01", title: "Blitzschnelle Ladezeiten", description: "Kein JavaScript-Overhead, keine ungenutzten Plugins. Statisch generiert, global ausgeliefert. Unter 1 Sekunde ist Standard." },
+      { number: "02", title: "SEO von Anfang an", description: "Semantisches HTML, Schema.org, Sitemap, optimierte Meta-Tags und Core Web Vitals im grünen Bereich. Als Fundament, nicht als Nachgedanke." },
+      { number: "03", title: "Sicherheit ohne Kompromisse", description: "Keine WordPress-Angriffsfläche, keine veralteten Plugins, kein öffentliches Admin-Panel. Keine Datenbank, die man angreifen kann." },
+      { number: "04", title: "Vollständig responsiv", description: "Mobile-first und auf allen Gerätegrössen getestet. Kein generisches Breakpoint-Raster, sondern ein Layout, das für dein Design gemacht wurde." },
+      { number: "05", title: "Einfache Inhaltsverwaltung", description: "Auf Wunsch mit Headless CMS verbunden. Texte, Bilder und Seiten selbst bearbeiten, ohne technische Kenntnisse, ohne uns anzurufen." },
+      { number: "06", title: "Übergabe mit Dokumentation", description: "Hosting, Domain, CMS und Code gehören dir. Mit verständlicher Anleitung, damit du weisst, was du hast, und nie von uns abhängig bist." },
+    ],
   },
   en: {
     heading: "What you get.",
     description: "No page builders. No plugin chaos. Every website is developed from scratch for your business.",
+    stats: [
+      { value: "100", label: "Lighthouse Score" },
+      { value: "< 1s", label: "Load time" },
+      { value: "0", label: "WordPress plugins" },
+    ],
     items: [
-      {
-        number: "01",
-        title: "Lightning-fast load times",
-        description: "No JavaScript overhead, no unused plugins. Every page is statically generated and delivered via a global CDN. Under 1 second load time is standard."
-      },
-      {
-        number: "02",
-        title: "SEO built in from day one",
-        description: "Clean semantic HTML, structured data (Schema.org), automatic sitemap, optimised meta tags and green Core Web Vitals. Not an afterthought, but a foundation."
-      },
-      {
-        number: "03",
-        title: "Security without compromise",
-        description: "No WordPress attack surface, no outdated plugins, no public admin panels. Statically rendered sites have no database to attack."
-      },
-      {
-        number: "04",
-        title: "Fully responsive",
-        description: "Mobile-first developed and tested across all screen sizes. Not a generic breakpoint grid, but a layout made for your design."
-      },
-      {
-        number: "05",
-        title: "Simple content management",
-        description: "Optionally connected to a headless CMS so you can edit text, images and pages yourself. No technical knowledge required, no need to call us."
-      },
-      {
-        number: "06",
-        title: "Handover with documentation",
-        description: "You get full control. Hosting, domain, CMS and code belong to you. With a clear guide so you know exactly what you have."
-      }
-    ]
-  }
+      { number: "01", title: "Lightning-fast load times", description: "No JavaScript overhead, no unused plugins. Statically generated and globally delivered. Under 1 second is standard." },
+      { number: "02", title: "SEO built in from day one", description: "Semantic HTML, Schema.org, sitemap, optimised meta tags, and green Core Web Vitals. As a foundation, not an afterthought." },
+      { number: "03", title: "Security without compromise", description: "No WordPress attack surface, no outdated plugins, no public admin panel. No database to attack." },
+      { number: "04", title: "Fully responsive", description: "Mobile-first and tested across all screen sizes. Not a generic breakpoint grid, but a layout made for your design." },
+      { number: "05", title: "Simple content management", description: "Optionally connected to a headless CMS. Edit text, images, and pages yourself — no technical knowledge, no need to call us." },
+      { number: "06", title: "Handover with documentation", description: "Hosting, domain, CMS, and code belong to you. With a clear guide so you know exactly what you have and are never dependent on us." },
+    ],
+  },
 };
 
-const content = locale === "de" ? features.de : features.en;
+const c = locale === "de" ? content.de : content.en;
+
+const icons: Record<string, string> = {
+  "01": `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f7f8f8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>`,
+  "02": `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f7f8f8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>`,
+  "03": `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f7f8f8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`,
+  "04": `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f7f8f8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3"/><rect x="9" y="11" width="14" height="10" rx="2"/><line x1="12" y1="21" x2="20" y2="21"/></svg>`,
+  "05": `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f7f8f8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>`,
+  "06": `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f7f8f8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>`,
+};
 ---
 
-<section class="px-6 md:px-10 py-32 border-t border-[rgba(255,255,255,0.06)]">
-  <div class="max-w-7xl mx-auto">
+<section class="px-6 md:px-10 border-t border-[rgba(255,255,255,0.06)]">
+  <div class="max-w-7xl mx-auto flex flex-col gap-12">
 
-    <div class="flex flex-col lg:flex-row lg:justify-between gap-8 lg:gap-16 mb-20">
-      <h2 class="text-[clamp(1.75rem,3vw,2.5rem)] fw-510 leading-[1.08] tracking-[-0.04em] text-[#f7f8f8] lg:max-w-[44%]">
-        {content.heading}
+    <div class="py-28 flex flex-col lg:flex-row lg:justify-between gap-6 lg:gap-16">
+      <h2 class="text-section-heading fw-510 leading-[1.08] tracking-[-0.04em] text-[#f7f8f8] lg:max-w-[44%]">
+        {c.heading}
       </h2>
-      <p class="text-[16px] text-[#8a8f98] leading-[1.7] fw-400 lg:max-w-[42%] flex items-center">
-        {content.description}
+      <p class="text-body text-[#8a8f98] leading-[1.7] fw-400 lg:max-w-[42%] flex items-center">
+        {c.description}
       </p>
     </div>
 
-    <div class="flex flex-col border-t border-[rgba(255,255,255,0.06)]">
-      {
-        content.items.map((item) => (
-          <div class="flex items-start gap-8 py-7 border-b border-[rgba(255,255,255,0.06)]">
-            <p class="text-[11px] fw-510 text-[#3d4047] tracking-[0.1em] flex-shrink-0 w-7 mt-0.5">{item.number}</p>
-            <div class="flex flex-col lg:flex-row lg:gap-16 flex-1 min-w-0">
-              <h3 class="text-[15px] fw-590 text-[#f7f8f8] tracking-[-0.015em] lg:w-56 flex-shrink-0 mb-2 lg:mb-0">
-                {item.title}
-              </h3>
-              <p class="text-[13px] text-[#62666d] leading-[1.65] fw-400 flex-1">{item.description}</p>
-            </div>
+    <!-- Stats row -->
+    <div class="grid grid-cols-3 mb-px">
+      {c.stats.map((stat) => (
+        <div class="bg-[#08090a] px-8 py-10 place-self-center text-center">
+          <p class="text-page-heading fw-510 text-[#f7f8f8] tracking-[-0.04em] leading-none mb-2">{stat.value}</p>
+          <p class="text-label text-[#62666d] fw-400">{stat.label}</p>
+        </div>
+      ))}
+    </div>
+
+    <!-- 2-col features grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 mb-16 gap-x-24">
+      {c.items.map((item) => (
+        <div class="bg-[#08090a] py-8 flex flex-col gap-4">
+          <div
+            class="w-8 h-8 rounded-lg flex items-center justify-center"
+            style="background: rgba(255,255,255,0.06);"
+            set:html={icons[item.number]}
+          />
+          <div>
+            <h3 class="text-body fw-590 text-[#f7f8f8] tracking-[-0.015em] mb-2">{item.title}</h3>
+            <p class="text-label text-[#62666d] leading-[1.7] fw-400">{item.description}</p>
           </div>
-        ))
-      }
+        </div>
+      ))}
     </div>
 
   </div>

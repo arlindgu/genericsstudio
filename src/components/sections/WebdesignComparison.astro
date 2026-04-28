@@ -8,8 +8,6 @@ const { locale } = Astro.props;
 const de = {
   heading: "Warum kein WordPress?",
   description: "Die meisten Agenturen installieren 20 Plugins und nennen das Webdesign. Das Resultat: langsam, angreifbar und generisch. Wir bauen von Grund auf.",
-  figA: "FIG. 2.8",
-  figB: "FIG. 2.9",
   labelA: "Typische WordPress-Seite",
   labelB: "Generics Studio Website",
   captionA: "Schwere Plugins, unkomprimierte Bilder und überladene Themes bremsen WordPress-Seiten auf unter 50 Punkte. Google straft das ab.",
@@ -23,8 +21,6 @@ const de = {
 const en = {
   heading: "Why not WordPress?",
   description: "Most agencies install 20 plugins and call it web design. The result: slow, vulnerable, and generic. We build from scratch.",
-  figA: "FIG. 2.8",
-  figB: "FIG. 2.9",
   labelA: "Typical WordPress site",
   labelB: "Generics Studio website",
   captionA: "Heavy plugins, uncompressed images and bloated themes drag WordPress sites below 50. Google ranks you accordingly.",
@@ -37,8 +33,6 @@ const en = {
 
 const c = locale === "de" ? de : en;
 
-// Lighthouse score circle SVG helper
-// r=22 → circumference = 2*π*22 ≈ 138.23
 const circ = 138.23;
 function scoreCircle(score: number) {
   const color = score >= 90 ? "#0cce6b" : score >= 50 ? "#ffa400" : "#ff4e43";
@@ -46,109 +40,79 @@ function scoreCircle(score: number) {
   return { color, offset };
 }
 
-const wpScores  = [42, 74, 67, 71];
-const gsScores  = [100, 98, 100, 100];
-const labels    = [c.perf, c.access, c.bp, c.seo];
+const wpScores = [42, 74, 67, 71];
+const gsScores = [100, 98, 100, 100];
+const labels   = [c.perf, c.access, c.bp, c.seo];
 ---
 
-<section class="border-t border-[rgba(255,255,255,0.06)]">
+<section class="px-6 md:px-10">
+  <div class="max-w-7xl mx-auto">
 
-  <!-- Heading -->
-  <div class="px-6 md:px-10 py-20 max-w-7xl mx-auto flex flex-col lg:flex-row lg:justify-between gap-8 lg:gap-16">
-    <h2 class="text-[clamp(1.75rem,3vw,2.5rem)] fw-510 leading-[1.08] tracking-[-0.04em] text-[#f7f8f8] lg:max-w-[44%]">
-      {c.heading}
-    </h2>
-    <p class="text-[16px] text-[#8a8f98] leading-[1.7] fw-400 lg:max-w-[42%] flex items-center">
-      {c.description}
-    </p>
-  </div>
-
-  <!-- Two-panel comparison, full content width -->
-  <div class="grid grid-cols-1 md:grid-cols-2 border-t border-[rgba(255,255,255,0.06)]">
-
-    <!-- Panel A: WordPress -->
-    <div class="px-6 md:px-10 py-10 md:border-r border-[rgba(255,255,255,0.06)]">
-      <p class="text-[11px] fw-510 text-[#3d4047] tracking-[0.1em] mb-8">{c.figA}</p>
-
-      <!-- Lighthouse mockup -->
-      <div class="bg-[#0d0e0f] rounded-[8px] p-6 mb-8 border border-[rgba(255,255,255,0.05)]">
-        <!-- Chrome-style url bar -->
-        <div class="flex items-center gap-2 mb-6 pb-4 border-b border-[rgba(255,255,255,0.05)]">
-          <div class="w-2 h-2 rounded-full bg-[rgba(255,255,255,0.06)]"></div>
-          <div class="flex-1 h-5 rounded-[4px] bg-[rgba(255,255,255,0.04)] flex items-center px-3">
-            <span class="text-[11px] text-[#3d4047] fw-400">wordpress-seite.ch</span>
-          </div>
-        </div>
-        <!-- Score circles -->
-        <div class="grid grid-cols-4 gap-3">
-          {wpScores.map((score, i) => {
-            const { color, offset } = scoreCircle(score);
-            return (
-              <div class="flex flex-col items-center gap-2">
-                <svg viewBox="0 0 50 50" class="w-12 h-12">
-                  <circle cx="25" cy="25" r="22" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="3.5"/>
-                  <circle
-                    cx="25" cy="25" r="22" fill="none"
-                    stroke={color} stroke-width="3.5"
-                    stroke-dasharray={circ}
-                    stroke-dashoffset={offset}
-                    stroke-linecap="round"
-                    transform="rotate(-90 25 25)"
-                  />
-                  <text x="25" y="29" text-anchor="middle" fill={color} font-size="11" font-weight="600">{score}</text>
-                </svg>
-                <p class="text-[10px] text-[#3d4047] fw-400 text-center leading-tight">{labels[i]}</p>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-
-      <h3 class="text-[16px] fw-590 text-[#f7f8f8] tracking-[-0.015em] mb-2">{c.labelA}</h3>
-      <p class="text-[13px] text-[#62666d] leading-[1.65] fw-400 max-w-md">{c.captionA}</p>
+    <div class="py-28 flex flex-col lg:flex-row lg:justify-between gap-8 lg:gap-16">
+      <h2 class="text-section-heading fw-510 leading-[1.08] tracking-[-0.04em] text-[#f7f8f8] lg:max-w-[44%]">
+        {c.heading}
+      </h2>
+      <p class="text-body text-[#8a8f98] leading-[1.7] fw-400 lg:max-w-[42%] flex items-center">
+        {c.description}
+      </p>
     </div>
 
-    <!-- Panel B: Generics Studio -->
-    <div class="px-6 md:px-10 py-10 border-t border-[rgba(255,255,255,0.06)] md:border-t-0">
-      <p class="text-[11px] fw-510 text-[#3d4047] tracking-[0.1em] mb-8">{c.figB}</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 border-t border-[rgba(255,255,255,0.06)] pt-10 pb-10">
 
-      <!-- Lighthouse mockup -->
-      <div class="bg-[#0d0e0f] rounded-[8px] p-6 mb-8 border border-[rgba(255,255,255,0.05)]">
-        <!-- Chrome-style url bar -->
-        <div class="flex items-center gap-2 mb-6 pb-4 border-b border-[rgba(255,255,255,0.05)]">
-          <div class="w-2 h-2 rounded-full bg-[rgba(255,255,255,0.06)]"></div>
-          <div class="flex-1 h-5 rounded-[4px] bg-[rgba(255,255,255,0.04)] flex items-center px-3">
-            <span class="text-[11px] text-[#3d4047] fw-400">generics.studio</span>
+      <!-- Panel A: WordPress -->
+      <div>
+        <div class="bg-[#0d0e0f] rounded-[8px] p-6 mb-6 border border-[rgba(255,255,255,0.05)]">
+          <div class="flex items-center gap-2 mb-6 pb-4 border-b border-[rgba(255,255,255,0.05)]">
+            <div class="flex-1 h-5 rounded-[4px] bg-[rgba(255,255,255,0.04)] flex items-center px-3">
+            </div>
+          </div>
+          <div class="grid grid-cols-4 gap-3">
+            {wpScores.map((score, i) => {
+              const { color, offset } = scoreCircle(score);
+              return (
+                <div class="flex flex-col items-center gap-2">
+                  <svg viewBox="0 0 50 50" class="w-12 h-12">
+                    <circle cx="25" cy="25" r="22" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="3.5"/>
+                    <circle cx="25" cy="25" r="22" fill="none" stroke={color} stroke-width="3.5" stroke-dasharray={circ} stroke-dashoffset={offset} stroke-linecap="round" transform="rotate(-90 25 25)"/>
+                    <text x="25" y="29" text-anchor="middle" fill={color} font-size="11" font-weight="600">{score}</text>
+                  </svg>
+                  <p class="text-label text-[#3d4047] fw-400 text-center leading-tight">{labels[i]}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
-        <!-- Score circles -->
-        <div class="grid grid-cols-4 gap-3">
-          {gsScores.map((score, i) => {
-            const { color, offset } = scoreCircle(score);
-            return (
-              <div class="flex flex-col items-center gap-2">
-                <svg viewBox="0 0 50 50" class="w-12 h-12">
-                  <circle cx="25" cy="25" r="22" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="3.5"/>
-                  <circle
-                    cx="25" cy="25" r="22" fill="none"
-                    stroke={color} stroke-width="3.5"
-                    stroke-dasharray={circ}
-                    stroke-dashoffset={offset}
-                    stroke-linecap="round"
-                    transform="rotate(-90 25 25)"
-                  />
-                  <text x="25" y="29" text-anchor="middle" fill={color} font-size="11" font-weight="600">{score}</text>
-                </svg>
-                <p class="text-[10px] text-[#3d4047] fw-400 text-center leading-tight">{labels[i]}</p>
-              </div>
-            );
-          })}
-        </div>
+        <h3 class="text-body fw-590 text-[#f7f8f8] tracking-[-0.015em] mb-2">{c.labelA}</h3>
+        <p class="text-label text-[#62666d] leading-[1.65] fw-400">{c.captionA}</p>
       </div>
 
-      <h3 class="text-[16px] fw-590 text-[#f7f8f8] tracking-[-0.015em] mb-2">{c.labelB}</h3>
-      <p class="text-[13px] text-[#62666d] leading-[1.65] fw-400 max-w-md">{c.captionB}</p>
-    </div>
+      <!-- Panel B: Generics Studio -->
+      <div>
+        <div class="bg-[#0d0e0f] rounded-[8px] p-6 mb-6 border border-[rgba(255,255,255,0.05)]">
+          <div class="flex items-center gap-2 mb-6 pb-4 border-b border-[rgba(255,255,255,0.05)]">
+            <div class="flex-1 h-5 rounded-[4px] bg-[rgba(255,255,255,0.04)] flex items-center px-3">
+            </div>
+          </div>
+          <div class="grid grid-cols-4 gap-3">
+            {gsScores.map((score, i) => {
+              const { color, offset } = scoreCircle(score);
+              return (
+                <div class="flex flex-col items-center gap-2">
+                  <svg viewBox="0 0 50 50" class="w-12 h-12">
+                    <circle cx="25" cy="25" r="22" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="3.5"/>
+                    <circle cx="25" cy="25" r="22" fill="none" stroke={color} stroke-width="3.5" stroke-dasharray={circ} stroke-dashoffset={offset} stroke-linecap="round" transform="rotate(-90 25 25)"/>
+                    <text x="25" y="29" text-anchor="middle" fill={color} font-size="11" font-weight="600">{score}</text>
+                  </svg>
+                  <p class="text-label text-[#3d4047] fw-400 text-center leading-tight">{labels[i]}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+        <h3 class="text-body fw-590 text-[#f7f8f8] tracking-[-0.015em] mb-2">{c.labelB}</h3>
+        <p class="text-label text-[#62666d] leading-[1.65] fw-400">{c.captionB}</p>
+      </div>
 
+    </div>
   </div>
 </section>

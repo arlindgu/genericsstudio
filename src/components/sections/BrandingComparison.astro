@@ -1,0 +1,151 @@
+---
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+
+const content = {
+  de: {
+    heading: "Eine Marke ist ein System.",
+    description: "Ein Logo allein reicht nicht. Erst wenn Logo, Farbe, Typografie und Guidelines zusammenspielen, entsteht eine Marke, die im Gedächtnis bleibt.",
+    pillars: [
+      {
+        number: "01",
+        title: "Logo-System",
+        description: "Primär, sekundär und monochrom. Für jeden Kontext die richtige Variante, vom Briefkopf bis zum Instagram-Profil.",
+        visual: "logo",
+      },
+      {
+        number: "02",
+        title: "Farbpalette",
+        description: "Primär-, Sekundär- und Neutraltöne in HEX, RGB und CMYK. Konsistenz auf jedem Kanal, jedem Medium.",
+        visual: "color",
+      },
+      {
+        number: "03",
+        title: "Typografie",
+        description: "Zwei bis drei Schriften mit klarer Hierarchie. Überschriften, Fliesstext, Akzente — immer stimmig.",
+        visual: "type",
+      },
+      {
+        number: "04",
+        title: "Brand Guidelines",
+        description: "Alle Regeln deiner Marke in einem Dokument. Für jeden Dienstleister, der je damit arbeitet.",
+        visual: "doc",
+      },
+    ],
+  },
+  en: {
+    heading: "A brand is a system.",
+    description: "A logo alone is not enough. Only when logo, colour, typography, and guidelines work together does a brand become truly memorable.",
+    pillars: [
+      {
+        number: "01",
+        title: "Logo system",
+        description: "Primary, secondary, and monochrome. The right variant for every context, from letterhead to Instagram profile.",
+        visual: "logo",
+      },
+      {
+        number: "02",
+        title: "Colour palette",
+        description: "Primary, secondary, and neutral tones in HEX, RGB, and CMYK. Consistency across every channel and medium.",
+        visual: "color",
+      },
+      {
+        number: "03",
+        title: "Typography",
+        description: "Two to three fonts with a clear hierarchy. Headings, body text, accents — always coherent.",
+        visual: "type",
+      },
+      {
+        number: "04",
+        title: "Brand guidelines",
+        description: "All your brand rules in one document. For every supplier who ever works with them.",
+        visual: "doc",
+      },
+    ],
+  },
+};
+
+const c = locale === "de" ? content.de : content.en;
+const brandColors = ["#0a0a0b", "#c96c30", "#8a8f98", "#f7f8f8", "#3d4047"];
+---
+
+<section class="px-6 md:px-10">
+  <div class="max-w-7xl mx-auto">
+
+    <div class="py-28 flex flex-col lg:flex-row lg:justify-between gap-8 lg:gap-16">
+      <h2 class="text-section-heading fw-510 leading-[1.08] tracking-[-0.04em] text-[#f7f8f8] lg:max-w-[44%]">
+        {c.heading}
+      </h2>
+      <p class="text-body text-[#8a8f98] leading-[1.7] fw-400 lg:max-w-[42%] flex items-center">
+        {c.description}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+      {c.pillars.map((pillar) => (
+        <div class="bg-[#08090a] py-8 flex flex-col">
+
+          <!-- Visual area -->
+          <div class="h-24 flex items-end mb-8">
+            {pillar.visual === "logo" && (
+              <div class="flex items-end gap-3">
+                <div class="w-12 h-12 rounded-[10px] bg-[#c96c30] flex items-center justify-center">
+                  <span class="text-ui fw-590 text-white">G</span>
+                </div>
+                <div class="flex flex-col gap-1.5 mb-0.5">
+                  <div class="w-9 h-9 rounded-[8px] bg-[rgba(255,255,255,0.06)] flex items-center justify-center">
+                    <span class="text-body fw-590 text-[#f7f8f8]">G</span>
+                  </div>
+                  <div class="w-9 h-5 rounded-[4px] bg-[rgba(255,255,255,0.04)] flex items-center justify-center">
+                    <span class="text-label fw-590 text-[#62666d]">G</span>
+                  </div>
+                </div>
+              </div>
+            )}
+            {pillar.visual === "color" && (
+              <div class="flex items-end gap-1.5 w-full">
+                {brandColors.map((color, i) => (
+                  <div
+                    class="flex-1 rounded-[3px] border border-[rgba(255,255,255,0.06)]"
+                    style={`background: ${color}; height: ${[48, 64, 40, 80, 32][i]}px;`}
+                  ></div>
+                ))}
+              </div>
+            )}
+            {pillar.visual === "type" && (
+              <div class="flex flex-col justify-end gap-0.5">
+                <p class="text-h2 fw-510 text-[#f7f8f8] leading-none tracking-[-0.04em]">Aa</p>
+                <p class="text-ui fw-400 text-[#62666d] leading-none">Bb Cc</p>
+                <p class="text-label fw-400 text-[#3d4047] leading-none tracking-[0.02em]">Dd Ee Ff Gg Hh</p>
+              </div>
+            )}
+            {pillar.visual === "doc" && (
+              <div class="flex items-end gap-2">
+                <div class="w-14 h-18 rounded-[5px] bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.08)] p-2.5 flex flex-col gap-1.5" style="height: 72px;">
+                  <div class="h-2 w-full rounded-sm bg-[#c96c30] opacity-60"></div>
+                  <div class="h-1.5 w-3/4 rounded-sm bg-[rgba(255,255,255,0.08)]"></div>
+                  <div class="h-1.5 w-full rounded-sm bg-[rgba(255,255,255,0.06)]"></div>
+                  <div class="h-1.5 w-2/3 rounded-sm bg-[rgba(255,255,255,0.06)]"></div>
+                  <div class="h-1.5 w-5/6 rounded-sm bg-[rgba(255,255,255,0.05)]"></div>
+                </div>
+                <div class="w-10 rounded-[5px] bg-[rgba(255,255,255,0.02)] border border-[rgba(255,255,255,0.06)] p-2 flex flex-col gap-1.5" style="height: 56px;">
+                  <div class="h-1.5 w-full rounded-sm bg-[rgba(255,255,255,0.06)]"></div>
+                  <div class="h-1.5 w-3/4 rounded-sm bg-[rgba(255,255,255,0.04)]"></div>
+                  <div class="h-1.5 w-full rounded-sm bg-[rgba(255,255,255,0.04)]"></div>
+                </div>
+              </div>
+            )}
+          </div>
+
+          <span class="text-label fw-510 text-[#3d4047] tracking-[0.1em] mb-3">{pillar.number}</span>
+          <h3 class="text-body fw-590 text-[#f7f8f8] tracking-[-0.015em] mb-2">{pillar.title}</h3>
+          <p class="text-label text-[#62666d] leading-[1.7] fw-400">{pillar.description}</p>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

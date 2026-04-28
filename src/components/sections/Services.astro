@@ -18,12 +18,12 @@ interface Props {
 const { label, title, subtitle, more, items, locale } = Astro.props;
 ---
 
-<section class="px-6 md:px-10 py-32 border-t border-[rgba(255,255,255,0.06)]" id="services">
+<section class="px-6 md:px-10 py-40 border-t border-[rgba(255,255,255,0.06)]" id="services">
   <div class="max-w-7xl mx-auto">
 
     <!-- Heading -->
     <div class="mb-16">
-      <h2 class="text-[clamp(1.75rem,3vw,2.5rem)] fw-510 leading-[1.08] tracking-[-0.04em] text-[#f7f8f8]">
+      <h2 class="text-section-heading fw-510 leading-[1.08] tracking-[-0.04em] text-[#f7f8f8]">
         {title}<br />{subtitle}
       </h2>
     </div>
@@ -36,17 +36,17 @@ const { label, title, subtitle, more, items, locale } = Astro.props;
             href={`/${locale}${s.href}`}
             class="group flex items-start gap-8 py-7 border-b border-[rgba(255,255,255,0.06)]"
           >
-            <p class="text-[11px] fw-510 text-[#3d4047] tracking-[0.1em] flex-shrink-0 w-7 mt-0.5">
+            <p class="text-label fw-510 text-[#3d4047] tracking-[0.1em] flex-shrink-0 w-7 mt-0.5">
               {s.number}
             </p>
             <div class="flex-1 min-w-0">
-              <h3 class="text-[15px] fw-590 text-[#f7f8f8] tracking-[-0.015em] mb-1.5 group-hover:text-white transition-colors">
+              <h3 class="text-body fw-590 text-[#f7f8f8] tracking-[-0.015em] mb-1.5 group-hover:text-white transition-colors">
                 {s.title}
               </h3>
-              <p class="text-[13px] text-[#62666d] leading-[1.6] fw-400">{s.description}</p>
+              <p class="text-label text-[#62666d] leading-[1.6] fw-400">{s.description}</p>
             </div>
-            <div class="flex items-center gap-1.5 text-[13px] fw-510 text-[#3d4047] group-hover:text-[#7170ff] transition-colors flex-shrink-0 mt-0.5">
-              {more}
+            <div class="flex items-center gap-1.5 text-label fw-510 text-[#3d4047] group-hover:text-[#e0813e] transition-colors flex-shrink-0 mt-0.5">
+              <span class="hidden sm:inline">{more}</span>
               <svg
                 width="12" height="12" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"

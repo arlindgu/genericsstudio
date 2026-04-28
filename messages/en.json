@@ -262,6 +262,36 @@
             "features": ["UX concept + custom UI", "Advanced SEO", "Automations", "Multilingual", "Security setup + hosting setup", "3 months support"]
           }
         ]
+      },
+      "hosting": {
+        "title": "Hosting & Maintenance",
+        "description": "Your website stays online, stays current, and you handle nothing.",
+        "note": "All plans cancel monthly. One-time setup fee of CHF 150.",
+        "cta": {
+          "title": "Not sure which plan fits?",
+          "description": "Free consultation — we'll find the right solution together.",
+          "button": "Book a call"
+        },
+        "plans": [
+          {
+            "title": "Basic",
+            "description": "Everything your website needs to stay secure and fast online.",
+            "price": "CHF 29/mo.",
+            "features": ["Managed hosting (SSD, CDN, SSL)", "Weekly backups", "24/7 uptime monitoring", "Security monitoring", "Monthly status report"]
+          },
+          {
+            "title": "Care",
+            "description": "Active maintenance so your website is always up to date.",
+            "price": "CHF 79/mo.",
+            "features": ["Everything in Basic", "CMS & plugin updates", "1h content changes per month", "Monthly performance check", "Priority support (48h)"]
+          },
+          {
+            "title": "Ultra",
+            "description": "Full service care — you focus on your business.",
+            "price": "CHF 149/mo.",
+            "features": ["Everything in Care", "4h content changes per month", "SEO monitoring & optimisations", "Monthly analytics report", "Priority support (24h)"]
+          }
+        ]
       }
     },
     "branding": {
