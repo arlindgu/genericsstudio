@@ -94,10 +94,10 @@ const content = features.de;
   <div class="max-w-7xl mx-auto">
 
     <div class="py-28 flex flex-col lg:flex-row lg:justify-between gap-6 lg:gap-16">
-      <h2 class="text-section-heading fw-510 leading-[1.08] tracking-[-0.04em] text-[#f7f8f8] lg:max-w-[44%]">
+      <h2 class="text-section-heading fw-510 leading-[1.08] tracking-[-0.04em] text-foreground lg:max-w-[44%]">
         {content.heading}
       </h2>
-      <p class="text-body text-[#8a8f98] leading-[1.7] fw-400 lg:max-w-[42%] flex items-center">
+      <p class="text-body text-muted-foreground leading-[1.7] fw-400 lg:max-w-[42%] flex items-center">
         {content.description}
       </p>
     </div>
@@ -107,10 +107,10 @@ const content = features.de;
         <div class="flex items-start gap-8 py-8 border-b border-[rgba(255,255,255,0.06)]">
           <div class="grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-x-16 gap-y-2 flex-1">
             <div>
-              <h3 class="text-body fw-590 text-[#f7f8f8] tracking-[-0.02em] mb-1.5">{item.title}</h3>
-              <span class="text-label fw-400 text-[#3d4047] tracking-[0.03em]">{item.spec}</span>
+              <h3 class="text-body fw-590 text-foreground tracking-[-0.02em] mb-1.5">{item.title}</h3>
+              <span class="text-label fw-400 text-muted-foreground tracking-[0.03em]">{item.spec}</span>
             </div>
-            <p class="text-body text-[#62666d] leading-[1.75] fw-400">{item.description}</p>
+            <p class="text-body text-muted-foreground leading-[1.75] fw-400">{item.description}</p>
           </div>
         </div>
       ))}

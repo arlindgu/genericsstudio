@@ -22,7 +22,7 @@ const { label, title, subtitle, more, items } = Astro.props;
 
     <!-- Heading -->
     <div class="mb-16">
-      <h2 class="text-section-heading fw-510 leading-[1.08] tracking-[-0.04em] text-[#f7f8f8]">
+      <h2 class="text-section-heading fw-510 leading-[1.08] tracking-[-0.04em] text-foreground">
         {title}<br />{subtitle}
       </h2>
     </div>
@@ -39,10 +39,10 @@ const { label, title, subtitle, more, items } = Astro.props;
               {s.number}
             </p>
             <div class="flex-1 min-w-0">
-              <h3 class="text-body fw-590 text-[#f7f8f8] tracking-[-0.015em] mb-1.5 group-hover:text-white transition-colors">
+              <h3 class="text-body fw-590 text-foreground tracking-[-0.015em] mb-1.5 group-hover:text-white transition-colors">
                 {s.title}
               </h3>
-              <p class="text-label text-[#62666d] leading-[1.6] fw-400">{s.description}</p>
+              <p class="text-label text-muted-foreground leading-[1.6] fw-400">{s.description}</p>
             </div>
             <div class="flex items-center gap-1.5 text-label fw-510 text-[#3d4047] group-hover:text-[#e0813e] transition-colors flex-shrink-0 mt-0.5">
               <span class="hidden sm:inline">{more}</span>

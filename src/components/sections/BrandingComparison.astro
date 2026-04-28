@@ -71,17 +71,17 @@ const brandColors = ["#0a0a0b", "#c96c30", "#8a8f98", "#f7f8f8", "#3d4047"];
   <div class="max-w-7xl mx-auto">
 
     <div class="py-28 flex flex-col lg:flex-row lg:justify-between gap-8 lg:gap-16">
-      <h2 class="text-section-heading fw-510 leading-[1.08] tracking-[-0.04em] text-[#f7f8f8] lg:max-w-[44%]">
+      <h2 class="text-section-heading fw-510 leading-[1.08] tracking-[-0.04em] text-foreground lg:max-w-[44%]">
         {c.heading}
       </h2>
-      <p class="text-body text-[#8a8f98] leading-[1.7] fw-400 lg:max-w-[42%] flex items-center">
+      <p class="text-body text-muted-foreground leading-[1.7] fw-400 lg:max-w-[42%] flex items-center">
         {c.description}
       </p>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
       {c.pillars.map((pillar) => (
-        <div class="bg-[#08090a] py-8 flex flex-col">
+        <div class=" py-8 flex flex-col">
 
           <!-- Visual area -->
           <div class="h-24 flex items-end mb-8">
@@ -92,10 +92,10 @@ const brandColors = ["#0a0a0b", "#c96c30", "#8a8f98", "#f7f8f8", "#3d4047"];
                 </div>
                 <div class="flex flex-col gap-1.5 mb-0.5">
                   <div class="w-9 h-9 rounded-[8px] bg-[rgba(255,255,255,0.06)] flex items-center justify-center">
-                    <span class="text-body fw-590 text-[#f7f8f8]">G</span>
+                    <span class="text-body fw-590 text-foreground">G</span>
                   </div>
                   <div class="w-9 h-5 rounded-[4px] bg-[rgba(255,255,255,0.04)] flex items-center justify-center">
-                    <span class="text-label fw-590 text-[#62666d]">G</span>
+                    <span class="text-label fw-590 text-muted-foreground">G</span>
                   </div>
                 </div>
               </div>
@@ -112,8 +112,8 @@ const brandColors = ["#0a0a0b", "#c96c30", "#8a8f98", "#f7f8f8", "#3d4047"];
             )}
             {pillar.visual === "type" && (
               <div class="flex flex-col justify-end gap-0.5">
-                <p class="text-h2 fw-510 text-[#f7f8f8] leading-none tracking-[-0.04em]">Aa</p>
-                <p class="text-ui fw-400 text-[#62666d] leading-none">Bb Cc</p>
+                <p class="text-h2 fw-510 text-foreground leading-none tracking-[-0.04em]">Aa</p>
+                <p class="text-ui fw-400 text-muted-foreground leading-none">Bb Cc</p>
                 <p class="text-label fw-400 text-[#3d4047] leading-none tracking-[0.02em]">Dd Ee Ff Gg Hh</p>
               </div>
             )}
@@ -136,8 +136,8 @@ const brandColors = ["#0a0a0b", "#c96c30", "#8a8f98", "#f7f8f8", "#3d4047"];
           </div>
 
           <span class="text-label fw-510 text-[#3d4047] tracking-[0.1em] mb-3">{pillar.number}</span>
-          <h3 class="text-body fw-590 text-[#f7f8f8] tracking-[-0.015em] mb-2">{pillar.title}</h3>
-          <p class="text-label text-[#62666d] leading-[1.7] fw-400">{pillar.description}</p>
+          <h3 class="text-body fw-590 text-foreground tracking-[-0.015em] mb-2">{pillar.title}</h3>
+          <p class="text-label text-muted-foreground leading-[1.7] fw-400">{pillar.description}</p>
         </div>
       ))}
     </div>

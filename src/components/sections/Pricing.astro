@@ -29,10 +29,10 @@ const { label, title, subtitle, description, cta, items } = Astro.props;
 
     <!-- 2-col intro -->
     <div class="flex flex-col lg:flex-row lg:justify-between gap-8 lg:gap-16 mb-16">
-      <h2 class="text-section-heading fw-510 leading-[1.08] tracking-[-0.04em] text-[#f7f8f8] lg:max-w-[44%]">
+      <h2 class="text-section-heading fw-510 leading-[1.08] tracking-[-0.04em] text-foreground lg:max-w-[44%]">
         {title}<br />{subtitle}
       </h2>
-      <p class="text-body text-[#8a8f98] leading-[1.7] fw-400 lg:max-w-[42%] flex items-center">
+      <p class="text-body text-muted-foreground leading-[1.7] fw-400 lg:max-w-[42%] flex items-center">
         {description}
       </p>
     </div>
@@ -46,12 +46,12 @@ const { label, title, subtitle, description, cta, items } = Astro.props;
             class="group flex items-center justify-between py-6 border-b border-[rgba(255,255,255,0.06)]"
           >
             <div class="flex-1 min-w-0 mr-8">
-              <h3 class="text-body fw-590 text-[#f7f8f8] tracking-[-0.01em] mb-1 group-hover:text-white transition-colors">
+              <h3 class="text-body fw-590 text-foreground tracking-[-0.01em] mb-1 group-hover:text-white transition-colors">
                 {item.title}
               </h3>
-              <p class="text-label text-[#62666d] fw-400 leading-[1.5]">{item.description}</p>
+              <p class="text-label text-muted-foreground fw-400 leading-[1.5]">{item.description}</p>
             </div>
-            <p class="text-label fw-510 text-[#62666d] group-hover:text-[#e0813e] transition-colors flex-shrink-0">
+            <p class="text-label fw-510 text-muted-foreground group-hover:text-[#e0813e] transition-colors flex-shrink-0">
               {item.startingPrice} →
             </p>
           </a>
@@ -62,8 +62,8 @@ const { label, title, subtitle, description, cta, items } = Astro.props;
     <!-- CTA: plain text + button, no card wrapper -->
     <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
       <div>
-        <p class="text-body fw-590 text-[#f7f8f8] tracking-[-0.01em] mb-0.5">{cta.title}</p>
-        <p class="text-label text-[#62666d] fw-400">{cta.description}</p>
+        <p class="text-body fw-590 text-foreground tracking-[-0.01em] mb-0.5">{cta.title}</p>
+        <p class="text-label text-muted-foreground fw-400">{cta.description}</p>
       </div>
       <a
         href="https://cal.com/genericsstudio/discovery-call"

@@ -14,7 +14,7 @@ const links = tRaw<FooterLink[]>("footer.links");
       <!-- Brand -->
       <div class="col-span-2 md:col-span-1">
         <a href="/" class="inline-block mb-4">
-          <GenericsStudioLogo class="h-7 w-auto text-[#f7f8f8] opacity-60 hover:opacity-90 transition-opacity" />
+          <GenericsStudioLogo class="h-7 w-auto text-foreground opacity-60 hover:opacity-90 transition-opacity" />
         </a>
         <p class="text-label text-[#3d4047] leading-[1.7] fw-400 max-w-[220px]">
           Design- und Webagentur aus der Schweiz.
@@ -29,7 +29,7 @@ const links = tRaw<FooterLink[]>("footer.links");
             <li>
               <a
                 href={link.href}
-                class="text-label text-[#62666d] hover:text-[#d0d6e0] transition-colors fw-400"
+                class="text-label text-muted-foreground hover:text-[#d0d6e0] transition-colors fw-400"
               >
                 {link.label}
               </a>
@@ -51,7 +51,7 @@ const links = tRaw<FooterLink[]>("footer.links");
             <li>
               <a
                 href={link.href}
-                class="text-label text-[#62666d] hover:text-[#d0d6e0] transition-colors fw-400"
+                class="text-label text-muted-foreground hover:text-[#d0d6e0] transition-colors fw-400"
               >
                 {link.label}
               </a>
@@ -65,12 +65,12 @@ const links = tRaw<FooterLink[]>("footer.links");
         <p class="text-label fw-510 uppercase tracking-[0.12em] text-[#3d4047] mb-4">Kontakt</p>
         <ul class="flex flex-col gap-2.5">
           <li>
-            <a href="mailto:hello@generics.studio" class="text-label text-[#62666d] hover:text-[#d0d6e0] transition-colors fw-400">
+            <a href="mailto:hello@generics.studio" class="text-label text-muted-foreground hover:text-[#d0d6e0] transition-colors fw-400">
               hello@generics.studio
             </a>
           </li>
           <li>
-            <a href="https://www.instagram.com/genericsstudio" target="_blank" rel="noopener" class="text-label text-[#62666d] hover:text-[#d0d6e0] transition-colors fw-400">
+            <a href="https://www.instagram.com/genericsstudio" target="_blank" rel="noopener" class="text-label text-muted-foreground hover:text-[#d0d6e0] transition-colors fw-400">
               Instagram
             </a>
           </li>
@@ -82,7 +82,7 @@ const links = tRaw<FooterLink[]>("footer.links");
       <p class="text-label text-[#3d4047] fw-400">
         &copy; {new Date().getFullYear()} Gurgurovci Studio. {t("footer.copyright")}
       </p>
-      <a href="/imprint" class="text-label text-[#3d4047] hover:text-[#62666d] transition-colors fw-400">
+      <a href="/imprint" class="text-label text-[#3d4047] hover:text-muted-foreground transition-colors fw-400">
         {t("footer.imprint")}
       </a>
     </div>

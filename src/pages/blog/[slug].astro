@@ -70,7 +70,7 @@ const breadcrumbSchema = {
       <div class="max-w-3xl mx-auto">
         <a
           href="/blog"
-          class="inline-flex items-center gap-2 text-sm text-[#8a8f98] hover:text-[#f7f8f8] transition-colors mb-8"
+          class="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -91,22 +91,22 @@ const breadcrumbSchema = {
 
         <div class="flex items-center gap-3 mb-6">
           <span
-            class="text-label font-[510] text-[#62666d] bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-full px-2.5 py-0.5"
+            class="text-label font-[510] text-muted-foreground bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-full px-2.5 py-0.5"
           >
             {post.data.category}
           </span>
-          <span class="text-label text-[#62666d]">
+          <span class="text-label text-muted-foreground">
             {post.data.readingTime} {t("blog.readingTime")}
           </span>
-          <span class="text-label text-[#62666d]">{formattedDate}</span>
+          <span class="text-label text-muted-foreground">{formattedDate}</span>
         </div>
 
         <h1
-          class="text-3xl md:text-4xl lg:text-5xl font-[510] text-[#f7f8f8] leading-tight tracking-[-1.056px] mb-6"
+          class="text-3xl md:text-4xl lg:text-5xl font-[510] text-foreground leading-tight tracking-[-1.056px] mb-6"
         >
           {post.data.title}
         </h1>
-        <p class="text-lg text-[#8a8f98] leading-relaxed">
+        <p class="text-lg text-muted-foreground leading-relaxed">
           {post.data.description}
         </p>
       </div>
