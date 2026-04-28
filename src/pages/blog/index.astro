@@ -25,7 +25,7 @@ const posts = (await getCollection("blog-de")).sort(
       <div class="max-w-7xl mx-auto">
         {
           posts.length === 0 ? (
-            <p class="text-body text-[#8a8f98]">Noch keine Beiträge.</p>
+            <p class="text-body text-muted-foreground">Noch keine Beiträge.</p>
           ) : (
             <div class="flex flex-col border-t border-[rgba(255,255,255,0.06)]">
               {posts.map((post) => (
@@ -41,14 +41,14 @@ const posts = (await getCollection("blog-de")).sort(
                         day: "numeric",
                       })}
                     </p>
-                    <h2 class="text-body fw-590 text-[#f7f8f8] tracking-[-0.015em] mb-1 group-hover:text-white transition-colors">
+                    <h2 class="text-body fw-590 text-foreground tracking-[-0.015em] mb-1 group-hover:text-white transition-colors">
                       {post.data.title}
                     </h2>
-                    <p class="text-label text-[#62666d] leading-[1.6] fw-400">
+                    <p class="text-label text-muted-foreground leading-[1.6] fw-400">
                       {post.data.description}
                     </p>
                   </div>
-                  <span class="text-label fw-510 text-[#62666d] group-hover:text-[#e0813e] transition-colors flex-shrink-0 mt-0.5">→</span>
+                  <span class="text-label fw-510 text-muted-foreground group-hover:text-[#e0813e] transition-colors flex-shrink-0 mt-0.5">→</span>
                 </a>
               ))}
             </div>

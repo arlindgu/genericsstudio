@@ -21,10 +21,10 @@ const { label, title, subtitle, description, benefits } = Astro.props;
 
     <!-- 2-col intro -->
     <div class="flex flex-col lg:flex-row lg:justify-between gap-8 lg:gap-16 mb-20">
-      <h2 class="text-section-heading fw-510 leading-[1.08] tracking-[-0.04em] text-[#f7f8f8] lg:max-w-[44%]">
+      <h2 class="text-section-heading fw-510 leading-[1.08] tracking-[-0.04em] text-foreground lg:max-w-[44%]">
         {title}<br />{subtitle}
       </h2>
-      <p class="text-body text-[#8a8f98] leading-[1.7] fw-400 lg:max-w-[42%] flex items-center">
+      <p class="text-body text-muted-foreground leading-[1.7] fw-400 lg:max-w-[42%] flex items-center">
         {description}
       </p>
     </div>
@@ -35,8 +35,8 @@ const { label, title, subtitle, description, benefits } = Astro.props;
         benefits.map((b) => (
           <div>
             <p class="text-label fw-510 text-[#3d4047] tracking-[0.1em] mb-4">{b.number}</p>
-            <h3 class="text-body fw-590 text-[#f7f8f8] tracking-[-0.01em] mb-2.5">{b.title}</h3>
-            <p class="text-label text-[#62666d] leading-[1.6] fw-400">{b.description}</p>
+            <h3 class="text-body fw-590 text-foreground tracking-[-0.01em] mb-2.5">{b.title}</h3>
+            <p class="text-label text-muted-foreground leading-[1.6] fw-400">{b.description}</p>
           </div>
         ))
       }

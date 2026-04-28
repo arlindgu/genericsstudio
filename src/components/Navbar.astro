@@ -18,7 +18,7 @@ const navLinks = [
 >
   <div class="max-w-7xl mx-auto h-full flex items-center justify-between">
     <a href="/" class="flex items-center flex-shrink-0">
-      <GenericsStudioLogo class="h-8 w-auto text-[#f7f8f8]" />
+      <GenericsStudioLogo class="h-8 w-auto text-foreground" />
     </a>
 
     <div class="flex items-center gap-3">
@@ -28,7 +28,7 @@ const navLinks = [
           <li>
             <a
               href={link.href}
-              class={`px-3 h-8 inline-flex items-center text-label fw-510 rounded-[6px] transition-colors ${isActive(link.href) ? "text-[#f7f8f8] bg-[rgba(255,255,255,0.06)]" : "text-[#8a8f98] hover:text-[#d0d6e0] hover:bg-[rgba(255,255,255,0.04)]"}`}
+              class={`px-3 h-8 inline-flex items-center text-label fw-510 rounded-[6px] transition-colors ${isActive(link.href) ? "text-foreground bg-[rgba(255,255,255,0.06)]" : "text-muted-foreground hover:text-[#d0d6e0] hover:bg-[rgba(255,255,255,0.04)]"}`}
             >
               {link.label}
             </a>
@@ -39,7 +39,7 @@ const navLinks = [
       <!-- Burger button (mobile only) -->
       <button
         id="menu-toggle"
-        class="md:hidden flex items-center justify-center w-8 h-8 text-[#8a8f98] hover:text-[#f7f8f8] transition-colors"
+        class="md:hidden flex items-center justify-center w-8 h-8 text-muted-foreground hover:text-foreground transition-colors"
         aria-label="Menu"
         aria-expanded="false"
       >
@@ -67,14 +67,14 @@ const navLinks = [
 <!-- Mobile menu -->
 <div
   id="mobile-menu"
-  class="hidden md:hidden fixed top-14 left-0 right-0 bottom-0 z-40 bg-[#08090a]"
+  class="hidden md:hidden fixed top-14 left-0 right-0 bottom-0 z-40 "
 >
   <div class="px-6 py-4 flex flex-col h-full overflow-y-auto">
     <div class="flex flex-col border-t border-[rgba(255,255,255,0.06)]">
       {navLinks.map((link) => (
         <a
           href={link.href}
-          class={`flex items-center h-14 border-b border-[rgba(255,255,255,0.06)] text-body fw-510 transition-colors ${isActive(link.href) ? "text-[#f7f8f8]" : "text-[#8a8f98]"}`}
+          class={`flex items-center h-14 border-b border-[rgba(255,255,255,0.06)] text-body fw-510 transition-colors ${isActive(link.href) ? "text-foreground" : "text-muted-foreground"}`}
         >
           {link.label}
         </a>
