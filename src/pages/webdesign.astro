@@ -6,23 +6,17 @@ import WebdesignFeatures from "@/components/sections/WebdesignFeatures.astro";
 import ServicePricing from "@/components/sections/ServicePricing.astro";
 import { useTranslations } from "@/i18n/utils";
 
-export function getStaticPaths() {
-  return [{ params: { locale: "de" } }, { params: { locale: "en" } }];
-}
-
-const { locale } = Astro.params;
-const { t, tRaw } = useTranslations(locale);
+const { t, tRaw } = useTranslations("de");
 
 type Plan = { title: string; description: string; price: string; features: string[] };
 type PricingCta = { title: string; description: string; button: string };
 
 const siteUrl = "https://generics.studio";
-const localePath = locale === "de" ? siteUrl : `${siteUrl}/en`;
 
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: locale === "de" ? "Webdesign & Entwicklung" : "Web Design & Development",
+  name: "Webdesign & Entwicklung",
   serviceType: "Webdesign",
   description: t("pages.webdesign.meta.description"),
   provider: { "@id": `${siteUrl}/#organization` },
@@ -38,13 +32,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: `${localePath}/` },
-    {
-      "@type": "ListItem",
-      position: 2,
-      name: locale === "de" ? "Webdesign" : "Web Design",
-      item: `${localePath}/webdesign`,
-    },
+    { "@type": "ListItem", position: 1, name: "Home", item: `${siteUrl}/` },
+    { "@type": "ListItem", position: 2, name: "Webdesign", item: `${siteUrl}/webdesign` },
   ],
 };
 ---
@@ -52,7 +41,6 @@ const breadcrumbSchema = {
 <Layout
   title={t("pages.webdesign.meta.title")}
   description={t("pages.webdesign.meta.description")}
-  locale={locale}
   schema={[serviceSchema, breadcrumbSchema]}
 >
   <main>
@@ -60,8 +48,8 @@ const breadcrumbSchema = {
       title={t("pages.webdesign.header.title")}
       description={t("pages.webdesign.header.description")}
     />
-    <WebdesignComparison locale={locale} />
-    <WebdesignFeatures locale={locale} />
+    <WebdesignComparison locale="de" />
+    <WebdesignFeatures locale="de" />
     <ServicePricing
       title={t("pages.webdesign.pricing.title")}
       description={t("pages.webdesign.pricing.description")}

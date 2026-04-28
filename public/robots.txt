@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /de/imprint
-Disallow: /en/imprint
+Disallow: /imprint
 
 Sitemap: https://generics.studio/sitemap-index.xml

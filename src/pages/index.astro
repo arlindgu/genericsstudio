@@ -8,8 +8,7 @@ import Pricing from "@/components/sections/Pricing.astro";
 import CTA from "@/components/sections/CTA.astro";
 import { useTranslations } from "@/i18n/utils";
 
-const locale = "de";
-const { t, tRaw } = useTranslations(locale);
+const { t, tRaw } = useTranslations("de");
 
 type Benefit = { number: string; title: string; description: string };
 type ServiceItem = { number: string; title: string; description: string; href: string };
@@ -35,7 +34,6 @@ const homeSchema = {
 <Layout
   title={t("hero.meta.title")}
   description={t("hero.meta.description")}
-  locale={locale}
   schema={homeSchema}
 >
   <main>
@@ -46,7 +44,6 @@ const homeSchema = {
       description={t("hero.description")}
       ctaLabel={t("hero.cta")}
       ctaSecondary={t("hero.ctaSecondary")}
-      locale={locale}
     />
 
     <Mission
@@ -63,7 +60,6 @@ const homeSchema = {
       subtitle={t("services.subtitle")}
       more={t("services.more")}
       items={tRaw<ServiceItem[]>("services.items")}
-      locale={locale}
     />
 
     <Process
@@ -81,7 +77,6 @@ const homeSchema = {
       description={t("pricing.description")}
       cta={tRaw<PricingCta>("pricing.cta")}
       items={tRaw<PricingItem[]>("pricing.items")}
-      locale={locale}
     />
 
     <CTA
@@ -89,7 +84,6 @@ const homeSchema = {
       title={t("cta.title")}
       subtitle={t("cta.subtitle")}
       button={t("cta.button")}
-      locale={locale}
     />
   </main>
 </Layout>

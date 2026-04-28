@@ -14,8 +14,4 @@ export const collections = {
     loader: glob({ pattern: "**/*.md", base: "./content/blog/de" }),
     schema: blogSchema,
   }),
-  "blog-en": defineCollection({
-    loader: glob({ pattern: "**/*.md", base: "./content/blog/en" }),
-    schema: blogSchema,
-  }),
 };
