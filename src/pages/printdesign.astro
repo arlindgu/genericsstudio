@@ -6,23 +6,17 @@ import PrintDesignFeatures from "@/components/sections/PrintDesignFeatures.astro
 import ServicePricing from "@/components/sections/ServicePricing.astro";
 import { useTranslations } from "@/i18n/utils";
 
-export function getStaticPaths() {
-  return [{ params: { locale: "de" } }, { params: { locale: "en" } }];
-}
-
-const { locale } = Astro.params;
-const { t, tRaw } = useTranslations(locale);
+const { t, tRaw } = useTranslations("de");
 
 type Plan = { title: string; description: string; price: string; features: string[] };
 type PricingCta = { title: string; description: string; button: string };
 
 const siteUrl = "https://generics.studio";
-const localePath = locale === "de" ? siteUrl : `${siteUrl}/en`;
 
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: locale === "de" ? "Printdesign" : "Print Design",
+  name: "Printdesign",
   serviceType: "Print Design",
   description: t("pages.printdesign.meta.description"),
   provider: { "@id": `${siteUrl}/#organization` },
@@ -38,13 +32,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: `${localePath}/` },
-    {
-      "@type": "ListItem",
-      position: 2,
-      name: locale === "de" ? "Printdesign" : "Print Design",
-      item: `${localePath}/printdesign`,
-    },
+    { "@type": "ListItem", position: 1, name: "Home", item: `${siteUrl}/` },
+    { "@type": "ListItem", position: 2, name: "Printdesign", item: `${siteUrl}/printdesign` },
   ],
 };
 ---
@@ -52,7 +41,6 @@ const breadcrumbSchema = {
 <Layout
   title={t("pages.printdesign.meta.title")}
   description={t("pages.printdesign.meta.description")}
-  locale={locale}
   schema={[serviceSchema, breadcrumbSchema]}
 >
   <main>
@@ -60,8 +48,8 @@ const breadcrumbSchema = {
       title={t("pages.printdesign.header.title")}
       description={t("pages.printdesign.header.description")}
     />
-    <PrintDesignComparison locale={locale} />
-    <PrintDesignFeatures locale={locale} />
+    <PrintDesignComparison locale="de" />
+    <PrintDesignFeatures locale="de" />
     <ServicePricing
       title={t("pages.printdesign.pricing.title")}
       description={t("pages.printdesign.pricing.description")}

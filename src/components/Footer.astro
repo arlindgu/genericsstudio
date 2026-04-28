@@ -2,19 +2,10 @@
 import GenericsStudioLogo from "@/components/svgs/GenericsStudioLogo.astro";
 import { useTranslations } from "@/i18n/utils";
 
-interface Props {
-  locale: string;
-}
-
-const { locale } = Astro.props;
-const { t, tRaw } = useTranslations(locale);
+const { t, tRaw } = useTranslations("de");
 
 type FooterLink = { label: string; href: string };
 const links = tRaw<FooterLink[]>("footer.links");
-const currentPath = Astro.url.pathname;
-const lp = (path: string) => locale === "de" ? path : `/en${path}`;
-const toDeHref = locale === "en" ? currentPath.replace(/^\/en/, "") || "/" : currentPath;
-const toEnHref = locale === "de" ? `/en${currentPath}` : currentPath;
 ---
 
 <footer class="border-t border-[rgba(255,255,255,0.06)] pt-16 pb-12 px-6 md:px-10 mt-0">
@@ -22,13 +13,11 @@ const toEnHref = locale === "de" ? `/en${currentPath}` : currentPath;
     <div class="grid grid-cols-2 md:grid-cols-4 gap-10 mb-16">
       <!-- Brand -->
       <div class="col-span-2 md:col-span-1">
-        <a href={lp("/")} class="inline-block mb-4">
+        <a href="/" class="inline-block mb-4">
           <GenericsStudioLogo class="h-7 w-auto text-[#f7f8f8] opacity-60 hover:opacity-90 transition-opacity" />
         </a>
         <p class="text-label text-[#3d4047] leading-[1.7] fw-400 max-w-[220px]">
-          {locale === "de"
-            ? "Design- und Webagentur aus der Schweiz."
-            : "Design and web agency from Switzerland."}
+          Design- und Webagentur aus der Schweiz.
         </p>
       </div>
 
@@ -39,7 +28,7 @@ const toEnHref = locale === "de" ? `/en${currentPath}` : currentPath;
           {links.map((link) => (
             <li>
               <a
-                href={lp(link.href)}
+                href={link.href}
                 class="text-label text-[#62666d] hover:text-[#d0d6e0] transition-colors fw-400"
               >
                 {link.label}
@@ -51,19 +40,17 @@ const toEnHref = locale === "de" ? `/en${currentPath}` : currentPath;
 
       <!-- Services -->
       <div>
-        <p class="text-label fw-510 uppercase tracking-[0.12em] text-[#3d4047] mb-4">
-          {locale === "de" ? "Leistungen" : "Services"}
-        </p>
+        <p class="text-label fw-510 uppercase tracking-[0.12em] text-[#3d4047] mb-4">Leistungen</p>
         <ul class="flex flex-col gap-2.5">
           {[
-            { label: locale === "de" ? "Webdesign" : "Web Design", href: "/webdesign" },
-            { label: "Branding", href: "/branding" },
-            { label: locale === "de" ? "Grafikdesign" : "Graphic Design", href: "/graphicdesign" },
-            { label: locale === "de" ? "Printdesign" : "Print Design", href: "/printdesign" },
+            { label: "Webdesign",    href: "/webdesign"     },
+            { label: "Branding",     href: "/branding"      },
+            { label: "Grafikdesign", href: "/graphicdesign" },
+            { label: "Printdesign",  href: "/printdesign"   },
           ].map((link) => (
             <li>
               <a
-                href={lp(link.href)}
+                href={link.href}
                 class="text-label text-[#62666d] hover:text-[#d0d6e0] transition-colors fw-400"
               >
                 {link.label}
@@ -73,12 +60,10 @@ const toEnHref = locale === "de" ? `/en${currentPath}` : currentPath;
         </ul>
       </div>
 
-      <!-- Contact + Language -->
+      <!-- Contact -->
       <div>
-        <p class="text-label fw-510 uppercase tracking-[0.12em] text-[#3d4047] mb-4">
-          {locale === "de" ? "Kontakt" : "Contact"}
-        </p>
-        <ul class="flex flex-col gap-2.5 mb-8">
+        <p class="text-label fw-510 uppercase tracking-[0.12em] text-[#3d4047] mb-4">Kontakt</p>
+        <ul class="flex flex-col gap-2.5">
           <li>
             <a href="mailto:hello@generics.studio" class="text-label text-[#62666d] hover:text-[#d0d6e0] transition-colors fw-400">
               hello@generics.studio
@@ -90,21 +75,6 @@ const toEnHref = locale === "de" ? `/en${currentPath}` : currentPath;
             </a>
           </li>
         </ul>
-
-        <p class="text-label fw-510 uppercase tracking-[0.12em] text-[#3d4047] mb-3">
-          Language
-        </p>
-        <div class="flex gap-3">
-          <a
-            href={toDeHref}
-            class={`text-label fw-510 transition-colors ${locale === "de" ? "text-[#f7f8f8]" : "text-[#3d4047] hover:text-[#62666d]"}`}
-          >Deutsch</a>
-          <span class="text-[#3d4047]">/</span>
-          <a
-            href={toEnHref}
-            class={`text-label fw-510 transition-colors ${locale === "en" ? "text-[#f7f8f8]" : "text-[#3d4047] hover:text-[#62666d]"}`}
-          >English</a>
-        </div>
       </div>
     </div>
 
@@ -112,7 +82,7 @@ const toEnHref = locale === "de" ? `/en${currentPath}` : currentPath;
       <p class="text-label text-[#3d4047] fw-400">
         &copy; {new Date().getFullYear()} Gurgurovci Studio. {t("footer.copyright")}
       </p>
-      <a href={lp("/imprint")} class="text-label text-[#3d4047] hover:text-[#62666d] transition-colors fw-400">
+      <a href="/imprint" class="text-label text-[#3d4047] hover:text-[#62666d] transition-colors fw-400">
         {t("footer.imprint")}
       </a>
     </div>

@@ -3,12 +3,7 @@ import Layout from "@/layouts/Layout.astro";
 import PageHeader from "@/components/PageHeader.astro";
 import { useTranslations } from "@/i18n/utils";
 
-export function getStaticPaths() {
-  return [{ params: { locale: "de" } }, { params: { locale: "en" } }];
-}
-
-const { locale } = Astro.params;
-const { t, tRaw } = useTranslations(locale);
+const { t, tRaw } = useTranslations("de");
 
 type ContactOption = {
   number: string;
@@ -22,13 +17,12 @@ type ContactOption = {
 const options = tRaw<ContactOption[]>("contact.options");
 
 const siteUrl = "https://generics.studio";
-const localePath = locale === "de" ? siteUrl : `${siteUrl}/en`;
 
 const contactSchema = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
-  name: locale === "de" ? "Kontakt – Generics Studio" : "Contact – Generics Studio",
-  url: `${siteUrl}/${locale}/contact`,
+  name: "Kontakt – Generics Studio",
+  url: `${siteUrl}/contact`,
   isPartOf: { "@id": `${siteUrl}/#website` },
 };
 
@@ -36,13 +30,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: `${localePath}/` },
-    {
-      "@type": "ListItem",
-      position: 2,
-      name: locale === "de" ? "Kontakt" : "Contact",
-      item: `${localePath}/contact`,
-    },
+    { "@type": "ListItem", position: 1, name: "Home", item: `${siteUrl}/` },
+    { "@type": "ListItem", position: 2, name: "Kontakt", item: `${siteUrl}/contact` },
   ],
 };
 ---
@@ -50,7 +39,6 @@ const breadcrumbSchema = {
 <Layout
   title={t("contact.meta.title")}
   description={t("contact.meta.description")}
-  locale={locale}
   schema={[contactSchema, breadcrumbSchema]}
 >
   <main>

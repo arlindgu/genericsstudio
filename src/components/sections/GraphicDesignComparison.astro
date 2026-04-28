@@ -1,9 +1,4 @@
 ---
-interface Props {
-  locale: string;
-}
-
-const { locale } = Astro.props;
 
 const de = {
   heading: "Warum kein Canva?",
@@ -47,7 +42,7 @@ const en = {
   ],
 };
 
-const c = locale === "de" ? de : en;
+const c = de;
 ---
 
 <section class="px-6 md:px-10">

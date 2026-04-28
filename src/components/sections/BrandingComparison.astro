@@ -1,9 +1,4 @@
 ---
-interface Props {
-  locale: string;
-}
-
-const { locale } = Astro.props;
 
 const content = {
   de: {
@@ -68,7 +63,7 @@ const content = {
   },
 };
 
-const c = locale === "de" ? content.de : content.en;
+const c = content.de;
 const brandColors = ["#0a0a0b", "#c96c30", "#8a8f98", "#f7f8f8", "#3d4047"];
 ---
 

@@ -1,9 +1,4 @@
 ---
-interface Props {
-  locale: string;
-}
-
-const { locale } = Astro.props;
 
 const de = {
   heading: "Warum kein WordPress?",
@@ -31,7 +26,7 @@ const en = {
   seo: "SEO",
 };
 
-const c = locale === "de" ? de : en;
+const c = de;
 
 const circ = 138.23;
 function scoreCircle(score: number) {

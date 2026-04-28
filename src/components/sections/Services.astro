@@ -12,10 +12,9 @@ interface Props {
   subtitle: string;
   more: string;
   items: ServiceItem[];
-  locale: string;
 }
 
-const { label, title, subtitle, more, items, locale } = Astro.props;
+const { label, title, subtitle, more, items } = Astro.props;
 ---
 
 <section class="px-6 md:px-10 py-40 border-t border-[rgba(255,255,255,0.06)]" id="services">
@@ -33,7 +32,7 @@ const { label, title, subtitle, more, items, locale } = Astro.props;
       {
         items.map((s) => (
           <a
-            href={`/${locale}${s.href}`}
+            href={s.href}
             class="group flex items-start gap-8 py-7 border-b border-[rgba(255,255,255,0.06)]"
           >
             <p class="text-label fw-510 text-[#3d4047] tracking-[0.1em] flex-shrink-0 w-7 mt-0.5">

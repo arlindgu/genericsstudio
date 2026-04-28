@@ -1,9 +1,4 @@
 ---
-interface Props {
-  locale: string;
-}
-
-const { locale } = Astro.props;
 
 const features = {
   de: {
@@ -92,7 +87,7 @@ const features = {
   }
 };
 
-const content = locale === "de" ? features.de : features.en;
+const content = features.de;
 ---
 
 <section class="px-6 md:px-10 border-t border-[rgba(255,255,255,0.06)]">

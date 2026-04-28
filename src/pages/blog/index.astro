@@ -4,15 +4,9 @@ import PageHeader from "@/components/PageHeader.astro";
 import { useTranslations } from "@/i18n/utils";
 import { getCollection } from "astro:content";
 
-export async function getStaticPaths() {
-  return [{ params: { locale: "de" } }, { params: { locale: "en" } }];
-}
+const { t } = useTranslations("de");
 
-const { locale } = Astro.params;
-const { t } = useTranslations(locale);
-
-const collectionKey = locale === "de" ? "blog-de" : "blog-en";
-const posts = (await getCollection(collectionKey)).sort(
+const posts = (await getCollection("blog-de")).sort(
   (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
 );
 ---
@@ -20,7 +14,6 @@ const posts = (await getCollection(collectionKey)).sort(
 <Layout
   title={t("blog.meta.title")}
   description={t("blog.meta.description")}
-  locale={locale}
 >
   <main>
     <PageHeader
@@ -32,20 +25,21 @@ const posts = (await getCollection(collectionKey)).sort(
       <div class="max-w-7xl mx-auto">
         {
           posts.length === 0 ? (
-            <p class="text-body text-[#8a8f98]">No posts yet.</p>
+            <p class="text-body text-[#8a8f98]">Noch keine Beiträge.</p>
           ) : (
             <div class="flex flex-col border-t border-[rgba(255,255,255,0.06)]">
               {posts.map((post) => (
                 <a
-                  href={`/${locale}/blog/${post.id}`}
+                  href={`/blog/${post.id}`}
                   class="group flex items-start justify-between py-6 border-b border-[rgba(255,255,255,0.06)]"
                 >
                   <div class="flex-1 min-w-0 mr-8">
                     <p class="text-label text-[#3d4047] fw-400 mb-1.5">
-                      {new Date(post.data.date).toLocaleDateString(
-                        locale === "de" ? "de-CH" : "en-GB",
-                        { year: "numeric", month: "long", day: "numeric" }
-                      )}
+                      {new Date(post.data.date).toLocaleDateString("de-CH", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })}
                     </p>
                     <h2 class="text-body fw-590 text-[#f7f8f8] tracking-[-0.015em] mb-1 group-hover:text-white transition-colors">
                       {post.data.title}

@@ -6,7 +6,6 @@ import "@/styles/global.css";
 interface Props {
   title: string;
   description: string;
-  locale: string;
   noindex?: boolean;
   ogImage?: string;
   type?: "website" | "article";
@@ -16,7 +15,6 @@ interface Props {
 const {
   title,
   description,
-  locale,
   noindex = false,
   ogImage = "/opengraph-image.png",
   type = "website",
@@ -28,15 +26,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImageURL = new URL(ogImage, Astro.site);
 const fullTitle = `${title} | Generics Studio`;
 
-const pathWithoutLocale = Astro.url.pathname
-  .replace(/^\/de/, "")
-  .replace(/^\/en/, "") || "/";
-const deHref = pathWithoutLocale === "/" ? `${siteUrl}/` : `${siteUrl}/de${pathWithoutLocale}`;
-const enHref = `${siteUrl}/en${pathWithoutLocale}`;
-
-const ogLocale = locale === "de" ? "de_CH" : "en_US";
-const ogLocaleAlternate = locale === "de" ? "en_US" : "de_CH";
-
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "ProfessionalService"],
@@ -44,10 +33,7 @@ const organizationSchema = {
   name: "Generics Studio",
   url: siteUrl,
   image: `${siteUrl}/opengraph-image.png`,
-  description:
-    locale === "de"
-      ? "Webdesign, Branding und Grafikdesign aus Wil SG für KMUs und Restaurants in der Schweiz"
-      : "Web design, branding, and graphic design from Wil SG for SMEs and restaurants in Switzerland",
+  description: "Webdesign, Branding und Grafikdesign aus Wil SG für KMUs und Restaurants in der Schweiz",
   telephone: "+41794059955",
   email: "hello@generics.studio",
   address: {
@@ -77,7 +63,7 @@ const websiteSchema = {
   "@id": `${siteUrl}/#website`,
   name: "Generics Studio",
   url: siteUrl,
-  inLanguage: ["de-CH", "en"],
+  inLanguage: "de-CH",
   publisher: { "@id": `${siteUrl}/#organization` },
 };
 
@@ -89,7 +75,7 @@ const allSchemas = [
 ---
 
 <!doctype html>
-<html lang={locale}>
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -97,11 +83,8 @@ const allSchemas = [
     {noindex && <meta name="robots" content="noindex,nofollow" />}
     <title>{fullTitle}</title>
 
-    <!-- Canonical & hreflang -->
+    <!-- Canonical -->
     <link rel="canonical" href={canonicalURL} />
-    <link rel="alternate" hreflang="de" href={deHref} />
-    <link rel="alternate" hreflang="en" href={enHref} />
-    <link rel="alternate" hreflang="x-default" href={deHref} />
 
     <!-- Icons & manifest -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -117,8 +100,7 @@ const allSchemas = [
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content={fullTitle} />
-    <meta property="og:locale" content={ogLocale} />
-    <meta property="og:locale:alternate" content={ogLocaleAlternate} />
+    <meta property="og:locale" content="de_CH" />
     <meta property="og:site_name" content="Generics Studio" />
 
     <!-- Twitter / X -->
@@ -136,8 +118,7 @@ const allSchemas = [
       rel="stylesheet"
     />
 
-    <!-- Plausible Analytics (privacy-first, GDPR-konform, kein Cookie-Banner nötig) -->
-    <!-- Aktiviere nach Registrierung auf plausible.io mit Domain "generics.studio" -->
+    <!-- Plausible Analytics -->
     <script
       is:inline
       defer
@@ -148,8 +129,8 @@ const allSchemas = [
     {allSchemas.map((s) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)}
   </head>
   <body>
-    <Navbar locale={locale} />
+    <Navbar />
     <slot />
-    <Footer locale={locale} />
+    <Footer />
   </body>
 </html>
