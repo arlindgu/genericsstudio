@@ -14,7 +14,7 @@ const navLinks = [
 ---
 
 <nav
-  class="w-full backdrop-blur-md bg-[rgba(8,9,10,0.8)] px-6 md:px-10 sticky top-0 z-50 border-b border-[rgba(255,255,255,0.06)] h-14"
+  class="w-full backdrop-blur-md bg-background/80 px-6 md:px-10 sticky top-0 z-50 border-b border-white/6 h-14"
 >
   <div class="max-w-7xl mx-auto h-full flex items-center justify-between">
     <a href="/" class="flex items-center flex-shrink-0">
@@ -28,7 +28,7 @@ const navLinks = [
           <li>
             <a
               href={link.href}
-              class={`px-3 h-8 inline-flex items-center text-label fw-510 rounded-[6px] transition-colors ${isActive(link.href) ? "text-foreground bg-[rgba(255,255,255,0.06)]" : "text-muted-foreground hover:text-[#d0d6e0] hover:bg-[rgba(255,255,255,0.04)]"}`}
+              class={`px-3 h-8 inline-flex items-center text-label fw-510 rounded-[6px] transition-colors ${isActive(link.href) ? "text-foreground bg-white/6" : "text-muted-foreground hover:text-secondary-foreground hover:bg-secondary"}`}
             >
               {link.label}
             </a>
@@ -56,7 +56,7 @@ const navLinks = [
 
       <a
         href="/contact"
-        class="hidden md:inline-flex items-center justify-center h-8 px-4 rounded-[6px] text-label fw-510 bg-[#c96c30] text-white hover:bg-[#d97838] transition-colors"
+        class="hidden md:inline-flex items-center justify-center h-8 px-4 rounded-[6px] text-label fw-510 bg-primary text-white hover:bg-primary-hover transition-colors"
       >
         Kontakt
       </a>
@@ -70,11 +70,11 @@ const navLinks = [
   class="hidden md:hidden fixed top-14 left-0 right-0 bottom-0 z-40 "
 >
   <div class="px-6 py-4 flex flex-col h-full overflow-y-auto">
-    <div class="flex flex-col border-t border-[rgba(255,255,255,0.06)]">
+    <div class="flex flex-col border-t border-white/6">
       {navLinks.map((link) => (
         <a
           href={link.href}
-          class={`flex items-center h-14 border-b border-[rgba(255,255,255,0.06)] text-body fw-510 transition-colors ${isActive(link.href) ? "text-foreground" : "text-muted-foreground"}`}
+          class={`flex items-center h-14 border-b border-white/6 text-body fw-510 transition-colors ${isActive(link.href) ? "text-foreground" : "text-muted-foreground"}`}
         >
           {link.label}
         </a>
@@ -83,7 +83,7 @@ const navLinks = [
 
     <a
       href="/contact"
-      class="mt-6 inline-flex items-center justify-center h-10 px-6 rounded-[6px] text-label fw-510 bg-[#c96c30] text-white hover:bg-[#d97838] transition-colors w-full"
+      class="mt-6 inline-flex items-center justify-center h-10 px-6 rounded-[6px] text-label fw-510 bg-primary text-white hover:bg-primary-hover transition-colors w-full"
     >
       Kontakt
     </a>

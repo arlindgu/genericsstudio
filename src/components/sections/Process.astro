@@ -16,7 +16,7 @@ interface Props {
 const { label, title, subtitle, description, steps } = Astro.props;
 ---
 
-<section class="px-6 md:px-10 py-40 border-t border-[rgba(255,255,255,0.06)]">
+<section class="px-6 md:px-10 py-40 border-t border-white/6">
   <div class="max-w-7xl mx-auto">
 
     <!-- 2-col intro -->
@@ -30,11 +30,11 @@ const { label, title, subtitle, description, steps } = Astro.props;
     </div>
 
     <!-- Steps: 3 equal columns, top-border accent, no connecting line -->
-    <div class="grid grid-cols-1 md:grid-cols-3 border-t border-[rgba(255,255,255,0.06)]">
+    <div class="grid grid-cols-1 md:grid-cols-3 border-t border-white/6">
       {
         steps.map((step, i) => (
           <div class={`flex flex-col pt-8 pb-4 ${i < steps.length - 1 ? "md:pr-12" : ""} ${i > 0 ? "md:pl-12 mt-8 md:mt-0" : ""}`}>
-            <p class="text-label fw-510 text-[#3d4047] tracking-[0.1em] mb-6">{step.number}</p>
+            <p class="text-label fw-510 text-foreground-dimmer tracking-[0.1em] mb-6">{step.number}</p>
             <h3 class="text-body fw-590 text-foreground tracking-[-0.015em] mb-3">
               {step.title}
             </h3>

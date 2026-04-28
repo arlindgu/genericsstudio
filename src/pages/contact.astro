@@ -58,21 +58,21 @@ const breadcrumbSchema = {
           </p>
         </div>
 
-        <div class="flex flex-col border-t border-[rgba(255,255,255,0.06)]">
+        <div class="flex flex-col border-t border-white/6">
           {
             options.map((option) => (
               <a
                 href={option.href}
                 target={option.external ? "_blank" : undefined}
                 rel={option.external ? "noopener noreferrer" : undefined}
-                class="group flex items-center justify-between py-6 border-b border-[rgba(255,255,255,0.06)]"
+                class="group flex items-center justify-between py-6 border-b border-white/6"
               >
                 <div class="flex-1 min-w-0 mr-8">
-                  <p class="text-label fw-510 text-[#3d4047] tracking-[0.1em] uppercase mb-1">{option.label}</p>
+                  <p class="text-label fw-510 text-foreground-dimmer tracking-[0.1em] uppercase mb-1">{option.label}</p>
                   <h3 class="text-body fw-590 text-foreground tracking-[-0.01em] mb-0.5 group-hover:text-white transition-colors">{option.title}</h3>
                   <p class="text-label text-muted-foreground fw-400">{option.description}</p>
                 </div>
-                <p class="text-label fw-510 text-muted-foreground group-hover:text-[#e0813e] transition-colors flex-shrink-0">
+                <p class="text-label fw-510 text-muted-foreground group-hover:text-primary-bright transition-colors flex-shrink-0">
                   {option.external ? "↗" : "→"}
                 </p>
               </a>

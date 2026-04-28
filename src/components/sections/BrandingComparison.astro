@@ -87,14 +87,14 @@ const brandColors = ["#0a0a0b", "#c96c30", "#8a8f98", "#f7f8f8", "#3d4047"];
           <div class="h-24 flex items-end mb-8">
             {pillar.visual === "logo" && (
               <div class="flex items-end gap-3">
-                <div class="w-12 h-12 rounded-[10px] bg-[#c96c30] flex items-center justify-center">
+                <div class="w-12 h-12 rounded-[10px] bg-primary flex items-center justify-center">
                   <span class="text-ui fw-590 text-white">G</span>
                 </div>
                 <div class="flex flex-col gap-1.5 mb-0.5">
-                  <div class="w-9 h-9 rounded-[8px] bg-[rgba(255,255,255,0.06)] flex items-center justify-center">
+                  <div class="w-9 h-9 rounded-[8px] bg-white/6 flex items-center justify-center">
                     <span class="text-body fw-590 text-foreground">G</span>
                   </div>
-                  <div class="w-9 h-5 rounded-[4px] bg-[rgba(255,255,255,0.04)] flex items-center justify-center">
+                  <div class="w-9 h-5 rounded-[4px] bg-secondary flex items-center justify-center">
                     <span class="text-label fw-590 text-muted-foreground">G</span>
                   </div>
                 </div>
@@ -104,7 +104,7 @@ const brandColors = ["#0a0a0b", "#c96c30", "#8a8f98", "#f7f8f8", "#3d4047"];
               <div class="flex items-end gap-1.5 w-full">
                 {brandColors.map((color, i) => (
                   <div
-                    class="flex-1 rounded-[3px] border border-[rgba(255,255,255,0.06)]"
+                    class="flex-1 rounded-[3px] border border-white/6"
                     style={`background: ${color}; height: ${[48, 64, 40, 80, 32][i]}px;`}
                   ></div>
                 ))}
@@ -114,28 +114,28 @@ const brandColors = ["#0a0a0b", "#c96c30", "#8a8f98", "#f7f8f8", "#3d4047"];
               <div class="flex flex-col justify-end gap-0.5">
                 <p class="text-h2 fw-510 text-foreground leading-none tracking-[-0.04em]">Aa</p>
                 <p class="text-ui fw-400 text-muted-foreground leading-none">Bb Cc</p>
-                <p class="text-label fw-400 text-[#3d4047] leading-none tracking-[0.02em]">Dd Ee Ff Gg Hh</p>
+                <p class="text-label fw-400 text-foreground-dimmer leading-none tracking-[0.02em]">Dd Ee Ff Gg Hh</p>
               </div>
             )}
             {pillar.visual === "doc" && (
               <div class="flex items-end gap-2">
-                <div class="w-14 h-18 rounded-[5px] bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.08)] p-2.5 flex flex-col gap-1.5" style="height: 72px;">
-                  <div class="h-2 w-full rounded-sm bg-[#c96c30] opacity-60"></div>
-                  <div class="h-1.5 w-3/4 rounded-sm bg-[rgba(255,255,255,0.08)]"></div>
-                  <div class="h-1.5 w-full rounded-sm bg-[rgba(255,255,255,0.06)]"></div>
-                  <div class="h-1.5 w-2/3 rounded-sm bg-[rgba(255,255,255,0.06)]"></div>
-                  <div class="h-1.5 w-5/6 rounded-sm bg-[rgba(255,255,255,0.05)]"></div>
+                <div class="w-14 h-18 rounded-[5px] bg-secondary border border-border p-2.5 flex flex-col gap-1.5" style="height: 72px;">
+                  <div class="h-2 w-full rounded-sm bg-primary opacity-60"></div>
+                  <div class="h-1.5 w-3/4 rounded-sm bg-white/8"></div>
+                  <div class="h-1.5 w-full rounded-sm bg-white/6"></div>
+                  <div class="h-1.5 w-2/3 rounded-sm bg-white/6"></div>
+                  <div class="h-1.5 w-5/6 rounded-sm bg-white/5"></div>
                 </div>
-                <div class="w-10 rounded-[5px] bg-[rgba(255,255,255,0.02)] border border-[rgba(255,255,255,0.06)] p-2 flex flex-col gap-1.5" style="height: 56px;">
-                  <div class="h-1.5 w-full rounded-sm bg-[rgba(255,255,255,0.06)]"></div>
-                  <div class="h-1.5 w-3/4 rounded-sm bg-[rgba(255,255,255,0.04)]"></div>
-                  <div class="h-1.5 w-full rounded-sm bg-[rgba(255,255,255,0.04)]"></div>
+                <div class="w-10 rounded-[5px] bg-white/2 border border-white/6 p-2 flex flex-col gap-1.5" style="height: 56px;">
+                  <div class="h-1.5 w-full rounded-sm bg-white/6"></div>
+                  <div class="h-1.5 w-3/4 rounded-sm bg-secondary"></div>
+                  <div class="h-1.5 w-full rounded-sm bg-secondary"></div>
                 </div>
               </div>
             )}
           </div>
 
-          <span class="text-label fw-510 text-[#3d4047] tracking-[0.1em] mb-3">{pillar.number}</span>
+          <span class="text-label fw-510 text-foreground-dimmer tracking-[0.1em] mb-3">{pillar.number}</span>
           <h3 class="text-body fw-590 text-foreground tracking-[-0.015em] mb-2">{pillar.title}</h3>
           <p class="text-label text-muted-foreground leading-[1.7] fw-400">{pillar.description}</p>
         </div>
