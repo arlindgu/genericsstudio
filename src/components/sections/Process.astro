@@ -30,7 +30,7 @@ const { label, title, subtitle, description, steps } = Astro.props;
     </div>
 
     <!-- Steps: 3 equal columns, top-border accent, no connecting line -->
-    <div class="grid grid-cols-1 md:grid-cols-3">
+    <div class="grid grid-cols-1 md:grid-cols-3 border-t border-[rgba(255,255,255,0.06)]">
       {
         steps.map((step, i) => (
           <div class={`flex flex-col pt-8 pb-4 ${i < steps.length - 1 ? "md:pr-12" : ""} ${i > 0 ? "md:pl-12 mt-8 md:mt-0" : ""}`}>

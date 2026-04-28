@@ -38,7 +38,7 @@ const { title, description, note, cta, plans } = Astro.props;
     <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16">
       {
         plans.map((plan, i) => (
-          <div class={`flex flex-col border-t-2 pt-7 ${i === 1 ? "border-[#5e6ad2]" : "border-[rgba(255,255,255,0.1)]"}`}>
+          <div class={`flex flex-col border-t-2 pt-7 ${i === 1 ? "border-[#c96c30]" : "border-[rgba(255,255,255,0.1)]"}`}>
             <div class="mb-7">
               <h3 class="text-body fw-590 text-[#f7f8f8] tracking-[-0.01em] mb-1.5">
                 {plan.title}
@@ -80,7 +80,7 @@ const { title, description, note, cta, plans } = Astro.props;
         href="https://cal.com/genericsstudio/discovery-call"
         target="_blank"
         rel="noopener noreferrer"
-        class="flex-shrink-0 inline-flex items-center justify-center h-8 px-4 rounded-[6px] text-label fw-510 bg-[#5e6ad2] text-white hover:bg-[#6b77e0] transition-colors"
+        class="flex-shrink-0 inline-flex items-center justify-center h-8 px-4 rounded-[6px] text-label fw-510 bg-[#c96c30] text-white hover:bg-[#d97838] transition-colors"
       >
         {cta.button}
       </a>
