@@ -1,0 +1,68 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import PageHeader from "@/components/PageHeader.astro";
+import ServicePricing from "@/components/sections/ServicePricing.astro";
+import { useTranslations } from "@/i18n/utils";
+
+export function getStaticPaths() {
+  return [{ params: { locale: "de" } }, { params: { locale: "en" } }];
+}
+
+const { locale } = Astro.params;
+const { t, tRaw } = useTranslations(locale);
+
+type Plan = { title: string; description: string; price: string; features: string[] };
+type PricingCta = { title: string; description: string; button: string };
+
+const siteUrl = "https://generics.studio";
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: locale === "de" ? "Grafikdesign" : "Graphic Design",
+  serviceType: "Graphic Design",
+  description: t("pages.graphicdesign.meta.description"),
+  provider: { "@id": `${siteUrl}/#organization` },
+  areaServed: [
+    { "@type": "City", name: "Wil" },
+    { "@type": "AdministrativeArea", name: "Kanton St. Gallen" },
+    { "@type": "Country", name: "Schweiz" },
+  ],
+  offers: { "@type": "AggregateOffer", lowPrice: "80", priceCurrency: "CHF", offerCount: "3" },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: `${siteUrl}/${locale}/` },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: locale === "de" ? "Grafikdesign" : "Graphic Design",
+      item: `${siteUrl}/${locale}/graphicdesign`,
+    },
+  ],
+};
+---
+
+<Layout
+  title={t("pages.graphicdesign.meta.title")}
+  description={t("pages.graphicdesign.meta.description")}
+  locale={locale}
+  schema={[serviceSchema, breadcrumbSchema]}
+>
+  <main>
+    <PageHeader
+      title={t("pages.graphicdesign.header.title")}
+      description={t("pages.graphicdesign.header.description")}
+    />
+    <ServicePricing
+      title={t("pages.graphicdesign.pricing.title")}
+      description={t("pages.graphicdesign.pricing.description")}
+      note={t("pages.graphicdesign.pricing.note")}
+      cta={tRaw<PricingCta>("pages.graphicdesign.pricing.cta")}
+      plans={tRaw<Plan[]>("pages.graphicdesign.pricing.plans")}
+    />
+  </main>
+</Layout>

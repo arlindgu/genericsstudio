@@ -1,0 +1,68 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import PageHeader from "@/components/PageHeader.astro";
+import ServicePricing from "@/components/sections/ServicePricing.astro";
+import { useTranslations } from "@/i18n/utils";
+
+export function getStaticPaths() {
+  return [{ params: { locale: "de" } }, { params: { locale: "en" } }];
+}
+
+const { locale } = Astro.params;
+const { t, tRaw } = useTranslations(locale);
+
+type Plan = { title: string; description: string; price: string; features: string[] };
+type PricingCta = { title: string; description: string; button: string };
+
+const siteUrl = "https://generics.studio";
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: locale === "de" ? "Printdesign" : "Print Design",
+  serviceType: "Print Design",
+  description: t("pages.printdesign.meta.description"),
+  provider: { "@id": `${siteUrl}/#organization` },
+  areaServed: [
+    { "@type": "City", name: "Wil" },
+    { "@type": "AdministrativeArea", name: "Kanton St. Gallen" },
+    { "@type": "Country", name: "Schweiz" },
+  ],
+  offers: { "@type": "AggregateOffer", lowPrice: "100", priceCurrency: "CHF", offerCount: "3" },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: `${siteUrl}/${locale}/` },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: locale === "de" ? "Printdesign" : "Print Design",
+      item: `${siteUrl}/${locale}/printdesign`,
+    },
+  ],
+};
+---
+
+<Layout
+  title={t("pages.printdesign.meta.title")}
+  description={t("pages.printdesign.meta.description")}
+  locale={locale}
+  schema={[serviceSchema, breadcrumbSchema]}
+>
+  <main>
+    <PageHeader
+      title={t("pages.printdesign.header.title")}
+      description={t("pages.printdesign.header.description")}
+    />
+    <ServicePricing
+      title={t("pages.printdesign.pricing.title")}
+      description={t("pages.printdesign.pricing.description")}
+      note={t("pages.printdesign.pricing.note")}
+      cta={tRaw<PricingCta>("pages.printdesign.pricing.cta")}
+      plans={tRaw<Plan[]>("pages.printdesign.pricing.plans")}
+    />
+  </main>
+</Layout>

@@ -1,0 +1,46 @@
+---
+interface Benefit {
+  number: string;
+  title: string;
+  description: string;
+}
+
+interface Props {
+  label: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  benefits: Benefit[];
+}
+
+const { label, title, subtitle, description, benefits } = Astro.props;
+---
+
+<section class="px-6 md:px-10 pt-32 pb-32 border-t border-[rgba(255,255,255,0.06)]">
+  <div class="max-w-7xl mx-auto">
+
+    <!-- 2-col intro -->
+    <div class="flex flex-col lg:flex-row lg:justify-between gap-8 lg:gap-16 mb-20">
+      <h2 class="text-[clamp(1.75rem,3vw,2.5rem)] fw-510 leading-[1.08] tracking-[-0.04em] text-[#f7f8f8] lg:max-w-[44%]">
+        {title}<br />{subtitle}
+      </h2>
+      <p class="text-[16px] text-[#8a8f98] leading-[1.7] fw-400 lg:max-w-[42%] flex items-center">
+        {description}
+      </p>
+    </div>
+
+    <!-- Benefits: simple grid, no cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-12 border-t border-[rgba(255,255,255,0.06)] pt-16">
+      {
+        benefits.map((b) => (
+          <div>
+            <p class="text-[11px] fw-510 text-[#3d4047] tracking-[0.1em] mb-4">{b.number}</p>
+            <h3 class="text-[14px] fw-590 text-[#f7f8f8] tracking-[-0.01em] mb-2.5">{b.title}</h3>
+            <p class="text-[13px] text-[#62666d] leading-[1.6] fw-400">{b.description}</p>
+          </div>
+        ))
+      }
+    </div>
+
+  </div>
+</section>

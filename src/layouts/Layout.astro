@@ -1,0 +1,153 @@
+---
+import Navbar from "@/components/Navbar.astro";
+import Footer from "@/components/Footer.astro";
+import "@/styles/global.css";
+
+interface Props {
+  title: string;
+  description: string;
+  locale: string;
+  noindex?: boolean;
+  ogImage?: string;
+  type?: "website" | "article";
+  schema?: object | object[];
+}
+
+const {
+  title,
+  description,
+  locale,
+  noindex = false,
+  ogImage = "/opengraph-image.png",
+  type = "website",
+  schema,
+} = Astro.props;
+
+const siteUrl = "https://generics.studio";
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImageURL = new URL(ogImage, Astro.site);
+const fullTitle = `${title} | Generics Studio`;
+
+const pathWithoutLocale = Astro.url.pathname.replace(/^\/(de|en)/, "") || "/";
+const deHref = `${siteUrl}/de${pathWithoutLocale}`;
+const enHref = `${siteUrl}/en${pathWithoutLocale}`;
+
+const ogLocale = locale === "de" ? "de_CH" : "en_US";
+const ogLocaleAlternate = locale === "de" ? "en_US" : "de_CH";
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "ProfessionalService"],
+  "@id": `${siteUrl}/#organization`,
+  name: "Generics Studio",
+  url: siteUrl,
+  image: `${siteUrl}/opengraph-image.png`,
+  description:
+    locale === "de"
+      ? "Webdesign, Branding und Grafikdesign aus Wil SG für KMUs und Restaurants in der Schweiz"
+      : "Web design, branding, and graphic design from Wil SG for SMEs and restaurants in Switzerland",
+  telephone: "+41794059955",
+  email: "hello@generics.studio",
+  address: {
+    "@type": "PostalAddress",
+    postalCode: "9500",
+    addressLocality: "Wil",
+    addressRegion: "SG",
+    addressCountry: "CH",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 47.4631,
+    longitude: 9.0445,
+  },
+  sameAs: ["https://www.instagram.com/genericsstudio"],
+  priceRange: "CHF",
+  areaServed: [
+    { "@type": "City", name: "Wil" },
+    { "@type": "AdministrativeArea", name: "Kanton St. Gallen" },
+    { "@type": "Country", name: "Schweiz" },
+  ],
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${siteUrl}/#website`,
+  name: "Generics Studio",
+  url: siteUrl,
+  inLanguage: ["de-CH", "en"],
+  publisher: { "@id": `${siteUrl}/#organization` },
+};
+
+const allSchemas = [
+  organizationSchema,
+  websiteSchema,
+  ...(schema ? (Array.isArray(schema) ? schema : [schema]) : []),
+];
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex,nofollow" />}
+    <title>{fullTitle}</title>
+
+    <!-- Canonical & hreflang -->
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="alternate" hreflang="de" href={deHref} />
+    <link rel="alternate" hreflang="en" href={enHref} />
+    <link rel="alternate" hreflang="x-default" href={deHref} />
+
+    <!-- Icons & manifest -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#5e6ad2" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageURL} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={fullTitle} />
+    <meta property="og:locale" content={ogLocale} />
+    <meta property="og:locale:alternate" content={ogLocaleAlternate} />
+    <meta property="og:site_name" content="Generics Studio" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageURL} />
+    <meta name="twitter:image:alt" content={fullTitle} />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Plausible Analytics (privacy-first, GDPR-konform, kein Cookie-Banner nötig) -->
+    <!-- Aktiviere nach Registrierung auf plausible.io mit Domain "generics.studio" -->
+    <script
+      is:inline
+      defer
+      data-domain="generics.studio"
+      src="https://plausible.io/js/script.js"></script>
+
+    <!-- JSON-LD Structured Data -->
+    {allSchemas.map((s) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)}
+  </head>
+  <body>
+    <Navbar locale={locale} />
+    <slot />
+    <Footer locale={locale} />
+  </body>
+</html>

@@ -1,0 +1,142 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { useTranslations } from "@/i18n/utils";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+  const dePosts = await getCollection("blog-de");
+  const enPosts = await getCollection("blog-en");
+
+  return [
+    ...dePosts.map((post) => ({
+      params: { locale: "de", slug: post.id },
+      props: { post, locale: "de" },
+    })),
+    ...enPosts.map((post) => ({
+      params: { locale: "en", slug: post.id },
+      props: { post, locale: "en" },
+    })),
+  ];
+}
+
+const { post, locale } = Astro.props;
+const { t } = useTranslations(locale);
+const { Content } = await render(post);
+
+const formattedDate = new Date(post.data.date).toLocaleDateString(
+  locale === "de" ? "de-CH" : "en-GB",
+  { year: "numeric", month: "long", day: "numeric" }
+);
+
+const siteUrl = "https://generics.studio";
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: post.data.title,
+  description: post.data.description,
+  datePublished: post.data.date,
+  image: `${siteUrl}/opengraph-image.png`,
+  author: {
+    "@type": "Organization",
+    "@id": `${siteUrl}/#organization`,
+    name: "Generics Studio",
+  },
+  publisher: {
+    "@type": "Organization",
+    "@id": `${siteUrl}/#organization`,
+    name: "Generics Studio",
+    logo: { "@type": "ImageObject", url: `${siteUrl}/opengraph-image.png` },
+  },
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": `${siteUrl}/${locale}/blog/${post.id}`,
+  },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: `${siteUrl}/${locale}/` },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: locale === "de" ? "Blog" : "Blog",
+      item: `${siteUrl}/${locale}/blog`,
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: post.data.title,
+      item: `${siteUrl}/${locale}/blog/${post.id}`,
+    },
+  ],
+};
+---
+
+<Layout
+  title={post.data.title}
+  description={post.data.description}
+  locale={locale}
+  type="article"
+  schema={[articleSchema, breadcrumbSchema]}
+>
+  <main>
+    <!-- Article header -->
+    <section class="pt-16 pb-12 px-6 md:px-10 border-b border-[rgba(255,255,255,0.05)]">
+      <div class="max-w-3xl mx-auto">
+        <a
+          href={`/${locale}/blog`}
+          class="inline-flex items-center gap-2 text-sm text-[#8a8f98] hover:text-[#f7f8f8] transition-colors mb-8"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="m19 12H5" />
+            <path d="m12 19-7-7 7-7" />
+          </svg>
+          {t("blog.back")}
+        </a>
+
+        <div class="flex items-center gap-3 mb-6">
+          <span
+            class="text-xs font-[510] text-[#62666d] bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-full px-2.5 py-0.5"
+          >
+            {post.data.category}
+          </span>
+          <span class="text-xs text-[#62666d]">
+            {post.data.readingTime} {t("blog.readingTime")}
+          </span>
+          <span class="text-xs text-[#62666d]">{formattedDate}</span>
+        </div>
+
+        <h1
+          class="text-3xl md:text-4xl lg:text-5xl font-[510] text-[#f7f8f8] leading-tight tracking-[-1.056px] mb-6"
+        >
+          {post.data.title}
+        </h1>
+        <p class="text-lg text-[#8a8f98] leading-relaxed">
+          {post.data.description}
+        </p>
+      </div>
+    </section>
+
+    <!-- Article body -->
+    <section class="py-16 px-6 md:px-10">
+      <div class="max-w-3xl mx-auto">
+        <article class="blog-content">
+          <Content />
+        </article>
+      </div>
+    </section>
+  </main>
+</Layout>

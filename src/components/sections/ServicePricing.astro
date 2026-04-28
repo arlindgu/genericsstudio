@@ -1,0 +1,90 @@
+---
+interface Plan {
+  title: string;
+  description: string;
+  price: string;
+  features: string[];
+}
+
+interface PricingCta {
+  title: string;
+  description: string;
+  button: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  note: string;
+  cta: PricingCta;
+  plans: Plan[];
+}
+
+const { title, description, note, cta, plans } = Astro.props;
+---
+
+<section class="py-24 px-6 md:px-10">
+  <div class="max-w-7xl mx-auto">
+
+    <div class="mb-14">
+      <h2 class="text-[clamp(1.75rem,3vw,2.5rem)] fw-510 text-[#f7f8f8] tracking-[-0.04em] mb-3 leading-tight">
+        {title}
+      </h2>
+      <p class="text-[15px] text-[#8a8f98] fw-400 mb-1">{description}</p>
+      <p class="text-[13px] text-[#3d4047] fw-400">{note}</p>
+    </div>
+
+    <!-- Plans: three columns, accent top-border, no cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16">
+      {
+        plans.map((plan, i) => (
+          <div class={`flex flex-col border-t-2 pt-7 ${i === 1 ? "border-[#5e6ad2]" : "border-[rgba(255,255,255,0.1)]"}`}>
+            <div class="mb-7">
+              <h3 class="text-[15px] fw-590 text-[#f7f8f8] tracking-[-0.01em] mb-1.5">
+                {plan.title}
+              </h3>
+              <p class="text-[13px] text-[#62666d] leading-[1.6] fw-400 mb-5">
+                {plan.description}
+              </p>
+              <p class="text-[1.75rem] fw-510 text-[#f7f8f8] tracking-[-0.03em] leading-none">
+                {plan.price}
+              </p>
+            </div>
+
+            <ul class="flex flex-col gap-2.5 flex-1 border-t border-[rgba(255,255,255,0.06)] pt-6">
+              {plan.features.map((feature) => (
+                <li class="flex items-start gap-2.5 text-[13px] text-[#8a8f98] fw-400 leading-[1.5]">
+                  <svg
+                    width="14" height="14" viewBox="0 0 24 24" fill="none"
+                    stroke="#27a644" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                    class="flex-shrink-0 mt-0.5"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  {feature}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+
+    <!-- CTA: plain, no card -->
+    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 border-t border-[rgba(255,255,255,0.06)] pt-8">
+      <div>
+        <p class="text-[14px] fw-590 text-[#f7f8f8] tracking-[-0.01em] mb-0.5">{cta.title}</p>
+        <p class="text-[13px] text-[#62666d] fw-400">{cta.description}</p>
+      </div>
+      <a
+        href="https://cal.com/genericsstudio/discovery-call"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex-shrink-0 inline-flex items-center justify-center h-8 px-4 rounded-[6px] text-[13px] fw-510 bg-[#5e6ad2] text-white hover:bg-[#6b77e0] transition-colors"
+      >
+        {cta.button}
+      </a>
+    </div>
+
+  </div>
+</section>
