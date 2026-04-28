@@ -9,7 +9,7 @@ interface Props {
 const { label, title, subtitle, button } = Astro.props;
 ---
 
-<section class="px-6 md:px-10 py-48 border-t border-[rgba(255,255,255,0.06)]">
+<section class="px-6 md:px-10 py-48 border-t border-white/6">
   <div class="max-w-7xl mx-auto text-center">
     <h2
       class="text-page-heading fw-510 leading-[1.04] tracking-[-0.04em] text-foreground mb-12"
@@ -19,7 +19,7 @@ const { label, title, subtitle, button } = Astro.props;
     <div class="flex flex-wrap gap-3 justify-center">
       <a
         href="/contact"
-        class="inline-flex items-center justify-center h-11 px-7 rounded-[6px] text-body fw-510 bg-[#c96c30] text-white hover:bg-[#d97838] transition-colors"
+        class="inline-flex items-center justify-center h-11 px-7 rounded-[6px] text-body fw-510 bg-primary text-white hover:bg-primary-hover transition-colors"
       >
         {button}
       </a>
@@ -27,7 +27,7 @@ const { label, title, subtitle, button } = Astro.props;
         href="https://cal.com/genericsstudio/discovery-call"
         target="_blank"
         rel="noopener noreferrer"
-        class="inline-flex items-center justify-center h-11 px-7 rounded-[6px] text-body fw-510 bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.08)] text-[#d0d6e0] hover:bg-[rgba(255,255,255,0.07)] transition-colors"
+        class="inline-flex items-center justify-center h-11 px-7 rounded-[6px] text-body fw-510 bg-secondary border border-border text-secondary-foreground hover:bg-white/7 transition-colors"
       >
         Kostenloses Gespräch
       </a>

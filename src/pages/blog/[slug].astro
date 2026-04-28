@@ -66,7 +66,7 @@ const breadcrumbSchema = {
 >
   <main>
     <!-- Article header -->
-    <section class="pt-16 pb-12 px-6 md:px-10 border-b border-[rgba(255,255,255,0.05)]">
+    <section class="pt-16 pb-12 px-6 md:px-10 border-b border-white/5">
       <div class="max-w-3xl mx-auto">
         <a
           href="/blog"
@@ -91,7 +91,7 @@ const breadcrumbSchema = {
 
         <div class="flex items-center gap-3 mb-6">
           <span
-            class="text-label font-[510] text-muted-foreground bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-full px-2.5 py-0.5"
+            class="text-label fw-510 text-muted-foreground bg-secondary border border-white/6 rounded-full px-2.5 py-0.5"
           >
             {post.data.category}
           </span>
@@ -102,7 +102,7 @@ const breadcrumbSchema = {
         </div>
 
         <h1
-          class="text-3xl md:text-4xl lg:text-5xl font-[510] text-foreground leading-tight tracking-[-1.056px] mb-6"
+          class="text-3xl md:text-4xl lg:text-5xl fw-510 text-foreground leading-tight tracking-[-0.03em] mb-6"
         >
           {post.data.title}
         </h1>

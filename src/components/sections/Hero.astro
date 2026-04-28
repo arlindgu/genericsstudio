@@ -33,13 +33,13 @@ const { badge, title, subtitle, description, ctaLabel, ctaSecondary } =
     <div class="animate-fade-in delay-400 flex flex-wrap gap-3 mb-20">
       <a
         href="/contact"
-        class="inline-flex items-center justify-center h-10 px-5 rounded-[6px] text-label fw-510 bg-[#c96c30] text-white hover:bg-[#d97838] transition-colors"
+        class="inline-flex items-center justify-center h-10 px-5 rounded-[6px] text-label fw-510 bg-primary text-white hover:bg-primary-hover transition-colors"
       >
         {ctaLabel}
       </a>
       <a
         href="/#services"
-        class="inline-flex items-center justify-center h-10 px-5 rounded-[6px] text-label fw-510 bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.08)] text-[#d0d6e0] hover:bg-[rgba(255,255,255,0.07)] hover:border-[rgba(255,255,255,0.12)] transition-colors"
+        class="inline-flex items-center justify-center h-10 px-5 rounded-[6px] text-label fw-510 bg-secondary border border-border text-secondary-foreground hover:bg-white/7 hover:border-white/12 transition-colors"
       >
         {ctaSecondary}
       </a>
@@ -47,43 +47,37 @@ const { badge, title, subtitle, description, ctaLabel, ctaSecondary } =
 
     <!-- Hero visual — full-width dark panel -->
     <div
-      class="animate-fade-in delay-500 relative w-full rounded-t-[12px] border border-b-0 border-[rgba(255,255,255,0.07)] bg-[#0d0e0f] overflow-hidden"
+      class="animate-fade-in delay-500 relative w-full rounded-t-[12px] border border-b-0 border-white/7 bg-surface overflow-hidden"
       style="height: clamp(260px, 38vw, 520px);"
     >
       <!-- Fade to dark at bottom -->
-      <div
-        class="absolute inset-0 pointer-events-none z-10"
-        style="background: linear-gradient(to bottom, rgba(8,9,10,0) 0%, rgba(8,9,10,0) 55%, rgba(8,9,10,0.97) 100%);"
-      ></div>
+      <div class="absolute inset-0 pointer-events-none z-10 hero-fade"></div>
 
       <!-- Window chrome bar -->
       <div
-        class="absolute top-0 left-0 right-0 h-9 border-b border-[rgba(255,255,255,0.06)] flex items-center px-4 gap-2"
+        class="absolute top-0 left-0 right-0 h-9 border-b border-white/6 flex items-center px-4 gap-2"
       >
-        <span class="w-2.5 h-2.5 rounded-full bg-[rgba(255,255,255,0.08)]"></span>
-        <span class="w-2.5 h-2.5 rounded-full bg-[rgba(255,255,255,0.08)]"></span>
-        <span class="w-2.5 h-2.5 rounded-full bg-[rgba(255,255,255,0.08)]"></span>
-        <div class="ml-4 h-5 w-40 rounded-[4px] bg-[rgba(255,255,255,0.04)]"></div>
+        <span class="w-2.5 h-2.5 rounded-full bg-white/8"></span>
+        <span class="w-2.5 h-2.5 rounded-full bg-white/8"></span>
+        <span class="w-2.5 h-2.5 rounded-full bg-white/8"></span>
+        <div class="ml-4 h-5 w-40 rounded-[4px] bg-secondary"></div>
       </div>
 
       <!-- Faux UI skeleton -->
       <div class="absolute top-12 left-6 right-6 flex flex-col gap-3">
-        <div class="h-4 w-48 rounded-[3px] bg-[rgba(255,255,255,0.05)]"></div>
-        <div class="h-3 w-72 rounded-[3px] bg-[rgba(255,255,255,0.03)]"></div>
-        <div class="h-3 w-56 rounded-[3px] bg-[rgba(255,255,255,0.03)]"></div>
-        <div class="mt-4 h-24 w-full rounded-[6px] bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.05)]"></div>
+        <div class="h-4 w-48 rounded-[3px] bg-white/5"></div>
+        <div class="h-3 w-72 rounded-[3px] bg-white/3"></div>
+        <div class="h-3 w-56 rounded-[3px] bg-white/3"></div>
+        <div class="mt-4 h-24 w-full rounded-[6px] bg-white/3 border border-white/5"></div>
         <div class="flex gap-3">
-          <div class="h-16 flex-1 rounded-[6px] bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.05)]"></div>
-          <div class="h-16 flex-1 rounded-[6px] bg-[rgba(201,108,48,0.08)] border border-[rgba(201,108,48,0.2)]"></div>
-          <div class="h-16 flex-1 rounded-[6px] bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.05)]"></div>
+          <div class="h-16 flex-1 rounded-[6px] bg-white/3 border border-white/5"></div>
+          <div class="h-16 flex-1 rounded-[6px] bg-primary/8 border border-primary/20"></div>
+          <div class="h-16 flex-1 rounded-[6px] bg-white/3 border border-white/5"></div>
         </div>
       </div>
     </div>
   </div>
 
   <!-- Radial glow -->
-  <div
-    class="pointer-events-none absolute top-0 left-0 right-0 h-[600px] -z-10"
-    style="background: radial-gradient(ellipse 60% 50% at 30% 0%, rgba(201,108,48,0.09) 0%, transparent 70%);"
-  ></div>
+  <div class="pointer-events-none absolute top-0 left-0 right-0 h-[600px] -z-10 hero-glow"></div>
 </section>

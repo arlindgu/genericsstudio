@@ -38,7 +38,7 @@ const { title, description, note, cta, plans } = Astro.props;
     <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16">
       {
         plans.map((plan, i) => (
-          <div class={`flex flex-col border-t-2 pt-7 ${i === 1 ? "border-[#c96c30]" : "border-[rgba(255,255,255,0.1)]"}`}>
+          <div class={`flex flex-col border-t-2 pt-7 ${i === 1 ? "border-primary" : "border-white/10"}`}>
             <div class="mb-7">
               <h3 class="text-body fw-590 text-foreground tracking-[-0.01em] mb-1.5">
                 {plan.title}
@@ -46,17 +46,17 @@ const { title, description, note, cta, plans } = Astro.props;
               <p class="text-label text-muted-foreground leading-[1.6] fw-400 mb-5">
                 {plan.description}
               </p>
-              <p class="text-[1.75rem] fw-510 text-foreground tracking-[-0.03em] leading-none">
+              <p class="text-price fw-510 text-foreground tracking-[-0.03em] leading-none">
                 {plan.price}
               </p>
             </div>
 
-            <ul class="flex flex-col gap-2.5 flex-1 border-t border-[rgba(255,255,255,0.06)] pt-6">
+            <ul class="flex flex-col gap-2.5 flex-1 border-t border-white/6 pt-6">
               {plan.features.map((feature) => (
                 <li class="flex items-start gap-2.5 text-label text-muted-foreground fw-400 leading-[1.5]">
                   <svg
                     width="14" height="14" viewBox="0 0 24 24" fill="none"
-                    stroke="#27a644" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                    stroke="var(--success)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
                     class="flex-shrink-0 mt-0.5"
                   >
                     <polyline points="20 6 9 17 4 12" />
@@ -71,7 +71,7 @@ const { title, description, note, cta, plans } = Astro.props;
     </div>
 
     <!-- CTA: plain, no card -->
-    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 border-t border-[rgba(255,255,255,0.06)] pt-8">
+    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 border-t border-white/6 pt-8">
       <div>
         <p class="text-body fw-590 text-foreground tracking-[-0.01em] mb-0.5">{cta.title}</p>
         <p class="text-label text-muted-foreground fw-400">{cta.description}</p>
@@ -80,7 +80,7 @@ const { title, description, note, cta, plans } = Astro.props;
         href="https://cal.com/genericsstudio/discovery-call"
         target="_blank"
         rel="noopener noreferrer"
-        class="flex-shrink-0 inline-flex items-center justify-center h-8 px-4 rounded-[6px] text-label fw-510 bg-[#c96c30] text-white hover:bg-[#d97838] transition-colors"
+        class="flex-shrink-0 inline-flex items-center justify-center h-8 px-4 rounded-[6px] text-label fw-510 bg-primary text-white hover:bg-primary-hover transition-colors"
       >
         {cta.button}
       </a>

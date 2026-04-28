@@ -12,13 +12,13 @@ const { label, title, description, center = false } = Astro.props;
 <div class={center ? "text-center" : ""}>
   {
     label && (
-      <p class="text-muted-foreground text-label font-[510] uppercase tracking-[0.12em] mb-3">
+      <p class="text-muted-foreground text-label fw-510 uppercase tracking-[0.12em] mb-3">
         {label}
       </p>
     )
   }
   <h2
-    class="text-3xl md:text-4xl font-[510] text-foreground leading-tight tracking-[-0.704px] whitespace-pre-line"
+    class="text-3xl md:text-4xl fw-510 text-foreground leading-tight tracking-[-0.704px] whitespace-pre-line"
   >
     {title}
   </h2>

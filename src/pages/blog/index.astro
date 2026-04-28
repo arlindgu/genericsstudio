@@ -27,14 +27,14 @@ const posts = (await getCollection("blog-de")).sort(
           posts.length === 0 ? (
             <p class="text-body text-muted-foreground">Noch keine Beiträge.</p>
           ) : (
-            <div class="flex flex-col border-t border-[rgba(255,255,255,0.06)]">
+            <div class="flex flex-col border-t border-white/6">
               {posts.map((post) => (
                 <a
                   href={`/blog/${post.id}`}
-                  class="group flex items-start justify-between py-6 border-b border-[rgba(255,255,255,0.06)]"
+                  class="group flex items-start justify-between py-6 border-b border-white/6"
                 >
                   <div class="flex-1 min-w-0 mr-8">
-                    <p class="text-label text-[#3d4047] fw-400 mb-1.5">
+                    <p class="text-label text-foreground-dimmer fw-400 mb-1.5">
                       {new Date(post.data.date).toLocaleDateString("de-CH", {
                         year: "numeric",
                         month: "long",
@@ -48,7 +48,7 @@ const posts = (await getCollection("blog-de")).sort(
                       {post.data.description}
                     </p>
                   </div>
-                  <span class="text-label fw-510 text-muted-foreground group-hover:text-[#e0813e] transition-colors flex-shrink-0 mt-0.5">→</span>
+                  <span class="text-label fw-510 text-muted-foreground group-hover:text-primary-bright transition-colors flex-shrink-0 mt-0.5">→</span>
                 </a>
               ))}
             </div>

@@ -16,7 +16,7 @@ interface Props {
 const { label, title, subtitle, description, benefits } = Astro.props;
 ---
 
-<section class="px-6 md:px-10 pt-40 pb-40 border-t border-[rgba(255,255,255,0.06)]">
+<section class="px-6 md:px-10 pt-40 pb-40 border-t border-white/6">
   <div class="max-w-7xl mx-auto">
 
     <!-- 2-col intro -->
@@ -30,11 +30,11 @@ const { label, title, subtitle, description, benefits } = Astro.props;
     </div>
 
     <!-- Benefits: simple grid, no cards -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-12 border-t border-[rgba(255,255,255,0.06)] pt-16">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-12 border-t border-white/6 pt-16">
       {
         benefits.map((b) => (
           <div>
-            <p class="text-label fw-510 text-[#3d4047] tracking-[0.1em] mb-4">{b.number}</p>
+            <p class="text-label fw-510 text-foreground-dimmer tracking-[0.1em] mb-4">{b.number}</p>
             <h3 class="text-body fw-590 text-foreground tracking-[-0.01em] mb-2.5">{b.title}</h3>
             <p class="text-label text-muted-foreground leading-[1.6] fw-400">{b.description}</p>
           </div>

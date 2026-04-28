@@ -57,26 +57,26 @@ const c = de;
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 border-t border-[rgba(255,255,255,0.06)] pt-10 pb-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 border-t border-white/6 pt-10 pb-10">
 
       <!-- Panel A: Wrong file -->
       <div>
-        <div class="bg-[#0d0e0f] rounded-[8px] p-6 mb-6 border border-[rgba(255,255,255,0.05)]">
-          <div class="rounded-[6px] border border-dashed border-[rgba(255,78,67,0.3)] p-4 mb-5 relative">
+        <div class="bg-surface rounded-[8px] p-6 mb-6 border border-white/5">
+          <div class="rounded-[6px] border border-dashed border-destructive/30 p-4 mb-5 relative">
             <div class="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-destructive flex items-center justify-center">
               <span class="text-label text-foreground fw-590">!</span>
             </div>
             <div class="h-16 rounded-[4px] mb-3 overflow-hidden relative">
-              <div class="absolute inset-0 bg-gradient-to-r from-none via-[#3498db] to-none opacity-60"></div>
+              <div class="absolute inset-0 bg-gradient-to-r from-none via-mockup-blue to-none opacity-60"></div>
               <div class="absolute inset-1 flex items-center justify-center">
-                <div class="h-2 w-20 rounded bg-[rgba(255,255,255,0.1)]"></div>
+                <div class="h-2 w-20 rounded bg-white/10"></div>
               </div>
             </div>
             <p class="text-label text-destructive fw-510 text-center">document_final_v3.png</p>
           </div>
           <div class="flex flex-col">
             {c.specsA.map(spec => (
-              <div class="flex justify-between items-center py-2 border-b border-[rgba(255,255,255,0.04)] last:border-0">
+              <div class="flex justify-between items-center py-2 border-b border-white/4 last:border-0">
                 <span class="text-label text-muted-foreground fw-400">{spec.label}</span>
                 <div class="flex items-center gap-1.5">
                   <div class="w-1.5 h-1.5 rounded-full bg-destructive"></div>
@@ -95,29 +95,29 @@ const c = de;
 
       <!-- Panel B: Professional prep -->
       <div>
-        <div class="bg-[#0d0e0f] rounded-[8px] p-6 mb-6 border border-[rgba(255,255,255,0.05)]">
-          <div class="rounded-[6px] border border-[rgba(12,206,107,0.2)] p-4 mb-5 relative">
+        <div class="bg-surface rounded-[8px] p-6 mb-6 border border-white/5">
+          <div class="rounded-[6px] border border-success/20 p-4 mb-5 relative">
             <div class="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-success flex items-center justify-center">
               <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="20 6 9 17 4 12"/>
               </svg>
             </div>
-            <div class="h-16 rounded-[4px] mb-3 overflow-hidden relative bg-[#0a0b12]">
-              <div class="absolute inset-0 border border-dashed border-[rgba(12,206,107,0.2)]"></div>
-              <div class="absolute inset-[3px] bg-[rgba(201,108,48,0.08)] flex items-center justify-center">
+            <div class="h-16 rounded-[4px] mb-3 overflow-hidden relative bg-surface-dark">
+              <div class="absolute inset-0 border border-dashed border-success/20"></div>
+              <div class="absolute inset-[3px] bg-primary/8 flex items-center justify-center">
                 <div class="flex items-center gap-2">
-                  <div class="w-5 h-5 rounded-[3px] bg-[#c96c30] flex items-center justify-center">
+                  <div class="w-5 h-5 rounded-[3px] bg-primary flex items-center justify-center">
                     <span class="text-label fw-590 text-foreground">G</span>
                   </div>
-                  <div class="h-2 w-12 rounded bg-[rgba(247,248,248,0.1)]"></div>
+                  <div class="h-2 w-12 rounded bg-foreground/10"></div>
                 </div>
               </div>
             </div>
-            <p class="text-label text-[#0cce6b] fw-510 text-center">flyer_druckfertig_CMYK.pdf</p>
+            <p class="text-label text-success fw-510 text-center">flyer_druckfertig_CMYK.pdf</p>
           </div>
           <div class="flex flex-col">
             {c.specsB.map(spec => (
-              <div class="flex justify-between items-center py-2 border-b border-[rgba(255,255,255,0.04)] last:border-0">
+              <div class="flex justify-between items-center py-2 border-b border-white/4 last:border-0">
                 <span class="text-label text-muted-foreground fw-400">{spec.label}</span>
                 <div class="flex items-center gap-1.5">
                   <div class="w-1.5 h-1.5 rounded-full bg-success"></div>
