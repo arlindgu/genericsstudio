@@ -7,6 +7,8 @@ const blogSchema = z.object({
   date: z.string(),
   category: z.string(),
   readingTime: z.string(),
+  relatedService: z.enum(["webdesign", "branding", "graphicdesign", "printdesign"]).optional(),
+  relatedLabel: z.string().optional(),
 });
 
 export const collections = {

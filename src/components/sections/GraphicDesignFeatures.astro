@@ -1,81 +1,13 @@
 ---
+import { useTranslations } from "@/i18n/utils";
 
-const content = {
-  de: {
-    heading: "Was wir liefern.",
-    description: "Von einem einzigen Social-Post bis zum vollständigen Grafikpaket. Alles custom, alles auf deine Marke zugeschnitten.",
-    items: [
-      {
-        title: "Social Media Designs",
-        description: "Posts, Stories und Thumbnails für Instagram, LinkedIn, Facebook. Optimiert für jede Plattform.",
-        icon: "social",
-      },
-      {
-        title: "Werbebanner & Ads",
-        description: "Display-Ads und Social-Ad-Grafiken in allen gängigen Formaten. Auf Conversion ausgerichtet.",
-        icon: "ads",
-      },
-      {
-        title: "Illustrationen",
-        description: "Individuelle Illustrationen für Website, Kampagnen oder Präsentationen. Von Icon bis Szene.",
-        icon: "illustration",
-      },
-      {
-        title: "Brand Templates",
-        description: "Wiederverwendbare Vorlagen für Kommunikation und Marketing. Einmal aufgesetzt, dauerhaft nutzbar.",
-        icon: "template",
-      },
-      {
-        title: "Präsentationen",
-        description: "Pitch Decks und Unternehmensfolien in PowerPoint oder Keynote. Professionell und einheitlich.",
-        icon: "presentation",
-      },
-      {
-        title: "Icons & UI-Elemente",
-        description: "Custom Icon-Sets und Interface-Grafiken, die zu deiner Marke und deinem Produkt passen.",
-        icon: "icons",
-      },
-    ],
-  },
-  en: {
-    heading: "What we deliver.",
-    description: "From a single social post to a complete graphics package. All custom, all tailored to your brand.",
-    items: [
-      {
-        title: "Social media designs",
-        description: "Posts, stories, and thumbnails for Instagram, LinkedIn, Facebook. Optimised for every platform.",
-        icon: "social",
-      },
-      {
-        title: "Advertising banners & ads",
-        description: "Display ads and social ad graphics in all common formats. Built for conversion.",
-        icon: "ads",
-      },
-      {
-        title: "Illustrations",
-        description: "Custom illustrations for websites, campaigns, or presentations. From icon to full scene.",
-        icon: "illustration",
-      },
-      {
-        title: "Brand templates",
-        description: "Reusable templates for communication and marketing. Set up once, used permanently.",
-        icon: "template",
-      },
-      {
-        title: "Presentations",
-        description: "Pitch decks and company slides in PowerPoint or Keynote. Professional and consistent.",
-        icon: "presentation",
-      },
-      {
-        title: "Icons & UI elements",
-        description: "Custom icon sets and interface graphics that match your brand and your product.",
-        icon: "icons",
-      },
-    ],
-  },
-};
+interface Props { locale?: string }
+const { locale = "de" } = Astro.props;
+const { tRaw } = useTranslations(locale);
 
-const c = content.de;
+type Item = { title: string; description: string; icon: string };
+type FeaturesContent = { heading: string; description: string; items: Item[] };
+const c = tRaw<FeaturesContent>("sections.graphicdesign.features");
 ---
 
 <section class="border-t border-white/6 px-6 md:px-10">

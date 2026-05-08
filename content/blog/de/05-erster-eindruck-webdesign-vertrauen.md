@@ -4,6 +4,8 @@ description: "Nutzer urteilen in 50 Millisekunden über eine Webseite. Wie Webde
 date: "2025-02-12"
 category: "Webdesign"
 readingTime: "6 Min."
+relatedService: webdesign
+relatedLabel: "Website anfragen"
 ---
 
 50 Millisekunden. So lange braucht ein Nutzer, um sich ein erstes Urteil über eine Webseite zu bilden. Nicht 50 Sekunden – 50 Millisekunden. In dieser Zeit hat er keinen einzigen Satz gelesen. Er hat nur gesehen. Und das reicht für eine emotionale Entscheidung: Bleibe ich hier, oder gehe ich wieder?

@@ -1,43 +1,14 @@
 ---
+import { useTranslations } from "@/i18n/utils";
 
-const content = {
-  de: {
-    heading: "Was du bekommst.",
-    description: "Kein Baukastensystem. Kein Plugin-Wirrwarr. Jede Website wird von Grund auf für dein Business entwickelt.",
-    stats: [
-      { value: "+98", label: "Lighthouse Score" },
-      { value: "< 1s", label: "Ladezeit" },
-      { value: "0", label: "WordPress Plugins" },
-    ],
-    items: [
-      { number: "01", title: "Blitzschnelle Ladezeiten", description: "Kein JavaScript-Overhead, keine ungenutzten Plugins. Statisch generiert, global ausgeliefert. Unter 1 Sekunde ist Standard." },
-      { number: "02", title: "SEO von Anfang an", description: "Semantisches HTML, Schema.org, Sitemap, optimierte Meta-Tags und Core Web Vitals im grünen Bereich. Als Fundament, nicht als Nachgedanke." },
-      { number: "03", title: "Sicherheit ohne Kompromisse", description: "Keine WordPress-Angriffsfläche, keine veralteten Plugins, kein öffentliches Admin-Panel. Keine Datenbank, die man angreifen kann." },
-      { number: "04", title: "Vollständig responsiv", description: "Mobile-first und auf allen Gerätegrössen getestet. Kein generisches Breakpoint-Raster, sondern ein Layout, das für dein Design gemacht wurde." },
-      { number: "05", title: "Einfache Inhaltsverwaltung", description: "Auf Wunsch mit Headless CMS verbunden. Texte, Bilder und Seiten selbst bearbeiten, ohne technische Kenntnisse, ohne uns anzurufen." },
-      { number: "06", title: "Übergabe mit Dokumentation", description: "Hosting, Domain, CMS und Code gehören dir. Mit verständlicher Anleitung, damit du weisst, was du hast, und nie von uns abhängig bist." },
-    ],
-  },
-  en: {
-    heading: "What you get.",
-    description: "No page builders. No plugin chaos. Every website is developed from scratch for your business.",
-    stats: [
-      { value: "100", label: "Lighthouse Score" },
-      { value: "< 1s", label: "Load time" },
-      { value: "0", label: "WordPress plugins" },
-    ],
-    items: [
-      { number: "01", title: "Lightning-fast load times", description: "No JavaScript overhead, no unused plugins. Statically generated and globally delivered. Under 1 second is standard." },
-      { number: "02", title: "SEO built in from day one", description: "Semantic HTML, Schema.org, sitemap, optimised meta tags, and green Core Web Vitals. As a foundation, not an afterthought." },
-      { number: "03", title: "Security without compromise", description: "No WordPress attack surface, no outdated plugins, no public admin panel. No database to attack." },
-      { number: "04", title: "Fully responsive", description: "Mobile-first and tested across all screen sizes. Not a generic breakpoint grid, but a layout made for your design." },
-      { number: "05", title: "Simple content management", description: "Optionally connected to a headless CMS. Edit text, images, and pages yourself — no technical knowledge, no need to call us." },
-      { number: "06", title: "Handover with documentation", description: "Hosting, domain, CMS, and code belong to you. With a clear guide so you know exactly what you have and are never dependent on us." },
-    ],
-  },
-};
+interface Props { locale?: string }
+const { locale = "de" } = Astro.props;
+const { tRaw } = useTranslations(locale);
 
-const c = content.de;
+type Stat = { value: string; label: string };
+type Item = { number: string; title: string; description: string };
+type FeaturesContent = { heading: string; description: string; stats: Stat[]; items: Item[] };
+const c = tRaw<FeaturesContent>("sections.webdesign.features");
 
 const icons: Record<string, string> = {
   "01": `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>`,

@@ -4,6 +4,8 @@ description: "Instagram, TikTok, Facebook – Algorithmen entscheiden, wer dich 
 date: "2025-03-19"
 category: "Online-Strategie"
 readingTime: "7 Min."
+relatedService: webdesign
+relatedLabel: "Website anfragen"
 ---
 
 Stell dir vor, du betreibst ein Ladengeschäft – und jeden Morgen entscheidet jemand anderes, wie viele Kunden du heute hereinlassen darfst. Manchmal sind es 1.000, manchmal 10. Du weisst nicht warum, du hast keinen Einfluss darauf, du kannst nur hoffen. Genau so fühlt sich organische Reichweite auf Social Media an.

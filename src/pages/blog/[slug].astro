@@ -1,5 +1,6 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import BlogRelatedService from "@/components/BlogRelatedService.astro";
 import { useTranslations } from "@/i18n/utils";
 import { getCollection, render } from "astro:content";
 
@@ -120,5 +121,14 @@ const breadcrumbSchema = {
         </article>
       </div>
     </section>
+
+    {post.data.relatedService && (
+      <div class="max-w-3xl mx-auto">
+        <BlogRelatedService
+          service={post.data.relatedService}
+          label={post.data.relatedLabel}
+        />
+      </div>
+    )}
   </main>
 </Layout>

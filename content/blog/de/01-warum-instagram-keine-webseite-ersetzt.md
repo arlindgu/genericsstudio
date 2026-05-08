@@ -4,6 +4,8 @@ description: "Instagram ist kein Ersatz für eine eigene Webseite. Warum du trot
 date: "2025-01-08"
 category: "Online-Präsenz"
 readingTime: "6 Min."
+relatedService: webdesign
+relatedLabel: "Website anfragen"
 ---
 
 Instagram kann dein Profil über Nacht sperren. Deine Webseite nicht. Wer sein Business ausschliesslich auf Instagram aufbaut, baut auf fremdem Boden – und das ist riskanter, als die meisten ahnen.

@@ -4,6 +4,8 @@ description: "Social Media oder Webseite – was bringt mehr? Die Antwort ist ke
 date: "2025-03-05"
 category: "Online-Strategie"
 readingTime: "7 Min."
+relatedService: webdesign
+relatedLabel: "Website anfragen"
 ---
 
 "Ich brauche keine Webseite, ich habe Instagram." Dieser Satz fällt erstaunlich oft. Und er ist verständlich: Instagram ist intuitiv, kostenlos, schnell aufgebaut und zeigt sofort Wirkung. Aber er verwechselt ein Werkzeug mit einem Fundament.

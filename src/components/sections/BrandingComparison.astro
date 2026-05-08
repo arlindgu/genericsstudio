@@ -1,69 +1,14 @@
 ---
+import { useTranslations } from "@/i18n/utils";
 
-const content = {
-  de: {
-    heading: "Eine Marke ist ein System.",
-    description: "Ein Logo allein reicht nicht. Erst wenn Logo, Farbe, Typografie und Guidelines zusammenspielen, entsteht eine Marke, die im Gedächtnis bleibt.",
-    pillars: [
-      {
-        number: "01",
-        title: "Logo-System",
-        description: "Primär, sekundär und monochrom. Für jeden Kontext die richtige Variante, vom Briefkopf bis zum Instagram-Profil.",
-        visual: "logo",
-      },
-      {
-        number: "02",
-        title: "Farbpalette",
-        description: "Primär-, Sekundär- und Neutraltöne in HEX, RGB und CMYK. Konsistenz auf jedem Kanal, jedem Medium.",
-        visual: "color",
-      },
-      {
-        number: "03",
-        title: "Typografie",
-        description: "Zwei bis drei Schriften mit klarer Hierarchie. Überschriften, Fliesstext, Akzente — immer stimmig.",
-        visual: "type",
-      },
-      {
-        number: "04",
-        title: "Brand Guidelines",
-        description: "Alle Regeln deiner Marke in einem Dokument. Für jeden Dienstleister, der je damit arbeitet.",
-        visual: "doc",
-      },
-    ],
-  },
-  en: {
-    heading: "A brand is a system.",
-    description: "A logo alone is not enough. Only when logo, colour, typography, and guidelines work together does a brand become truly memorable.",
-    pillars: [
-      {
-        number: "01",
-        title: "Logo system",
-        description: "Primary, secondary, and monochrome. The right variant for every context, from letterhead to Instagram profile.",
-        visual: "logo",
-      },
-      {
-        number: "02",
-        title: "Colour palette",
-        description: "Primary, secondary, and neutral tones in HEX, RGB, and CMYK. Consistency across every channel and medium.",
-        visual: "color",
-      },
-      {
-        number: "03",
-        title: "Typography",
-        description: "Two to three fonts with a clear hierarchy. Headings, body text, accents — always coherent.",
-        visual: "type",
-      },
-      {
-        number: "04",
-        title: "Brand guidelines",
-        description: "All your brand rules in one document. For every supplier who ever works with them.",
-        visual: "doc",
-      },
-    ],
-  },
-};
+interface Props { locale?: string }
+const { locale = "de" } = Astro.props;
+const { tRaw } = useTranslations(locale);
 
-const c = content.de;
+type Pillar = { number: string; title: string; description: string; visual: string };
+type ComparisonContent = { heading: string; description: string; pillars: Pillar[] };
+const c = tRaw<ComparisonContent>("sections.branding.comparison");
+
 const brandColors = ["#0a0a0b", "#c96c30", "#8a8f98", "#f7f8f8", "#3d4047"];
 ---
 

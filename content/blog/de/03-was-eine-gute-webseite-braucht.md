@@ -4,6 +4,8 @@ description: "Was macht eine Webseite wirklich gut? 7 Elemente, die über Vertra
 date: "2025-01-22"
 category: "Webdesign"
 readingTime: "7 Min."
+relatedService: webdesign
+relatedLabel: "Website anfragen"
 ---
 
 Eine Webseite zu haben reicht nicht. Eine gute Webseite zu haben ist der Unterschied zwischen einem digitalen Aushängeschild und einer digitalen Geisterstadt. Hier sind die sieben Elemente, die tatsächlich darüber entscheiden, ob Besucher bleiben – oder sofort wieder weg sind.

@@ -4,6 +4,8 @@ description: "SEO klingt kompliziert, ist es aber nicht. Diese SEO-Grundlagen he
 date: "2025-02-05"
 category: "SEO"
 readingTime: "8 Min."
+relatedService: webdesign
+relatedLabel: "Website anfragen"
 ---
 
 Jeden Monat suchen Menschen in deiner Stadt nach dem, was du anbietest. Ob sie dich finden oder deinen Mitbewerber – das entscheidet in vielen Fällen eine Handvoll SEO-Grundlagen, die jeder umsetzen kann. Kein Agenturbudget nötig.

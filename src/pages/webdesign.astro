@@ -4,14 +4,27 @@ import PageHeader from "@/components/PageHeader.astro";
 import WebdesignComparison from "@/components/sections/WebdesignComparison.astro";
 import WebdesignFeatures from "@/components/sections/WebdesignFeatures.astro";
 import ServicePricing from "@/components/sections/ServicePricing.astro";
+import ServiceFAQ from "@/components/sections/ServiceFAQ.astro";
 import { useTranslations } from "@/i18n/utils";
 
 const { t, tRaw } = useTranslations("de");
 
 type Plan = { title: string; description: string; price: string; features: string[] };
 type PricingCta = { title: string; description: string; button: string };
+type FaqItem = { question: string; answer: string };
 
 const siteUrl = "https://generics.studio";
+const faqItems = tRaw<FaqItem[]>("pages.webdesign.faq.items");
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -41,7 +54,7 @@ const breadcrumbSchema = {
 <Layout
   title={t("pages.webdesign.meta.title")}
   description={t("pages.webdesign.meta.description")}
-  schema={[serviceSchema, breadcrumbSchema]}
+  schema={[serviceSchema, breadcrumbSchema, faqSchema]}
 >
   <main>
     <PageHeader
@@ -63,6 +76,10 @@ const breadcrumbSchema = {
       note={t("pages.webdesign.hosting.note")}
       cta={tRaw<PricingCta>("pages.webdesign.hosting.cta")}
       plans={tRaw<Plan[]>("pages.webdesign.hosting.plans")}
+    />
+    <ServiceFAQ
+      title={t("pages.webdesign.faq.title")}
+      items={faqItems}
     />
   </main>
 </Layout>

@@ -4,6 +4,8 @@ description: "Ein Blog auf der Webseite klingt nach Aufwand. Aber regelmässige 
 date: "2025-03-12"
 category: "Content-Strategie"
 readingTime: "6 Min."
+relatedService: webdesign
+relatedLabel: "Website anfragen"
 ---
 
 "Ich bin doch kein Journalist." Das ist der häufigste Grund, warum Selbstständige und Kleinunternehmer keinen Blog auf ihrer Webseite haben. Und er ist nachvollziehbar. Aber er basiert auf einem Missverständnis: Was ein Blog für dein Business tut, hat nichts mit journalistischem Schreiben zu tun.

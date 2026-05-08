@@ -1,48 +1,19 @@
 ---
+import { useTranslations } from "@/i18n/utils";
 
-const de = {
-  heading: "Warum kein Canva?",
-  description: "Canva-Templates sehen aus wie Canva-Templates. Jeder erkennt sie. Custom-Design macht den Unterschied zwischen scrollen und stoppen.",
-  labelA: "Canva / Stock-Template",
-  labelB: "Custom Design",
-  captionA: "Vorgefertigte Vorlage, Stock-Icons und generische Farbverläufe. Identisch mit zehntausend anderen Posts. Kein Wiedererkennungswert.",
-  captionB: "Jedes Element auf deine Marke abgestimmt. Eigene Typografie, eigene Farben, eigene Bildsprache. Unverwechselbar.",
-  templateBadge: "Vorlage",
-  customBadge: "Custom",
-  templateStats: [
-    { label: "Einzigartigkeit", value: "0 %" },
-    { label: "Markenkonformität", value: "Keine" },
-    { label: "Verwendung", value: "50.000×" },
-  ],
-  customStats: [
-    { label: "Einzigartigkeit", value: "100 %" },
-    { label: "Markenkonformität", value: "Voll" },
-    { label: "Verwendung", value: "1×" },
-  ],
+interface Props { locale?: string }
+const { locale = "de" } = Astro.props;
+const { tRaw } = useTranslations(locale);
+
+type Stat = { label: string; value: string };
+type ComparisonContent = {
+  heading: string; description: string;
+  labelA: string; labelB: string;
+  captionA: string; captionB: string;
+  templateBadge: string; customBadge: string;
+  templateStats: Stat[]; customStats: Stat[];
 };
-
-const en = {
-  heading: "Why not Canva?",
-  description: "Canva templates look like Canva templates. Everyone recognises them. Custom design is the difference between scrolling and stopping.",
-  labelA: "Canva / stock template",
-  labelB: "Custom design",
-  captionA: "Pre-made template, stock icons, and generic gradients. Identical to tens of thousands of other posts. Zero recognition value.",
-  captionB: "Every element aligned to your brand. Your own typography, colours, and visual language. Unmistakable.",
-  templateBadge: "Template",
-  customBadge: "Custom",
-  templateStats: [
-    { label: "Uniqueness", value: "0 %" },
-    { label: "Brand conformity", value: "None" },
-    { label: "Usage", value: "50,000×" },
-  ],
-  customStats: [
-    { label: "Uniqueness", value: "100 %" },
-    { label: "Brand conformity", value: "Full" },
-    { label: "Usage", value: "1×" },
-  ],
-};
-
-const c = de;
+const c = tRaw<ComparisonContent>("sections.graphicdesign.comparison");
 ---
 
 <section class="px-6 md:px-10">

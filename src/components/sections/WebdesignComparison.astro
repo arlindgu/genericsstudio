@@ -1,32 +1,17 @@
 ---
+import { useTranslations } from "@/i18n/utils";
 
-const de = {
-  heading: "Warum kein WordPress?",
-  description: "Die meisten Agenturen installieren 20 Plugins und nennen das Webdesign. Das Resultat: langsam, angreifbar und generisch. Wir bauen von Grund auf.",
-  labelA: "Typische WordPress-Seite",
-  labelB: "Generics Studio Website",
-  captionA: "Schwere Plugins, unkomprimierte Bilder und überladene Themes bremsen WordPress-Seiten auf unter 50 Punkte. Google straft das ab.",
-  captionB: "Schlanker Code, optimierte Assets und serverseitiges Rendering bringen jede Seite auf 100. Weniger Ladezeit, mehr Conversions.",
-  perf: "Leistung",
-  access: "Barrierefreiheit",
-  bp: "Best Practices",
-  seo: "SEO",
+interface Props { locale?: string }
+const { locale = "de" } = Astro.props;
+const { tRaw } = useTranslations(locale);
+
+type ComparisonContent = {
+  heading: string; description: string;
+  labelA: string; labelB: string;
+  captionA: string; captionB: string;
+  perf: string; access: string; bp: string; seo: string;
 };
-
-const en = {
-  heading: "Why not WordPress?",
-  description: "Most agencies install 20 plugins and call it web design. The result: slow, vulnerable, and generic. We build from scratch.",
-  labelA: "Typical WordPress site",
-  labelB: "Generics Studio website",
-  captionA: "Heavy plugins, uncompressed images and bloated themes drag WordPress sites below 50. Google ranks you accordingly.",
-  captionB: "Lean code, optimised assets and server-side rendering push every page to 100. Less load time, more conversions.",
-  perf: "Performance",
-  access: "Accessibility",
-  bp: "Best Practices",
-  seo: "SEO",
-};
-
-const c = de;
+const c = tRaw<ComparisonContent>("sections.webdesign.comparison");
 
 const circ = 138.23;
 function scoreCircle(score: number) {

@@ -4,6 +4,8 @@ description: "Eine schlechte Webseite kostet mehr als keine. Verlorene Kunden, s
 date: "2025-02-26"
 category: "Online-Präsenz"
 readingTime: "5 Min."
+relatedService: webdesign
+relatedLabel: "Website anfragen"
 ---
 
 Eine schlechte Webseite ist teurer als keine. Das klingt kontraintuitiv – aber wer schon einmal erlebt hat, wie ein potenzieller Kunde nach einem Webseitenbesuch nie wieder zurückgekehrt ist, versteht, was gemeint ist.

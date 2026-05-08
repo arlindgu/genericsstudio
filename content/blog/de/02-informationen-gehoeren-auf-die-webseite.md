@@ -4,6 +4,8 @@ description: "Öffnungszeiten im Bio-Link, Preise in den Highlights: Wer wichtig
 date: "2025-01-15"
 category: "Online-Präsenz"
 readingTime: "5 Min."
+relatedService: webdesign
+relatedLabel: "Website anfragen"
 ---
 
 Stell dir vor, ein potenzieller Kunde sucht nach deinen Öffnungszeiten. Er googelt deinen Namen, landet auf deiner Instagram-Bio, findet dort keinen Link – oder einen, der zu einer veralteten Seite führt. Er schliesst das Fenster. Du hast ihn verloren.
