@@ -4,7 +4,12 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   site: 'https://generics.studio',
-  integrations: [sitemap()],
+  trailingSlash: 'never',
+  integrations: [
+    sitemap({
+      filter: (page) => !page.includes('/imprint'),
+    }),
+  ],
   vite: {
     plugins: [tailwindcss()],
   },
