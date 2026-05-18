@@ -158,21 +158,8 @@
       { "label": "Branding", "href": "/branding" },
       { "label": "Graphic Design", "href": "/graphicdesign" },
       { "label": "Print Design", "href": "/printdesign" },
-      { "label": "Blog", "href": "/blog" },
       { "label": "Contact", "href": "/contact" }
     ]
-  },
-  "blog": {
-    "readingTime": "read",
-    "back": "All posts",
-    "header": {
-      "title": "Blog",
-      "description": "Thoughts on design, web development and brand management."
-    },
-    "meta": {
-      "title": "Blog. Web Design, Branding and Design Tips",
-      "description": "Articles on web design, branding and graphic design from Generics Studio in Wil SG. Tips and insights for SMEs and small businesses in Switzerland."
-    }
   },
   "contact": {
     "header": {

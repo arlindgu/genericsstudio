@@ -7,7 +7,7 @@
     "cta": "Projekt anfragen",
     "ctaSecondary": "Leistungen ansehen",
     "meta": {
-      "title": "Webagentur Wil SG | Webdesign & Grafikdesign",
+      "title": "Webagentur Wil SG | Web & Grafikdesign",
       "description": "Massgeschneiderte Websites, Logos und Grafikdesign für KMUs und Restaurants in der Schweiz. Aus Wil SG. Schnell, individuell und unverkennbar. Ab 600 CHF."
     }
   },
@@ -158,21 +158,8 @@
       { "label": "Branding", "href": "/branding" },
       { "label": "Grafikdesign", "href": "/graphicdesign" },
       { "label": "Printdesign", "href": "/printdesign" },
-      { "label": "Blog", "href": "/blog" },
       { "label": "Kontakt", "href": "/contact" }
     ]
-  },
-  "blog": {
-    "readingTime": "Lesezeit",
-    "back": "Alle Beiträge",
-    "header": {
-      "title": "Blog",
-      "description": "Gedanken zu Design, Webentwicklung und Markenführung."
-    },
-    "meta": {
-      "title": "Blog. Webdesign, Branding und Design Tipps",
-      "description": "Beiträge zu Webdesign, Branding und Grafikdesign von Generics Studio aus Wil SG. Tipps und Einblicke für KMUs und kleine Unternehmen in der Schweiz."
-    }
   },
   "contact": {
     "header": {
@@ -226,7 +213,7 @@
   "pages": {
     "webdesign": {
       "meta": {
-        "title": "Webdesign Wil SG | Individuell für KMUs und Restaurants",
+        "title": "Webdesign Wil SG | Für KMUs & Restaurants",
         "description": "Professionelles Webdesign aus Wil SG für KMUs, Restaurants und kleine Unternehmen. Responsive, schnell und 100% individuell, kein Template. Ab 600 CHF."
       },
       "header": {
@@ -317,7 +304,7 @@
     },
     "branding": {
       "meta": {
-        "title": "Logodesign & Branding Wil SG für KMUs und Startups",
+        "title": "Logodesign & Branding Wil SG",
         "description": "Logoentwicklung und Markenidentität aus Wil SG für kleine Unternehmen und Restaurants in der Ostschweiz. Von Logo bis Brand Guidelines. Ab 300 CHF."
       },
       "header": {
@@ -378,7 +365,7 @@
     },
     "graphicdesign": {
       "meta": {
-        "title": "Grafikdesign Wil SG | Social Media und Werbegrafiken",
+        "title": "Grafikdesign Wil SG | Social Media",
         "description": "Professionelles Grafikdesign aus Wil SG. Social Media Grafiken, Illustrationen und Werbemittel für KMUs und Restaurants in der Schweiz. Ab 80 CHF."
       },
       "header": {
@@ -439,7 +426,7 @@
     },
     "printdesign": {
       "meta": {
-        "title": "Individuelles Printdesign Wil SG | Flyer & Visitenkarten",
+        "title": "Printdesign Wil SG | Flyer & Visitenkarten",
         "description": "Druckfertiges Printdesign aus Wil SG. Flyer, Visitenkarten, Broschüren und Menükarten für KMUs und Restaurants. Präzise und professionell. Ab 100 CHF."
       },
       "header": {
